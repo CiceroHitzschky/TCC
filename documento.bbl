@@ -1,0 +1,23 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Bartle 1995]{bartle}
+\abntrefinfo{Bartle}{BARTLE}{1995}
+{BARTLE, R.~G. \textbf{The Elements of Integration and Lebesgue Measure}. 1.
+  ed. New York: Wiley-Interscience, 1995.}
+
+\bibitem[Lima 2019]{elon}
+\abntrefinfo{Lima}{LIMA}{2019}
+{LIMA, E.~L. \textbf{\textbf{Um Curso de Análise}}. 15. ed. Rio de Janeiro:
+  IMPA, 2019. v.~1.}
+
+\bibitem[Magalhaes 2011]{magalhaes}
+\abntrefinfo{Magalhaes}{MAGALHAES}{2011}
+{MAGALHAES, M.~N. \textbf{Probabilidade e Variáveis Aleatórias}. 3. ed. São
+  Paulo: EdUsp, 2011.}
+
+\end{thebibliography}
