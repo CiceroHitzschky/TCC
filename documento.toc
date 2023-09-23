@@ -7,6 +7,6 @@
 \contentsline {section}{\numberline {1.1}Conjuntos Mensuráveis}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Funções Mensuráveis}{10}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Os Espaços de Funções Mensuráveis}{17}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Espaços de Medida}{20}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Espaços de Medida}{24}{section.1.4}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{27}{section*.8}%
+\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{31}{section*.9}%
