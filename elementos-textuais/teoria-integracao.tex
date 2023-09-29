@@ -1,5 +1,5 @@
 \chapter{Teoria da Integração}
-\section{A Integral de Funções Não-Negativas}
+\section{A Integral de Funções Simples}
 
 Uma vez que já foram bem explorados os espaços mensuráveis e os espaços de medida, vamos medir funções mensuráveis de fato.
 Iniciaremos por funções não negativas e iremos estendendo os conceitos aos poucos.
@@ -667,6 +667,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 \end{prova}
 
 % Mostrar que existe uma função simples que aproxima uma função
+\section{A Integral de Funções Não-Negativas}
 
 Até aqui trabalhos com integrais de funções simples apenas.
 Considere a função $f: \R \to \R$ tal que $f(x) = \mathrm{seno}(x) + 3$.
@@ -891,45 +892,310 @@ Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então 
 
 \begin{theorem}[Aproximação Via Funções Simples]
 	\label{teo:aproximação via funções simples}
-	Se $f$ é uma função não negativa em $\menfus$, então existe uma sequência de funções $(\varphi_n) \in \menfus$ tal que
+	Se $f$ é uma função não negativa em $\menfus$, então existe uma sequência de funções $(\varphi_n) \subset \menfus$ tal que
 	\begin{enumerate}[label*=(\roman*)]
-		\item $0 \leq \varphi_n(x) \leq \varphi_{n+1}(x)$ para todo $x \in X$ e $n \in \N$;
-		\item $f(x) = \lim_{n \to \infty} \varphi_n(x)$ para todo $x \in X$;
-		\item Cada $\varphi_n$ é uma função simples, isto é, possui apenas uma quantidade finita de valores reais.
+		\item Cada $\varphi_n$ é uma função simples, isto é, possui apenas uma quantidade finita de valores reais;
+		\item $0 \leq \varphi_n(x) \leq f(x)$ para todo $x \in X$ e $n \in \N$;
+		\item $\displaystyle\lim_{n \to \infty} \varphi_n(x) = f(x)$ para todo $x \in X$.
 	\end{enumerate}
 \end{theorem} 
 
 \begin{prova}
-	Seja $n$ um número natural fixado.
-	Defina conjuntos $E_{kn}$, para $k = 0,1,...,n2^n -1$, pondo
+	Vamos mostrar a existência das sequência por construção.
+	Essa construção será realizada por meio de partições da imagem da seguinte maneira:
+	
 	$$
-	E_{kn} =\left\{ x \in X; \dfrac{k}{2^n} \leq f(x) < \dfrac{k+1}{2^n}\right\}.
-	$$  
-	Se, por ventura, $k = n2^n$, então defina $E_{kn}$ como 
-	$\{x \in X; f(x) \geq n\}$. 
-	Afirmamos que os conjuntos $\{E_{kn}; k = 0, 1, ..., n2^n\}$ são todos disjuntos.
-	Com efeito, suponha, por redução ao absurdo, que exista um $a \in X$ tal que
-	$a \in E_{kn}$ e $a \in E_{(k+1)n}$.
-	Assim, $\dfrac{k}{2^n} \leq f(a) < \dfrac{k+1}{2^n}$ e $\dfrac{k+1}{2^n} \leq f(a) < \dfrac{k+2}{2^n}$.
-	Logo, $f(a) < \dfrac{k+1}{2^n}$ e $\dfrac{k+1}{2^n} \leq f(a)$ uma contradição. 
-	Portanto, $\{E_{kn}; k = 0,1,...,n2^n\}$ são todos disjuntos.
-	Além disso, cada $E_{kn}$  é um elemento de $\cc$, pois 
-	\begin{align*}
-		a \in E_{kn}
-		\Leftrightarrow &
-		\dfrac{k}{2^n} \leq f(a) < \dfrac{k+1}{2^n}\\
-		\Leftrightarrow &
-		\dfrac{k}{2^n} \leq f(a)\textrm{\ e\ } f(a)< \dfrac{k+1}{2^n}\\
-		\Leftrightarrow &
-		a \in \left\{x \in X; \dfrac{k}{2^n} \leq f(x)\right\} \textrm{\ e\ } \left\{x \in X; f(x)< \dfrac{k+1}{2^n}\right\}
-	\end{align*}
+	\varphi_n(x) =\left\{
+	\begin{array}{ll}
+		0, & \textrm{se\ } 0 \leq f(x) < 2^{-n} \\
+		2^{-n}, & \textrm{se\ } 2^{-n} \leq f(x) < 2\cdot2^{-n} \\
+		2\cdot2^{-n}, & \textrm{se\ } 2\cdot2^{-n} \leq f(x) < 3\cdot2^{-n} \\
+		\vdots & \vdots \\
+		k\cdot2^{-n}, & \textrm{se\ } k\cdot2^{-n} \leq f(x) < (k+1)\cdot2^{-n} \\
+		\vdots & \vdots \\
+		n, & \textrm{se\ } f(x) \geq n
+	\end{array}
+	\right.
+	$$
+	Simplificadamente podemos escrever
+	$$
+	\varphi_n(x) =\left\{
+	\begin{array}{ll}
+		k\cdot2^{-n}, & \textrm{se\ } k\cdot2^{-n} \leq f(x) < (k+1)\cdot2^{-n}, \textrm{para } k = 0,1,2, \ldots, n2^n-1 \\
+		n, & \textrm{se\ } f(x) \geq n
+	\end{array}
+	\right.
+	$$
+	Com isso, podemos ver que $\varphi_n$ é uma função simples e que $0\leq \varphi_n(x)\leq f(x)$. Além disso, $\varphi_n$ é uma mensurável para todo $n \in \N$, pois trata-se de uma sequência de um funções simples.
+	
+	Observe que dado $n \in \N$ pelo que já provamos temos que 
+	$$
+	0\leq \varphi_n(x)\leq f(x)
+	\Leftrightarrow
+	0 \leq \varphi_n(x) - f(x) \leq 0
+	$$	
+	Pois, $\varphi_n$ e $f$ são funções não negativas.
+	Assim, 
+	$0 \leq \dlim_{n \to \infty} \varphi_n(x) - f(x) \leq 0$.
+	Segue pelo teorema do confronto que 
+	$\dlim_{n \to \infty}\varphi_n = f(x)$.
+\end{prova}
 
-	Desta forma, $E_{kn} = \left\{x \in X; \dfrac{k}{2^n} \leq f(x)\right\} \cap 
-	\left\{x \in X; f(x)< \dfrac{k+1}{2^n}\right\}$.
-	Como, $f$ é mensurável, $\left\{x \in X; \dfrac{k}{2^n} \leq f(x)\right\} \in \cc$ e $\left\{x \in X; f(x)< \dfrac{k+1}{2^n}\right\} \in \cc$.
-	Logo, $E_{kn} \in \cc$.
-	Com isso, defina $\varphi_n:E_{kn} \to \R$ pondo $\varphi_n(x) = \dfrac{k}{2^n}$.
- \end{prova}
+Esse teorema nos mostra que dada qualquer função não negativa mensurável, podemos aproximar seus valores por funções simples de maneira que o limite dessa sequência de funções simples convergem para a função que tomamos inicialmente.
+Diante disso, nada mais natural que definir a integral de Lebesgue para funções não negativas quaisquer da maneira que segue
+\begin{definition}
+	\label{def:integral de uma função qualquer não negativa}
+	Se $f \in M^+(X,\cc)$, nós definimos a integral de $f$ com respeito à medida $\mu$ sendo o valor real estendido
+	$$
+	\int f d\mu = sup \int \varphi d\mu
+	$$
+	Onde o supremo é sobre todas as funções simples $\varphi \in \menfus$ tal que a condição $0 \leq \varphi \leq f(x)$ para todo $x \in X$. 
+\end{definition}
+
+\begin{definition}
+	\label{def: integral de uma função não neg com respeito a um conjunto específico}
+	Se $f \in \menfus$ e $E \in \cc$, então $f\chi_{E} \in \menfus$ e nós definimos a integral de $f$ sobre o conjunto $E$ com respeito à medida $\mu$ como sendo o número real estendido
+	$$
+	\int_E f d\mu = \int f\chi_E d\mu
+	$$
+\end{definition}
+
+Agora desejamos realizar operações aritméticas com essa expansão da definição conforme fizemos para a integral de funções simples.
+Para tal, precisamos mostrar a monoticidade da integral de funções não negativas tanto à respeito de uma outra função integral quanto à um conjunto.
+Isso faremos por meio dos lemas a seguir
+
+\begin{lemma}
+	\label{lem:monoticiadade da integral de funções não negativas}
+	Se $f$ e $g$ são elementos de $M^+(X,\cc)$ com $f \leq g$, então 
+	$$
+	\int fd\mu \leq \int g d\mu.
+	$$
+\end{lemma}
+\begin{prova}
+	Se $\varphi$ é uma função simples em $M^+(X,\cc)$ tal que 
+	$0 \leq \varphi \leq f$, então $0 \leq \varphi \leq g$, uma vez que $f \leq g$.
+	Assim, 
+	$\sup_{\varphi leq f} \int\varphi d\mu \leq \int f d\mu$ e
+	$\sup_{\varphi leq f} \int\varphi d\mu \leq \int g d\mu$.
+	Subtraindo membro à membro temos 
+	$$
+	0 \leq  \int f d\mu  - \int g d\mu
+	\Leftrightarrow
+	\int f d\mu \leq \int g d\mu.
+	$$
+	
+\end{prova}
+\begin{lemma}
+	\label{lem:monoticiadade da integral com conjunto em funções não negativas}
+	Se $f$ é um elemento de $M^+(X,\cc)$ e $E,F \in \cc$ com $E \subseteq F$, então 
+	$$
+	\int_E fd\mu \leq \int_F f d\mu.
+	$$
+\end{lemma}
+\begin{prova}
+	Como $E \subseteq F$, então $chi_E \leq \chi_F$.
+	Assim, $fchi_E \leq f\chi_F$.
+	Segue, pelo lema anterior que, 
+	$$
+	\int_E f d\mu 
+	=
+	\int f\chi_E d\mu
+	\leq 
+	\int f\chi_F d\mu
+	=
+	\int_F f d\mu.
+	$$
+	Portanto, $ \displaystyle 
+	\int_E f d\mu 
+	=
+	\int_F f d\mu.
+	$
+\end{prova}
+
+\begin{theorem}
+	\label{teo:Convergencia Monótona}
+	Se $(f_n)$ é uma sequência monótona crescente de funções não negativas mensuráveis que converge para a $f$, então
+	$$
+	\int f d\mu = \dlim_{n \to \infty} \int f_n d\mu
+	$$
+\end{theorem}
+\begin{prova}
+	Pelo corolário \ref{cor:convergencia-de-uma-sequencia-mensuravel}, se temos uma sequência de funções mensuráveis que converge para uma função $f$, então $f$ também é mensurável.
+	Além disso,
+	como $(f_n)$ é crescente, então $f_n \leq f\ \forall n \in \N$.
+	Seque, pelo lema \ref{lem:monoticiadade da integral de funções não negativas} que 
+	$$
+	\int f_n\ d\mu \leq \int f\ d\mu
+	$$
+	Para todo $n \in \N$.
+	Desta maneira, 
+	$$
+	\dlim_{n \to +\infty}\int f_n d\mu \leq \int f d\mu.
+	$$
+	Por outro lado, sejam $\alpha \in \R$ tal que $0 < \alpha <1$ e 
+	$\varphi$ uma função simples mensurável tal que $0 \leq \varphi \leq f$.
+	Tomando $n \in \N$ tais que $f_n(x) \geq \alpha \varphi(x)$, construa
+	os conjuntos 
+	$$
+	A_n =\{x \in ;\ f_n(x) \geq \alpha \varphi(x)\}.
+	$$
+	Com isso, podemos observar que cada $A_n \in X$, $A_{n} \subseteq A_{n+1}$
+	e que $X = \bigcup_{n \in \N}A_n$.
+	Desta maneira, usando o lema \ref{lem:monoticiadade da integral com conjunto em funções não negativas} e \ref{lem:monoticiadade da integral de funções não negativas} temos que 
+	\begin{equation}
+		\label{eq:desigualdade da volta}
+		\int_{A_n} \alpha\varphi d\mu
+		\leq
+		\int_{A_n} f_n d\mu
+		\leq
+		\int f_n d\mu.		
+	\end{equation}
+	Como $(A_n)$ é uma sequência monótona crescente que a união é igual ao conjunto $X$, observamos que, pela proposição \ref{prop:limite-sequencia-crescente} que para uma medida $\mu$ vale
+	$$
+	\mu(X) = \mu\left(\bigcap_{n \in \N}A_n\right) = \lim_{n \to +\infty} \mu(A_n)
+	$$
+	Só que pelo teorema \ref{teo:medida-atraves-de-uma-integral} $\int \varphi \chi_E d\mu$ é uma medida.
+	Desta forma, 
+	$$
+	\dlim_{n \to +\infty} \int_{A_n} \varphi d\mu 
+	= \dlim_{n \to +\infty} \int \varphi \chi_{A_n} d\mu
+	= \int \varphi \chi_X d\mu
+	= \int \varphi d\mu.
+	$$
+	Substituindo isso na equação \ref{eq:desigualdade da volta} obtemos
+	$$
+	\alpha \int \varphi d\mu \leq \dlim_{n \to +\infty} \int f_n d\mu.
+	$$
+	Como $\alpha \in (0,1)$ segue que
+	$$
+	\int \varphi d\mu \leq \dlim_{n \to +\infty} \int f_n d\mu.
+	$$
+	Finalmente, por $\varphi$ ser uma função não negativa simples arbitrária que satisfaz $0\leq \varphi \leq f$, obtemos
+	$$
+	\int f d\mu 
+	= \sup_{\varphi} \int \varphi d\mu \leq \dlim_{n \to +\infty}\int f_n d\mu.
+	$$
+	Disso tudo,
+	$$
+	\int f d\mu 
+	\leq 
+	\dlim_{n \to +\infty}\int f_n d\mu
+	\leq
+	\int f d\mu.
+	$$
+	Portanto,  $\displaystyle \dlim_{n \to +\infty}\int f_n d\mu
+	=
+	\int f d\mu$ como desejávamos.
+\end{prova}
+
+O teorema anterior nos permite mostrar as operações aritméticas para integral de Lebesgue para funções não negativas quaisquer como apresentaremos adiante.
+
+\begin{corollary}
+	Se $f \in M^+$ e $c \geq 0$, então $cf \in M^+$ e vale
+	$$
+	\int cf d\mu = c\int f d\mu.
+	$$
+\end{corollary}
+
+
+\begin{prova}
+	Se o número real for zero, então o resultado sai de forma imediata.
+	Suponha que $c > 0$. 
+	Assim, pelo teorema \ref{teo:aproximação via funções simples}, existe uma sequência de funções simples $(\varphi_n) \subset M^+$ que converge para a função $f$.
+	Logo, a sequência $(c\varphi_n)$ converge para $cf$.
+	Desta forma, ao aplicarmos os teoremas \ref{teo:aritmetica-com-integrais-de-funções-simples} e 
+	\ref{teo:Convergencia Monótona}, obtemos
+	$$
+	\int c f d\mu 
+	= \dlim_{n \to +\infty} \int c\varphi_n d\mu 
+	= \dlim_{n \to +\infty}\left( c\cdot \int \varphi_n d\mu\right)
+	= c\cdot \left(\dlim_{n \to +\infty} \int \varphi_n d\mu\right)
+	= c \int f d\mu.
+	$$
+	Como queríamos demonstrar.
+\end{prova}
+
+
+\begin{corollary}
+	\label{cor:soma de integrais de funções não negativas}
+	Se $f, g \in M^+$, então $f + g \in M^+$ e vale
+	$$
+	\int (f + g) d\mu = \int f d\mu + \int g d\mu.
+	$$ 	
+\end{corollary}
+
+\begin{prova}
+	Analogamente ao corolário anterior, tomemos duas sequências de funções simples $(\varphi_n)$ e $(\psi_n)$ ambas monótonas e crescentes tal que convergem, respectivamente, para $f$ e $g$.
+	Segue, pelos teoremas \ref{teo:aritmetica-com-integrais-de-funções-simples} e 
+	\ref{teo:Convergencia Monótona} que
+	$$
+	\int(f+ g) d\mu
+	= \dlim_{n \to +\infty} \int (\varphi_n +\psi_n) d\mu
+	= \dlim_{n \to +\infty}\int \varphi_nd\mu + \dlim_{n \to +\infty} \int \psi_n d\mu
+	= \int f d\mu + \int g d\mu.
+	$$
+\end{prova}
+
+Note que os resultados tratam apenas de funções monótonas e nem sempre teremos essa condição \enquote{perfeita} para nossas sequências.
+Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequências que não são monótonas.
+
+\begin{theorem}[Lema de Fatou]
+	\label{teo:lema de fatou}
+	Se $(f_n) \subset M^+(X, \cc)$, então 
+	$\displaystyle
+	\int(\lim \inf f_n)d\mu \leq \lim \inf \int f_n d\mu$. 
+\end{theorem}
+\begin{prova}
+	Tome a sequência $g_m = \inf_{n \in \N}\{f_m, f_{m+1},...\}$.
+	Assim, enquanto $m\leq n$ nós temos $g_m \leq f_n$.
+	Neste caso,
+	$$
+	\int g_m d\mu \leq \int f_n d\mu.
+	$$
+	Como $(g_m)$ é crescente e converge para $\lim\inf f_n$ nós temos que 
+	$$
+	\int g_m d\mu \leq \lim \inf \int f_n d\mu.
+	$$
+	Logo, pelo Teorema da Convergência Uniforme,
+	$$
+	\int (\lim \inf f_n)d\mu = \lim \int g_m d\mu \leq \lim \inf \int f_n d\mu.
+	$$ 
+\end{prova}
+
+\begin{corollary}
+	Se $f \in M^+$ e $\lambda$ é definida sobre $\cc$ pondo
+	$
+	\lambda(E) = \int_E fd\mu 
+	$,
+	então $\lambda$ é uma medida.
+\end{corollary}
+
+\begin{prova}
+	Uma vez que $f \geq 0$, obtemos que $\lambda(E) \geq 0$, por definição.
+	Caso $E = \varnothing$, então $f\chi_E \equiv 0$ acarretando que $\lambda(\varnothing) = 0$.
+	Por fim, tome $(E_n)$ uma sequência disjunta do conjunto $\cc$ e defina
+	$f_n$ pondo
+	$$
+	f_n = \sum_{k =1}^nf\chi_{E_k}
+	$$
+	Segue do corolário \ref{cor:soma de integrais de funções não negativas} que
+	$$
+	\int f_n d\mu
+	= \int \left(\sum_{k =1}{n}f\chi_{E_k}\right) d\mu
+	= \sum_{k =1}^n \left(\int f\chi_{E_k}\right) d\mu
+	= \sum_{k =1}^n \left(\int_{E_k} f\right) d\mu
+	= \sum_{k =1}^n \lambda(E_k) d\mu
+	$$
+\end{prova}
+
+%%%%%%%%% Definir QUASE TODO PONTO
+
+
+
+
+
+
+
 
 
 

@@ -10,6 +10,7 @@
 \contentsline {section}{\numberline {1.4}Espaços de Medida}{24}{section.1.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Teoria da Integração}}{31}{chapter.2}%
-\contentsline {section}{\numberline {2.1}A Integral de Funções Não-Negativas}{31}{section.2.1}%
+\contentsline {section}{\numberline {2.1}A Integral de Funções Simples}{31}{section.2.1}%
+\contentsline {section}{\numberline {2.2}A Integral de Funções Não-Negativas}{39}{section.2.2}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{43}{section*.20}%
+\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{48}{section*.20}%
