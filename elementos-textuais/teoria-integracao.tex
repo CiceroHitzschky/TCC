@@ -1052,7 +1052,7 @@ Isso faremos por meio dos lemas a seguir
 	\end{equation}
 	Como $(A_n)$ é uma sequência monótona crescente que a união é igual ao conjunto $X$, observamos que, pela proposição \ref{prop:limite-sequencia-crescente} que para uma medida $\mu$ vale
 	$$
-	\mu(X) = \mu\left(\bigcap_{n \in \N}A_n\right) = \lim_{n \to +\infty} \mu(A_n)
+	\mu(X) = \mu\left(\bigcup_{n \in \N}A_n\right) = \lim_{n \to +\infty} \mu(A_n)
 	$$
 	Só que pelo teorema \ref{teo:medida-atraves-de-uma-integral} $\int \varphi \chi_E d\mu$ é uma medida.
 	Desta forma, 
@@ -1181,7 +1181,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	Segue do corolário \ref{cor:soma de integrais de funções não negativas} que
 	$$
 	\int f_n d\mu
-	= \int \left(\sum_{k =1}{n}f\chi_{E_k}\right) d\mu
+	= \int \left(\sum_{k =1}^nf\chi_{E_k}\right) d\mu
 	= \sum_{k =1}^n \left(\int f\chi_{E_k}\right) d\mu
 	= \sum_{k =1}^n \left(\int_{E_k} f\right) d\mu
 	= \sum_{k =1}^n \lambda(E_k) d\mu
@@ -1190,15 +1190,84 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 
 %%%%%%%%% Definir QUASE TODO PONTO
 
+\begin{definition}
+	\label{def:quase-todo-ponto}
+	Diremos que alguma propriedade ocorre em para a medida $\mu$ em quase todo ponto, se existe um subconjunto $\mathcal{N} \subset \cc$ tal que $\mu(\mathcal{N}) = 0$ e a propriedade ocorra para $\mathcal{N}^c$.
+	Denotaremos esse acontecimento por $\mu$-q.t.p.
+\end{definition}
 
 
+\section{Funções Integráveis}
+Definimos anteriormente apenas integrais de funções não negativas com respeito à uma medida $\mu$.
+Nesta estenderemos, finalmente, este conceito para uma função qualquer de valores reais estendidos. Com isso,
 
+\begin{definition}
+	Seja $L = (X, \cc, \mu)$ a coleção de funções integráveis que consiste de todas as funções reais $\cc$-mensuráveis $f:X \to \R$ tais que as funções
+	$f^+$ e $f^-$ são ambas integrais finitas com respeito à medida $\mu$.
+	Neste caso, nós definimos a integral de $f$ com respeito à medida $\mu$ como
+	$$
+	\int fd\mu
+	= \int f^+ d\mu - \int f^- d\mu
+	$$
+	Se, por ventura, $E$ for um elemento da \sigal $\cc$, então definimos
+	$$
+	\int_E fd\mu
+	= \int_E f^+ d\mu - \int_E f^- d\mu
+	$$
+\end{definition}
 
+\begin{theorem}
+	Uma função mensurável $f$ é um elemento de $L$ se, e somente se, $|f|$ é um elemento de $L$.
+\end{theorem}
 
+\begin{prova}
+	Suponha que $f \in L$.
+	Por definição, isso ocorre se, e somente se, as artes positiva e negativa de $f$ são ambas elementos de $M^+$ e suas, respectivas integrais, são finitas.
+	Devemos mostrar que 
+	$$
+		\int |f| d\mu = \int |f|^+ d\mu - \int |f|^-d\mu
+	$$
+	Pela definição \ref{def:parte-positiva e negativa}, $|f|^- = 0$, logo 
+	$\int |f|^- d\mu = 0$.
+	Pelo lema \ref{lem:decomposicao-da-funcao-em-partes-positiva-negativa} temos que
+	$|f|^+ = |f| = f^+ + f^-$.
+	Assim, $\displaystyle \int |f|^+ d\mu = \int (f^+ + f^-)d\mu$.
+	Como $f^+ + f^- \in M^+$, segue pelo corolário \ref{cor:soma de integrais de funções não negativas} que 
+	$\displaystyle\int (f^+ + f^-)d\mu = \int f^+ d\mu + \int f^- d\mu$, ou seja $\displaystyle\int |f|^+d\mu$ é finita.
+	Desta forma, 
+	$$
+	\int |f| d\mu 
+	= \int (f^+ + f^-)d\mu - 0 
+	= \int |f|^+ d\mu - \int |f|^- d\mu
+	$$
+	Logo, $|f| \in L$.
+	A recíproca é totalmente análoga.	
+\end{prova}
 
-
-
-
+\begin{corollary}
+	Se $|f| \in L$, então $\displaystyle \left|\int f d\mu\right| \leq \int |f| d\mu$.
+\end{corollary}
+\begin{prova}
+	Se $|f| \in L$, pelo teorema anterior, $f \in L$.
+	Logo $\int f^+ d\mu$ e $\int f^- d\mu$ são finitas e não negativas.
+	Desta forma
+	\begin{align*}
+		\left|\int f d\mu \right|
+		=
+		\left|\int f^+ d\mu - \int f^- d\mu\right|
+		= &
+		\left|\int f^+ d\mu + \left(- \int f^- d\mu\right)\right|\\
+		\leq&
+		\left|\int f^+ d\mu\right| + \left|\left(- \int f^- d\mu\right)\right|\\
+		=&
+		\int f^+ d\mu + \int f^- d\mu\\
+		= &
+		\int (f^+ f^-) d\mu\\
+		=&¨
+		\int |f| d\mu.
+	\end{align*}
+	Portanto, $\displaystyle \left|\int f d\mu \right| \leq  \int |f| d\mu.$
+\end{prova}
 
 
 
