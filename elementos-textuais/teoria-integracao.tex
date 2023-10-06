@@ -1,11 +1,13 @@
 \chapter{Teoria da Integração}
-\section{A Integral de Funções Simples}
-
 Uma vez que já foram bem explorados os espaços mensuráveis e os espaços de medida, vamos medir funções mensuráveis de fato.
 Iniciaremos por funções não negativas e iremos estendendo os conceitos aos poucos.
 Quando não houver menção contrária, $(X, \cc, \mu)$ será um espaço de medida.
 O conjunto de todas as funções $f:X \to \xreta$ mensuráveis será simplesmente denotado por $M = M(X, \cc)$ e o conjunto das funções não negativas, que também são $\cc$-mensuráveis será denotado por $M^+ = M^+(X, \cc)$. 
-Assim, iniciaremos calculando a medida de funções simples
+
+\section{A Integral de Funções Simples}
+	Iniciaremos tratando de casos particulares de integral e depois vamos expandindo.
+	Com isso, iniciaremos entendo a integral para funções simples.
+
 
 \begin{definition}[Função Simples]
     Uma função real é dita simples quando possui apenas uma quantidade finita de valores.
@@ -43,13 +45,18 @@ $\displaystyle \bigcup_{j = 1}^n E_j = X$.
     $$g(x) = \left\{
     \begin{array}{cc}
          1, & \textrm{\ se } x \in [0,1] \\
-         2, & \textrm{\ se } x \in (1,2] \\
-         3, & \textrm{\ se } x \in (2,3] \\
-         4, & \textrm{\ se } x \in (3,4]
+         2, & \textrm{\ se } x \in [1,2) \\
+         3, & \textrm{\ se } x \in [2,3) \\
+         4, & \textrm{\ se } x \in [3,4]
     \end{array}\right.
     $$
     Claramente, $g$ também é uma função simples.
-    Basta denotar $E_1 = [0,1), E_2 = (1,2], E_3 = (2,3], E_4 = (3,4]$ e $ a_i = i$ para $1 \leq i \leq 4$.
+    Basta denotar 
+    $E_1 = [0,1),
+     E_2 = [1,2), 
+     E_3 = [2,3),
+     E_4 = [3,4]$ e 
+     $ a_i = i$ para $1 \leq i \leq 4$.
     Com isso, vemos que para $x \in [0,4]$
     $$
     g(x) = 1\cdot \chi_{[0,1]}(x) + 2\cdot \chi_{(1,2]}(x) + 3\cdot \chi_{(2,3]}(x) + 4\cdot \chi_{(3,4]}(x)
@@ -95,7 +102,7 @@ Note que os gráficos das funções $f$ e $g$ são, respectivamente.\\
     \end{figure}    
     \begin{figure}[h!]
 	\centering
-	\Caption{\label{fig:gráfico-função-simples-f-sobre-[0,4]} Gráfico da Função $g =\dsum_{j = 1}^4 a_j\chi_{E_j}$}	
+	\Caption{\label{fig:gráfico-função-simples-g-sobre-[0,4]} Gráfico da Função $g =\dsum_{j = 1}^4 a_j\chi_{E_j}$}	
 	\UECEfig{}{
 	    \begin{tikzpicture}[scale=0.7]
                 % Eixos
@@ -110,10 +117,10 @@ Note que os gráficos das funções $f$ e $g$ são, respectivamente.\\
         
                 % Bolinhas de intervalos aberto e fechado
                 \foreach \i in {1,2,3}{
-                \draw[fill=white] (\i,\i+1) circle (0.08);
+                \draw[fill=blue] (\i,\i+1) circle (0.08);
                 }
-                \foreach \i in {1,2,3,4}{
-                \draw[fill=blue] (\i,\i) circle (0.08);
+                \foreach \i in {1,2,3}{
+                \draw[fill=white] (\i,\i) circle (0.08);
                 }
 
                 
@@ -186,7 +193,7 @@ Se quiséssemos calcular a integral das funções acima somaríamos as áreas do
     %Gráfico da função g
     \begin{figure}[!h]
 	\centering
-	\Caption{\label{fig:integral-função-simples-f-sobre-[0,4]} Área delimitada pelo gráfico da função $g =\dsum_{j = 1}^4 a_j\chi_{E_j}$}	
+	\Caption{\label{fig:integral-função-simples-g-sobre-[0,4]} Área delimitada pelo gráfico da função $g =\dsum_{j = 1}^4 a_j\chi_{E_j}$}	
 	\UECEfig{}{
 	    \begin{tikzpicture}[scale=0.7]
                 % Eixos
@@ -205,12 +212,13 @@ Se quiséssemos calcular a integral das funções acima somaríamos as áreas do
                 }
                 
                 % Bolinhas de intervalos aberto e fechado
-                \foreach \i in {1,2,3}{
-                \draw[fill=white] (\i,\i+1) circle (0.08);
-                }
-                \foreach \i in {1,2,3,4}{
-                \draw[fill=blue] (\i,\i) circle (0.08);
-                }
+				\foreach \i in {1,2,3}{
+					\draw[fill=blue] (\i,\i+1) circle (0.08);
+				}
+				\foreach \i in {1,2,3}{
+					\draw[fill=white] (\i,\i) circle (0.08);
+				}
+
 
                 % Rótulos
                 \foreach \i in {-1,1,2,3,4}{
@@ -233,7 +241,7 @@ Se quiséssemos calcular a integral das funções acima somaríamos as áreas do
 	    \Fonte{Elaborado pelo autor}
 	}	
     \end{figure} 
-
+Note que em ambos os casos estamos, basicamente, aplicando o valor $a_j$ na medida do conjunto $E_j$ correspondente para $j$ igual ao número de partições do domínio. Com isso, temos a definição a seguir:
 \begin{definition}
 \label{def:integral-função-naonegativa-simples}
     Se $\varphi$ é uma função simples de $M^+(X, \cc)$ com a representação apresentada anteriormente, então a integral da função $\varphi$ com respeito à medida $\mu$ é o valor real estendido
@@ -514,11 +522,11 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
         = &
         \sum_{j = 1}^n\sum_{k = 1}^m a_j \mu(E_j \cap F_k) + \sum_{j = 1}^n\sum_{k = 1}^m b_k \mu(E_j \cap F_k)
     \end{align*}
-    Ora, uma vez que $X$ é a união de ambas as famílias disjuntas $\{E_j\}$ e $\{F_k\}$, isto é, 
+    Ora, uma vez que $X$ é a união de ambas as famílias disjuntas $\{E_j\}$ e $\{F_k\}$, ou seja, 
     $$
     \bigcup_{j = 1}^n E_j = X = \bigcup_{k = 1}^m F_k 
     $$
-    Desta forma, se um elemento $x$ pertence à um conjunto $E_{j_0}$ para algum $j_0 \in I_n$, então deve existir um $k_0 \in I_m$ tal que $x \in F_{k_0}$.
+    Se um elemento $x$ pertence à um conjunto $E_{j_0}$ para algum $j_0 \in I_n$, então deve existir um $k_0 \in I_m$ tal que $x \in F_{k_0}$.
     Assim, se fixamos um $j \in I_n$, então $\bigcup_{k \in I_m} F_k$ forma uma cobertura de $E_j$, isto é, 
     $\displaystyle E_j \subset \bigcup_{k \in I_m} F_k$.
     Assim, 
@@ -526,10 +534,10 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     $$
     \mu(E_j) = \mu\left(E_j \cap \bigcup_{k \in I_m} F_k\right)
     = \mu\left(\bigcup_{k \in I_m} (E_j \cap F_k)\right)
-    = \sum_{k = 1}^m \mu(E_j \cap F_k)
+    = \sum_{k = 1}^m \mu(E_j \cap F_k).
     $$
     Analogamente, ao fixarmos um $k \in I_m$, vemos que $\displaystyle \mu(F_k) = \sum_{j = 1}^n \mu(E_j \cap F_k)$.
-    Empregando este resultado ao que foi desenvolvido anteriormente obtemos
+    Empregando estes resultados ao que foi desenvolvido anteriormente obtemos
     $$
     \sum_{j = 1}^n\sum_{k = 1}^m a_j \mu(E_j \cap F_k) + \sum_{j = 1}^n\sum_{k = 1}^m b_k \mu(E_j \cap F_k)
     =
@@ -545,7 +553,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 
 \begin{lemma}
 	\label{lem:medida-da-intersecao-de-um-fixado}
-	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall E \in \cc$ é uma medida sobre $X$.
+	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall E \in \cc$ também é uma medida sobre $X$.
 \end{lemma}
 \begin{prova}
 	Basta mostrar que $\lambda$ satisfaz as condições impostas na definição \ref{def:medida}.
@@ -588,7 +596,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 \begin{lemma}
 	\label{lem:medida-gerada-por-medidas-e-numeros-reais}
 	Se $\mu_1, ..., \mu_n$ são medidas sobre $X$ e $a_1, ... , a_n$ são números reais não negativos, então a função $\lambda$ definida por
-	$\lambda(E) = \dsum_{j =1}^n a_j\mu_j(E), \forall E \in \cc$ é uma medida sobre $X$.
+	$\lambda(E) = \dsum_{j =1}^n a_j\mu_j(E), \forall E \in \cc$ também é uma medida sobre $X$.
 \end{lemma}
 \begin{prova}
 	Como $\mu_j$ é uma medida para todo $j \in I_n$ e cada $a_j$ é maior ou igual à zero, temos que cada $a_j\mu_j(E) \geq 0$.
@@ -669,7 +677,10 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 % Mostrar que existe uma função simples que aproxima uma função
 \section{A Integral de Funções Não-Negativas}
 
-Até aqui trabalhos com integrais de funções simples apenas.
+Até aqui trabalhos apenas com integrais de funções simples apenas.
+Nesta seção, desejamos expandir o conceito de integral para uma função qualquer não negativa.
+Vale ressaltar que a perspectiva que traremos aqui é a de Lebesgue.
+Com o intuito de enfatizar a diferença da construção, vamos lembrar da construção feita por Riemann.
 Considere a função $f: \R \to \R$ tal que $f(x) = \mathrm{seno}(x) + 3$.
 Claramente não é uma função simples, pois não possui uma quantidade finita de valores. 
 Nosso objetivo, agora, é tentar calcular a integral dessa função com o que construímos até aqui.
@@ -887,6 +898,88 @@ Assim, se tomarmos o supremo dessas funções obteremos
 		\Fonte{Elaborado pelo autor}
 	}   
 \end{figure}
+
+Agora, tomemos como exemplo a função $f(x) = x^2$, mas não invés de particionarmos o domínio da função, a função simples é construída conforme uma partição feita na imagem.
+Assim, tomemos uma função $\phi_1$ pondo
+$$
+\phi_1(x) =\left\{
+\begin{array}{ll}
+	0, & \textrm{se\ } 0 \leq f(x) < 2^{-1} \\
+	2^{-1}, & \textrm{se\ } 2^{-1} \leq f(x) < 2\cdot2^{-1} \\
+	1, & \textrm{se\ } f(x) \geq 1
+\end{array}
+\right.
+$$
+
+Note que a função $\phi_1$ é simples, mas seus valores são escolhidos por meio da partição da imagem conforme explicitado na imagem a seguir:
+
+\begin{figure}[h!]
+	\centering
+	\Caption{Gráfico da função $\phi_1$} 
+	\UECEfig{}{
+		\begin{tikzpicture}[scale=2]
+			% Eixos
+			\draw[->] (-2,0) -- (2,0) node[right] {$x$};
+			\draw[->] (0,-1) -- (0, 2) node[left] {$y$};
+			% Rótulos
+			\foreach \i in {-1,1}{
+				\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+			}
+			
+			\foreach \i in {-1, 1}{
+				\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
+			}
+			
+			\draw (2pt,0.5)--(-2pt, 0.5) node[above left]{\footnotesize $\frac{1}{2}$};
+			
+			%\fill[domain=-1:1,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{\x*\x})--(4,0)--(0,0);
+			% Yes, this is drawn twice, but I wanted the shading to match the over/under pictures following.
+			
+			
+			\draw[domain=-1.2:1.2,smooth,variable=\x, thick]  plot ({\x},{\x*\x})  node[above right] {{\small $f(x) = x^2$}};
+			
+			
+			% Função $\phi_1$
+			\draw[domain=-0.71:0.71,smooth,variable=\x,thick, green]  plot ({\x},{0});
+			
+			\draw[domain=-1:-0.71,smooth,variable=\x,thick, green]  plot ({\x},{0.5});
+			\draw[domain=0.71:1,smooth,variable=\x,thick, green]  plot ({\x},{0.5});
+			
+			\draw[domain=-2:-1,smooth,variable=\x,thick, green]  plot ({\x},{1});
+			\draw[domain=1:2,smooth,variable=\x,thick, green]  plot ({\x},{1});
+			
+			% Retas auxiliares
+			\draw[dashed] (-0.71,0.09) -- (-0.71,0.5);
+			\draw[dashed] (0.71,0.09) -- (0.71,0.5);
+			
+			\draw[dashed] (-0.71,0.5) -- (0.71,0.5);
+			
+			\draw[dashed] (-1,1) -- (1,1);
+			
+			\draw[dashed] (-1,0) -- (-1,1);
+			\draw[dashed] (1,0) -- (1,1);
+			
+			% Bolinhas
+			\draw[fill=white] (-0.71,0) circle (0.03);
+			\draw[fill=white] (0.71,0) circle (0.03);
+			
+			\draw[fill=green] (-0.71,0.5) circle (0.03);
+			\draw[fill=green] (0.71,0.5) circle (0.03);
+			
+			\draw[fill=white] (-1,0.5) circle (0.03);
+			\draw[fill=white] (1,0.5) circle (0.03);
+			
+			\draw[fill=green] (-1,1) circle (0.03);
+			\draw[fill=green] (1,1) circle (0.03);
+			
+		\end{tikzpicture}
+		
+	}{
+		\Fonte{Elaborado pelo autor}
+	}   
+\end{figure}
+
+Na figura acima, o gráfico da função $\phi_1$ está representado pela cor verde.
 
 Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então ela pode ser aproximada por uma sequência de funções simples conforme o teorema
 
