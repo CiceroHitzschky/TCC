@@ -580,7 +580,7 @@ para $A \in \mathcal{C}$, definimos $\mu(A)$ por meio da sua cardinalidade, isto
 
 
 \begin{theorem}
-\label{teo:operacoes-com-medidas-1}
+\label{teo:medida-diferença}
 	Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
 	Se $A$ e $B$ são elementos de $\mathcal{C}$ e $A \subset B$, então $\mu(A) \leq \mu(B)$.
 	Se $\mu(A) < +\infty$, então $\mu(A-B) = \mu(A) - \mu(B)$.
@@ -681,6 +681,76 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
     Portanto, $\displaystyle \lim_{n \to +\infty} \mu(B_n) = \mu\left(\bigcap_{n \in \N} B_n\right)$
 \end{prova}
 
+Vimos quando tratamos de \sigals a \sigal de Borel que é muito relevante para o estudo da reta real.
+Da mesma forma, existe uma medida que é indispensável para o mesmo contexto.
+Essa, por sua vez, não será demonstrada, mas adotada como axioma à titulo de simplificação do trabalho.
+Assim, 
+
+\begin{axiom}
+	\label{ax: medida de lebesgue}
+	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos.
+\end{axiom}
+
+Em termos práticos, se $E$ é um intervalo real não vazio $(a,b)$, então $\lambda(E) = b - a$.
+Esta medida recebe o nome de Medida de Lebesgue. 
+Embora tenha tido a necessidade de utilizar o sistema da reta estendida para definirmos uma medida, existem conjuntos tão pequenos que sua medida é desprezível.
+À esses damos o nome de conjunto de medida nula.
+Formalmente,
+
+\begin{definition}
+	\label{def:conjunto-medida-nula}
+	Seja $(X, \cc, \mu)$ um espaço de medida.
+	Dizemos que um conjunto $E \subset \cc$ tem medida nula em relação à medida $\mu$ se $\mu(E) = 0$.
+\end{definition}
+
+\begin{proposition}
+	\label{prop:medida-nula-subconjunto}
+	Seja $(X, \cc, \mu)$ um espaço de medida.
+	Se $\mu(X) = 0$ e $Y \subset X$, então $\mu(Y) = 0$.
+\end{proposition}
+\begin{prova}
+	Note que $(Y \cap X) \subset X$, pois $ Y \cap X = Y$.
+	Assim, pelo teorema \ref{teo:medida-diferença}, temos que
+	$$
+	\mu(Y) = \mu(X \cap Y) \leq \mu(X) = 0
+	$$
+	Logo, $\mu(Y) \leq 0$.
+	Segue que $\mu(Y) = 0$, pois a medida é uma função não negativa.
+\end{prova}
+
+\begin{proposition}
+	\label{prop:medida-nula-união}
+	Seja $(X, \cc, \mu)$ um espaço de medida e $\{E_n\}$ uma sequência disjunta de elementos de $\cc$.
+	Se $Y = \displaystyle\bigcup_{n \in \N}E_n$ e $\mu(E_n) = 0$ para todo $n \in \N$, então $\mu(Y) = 0$.
+\end{proposition}
+\begin{prova}
+	Analogamente à proposição anterior segue, imediatamente, que
+	$$
+	\mu(Y)
+	=
+	\mu\left(\bigcup_{n \in \N}E_n\right)
+	\leq
+	\sum_{n = 1}^\infty \mu(E_n)
+	= 0.
+	$$
+	Assim,
+	$\mu(Y)\leq 0$. Portanto, $\mu(Y) = 0$.
+\end{prova}
+
+Como exemplo, temos por definição, que $\varnothing$ tem medida nula, pois para qualquer medida $\mu$, $\mu(\varnothing) = 0$.
+Mostraremos a seguir um exemplo menos trivial:
+
+\begin{example}[Medida de Conjuntos Discretos]
+	Se $X \subset \R$ é um conjunto discreto, então tem medida nula com respeito à medida $\lambda$ de Lebesgue.
+\end{example}
+
+De fato, se $X$ é discreto, então é formado por pontos.
+Assim, se $a \in X$, então pode ser representado degeneradamente, por 
+$\{a\} = [a,a]$.
+Logo, $\lambda(\{a\}) = a - a = 0$.
+Assim, o conjunto $X$ é dado pela reunião enumerável de seus pontos e todos têm medida nula. 
+Segue pela proposição \ref{prop:medida-nula-união} que $X$ tem medida nula.
+ 
 % Espaços de Medida
 
 %Uma vez que já foram bem explorados os espaços mensuráveis bem como os espaços de medida, nosso objetivo neste capítulo é medir 

@@ -1105,7 +1105,7 @@ Isso faremos por meio dos lemas a seguir
 	$
 \end{prova}
 
-\begin{theorem}
+\begin{theorem}[Teorema da Convergência Monótona]
 	\label{teo:Convergencia Monótona}
 	Se $(f_n)$ é uma sequência monótona crescente de funções não negativas mensuráveis que converge para a $f$, então
 	$$
@@ -1285,11 +1285,73 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 
 \begin{definition}
 	\label{def:quase-todo-ponto}
-	Diremos que alguma propriedade ocorre em para a medida $\mu$ em quase todo ponto, se existe um subconjunto $\mathcal{N} \subset \cc$ tal que $\mu(\mathcal{N}) = 0$ e a propriedade ocorra para $\mathcal{N}^c$.
+	Diremos que alguma propriedade ocorre em quase todo ponto de um conjunto $X$ com respeito à medida $\mu$, se ela não é valida somente em um subconjunto $E$ de $X$ que tem medida nula.
 	Denotaremos esse acontecimento por $\mu$-q.t.p.
 \end{definition}
 
+\begin{corollary}
+	Suponha que $f \in M^+$. Então
+	$f(x) = 0$ em quase todo ponto de $X$ se, e somente se $\displaystyle \int fd\mu = 0$.
+\end{corollary}
 
+\begin{prova}
+	Suponha $f(x) = 0$ $\mu$-q.t.p.
+	Assim, se $E = \{ x \in X: f(x) > 0\}$, então $\mu(E) = 0$.
+	Tome a sequência $f_n = n\chi_E$.
+	Dessa forma $f \leq \lim \inf_{n \in \N} f_n$.
+	Segue, pelo Lema de Fatou que
+	$$
+	0 
+	\leq
+	\int f d\mu
+	\leq
+	\int (\lim \inf f_n) d\mu
+	\leq
+	\lim \inf \int f_n d\mu
+	=
+	0.
+	$$
+	Ou seja, $\displaystyle\int f d\mu = 0$.
+	Reciprocamente, suponha que $\displaystyle\int f d\mu = 0$.
+	Tome uma sequência de conjuntos 
+	$E_n = \left\{ x \in X. f(x) > \dfrac{1}{n}\right\}$ tal que 
+	$f \geq \left(\dfrac{1}{n}\right)\chi_{E_n}$.
+	Assim, $\int f d\mu \geq \int \left(\dfrac{1}{n}\right)\chi_{E_n} d\mu$.
+	Só que 
+	$\int \left(\dfrac{1}{n}\right)\chi_{E_n} d\mu
+	= \dfrac{1}{n}\mu(E_n) \geq 0.
+	$
+	Segue que
+	$$
+	0 = \inf f d\mu 
+	\geq 
+	\dfrac{1}{n}\mu(E_n) \geq 0
+	$$
+	Ou seja $\mu(E_n) = 0$ para todo $n \in \N$.
+	Assim, todo $E_n$ tem medida nula.
+	Segue, pela proposição \ref{prop:medida-nula-união}
+	que o conjunto $\{x \in X; f(x) > 0\}$ tem medida nula, pois
+	$\{x \in X; f(x) > 0\}
+	=
+	\displaystyle
+	\bigcup_{n \in \N} E_n.
+	$
+	
+\end{prova}
+Finalizaremos esta subseção apresentando um corolário do Teorema da Convergência Monótona que enfatiza claramente a diferença entre a Integral de Riemann e a Integral de Lebesgue.
+
+\begin{corollary}
+	Se $(g_n)$ é uma sequência de funções em $M^+$, então 
+	$$
+	\int \left(\dsum_{n = 1} ^\infty g_n\right)d\mu
+	=
+	\dsum_{n = 1} ^\infty \left(\int g_n d\mu\right).
+	$$
+\end{corollary}
+\begin{prova}
+	O resultado sai imediatamente da aplicação do Teorema da Convergência Monótona considerando a sequência de funções $(f_n) \subset M^+$ tais que
+	$f_n = g_1 + \cdots + g_n  $.
+\end{prova}
 \section{Funções Integráveis}
 Definimos anteriormente apenas integrais de funções não negativas com respeito à uma medida $\mu$.
 Nesta estenderemos, finalmente, este conceito para uma função qualquer de valores reais estendidos. Com isso,
