@@ -1372,6 +1372,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 \end{definition}
 
 \begin{theorem}
+	\label{teo:f é integrável se, só, se |f| o é}
 	Uma função mensurável $f$ é um elemento de $L$ se, e somente se, $|f|$ é um elemento de $L$.
 \end{theorem}
 
@@ -1403,7 +1404,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	Se $|f| \in L$, então $\displaystyle \left|\int f d\mu\right| \leq \int |f| d\mu$.
 \end{corollary}
 \begin{prova}
-	Se $|f| \in L$, pelo teorema anterior, $f \in L$.
+	Se $|f| \in L$, então $f \in L$ pelo teorema anterior.
 	Logo $\int f^+ d\mu$ e $\int f^- d\mu$ são finitas e não negativas.
 	Desta forma
 	\begin{align*}
@@ -1417,12 +1418,104 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 		=&
 		\int f^+ d\mu + \int f^- d\mu\\
 		= &
-		\int (f^+ f^-) d\mu\\
+		\int (f^+ + f^-) d\mu\\
 		=&¨
 		\int |f| d\mu.
 	\end{align*}
 	Portanto, $\displaystyle \left|\int f d\mu \right| \leq  \int |f| d\mu.$
 \end{prova}
+
+\begin{corollary}
+	\label{cor: f é mensurável, g é integrável então f é integrável}
+	Se $f$ é mensurável, $g$ é integrável e $|f| \leq |g|$, então  $f$ é integrável e $\displaystyle \int |f| d\mu \leq \int |g| d\mu$.
+\end{corollary}
+\begin{prova}
+	Se $f$ é mensurável, então para uma medida $\mu$ definida sobre $(X,\cc)$, tem-se que $f \in L$. Assim, pelo teorema \ref{teo:f é integrável se, só, se |f| o é} tem-se que $|f|$ é integrável.
+	Como $|f|$ e $|g|$ são função não negativas, segue pelo lema
+	\ref{lem:monoticiadade da integral de funções não negativas} que 
+	$\displaystyle \int |f| d\mu \leq \int |g| d\mu$.
+\end{prova}
+
+
+\begin{theorem}
+	\label{teo: soma e multiplicação por escalar de funções integráveis}
+	Se $f, g \in L$ e $\alpha \in \R$. Então
+	\begin{enumerate}[label*=(\alph*)]
+		\item A multiplicação por escalar $\alpha f \in L$ com $\displaystyle \int \alpha fd\mu = \alpha \int f d\mu$;
+		\item A soma $(f + g) \in L$ com $\displaystyle \int (f + g) d\mu = \int f d\mu + \int g d\mu$. 
+	\end{enumerate}
+\end{theorem}
+\begin{prova}
+	\begin{enumerate}[label*=(\alph*)]
+	\item Se $\alpha = 0$, então $\alpha f = 0$ em todo ponto de seu domínio.
+	Assim,
+	$
+	\displaystyle\int \alpha f d\mu = 0 = \alpha \int f d\mu.
+	$
+	Se $\alpha > 0$, então 
+	\begin{align*}
+		\alpha \int f d\mu
+		=&	
+		\alpha \left( \int f^+ d\mu - \int f^- d\mu\right)\\
+		=&
+		\alpha\int f^+ d\mu - \alpha\int f^- d\mu\\
+		=&
+		\int\alpha f^+ d\mu - \int\alpha f^- d\mu.
+	\end{align*}
+	Perceba que $\alpha f^+ = (\alpha f)^+$  e $\alpha f^- = (\alpha f)^-$.
+	Disso, 
+	$$
+	\int\alpha f^+ d\mu - \int\alpha f^- d\mu
+	=
+	\int(\alpha f)^+ d\mu - \int(\alpha f)^- d\mu
+	=
+	\int \alpha f d\mu.
+	$$
+	Neste caso, $\alpha f \in L$ e temos $\displaystyle \alpha \int f d\mu = \int \alpha f d\mu$. O caso $\alpha < 0$ é totalmente análogo.
+	
+	\item Se $f, g \in L$, então $|f|,|g| \in L$ pelo teorema \ref{teo:f é integrável se, só, se |f| o é}.
+	Como $|f + g| \leq |f| + |g|$, segue que $f + g \in L$ pelo corolário \ref{cor: f é mensurável, g é integrável então f é integrável}.
+	Além disso, pelo lema \ref{lem:f = f^+ - f^-}, temos 
+	$f = f^+ - f^-$ e $g = g^+ - g^-$.
+	Somando membro a membro, temos
+	$$
+	f + g = f^+ - f^-  + g^+ - g^- = f^+ + g^+ - (f^- + g^-) 
+	$$
+	Como $(f^+ + g^+), (f^- + g^-)$ são funções integráveis não negativas, temos que 
+	$$
+	\int (f + g) d\mu =  \int [f^+ + g^+ - (f^- + g^-)] d\mu 
+	$$
+	Pelo corolário \ref{cor:soma de integrais de funções não negativas} 
+	\begin{align*}
+		\int [f^+ + g^+ - (f^- + g^-)] d\mu 
+		=&
+		\int (f^+ + g^+)d\mu - \int(f^- + g^-) d\mu\\
+		=&
+		\int f^+ d\mu + \int g^+ d\mu - \int f^-d\mu - \int g^- d\mu\\
+		=&
+		\int f^+ d\mu - \int f^-d\mu + \int g^+ d\mu  - \int g^- d\mu\\
+		=&
+		\int f d\mu + \int g d\mu.
+	\end{align*}
+	Portanto, $\displaystyle \int (f+g)d\mu = \int f d\mu + \int g d\mu.$
+	\end{enumerate}
+\end{prova}
+
+\begin{theorem}[Teorema da Convergência Dominada de Lebesgue]
+	Seja $(f_n)$ uma sequência de funções integráveis que converge em quase todo ponto para uma uma função real mensurável $f$.
+	Se existir uma função integrável $g$ tal que $|f_n| \leq g$ para todo $n \in \N$, então $f$ é integrável e $\displaystyle \int f d\mu = \dlim_{n \to +\infty} \int f_n d\mu$.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
