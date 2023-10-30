@@ -1506,7 +1506,58 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	Se existir uma função integrável $g$ tal que $|f_n| \leq g$ para todo $n \in \N$, então $f$ é integrável e $\displaystyle \int f d\mu = \dlim_{n \to +\infty} \int f_n d\mu$.
 \end{theorem}
 
-
+\begin{prova}
+	Se $(f_n)$ converge em quase todo ponto para a função $f$ e $|f_n| \leq g$ para cada $n \in \N$, então $f \leq g$ em quase todo ponto.
+	Como $g$ é integrável, segue pelo corolário \ref{cor: f é mensurável, g é integrável então f é integrável} que $f$ é integrável.
+	Além disso, note que para todo $n \in \N$, temos
+	
+	$$
+	|f_n| \leq g 
+	\Leftrightarrow 
+	f_n \leq g 
+	\textrm{\ ou \ }
+	 f_n \leq -g
+	\Leftrightarrow
+	g - f_n \geq 0
+	\textrm{\ ou \ }
+	g + f_n \geq 0
+	$$
+	Caso tenhamos $g + f_n \geq 0$ podemos utilizar o Lema de Fatou e o teorema \ref{teo: soma e multiplicação por escalar de funções integráveis} de forma que 
+	
+	\begin{align*}
+		\int g d\mu + \int f d\mu =& \int (g + f) d\mu \\
+		\leq & \lim \inf \int (g + f_n) d\mu \\
+		=& \lim \inf \left(\int g d\mu + \int f_n d\mu\right)\\
+		=& \int g d\mu + \lim \inf \int f_n d\mu
+	\end{align*}
+	isso acarreta que 
+	$$
+	\int g d\mu + \int f d\mu = \int g d\mu + \lim \inf \int f_n d\mu.
+	$$
+	Logo, $\displaystyle \int f d\mu \leq \lim \inf \int f_n d\mu$.
+	
+	Caso ocorra $g - f_n \geq 0$, aplicamos novamente o Lema de Fatou e o teorema \ref{teo: soma e multiplicação por escalar de funções integráveis}.
+	Assim, 
+	\begin{align*}
+		\int g d\mu - \int f d\mu = \int (g - f) d\mu
+		\leq  \lim \inf \int (g - f_n) d\mu
+		\leq \int g d\mu + \lim \inf \int (- f_n) d\mu.
+	\end{align*}
+	Lembre que $\displaystyle \lim \inf \int (- f_n) d\mu = - \lim \sup \int f_n d\mu$.
+	Com isso, 
+	$$
+	\int g d\mu - \int f d\mu \leq 
+	\int g d\mu + \lim \inf \int (- f_n) d\mu
+	=
+	\int g d\mu - \lim \sup \int f_n d\mu.
+	$$
+	Desta forma, $\displaystyle \int f d\mu \geq \lim \sup \int f_n d\mu$.
+	Disso tudo, observamos que 
+	$$
+	\lim \sup \int f_n d\mu \leq  \int f d\mu \leq \lim \inf \int f_n d\mu. 
+	$$
+	Portanto, $\displaystyle \lim \int f_n d\mu =  \int f d\mu $.
+\end{prova}
 
 
 

@@ -18,6 +18,6 @@
 \contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{45}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Funções Integráveis}{54}{section.4.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{58}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{59}{chapter.5}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{60}{section*.21}%
+\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{61}{section*.21}%
