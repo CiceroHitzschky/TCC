@@ -1,15 +1,18 @@
 \chapter{Espaços e Funções Mensuráveis}
 
-Nesta seção é apresentado um preâmbulo para a teoria medida.
+Nesta seção, apresentaremos os conceitos que fundamentam a teoria da medida. Trataremos, especificadamente, de $\sigma$-álgebra, espaços mensuráveis e funções mensuráveis. 
+Embora estejamos assumindo que o leitor já esteja familiarizado com a teoria de conjuntos, faremos algumas observações sobre notação de alguns conjuntos com o objetivo de cessar o maior número de dúvidas.
 Iniciaremos definindo \sigal para que possamos construir espaços mensuráveis.
 Em seguida, abordaremos as funções mensuráveis.
-Todas as definições e resultados aqui explorados tiveram como principais fontes \cite{elon}, \cite{bartle} e \cite{magalhaes}.
+Todas as definições e resultados aqui explorados, bem como nas demais seções,  tiveram como principal fonte \cite{bartle}.
 
 \section{O Conceito de \sigal}
 % Definição de Sigma álgebra
-\begin{definition}
+Para que possamos estabelecer uma \enquote{medida} precisamos de um ambiente que permita ser \enquote{medido}. 
+Criamos um ambiente como este adicionando uma estrutura algébrica específica em um conjunto.
+Tal estrutura recebe o nome de $\sigma$-álgebra e é definida a seguir
+\begin{resultado}{Definição}
 \label{def:sigma-algebra}
-
     Seja $X$ um conjunto não vazio. Uma família $\mathcal{C}$ de subconjuntos de $X$ é dita uma \sigal se as seguintes condições são atendidas:
     \begin{enumerate}[label*= (\roman*)]
         \item $\varnothing$ e $X$ são elementos de $\mathcal{C}$;     
@@ -19,16 +22,15 @@ Todas as definições e resultados aqui explorados tiveram como principais fonte
         então $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
     \end{enumerate}
 
-\end{definition}
+\end{resultado}
 
 Um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma \sigal sobre $X$ é chamado de  \textbf{espaço mensurável}. \index{espaço mensurável}
 Além disso, cada elemento deste espaço é chamado de conjunto $\mathcal{C}-$mensurável.
 Quando não houver confusão ou quando a \sigal estiver fixada, dizemos simplesmente que cada elemento é um conjunto mensurável.
-
-\begin{remark}
+\begin{resultado}{Observação}
 	Em todo o texto, indicaremos por $I_n$ o conjunto dos $n$ primeiros números naturais. 
 	Assim, $I_n = \{k \in \N; 1 \leq k \leq n\}$.
-\end{remark}
+\end{resultado}
 
 % União finita de elemento da sigma algebra
 \begin{remark}
