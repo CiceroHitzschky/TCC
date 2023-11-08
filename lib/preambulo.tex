@@ -151,6 +151,7 @@
 %%%%%%%%%%%%%%%% Organizção dos Teoremas e Proposições %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Exigencia do Claudemir
+
 \newcounter{contador} % Contador personalizado
 \NewDocumentEnvironment{resultado}{ O{} m }{
     \vspace{-0.2cm}
@@ -158,10 +159,12 @@
     \ifnum\value{section}>1
       \setcounter{contador}{0}% Reinicia o contador no início de cada seção
     \fi
-    \refstepcounter{contador}% Incrementa o contador
+  \refstepcounter{contador}% Incrementa o contador
     \noindent\textbf{#2}\if\relax\detokenize{#1}\relax\else\hspace{0.1cm}\textbf{(#1)}\fi% Nome em negrito (obrigatório e opcional)
-    \hspace{0.1cm}\textbf{\arabic{chapter}.\arabic{section}.\arabic{contador}} % Informações do contador
+  \hspace{0.1cm}\textbf{\arabic{chapter}.\arabic{section}.\arabic{contador}} % Informações do contador
     \ignorespaces % Remove indentação
 }{
     \par\medskip % Espaçamento
 }
+
+

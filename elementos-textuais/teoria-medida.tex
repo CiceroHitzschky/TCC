@@ -1,14 +1,13 @@
 \chapter{A Teoria da Medida}
 %%%%%%%%% ESPAÇOS MENSURÁVEIS
+    Nesta seção, apresentaremos o conceito chave desse trabalho: a teoria da medida.
+    Conhecemos este conceito de forma intuitiva pelo o que vemos, geralmente, na geometria euclidiana plana.
+    Aqui, trataremos de medida de modo generalizado. 
+    Para isso, precisaremos ampliar o conjunto dos números reais para que ele possa atender novas exigências.
+    Isso é necessário porquê, as vezes, teremos conjuntos tão \enquote{grandes} que nenhum número real poderá representar sua medida. 
+    Assim, estenderemos o conjunto dos números reais na primeira seção.
+    Na seguinte, estenderemos o conceito de função mensurável para o conjunto dos números reais estendidos e, na seção final, apresentaremos a definição de medida bem como exemplos dela.
 \section{Os Espaços de Funções Mensuráveis}
-
-    As vezes, teremos conjuntos \enquote{grandes} de tal forma que sua medida não poderá ser expressa por um número real.
-    Por exemplo, o conjunto $\R$.
-    Por ser infinito 
-    \footnote{Vide \supercite{elon}{p.86}},
-    consideramos que seu tamanho é \enquote{infinito} e representamos pelo simbolo $+\infty$.
-    Entretanto, $+\infty$ não é um número real e sim uma conceito de \enquote{tão grande quanto se queira}.
-    Para solucionar esta problemática, vamos considerar um novo sistema numérico.
 
     \begin{definition}
     \label{def:reta-estendida}
@@ -55,14 +54,19 @@
     \end{multicols}
 
     Neste novo contexto de números reais a \sigal de Borel não é mais válida uma vez que a definição \ref{def:algebra-borel} não inclui $+\infty$ nem $-\infty$.
+    Logo, precisaremos de uma $\sigma$-álgebra em $\xreta$ para dar continuidade aos nossos estudos. 
     Com isso, considere $\xreta$.
     Tomando um conjunto arbitrário $E \in \borel$, com $\varnothing \neq E$, defina $E_1 = E \cup \{-\infty\}, E_2 = E \cup \{+\infty\}$ e $E_3 = E \cup \{-\infty, +\infty\}$. 
-    Desta forma, o conjunto $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ é uma \sigal de $\xreta$. Com efeito, se $E \in \borel$, então é um intervalo aberto conforme o teorema \ref{teo:equiv-borel}.
+    Desta forma, o conjunto $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ é uma \sigal de $\xreta$.
+    \begin{comment}
+    Com efeito, se $E \in \borel$, então é um intervalo aberto conforme o teorema \ref{teo:equiv-borel}.
     Assim, $E_1, E_2, E_3$ e $E_4$ serão intervalos do tipo $[-\infty,x)$ ou $(x, +\infty]$ que são elementos de $\borel$ acrescidos de $+\infty$ ou $-\infty$. 
     Deste modo, é fácil verificar que se um elemento $A \in \xborel$, então $A^c \in \xborel$.
     Além disso, a união enumerável é, no máximo, o intervalo $[-\infty,+\infty]$ que é exatamente $\xreta$.
     Desta forma, $\xborel$ é uma \sigal de $\xreta$.
-
+    	
+    \end{comment}
+    
     \begin{definition}
     \label{def:algebra-borel-estendida}
         A \sigal $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ do conjunto $\xreta$ é chamada de Álgebra de Borel Estendida. 
@@ -77,6 +81,7 @@
     \end{definition}
 
 	Denotaremos a família de todas as funções de valores reais estendidos de $X$ que são $\mathcal{C}$-mensuráveis por $M(X, \mathcal{C})$.
+	Além disso, caso estivermos tratando apenas das funções não negativas usaremos $M^+(X, \mathcal{C})$.
     \begin{proposition}
     \label{prop:identidade-intersecao-mais-infinito}
         Se $f \in \menfus$, então $\{x \in X; f(x) = +\infty\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\}$.
@@ -88,15 +93,11 @@
         \begin{align*}
             a \in \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\} 
             \Leftrightarrow & a \in \{x \in X; f(x) > n\}, \ \forall n \in \N\\
-            \Leftrightarrow & \forall n \in \N,\ f(a) > n\\
-            \Leftrightarrow & \dlim_{n \to \infty} f(a) \geq \dlim_{n \to \infty} n\\
-            \Leftrightarrow & f(a) \geq +\infty.  
+            \Leftrightarrow & \forall\ n \in \N,\ f(a) > n\\
+            \Leftrightarrow & f(a) = +\infty.  
         \end{align*}
-    Como estamos trabalhando com $\xreta$, não existe elemento $x > +\infty$.
-    Logo, o único elemento possível para $f(a)$ é $+\infty$.
-    Assim, tudo isso ocorre se, e somente se, o elemento $a \in \{x \in X; f(x) = +\infty\}$ como queríamos.
     Além disso, note que cada $\{x \in X; f(x) > n\} \in \mathcal{C}$.
-    Segue, pela proposição \ref{prop:interseção-elementos-sigmas}, que $\displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\} \in \mathcal{C}$ acarretando que $\{x \in X; f(x) = +\infty\} \in \mathcal{C}$. 
+    Segue, pela proposição \ref{prop:interseção-elementos-sigmas}, que \linebreak $\displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\} \in \mathcal{C}$ acarretando que $\{x \in X; f(x) = +\infty\} \in \mathcal{C}$. 
     \end{prova}
 
     \begin{proposition}
@@ -114,8 +115,7 @@
             \Leftrightarrow & \forall \ n \in \N, a \notin \{x \in X; f(x) > - n\}\\
             \Leftrightarrow & \forall \ n \in \N, a \in \{x \in X; f(x) \leq - n\}\\
             \Leftrightarrow & \forall \ n \in \N, f(a) \leq - n\\
-            \Leftrightarrow & \lim_{n \to \infty} f(a) \leq \lim_{n \to \infty} (- n)\\            
-            \Leftrightarrow & f(a) \leq -\infty\\            
+            \Leftrightarrow & \lim_{n \to \infty} f(a) \leq \lim_{n \to \infty} (- n)\\                        
             \Leftrightarrow & f(a) = -\infty\\            
             \Leftrightarrow & a \in \{x \in X; f(x) = -\infty\}            
         \end{align*}
@@ -144,7 +144,7 @@
     Suponha que $f \in \menfus$. 
     Logo, pelas proposições \ref{prop:identidade-intersecao-mais-infinito} e \ref{prop:identidade-união-menos-infinito}, os conjuntos $A$ e $B$ são elementos de $\mathcal{C}$.
     Assim, tome $\alpha \in \R$ com $\alpha \geq 0$, então os elementos de $\{x \in X; h(x) > \alpha\}$ são os elementos de $\{x \in X; f(x) > \alpha\}$ que não estão em $A$, pois $h$ tem contradomínio $\R$.
-    Como $\cc$ é uma \sigal, $A \in \cc \Rightarrow A^c \in \cc$. 
+    Como $\cc$ é uma \sigal\hspace{-0.1cm}, $A \in \cc \Rightarrow A^c \in \cc$. 
     Com isso, 
     $$
     \{x \in X; h(x) > \alpha\} = A^c\cap \{x \in X; f(x) > \alpha\} \in \cc
@@ -156,13 +156,13 @@
     Por outro lado, se supormos que $A$ e $B$ são elementos de $\mathcal{C}$ e $h$ é $\cc$-mensurável, então
     $$\{x \in X; f(x) > \alpha\} = \{x \in  X ; h(x) > \alpha\} \cup A $$
     quando $\alpha \geq 0$, e 
-    $$\{x \in X; f(x) > \alpha\} = \{x \in  X ; h(x) > \alpha\} - B $$
-    quando  $\alpha < 0$ por motivos análogos à primeira parte da demonstração.
+    $$\{x \in X; f(x) > \alpha\} = \{x \in  X ; h(x) > \alpha\} \cap B^c $$
+    quando  $\alpha < 0$, por motivos análogos à primeira parte da demonstração.
     Portanto, $f$ é uma função $\cc$-mensurável como desejávamos.
 \end{prova}
 
 Como consequência do teorema \ref{prop:aritmetica-uma-funcao} e o teorema \ref{teo:condição-de-mensurabilidade} obtemos, imediatamente, que se $ f \in M(X,\mathcal{C})$, então as funções $cf, f^2, |f|, f^+$ e $f^-$ também são elementos de $M(X, \mathcal{C})$.
-Entretanto, um resultado análogo à proposição \ref{prop:aritmetica-duas-funcoes} não possível em $\xreta$.
+Entretanto, um resultado análogo à proposição \ref{prop:aritmetica-duas-funcoes} não é possível em $\xreta$.
 Isso acontece porquê em $\xreta$ a operação de adição não é bem definida.
 Então caso $f(x) = +\infty$ e $g(x) = -\infty$ para algum $x \in \R$ a adição
 $f(x) + g(x)$ não é realizada.
@@ -179,37 +179,37 @@ Para mostrar isso, precisamos do seguinte teorema
 	Então as funções $f, f^*, F$ e $F^*$ são elementos de $\menfus$.
 \end{theorem}
 \begin{prova}
-	Como $(f_n)$ é uma sequência de funções $\cc$-mensuráveis e $f = \inf f_n$, afirmamos que $\{x \in ; f(x) \geq \alpha\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\}$.
-	De fato, tomemos um elemento $h \in X$.
+	Como $(f_n)$ é uma sequência de funções $\cc$-mensuráveis e $f = \inf f_n$, afirmamos que $\{x \in X; f(x) \geq \alpha\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\}$.
+	De fato, tomemos um elemento $y \in X$.
 	Assim, 
 		\begin{align*}
-			h \in \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\} \Leftrightarrow	&
-			h \in \{x \in X; f_n(x) \geq \alpha\}\ \forall n \in \N\\
+			y \in \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\} \Leftrightarrow	&
+			y \in \{x \in X; f_n(x) \geq \alpha\}\ \forall\  n \in \N\\
 			\Leftrightarrow	&	
-			f_n(h) \geq \alpha\ \forall n \in \N\\
+			f_n(y) \geq \alpha\ \forall \ n \in \N\\
 			\Leftrightarrow	&	
-			\inf_{n \in \N}f_n(h) \geq \inf_{n \in \N}\alpha\ \forall n \in \N\\
+			\inf_{n \in \N}f_n(y) \geq \inf_{n \in \N}\alpha\ \forall \ n \in \N\\
 			\Leftrightarrow	&	
-			f(h) \geq \alpha\ \forall n \in \N\\
+			f(y) \geq \alpha\ \forall\  n \in \N\\
 			\Leftrightarrow	&
-			h \in \{x \in X; f(x) \geq \alpha\}
+			y \in \{x \in X; f(x) \geq \alpha\}
 		\end{align*}
 	Como cada $\{x \in X; f_n(x) \geq \alpha\}$ é $\cc$-mensurável, segue pela proposição \ref{prop:interseção-elementos-sigmas} que o conjunto $\{x \in X; f(x) \geq \alpha\} \in \cc$ para todo $\alpha \in \R$.
 	Desta forma, $f$ é $\cc$-mensurável.
 	
 	Observe, também, que $\{x \in X; F(x) >\alpha\} = \displaystyle \bigcup_{n = 1}^\infty \{x \in X; f_(x) >\alpha\}$.
-	Com efeito, para $h \in X$ 
+	Com efeito, para $y \in X$ 
 	\begin{align*}
-		h \in \bigcup_{n = 1}^\infty \{x \in X; f_n(x) > \alpha\} \Leftrightarrow	&
-		\exists\ k \in \N \textrm{tal que\ } h \in \{x \in X; f_k(x) > \alpha\}\\
+		y \in \bigcup_{n = 1}^\infty \{x \in X; f_n(x) > \alpha\} \Leftrightarrow	&
+		\ \exists\ k \in \N \textrm{tal que\ } y \in \{x \in X; f_k(x) > \alpha\}\\
 		\Leftrightarrow	&	
-		f_k(h) > \alpha,\ \forall \alpha \in \R\\
+		f_k(y) > \alpha\\
 		\Leftrightarrow	&	
-		F(x) \geq f_k(h) > \alpha,\ \forall \alpha \in \R\\
+		F(x) \geq f_k(y) > \alpha\\
 		\Leftrightarrow	&	
 		F(x) > \alpha,\ \forall \alpha \in \R\\
 		\Leftrightarrow	&
-		h \in \{x \in X; F(x) > \alpha\}
+		y \in \{x \in X; F(x) > \alpha\}
 	\end{align*}
 	Assim, concluímos que $f$ e $F$ são $\cc$-mensuráveis. 
 	Note que a mensurabilidade de $f^*$ e $F^*$ vem de $f$ e $F$ uma vez que
@@ -239,21 +239,51 @@ Para mostrar isso, precisamos do seguinte teorema
 	\left\{\begin{array}{cc}
 		f(x), & \textrm{se\ } |f(x)| \leq A \\
 		A, & \textrm{se\ } f(x) > A \\
-		-A, & \textrm{se\ } f(x) < A 
+		-A, & \textrm{se\ } f(x) < -A 
 	\end{array}\right.
 	$$
 \end{definition}
 
+\begin{proposition}
+	\label{prop:truncamento-mensurável}
+	Seja $A$ um número real maior que zero.
+	Se $f$ é uma função em $\menfus$, então $f_A$ é uma função $\cc$-mensurável.
+\end{proposition}
+\begin{prova}
+	Basta provar que para qualquer que seja $\alpha \in \R$, tem-se $\{x \in X; f_A(x) > \alpha\} \in \cc$.
+	Para isso, vamos analisar os casos de $\alpha$.
+	Se $-A \leq \alpha \leq A$, então $f_A(x) = f(x)$ para todo $x \in X$.
+	Logo, 
+	$$
+	\{x \in X; f_A(x) > \alpha \} = \{x \in X; f(x) > \alpha \}
+	$$
+	Como $f$ é mensurável, $\{x \in X; f(x) > \alpha \} \in \cc$.
+	Caso $\alpha > A$, então
+	$$
+	\{x \in X; f_A(x) > \alpha \} = \varnothing \in \cc.
+	$$
+	Pois, por definição de $f_A$, não existe valor maior que $A$.
+	Caso tenhamos $\alpha < -A$, ocorre que
+	$$
+	\{x \in X; f_A(x) > \alpha \} = X \in \cc.
+	$$
+	Pois todos os valores que $f_A$ assume são maiores ou igual à $-A$.
+	Em todo caso, o conjunto $\{x \in X; f_A(x) > \alpha\}$ é um elemento de $\cc$.
+	Portanto, $f_A$ é $\cc$-mensurável. 
+\end{prova}
 % Exemplos de Truncamento
+
+\begin{comment}
 
 \begin{example}
 	Seja $f \in \menfus$ tal que $f(x) = x^2-2$.
 	Então o truncamento $f_2$ é representado, graficamente, como
 	\begin{figure}[h!]
 		\centering
-		\Caption{\label{fig:representação do truncamento da função f(x) = x^2-2} representação do truncamento $f_2$ da função $f(x) = x^2-2$} 
+		\Caption{\label{fig:representação do truncamento da função} representação do truncamento $f_2$ da função $f(x) = x^2-2$} 
 		\UECEfig{}{
 			\begin{tikzpicture}[scale=0.5]
+				\draw[thick] (-5.5, -4.5) rectangle (6, 7);
 				% Defina o intervalo x
 				\def\xmin{-3}
 				\def\xmax{3}
@@ -265,7 +295,7 @@ Para mostrar isso, precisamos do seguinte teorema
 				\draw[domain=2:4.5, thick, samples=100, red] plot (\x, {2});
 				\draw[domain=-4.5:-2, thick, samples=100, red] plot (\x, {2});
 				\draw[domain=-2:2, thick, samples=100, red] plot (\x, {\x*\x -2});
-				
+				\draw[domain=-2:2, thick, samples=100, red] plot (\x, {\x*\x -2});
 				% Adicione rótulos aos eixos
 				\draw[->] (\xmin-2,0) -- (\xmax+2,0) node[right] {$x$};
 				\draw[->] (0,\xmin-1) -- (0,\xmax+2.5) node[above] {$y$};
@@ -275,7 +305,7 @@ Para mostrar isso, precisamos do seguinte teorema
 					\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
 				}
 				
-				\foreach \i in {1,2,3,4,5}{
+				\foreach \i in {-2, -1, 1,2,3,4,5}{
 					\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
 				}
 			\end{tikzpicture}
@@ -284,56 +314,187 @@ Para mostrar isso, precisamos do seguinte teorema
 	\end{figure}
 	
 \end{example}
+\end{comment}
+\begin{example}
+	Seja $g \in \menfus$ tal que $g(x) = 3\cos(2x)$.
+	Observe o gráfico de $g$
+	\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:3cosseno_de_2x} Gráfico da função $g(x) = 3\cos (2x)$} 
+		\UECEfig{}{
+			\begin{tikzpicture}[scale=0.5]
+				\draw[thick] (-5.5, -4.5) rectangle (6, 7);
+				% Defina o intervalo x
+				\def\xmin{-3}
+				\def\xmax{3}
+				%				
+				%				% Desenhe a função f(x)
+				%				\draw[domain=\xmin+0.4:\xmax-0.4, smooth, samples=100, blue] plot (\x, {\x*\x -2});
+				
+				% Desenhando a função f_2
+				\draw[domain=-4:4, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+				% Adicione rótulos aos eixos
+				\draw[->] (\xmin-2,0) -- (\xmax+2,0) node[right] {$x$};
+				\draw[->] (0,\xmin-1) -- (0,\xmax+2.5) node[above] {$y$};
+				
+				% Rótulos
+				\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
+					\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+				}
+				
+				\foreach \i in {-2, -1, 1,2,3,4,5}{
+					\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
+				}
+			\end{tikzpicture}
+		}{
+			\Fonte{Elaborado pelo autor}		}   
+	\end{figure}
+\end{example}
 
-	Observe que a figura \ref{fig:representação do truncamento da função f(x) = x^2-2} mostra que o truncamento $f_2$ efetua uma espécie de \enquote{limitação} da função $f$ pela constante $2$.
+	Uma truncamento faz, basicamente, uma espécie de limitação no gráfico da função original.
+	Ao tomarmos como constante o número real 1, vemos que o truncamento $g_1$ da função $g$, apresentada anteriormente, \enquote{amassa} o gráfico de $g$ nas ordenadas 1 e $-1$ como exposto na figura \ref{fig:truncamentog_1}.
+		\begin{figure}[h!]
+			\centering
+			\Caption{\label{fig:truncamentog_1} Gráfico do truncamento $g_1$ } 
+			\UECEfig{}{
+				\begin{tikzpicture}[scale=0.5]
+					\draw[thick] (-5.5, -4.5) rectangle (6, 7);
+					% Defina o intervalo x
+					\def\xmin{-3}
+					\def\xmax{3}
+					%				
+					%				% Desenhe a função f(x)
+					%				\draw[domain=\xmin+0.4:\xmax-0.4, smooth, samples=100, blue] plot (\x, {\x*\x -2});
+					
+					% Desenhando a função f_2
+					%\draw[domain=-4:4, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-5:5, dashed, samples=100] plot (\x, {1});
+					\draw[domain=-5:5, dashed, samples=100] plot (\x, {-1});
+					
+					\draw[domain=-4:-3.755, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-3.76:-2.55, thick, samples=100, red] plot (\x, {1});
+					\draw[domain=-2.53:-2.18, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-2.19:-0.96, thick, samples=100, red] plot (\x, {-1});
+					\draw[domain=-0.96:-0.61, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-0.61:0.635, thick, samples=100, red] plot (\x, {1});
+					\draw[domain=0.61:0.96, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=0.96:2.19, thick, samples=100, red] plot (\x, {-1});
+					\draw[domain=2.185:2.53, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=2.53:3.76, thick, samples=100, red] plot (\x, {1});]
+					\draw[domain=3.76:4, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					% Adicione rótulos aos eixos
+					\draw[->] (\xmin-2,0) -- (\xmax+2,0) node[right] {$x$};
+					\draw[->] (0,\xmin-1) -- (0,\xmax+2.5) node[above] {$y$};
+					
+					% Rótulos
+					\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
+						\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+					}
+					
+					\foreach \i in {-2, -1, 1,2,3,4,5}{
+						\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
+					}
+				\end{tikzpicture}
+			}{
+				\Fonte{Elaborado pelo autor}		}   
+		\end{figure}	
+Note que o mesmo ocorre com o truncamento $g_2$ apresentado na figura \ref{fig:truncamentog_2} onde, desta vez, $g$ é limitada pelas ordenadas $2$ e $-2$.
+		\begin{figure}[h!]
+			\centering
+			\Caption{\label{fig:truncamentog_2} Gráfico do truncamento $g_2$ } 
+			\UECEfig{}{
+				\begin{tikzpicture}[scale=0.5]
+					\draw[thick] (-5.5, -4.5) rectangle (6, 7);
+					% Defina o intervalo x
+					\def\xmin{-3}
+					\def\xmax{3}
+					%				
+					%				% Desenhe a função f(x)
+					%				\draw[domain=\xmin+0.4:\xmax-0.4, smooth, samples=100, blue] plot (\x, {\x*\x -2});
+					
+					% Desenhando a função f_2
+					%\draw[domain=-4:4, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-5:5, dashed, samples=100] plot (\x, {2});
+					\draw[domain=-5:5, dashed, samples=100] plot (\x, {-2});
+					
+					\draw[domain=-4:-3.552, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-3.55:-2.71, thick, samples=100, red] plot (\x, {2});
+					\draw[domain=-2.72:-1.99, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-2:-1.15, thick, samples=100, red] plot (\x, {-2});
+					\draw[domain=-1.15:-0.42, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=-0.43:0.43, thick, samples=100, red] plot (\x, {2});
+					\draw[domain=0.42:1.16, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=1.15:2, thick, samples=100, red] plot (\x, {-2});
+					\draw[domain=1.99:2.72, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					\draw[domain=2.72:3.55, thick, samples=100, red] plot (\x, {2});]
+					\draw[domain=3.552:4, thick, samples=100, red] plot (\x, {3*cos(2*\x r)});
+					% Adicione rótulos aos eixos
+					\draw[->] (\xmin-2,0) -- (\xmax+2,0) node[right] {$x$};
+					\draw[->] (0,\xmin-1) -- (0,\xmax+2.5) node[above] {$y$};
+					
+					% Rótulos
+					\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
+						\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+					}
+					
+					\foreach \i in {-2, -1, 1,2,3,4,5}{
+						\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
+					}
+				\end{tikzpicture}
+			}{
+				\Fonte{Elaborado pelo autor}		}   
+		\end{figure}
+Assim, quanto maior o número $n$ do truncamento $g_n$ de uma função mensurável $g$, mais próximo $g_n$ está de $g$ uma vez que a \enquote{limitação} vai desaparecendo.
 
-\begin{proposition}
-	\label{prop:truncamento-mensurável}
-	Seja $A$ um número real maior que zero.
-	Se $f$ é uma função em $\menfus$, então $f_A$ é uma função $\cc$-mensurável.
-\end{proposition}
-\begin{prova}
-	De fato, se os elementos $x \in X$ são tais que $-A \leq f(x) \leq A$, então $f_A(x) = f(x)$.
-	Logo $f_A$ é $\cc$-mensurável, pois $f$ o é.
-	Caso esses elementos sejam tais que $f(x) > A$ ou $f(x) <A$ a função $f_A$ é constante.
-	Segue pela proposição \ref{ex:funcao-constante} que $f_A$ é um elemento de $\menfus$.
-\end{prova}
-
-Retornemos para a mensurabilidade do produto de duas funções com valores reais estendidos.
-Sejam $f,g \in \menfus$. 
+Com essas observações podemos voltar a analisar o produto de duas funções com valores reais estendidos.
+Considere $f,g \in \menfus$. 
 Tomemos duas sequências $(f_n)$ e $(g_m)$ tais que para cada $k \in \N$, $f_k$ e $g_k$ são truncamentos de $f$ e $g$, respectivamente.
 Ou seja, 
-	$$ g_m(x) =
+	\begin{minipage}{0.5\linewidth}
+	$$ g_k(x) =
+	\left\{\begin{array}{cc}
+		g(x), & \textrm{se\ } |g(x)| \leq k \\
+		k, & \textrm{se\ } g(x) > k \\
+		-k, & \textrm{se\ } g(x) < k 
+	\end{array}\right.	
+	$$	
+	\end{minipage}
+e
+	\begin{minipage}{0.5\linewidth}
+		$$ f_k(x) =
 		\left\{\begin{array}{cc}
-			g(x), & \textrm{se\ } |g(x)| \leq m \\
-			n, & \textrm{se\ } g(x) > m \\
-			-n, & \textrm{se\ } g(x) < m 
+			f(x), & \textrm{se\ } |f(x)| \leq k \\
+			k, & \textrm{se\ } f(x) > k \\
+			-k, & \textrm{se\ } f(x) < k 
 		\end{array}\right.	
-	$$
-e $f_n$ é definida de modo similar.
-Pela proposição \ref{prop:truncamento-mensurável}, $f_n$ e $g_m$ são $\cc$-mensuráveis para cada $n$ e $m$ números naturais.
-Assim, pela proposição \ref{prop:aritmetica-duas-funcoes} $f_ng_m$ também é $\cc$-mensurável para quaisquer $n, m \in \N$.
-Como o truncamento de uma função $f$ causa uma \enquote{limitação} na função $f$ se tomarmos $n$ grande suficiente o truncamento $f_n$ tende a se aproximar da função $f$.
+		$$	
+	\end{minipage}
+\\
+
+Para qualquer que seja o valor de $k \in \N$.
+Pela proposição \ref{prop:truncamento-mensurável}, $f_k$ e $g_p$ são $\cc$-mensuráveis para cada $k$ e $p$ números naturais.
+Assim, pela proposição \ref{prop:aritmetica-duas-funcoes}, $f_kg_p$ também é $\cc$-mensurável para quaisquer $k, p \in \N$.
+Como mencionado anteriormente, o truncamento de uma função $f$ causa uma \enquote{limitação} em sua imagem.
+Logo, se tomarmos $n$ grande o suficiente, o truncamento $f_n$ da função $f$ tende a se aproximar da própria função $f$.
+Desta forma, fixemos um $m \in \N$.
 Assim, para $x \in X$
 $$
-\lim_{n \to +\infty} \left(f_n(x)g_m(x)\right) = f(x)g_m(x) 
+\lim_{k \to +\infty} \left(f_k(x)g_m(x)\right) = f(x)g_m(x) 
 $$
 Segue pelo corolário \ref{cor:convergencia-de-uma-sequencia-mensuravel} que 
-$fg_m \in \menfus$. Com isso, temos que para $x \in X$
+$fg_m \in \menfus$. 
+Analogamente, para $x \in X$
 $$
 \lim_{m \to +\infty} \left(f(x)g_m(x)\right) 
 = f(x)g(x) = (fg)(x)
 $$
-Segue, pelo mesmo corolário, que $fg \in \menfus$.
-
-Nos definimos a mensurabilidade de funções de maneira bem peculiar aos números reais uma vez que será o enfoque de nosso trabalho.
-Entretanto, em alguns casos, é necessário trabalhar com mensurabilidade de uma forma mais abstrata.
+Concluímos, pelo mesmo corolário, que $fg \in \menfus$.
 Dito isso, encerraremos esta seção apresentando a definição generalizada de mensurabilidade de uma função.
 
 \begin{definition}
 	\label{def:mensurabilidade-geral}
 	Sejam $(X, \cc)$ e $(Y,\mathcal{F})$ dois espaços mensuráveis.
-	Dizemos que uma função $\phi:(X, \cc)\to (Y,\mathcal{F})$ é dita mensurável se o conjunto $f^{-1}(E) = \{x \in X; f(x)\in E\} \in \cc$ para todo conjunto $E \in \mathcal{F}$. 
+	Dizemos que uma função $\phi:X \to Y$ é dita mensurável se o conjunto $f^{-1}(E) = \{x \in X; f(x)\in E\} \in \cc$ para todo conjunto $E \in \mathcal{F}$. 
 \end{definition}
 
 Embora essa definição pareça ser totalmente distinta da definição \ref{def:mensurabilidade-funções-reais}, as duas são equivalentes no caso particular de $Y = \R$ e $\mathcal{F} = \borel$ conforme demonstrado a seguir.
@@ -360,16 +521,12 @@ Embora essa definição pareça ser totalmente distinta da definição \ref{def:
 %%%%%%%%%% Espaços de Medida
 
 \section{Espaços de Medida}
-
-Nas subseções anteriores, nós trabalhos com conjuntos e com funções mensuráveis, isto é, que podem ser medidas de alguma forma.
-Nesta subseção, nos preocuparemos em definir e trabalhar com funções de um espaço mensurável $(X, \mathcal{C})$ que daremos o nome de "medida".
-Tais funções são induzidas pela nossa concepção de comprimento, área, volume, etc.
-Dito isso, para trabalhamos com medidas primeiro retomaremos alguns resutlados sobre sequência de conjuntos.
+Antes de definimos uma medida, lembraremos de alguns conceitos e resultados da teoria de conjuntos que nos serão úteis adiante.
 
 \begin{definition}
 \label{def:sequência-crescente-decrescente-de-conjuntos}
-    Uma sequência de conjuntos $(A_n)$ é dita \textbf{crescente} se $A_n \subseteq A_{n+1}$ para todo $n \in \N$.
-    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência  de conjuntos é \textbf{decrescente}.
+    Uma sequência de conjuntos $(A_n)$ é dita \textbf{não-decrescente} se $A_n \subseteq A_{n+1}$ para todo $n \in \N$.
+    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência  de conjuntos é \textbf{não-crescente}.
 \end{definition}
 
 \begin{proposition}
@@ -378,61 +535,75 @@ Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 =
 \begin{enumerate}[label* = (\roman*)]
     \item $A_n$ é uma sequência disjunta;
         \footnote{Lembre que uma sequência disjunta significa que $A_i \cap A_j = \varnothing$ para todo $i \neq j$}
-    \item $E_n = \displaystyle \bigcup_{j = 1}^n A_n$;
+    \item $E_n = \displaystyle \bigcup_{j = 1}^n A_j$;
     \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$;
 \end{enumerate}
 \end{proposition}
 
 \begin{prova}
     Para provar $(a)$ precisamos mostrar que para todo $n,m \in \N$ se $m \neq n$, então $A_n \cap A_m = \varnothing$.
-    Lembre que $A - B = A\cap B^c$ para quaisquer conjuntos $A$ e $B$.
-    Desta forma, como a interseção entre conjuntos é associativa e comutativa temos que
+    Suponha, sem perder generalidade, que $n > m > 1$.
+    Assim, pela comutatividade e associatividade da relação de interseção e união de conjuntos segue que
     \begin{align*}
         A_m\cap A_n =& (E_m - E_{m -1}) \cap (E_n - E_{n -1})\\
         =& (E_m \cap E_{m -1}^c) \cap (E_n \cap E_{n -1}^c)\\
         =& (E_m \cap E_n) \cap ( E_{m -1}^c\cap E_{n -1}^c)\\
-        =& (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c\\
+        =& (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c
     \end{align*}
-    Com isso, se $m > n$, então $E_n \subseteq E_m$ e $E_{n-1} \subseteq E_{m-1}$, pois $(E_n)$ é uma sequência crescente.
-    Além disso, $E_m^c \subseteq E_{m -1}^c$ e $E_m \cap E_m^c = \varnothing$.
-    Segue que
+	Como $(E_n)$ é não-decrescente, segue que $E_m \subseteq E_n$ e $E_{m-1}\subseteq E_{n-1}$.
+    Deste modo, 
     $$
-    (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c =
-    (E_m) \cap E_{m -1}^c = 
-    \varnothing
+    (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c
+    =
+    E_m \cap E_{m-1}^c
+    = \varnothing.
     $$
-    Caso tenhamos $m < n$ então $E_m \subseteq E_n$ e $E_{m-1} \subseteq E_{n-1}$.
-    Segue analogamente que 
-    $$
-    (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c =
-    (E_n) \cap E_{n -1}^c = 
-    \varnothing
-    $$
-    Em todo caso, $A_m \cap A_n = \varnothing$ para todo $m \neq n$.
-
-    Provaremos o item $(b)$ por indução sobre $n$.
-    Como $(E_n)$ é crescente, temos que $E_1 \subseteq E_2$.
-    Com isso, temos que 
-        \begin{align*}
-            \bigcup_{j = 1}^2 A_j = A_1 \cup A_2= & E_1 \cup (E_2 - E_1)\\
-            = & E_1 \cup (E_2 \cap E_1^c)\\
-            = & (E_1 \cup E_2) \cap (E_1 \cup E_1^c)\\
-            = & (E_1 \cup E_2) \cap \mathcal{C}\\
-            = & (E_1 \cap E_2)
-            = E_2  
-        \end{align*}
-    Suponha que exista um $k \in \N$ tal que $\displaystyle \bigcup_{j = 1}^k A_j = E_k$.
-    Mostraremos que $\displaystyle \bigcup_{j = 1}^{k+1} A_j = E_{k +1}$ também é verdadeira.
-    Com efeito, 
-    \begin{align*}
-        \bigcup_{j = 1}^{k+1} A_j =& \left(\bigcup_{j = 1}^{k} A_j\right) \cup A_{k+1}\\
-        =& E_k \cup A_{k +1}\\
-        =& E_k \cup (E_k - E_{k+1})\\
-        =& E_k \cap E_{k+1}\\
-        =& E_{k+1}\\
-    \end{align*}
-    Segue, pelo método da indução finita, que $\displaystyle \bigcup_{j = 1}^n A_j = E_n\ \forall n \in \N$.
-
+	Pois, se $x$ não é elemento de $E_{m-1}$ e $E_{m-1} \subseteq E_m$, então $x$ não pode ser elemento de $E_m$.
+    
+    Provaremos agora o item $(b)$.
+ 	Se $m = 1$, então não há o que fazer.
+ 	Suponha $m > 1$.
+ 	Assim, 
+ 	\begin{align*}
+ 		\bigcup_{j = 1}^m A_j
+ 		=&
+ 		\bigcup_{j = 1}^m(E_j\cap E_{j-1}^c)\\
+ 		=&
+ 		E_1 \cup (E_2\cap E_{1}^c) \cup (E_3\cap E_{2}^c) \cup \cdots
+ 		\cup (E_m\cap E_{m-1}^c)\\
+ 		=&
+ 		\left[(E_1 \cup E_2)\cap (E_1\cup E_{1}^c)\right]
+ 		\cup
+ 		\left[(E_2 \cup E_3)\cap (E_2\cup E_{2}^c)\right]
+ 		\cup
+ 		\cdots
+ 		\cup 
+ 		\left[(E_{m-1} \cup E_m)\cap (E_{m-1}\cup E_{m-1}^c)\right]\\
+ 		=&
+ 		\left[(E_1 \cup E_2)\cap X\right]
+ 		\cup
+ 		\left[(E_2 \cup E_3)\cap X\right]
+ 		\cup
+ 		\cdots
+ 		\cup 
+ 		\left[(E_{m-1} \cup E_m)\cap X\right]\\
+ 		=&
+ 		(E_1 \cup E_2)
+ 		\cup
+ 		(E_2 \cup E_3)
+ 		\cup
+ 		\cdots
+ 		\cup 
+ 		(E_{m-1} \cup E_m)\\
+ 		=&
+ 		E_1 \cup E_2 \cup E_3\cup 
+ 		\cdots
+ 		\cup E_{m-1} \cup E_m\\
+ 		=& E_m.
+ 	\end{align*}
+	A última igualdade ocorre pelo fato de $(E_n)$ ser não-decrescente.
+	Assim, $E_1 \subseteq E_2 \subseteq \cdots \subseteq E_m$.
+	
     Por fim, $(c)$ é um resultado imediato, pois $ x \in \displaystyle \bigcup_{j = 1}^\infty E_j$ se, e somente se, 
     existe um $n_0 \in \N$ tal que $x \in E_{n_0}$. 
     Pelo item $(b)$, isso só ocorre se $x \in \displaystyle \bigcup_{j = 1}^{n_0}A_j$.
@@ -443,23 +614,23 @@ Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 =
 
 \begin{proposition}
 \label{prop:sequencia-decrescente-conjuntos-resultado-A_n}
-Seja $(F_n)$ uma sequência decrescente de conjuntos. 
-Se $(E_n)$ é tal que $E_n = F_1 - F_n$ para todo $n \in \N$, então $(E_n)$ é crescente e 
+Seja $(F_n)$ uma sequência não-crescente de conjuntos. 
+Se $(E_n)$ é tal que $E_n = F_1 - F_n$ para todo $n \in \N$, então $(E_n)$ é não-decrescente e 
 $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$.
 \end{proposition}
 
 \begin{prova}
-    Queremos mostrar que $(E_n)$ é crescente, isto é, $E_n \subseteq E_{n+1}$ para todo $n \in \N$.
+    Queremos mostrar que $(E_n)$ é não-decrescente, isto é, $E_n \subseteq E_{n+1}$ para todo $n \in \N$.
     Tome $x \in E_n$. Logo, $x \in F_1$ e $x \notin F_n$, por construção.
-    Como $(F_n)$ é decrescente, $F_{n} \supseteq F_{n+1}$. 
+    Como $(F_n)$ é não-crescente, ocorre $F_{n} \supseteq F_{n+1}$. 
     Assim, $x \notin F_n \Rightarrow x \notin F_{n+1}$.
     Com isso, $x \in F_1$ e $x \notin F_{n+1}$.
     Segue que $x \in E_{n+1}$ e que $E_n \subseteq E_{n+1}$ para qualquer $n \in \N$ como queríamos.
-    Além disso, um elemento $a \in \displaystyle \bigcup_{n \in \N} E_n$ se, e somente se,
-    $a \in \displaystyle \bigcup_{n \in \N} (F_1 - F_n)$.
-    Isso é equivalente a dizer que existe um $n_0 \in \N$ tal que $a \in F_1 - F_{n_0}$.
-    Correspondentemente, $ a \in F_1$ e existe um $n_0 \in \N$ tal que $x \notin F_{n_0}$.
-    Isso só ocorre se $x \in F_1$, mas $x \notin \displaystyle \bigcup_{n \in \N} F_n$.
+    Além disso, um elemento $y \in \displaystyle \bigcup_{n \in \N} E_n$ se, e somente se,
+    $y \in \displaystyle \bigcup_{n \in \N} (F_1 - F_n)$.
+    Isso é equivalente a dizer que existe um $n_0 \in \N$ tal que $y \in F_1 - F_{n_0}$.
+    Correspondentemente, $ y \in F_1$ e existe um $n_0 \in \N$ tal que $y \notin F_{n_0}$.
+    Isso só ocorre se $y \in F_1$, mas $y \notin \displaystyle \bigcup_{n \in \N} F_n$.
     Portanto, $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$.
 \end{prova}
 
@@ -552,7 +723,6 @@ Além disso, uma função $\cc$-mensurável pela definição \ref{def:mensurabil
     Seja $(X, \mathcal{C})$ um espaço mensurável onde $\cc = \mathcal{P}(X)$ e $p$ um elemento de $X$.
     Defina $\mu: \mathcal{C} \to \xreta$  como sendo
 
-
 $$\mu(A) = \left\{\begin{array}{cc}
 0, & \textrm{\ se \ } p \notin A \\
 1, & \textrm{\ se \ } p \in A 
@@ -562,7 +732,6 @@ $$\mu(A) = \left\{\begin{array}{cc}
 Então $\mu$ é uma medida.
 Verdadeiramente, observe que $p \notin \varnothing$, ou seja, $\mu(\varnothing) = 0$.
 Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construção de $\mu$.
-
 
 
 \end{example}
