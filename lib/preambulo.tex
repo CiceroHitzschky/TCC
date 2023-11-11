@@ -143,8 +143,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newenvironment{prova}
-{\par\smallskip\noindent\textit{Demonstração.}\newline \indent}
-{{\par\medskip\hfill$\square$\par}}
+{\vspace{-0.2cm}\par\smallskip\noindent\textit{Demonstração.}\newline \indent}
+{\vspace{-0.2cm}{\par\medskip\hfill$\square$\par}}
 
 
 
@@ -167,4 +167,11 @@
     \par\medskip % Espaçamento
 }
 
-
+\newtheorem{myenvinner}{}[section]
+\newenvironment{env}[1]{%
+  \vspace{-0.3cm}
+  \renewcommand\themyenvinner{{#1} \thesection.\arabic{myenvinner}}%
+  \begin{myenvinner}%
+  \normalfont
+}{\vspace{-0.2cm}\end{myenvinner}%
+}

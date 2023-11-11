@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  7 NOV 2023 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 NOV 2023 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1848,6 +1848,7 @@ Package csquotes Info: ... configuration file loaded successfully.
 File: csquotes.cfg 
 ))
 \c@contador=\count498
+\c@myenvinner=\count499
 )
 \documento@idxfile=\write9
 \openout9 = `documento.idx'.
@@ -1898,7 +1899,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count499
+\c@section@level=\count500
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1910,16 +1911,16 @@ LaTeX Info: Redefining \nameref on input line 167.
 \myptabboxwidth=\skip331
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count500
+\scratchcounter=\count501
 \scratchdimen=\dimen373
 \scratchbox=\box163
-\nofMPsegments=\count501
-\nofMParguments=\count502
+\nofMPsegments=\count502
+\nofMParguments=\count503
 \everyMPshowfont=\toks70
-\MPscratchCnt=\count503
+\MPscratchCnt=\count504
 \MPscratchDim=\dimen374
-\MPnumerator=\count504
-\makeMPintoPDFobject=\count505
+\MPnumerator=\count505
+\makeMPintoPDFobject=\count506
 \everyMPtoPDFconversion=\toks71
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1936,7 +1937,7 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into
 your preamble.
  on input line 167.
 
-\c@lstlisting=\count506
+\c@lstlisting=\count507
 LaTeX Info: Redefining \microtypecontext on input line 167.
 Package microtype Info: Applying patch `item' on input line 167.
 Package microtype Info: Applying patch `toc' on input line 167.
@@ -2096,11 +2097,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 9.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 
-Overfull \hbox (11.39914pt too wide) in paragraph at lines 27--32
+Overfull \hbox (11.39914pt too wide) in paragraph at lines 28--33
 []\T1/ptm/m/n/12 (-20) Com isso, um par or-de-nado $\OT1/ztmcm/m/n/12 (\OML/ztm
 cm/m/it/12 X; \OMS/ztmcm/m/n/12 C\OT1/ztmcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) cons
 -ti-tuÌdo de um con-junto $\OML/ztmcm/m/it/12 X$ \T1/ptm/m/n/12 (-20) e uma $\O
@@ -2110,116 +2111,21 @@ ML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -·lgebrasobre
 [8
 
 ] [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--280
-
- []
-
-[12]pdfTeX warning (ext4): destination with the same identifier (name{contador.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.332 \begin{resultado}{Defini√ß√£o}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{contador.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.339 ...n{resultado}[Fun√ß√£o Constante]{Exemplo}
-                                                   [13]pdfTeX warning (ext4): d
-estination with the same identifier (name{contador.1}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.354 ...ltado}[Fun√ß√£o Caracter√≠stica]{Exemplo}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{contador.1}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.373 \begin{resultado}{Exemplo}
-                                pdfTeX warning (ext4): destination with the sam
-e identifier (name{contador.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.379 \begin{resultado}{Proposi√ß√£o}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{contador.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.388 	\begin{resultado}{Teorema}
-                                 [Estrutura de abertos da reta] [14]pdfTeX warn
-ing (ext4): destination with the same identifier (name{contador.1}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.402 \begin{resultado}{Teorema}
-                                 [15]pdfTeX warning (ext4): destination with th
-e same identifier (name{contador.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.466 \begin{resultado}{Proposi√ß√£o}
-                                      [16]pdfTeX warning (ext4): destination wi
-th the same identifier (name{contador.1}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.519 \begin{resultado}{Lema}
-                              [17]pdfTeX warning (ext4): destination with the s
-ame identifier (name{contador.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.527 \begin{resultado}{Proposi√ß√£o}
-                                      [18]pdfTeX warning (ext4): destination wi
-th the same identifier (name{contador.1}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.602 \begin{resultado}{Defini√ß√£o}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{contador.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.611 \begin{resultado}{Exemplo}
-                                
-Underfull \hbox (badness 10000) in paragraph at lines 616--620
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[19]
-
-LaTeX Warning: Reference `lem:decomposicao-da-funcao-em-partes-positiva-negativ
-a' on page 20 undefined on input line 680.
-
-pdfTeX warning (ext4): destination with the same identifier (name{contador.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.691     \begin{resultado}{Teorema}
-                                    
-
-LaTeX Warning: Reference `lem:decomposicao-da-funcao-em-partes-positiva-negativ
-a' on page 20 undefined on input line 698.
-
-[20]) (./elementos-textuais/teoria-medida.tex [21]
+[12] [13] [14] [15] [16] [17] [18] [19])
+(./elementos-textuais/teoria-medida.tex [20]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-4.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [22
+) [21
 
-] [23] [24]
-[25] [26]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+] [22] [23]
+[24] [25]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
@@ -2228,34 +2134,39 @@ Missing character: There is no ] in font nullfont!
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (9.78143pt too wide) in paragraph at lines 449--473
+Overfull \hbox (9.78143pt too wide) in paragraph at lines 463--488
 []$ \T1/ptm/m/n/12 (-20) e $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--473
+Underfull \hbox (badness 10000) in paragraph at lines 463--488
 
  []
 
-[27] [28] [29]
-Overfull \hbox (6.02373pt too wide) detected at line 603
+[26]
+Overfull \hbox (0.43129pt too wide) in paragraph at lines 518--520
+[]\T1/ptm/m/n/12 (-20) Seja $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 X; []\OT1/zt
+mcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) um es-paÁo men-su-r·-vel e $\OML/ztmcm/m/it/
+12 f$ \T1/ptm/m/n/12 (-20) uma fun-Á„o. En-t„o $\OML/ztmcm/m/it/12 f$ \T1/ptm/m
+/n/12 (-20) È $[]$-mensur·vel
+ []
+
+[27] [28]
+Overfull \hbox (6.02373pt too wide) detected at line 618
 []
  []
 
-[30] [31] [32] [33]
+[29] [30] [31]
 
-LaTeX Warning: Reference `teo:operacoes-com-medidas-1' on page 34 undefined on 
-input line 789.
+LaTeX Warning: Reference `teo:operacoes-com-medidas-1' on page 32 undefined on 
+input line 809.
 
-[34]
+[32]
 
-LaTeX Warning: Reference `teo:operacoes-com-medidas-1' on page 35 undefined on 
-input line 838.
+LaTeX Warning: Reference `teo:operacoes-com-medidas-1' on page 33 undefined on 
+input line 858.
 
-[35]) (./elementos-textuais/teoria-integracao.tex [36] [37
+[33]) (./elementos-textuais/teoria-integracao.tex [34] [35
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
@@ -2268,23 +2179,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38] [39]
+[36] [37]
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
-[40]
+[38]
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 503.
 
-[41] [42] [43] [44]
+[39] [40] [41] [42]
 Underfull \hbox (badness 10000) in paragraph at lines 680--688
 
  []
 
-[45]
+[43]
 Overfull \hbox (22.1557pt too wide) in paragraph at lines 818--826
 \OT1/ztmcm/m/n/12 [2\OML/ztmcm/m/it/12 :\OT1/ztmcm/m/n/12 5\OML/ztmcm/m/it/12 ;
  \OT1/ztmcm/m/n/12 3)\OML/ztmcm/m/it/12 ; E[] \OT1/ztmcm/m/n/12 = [3\OML/ztmcm/
@@ -2309,7 +2220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 818--826
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46] [47] [48] [49] [50] [51]
+[44] [45] [46] [47] [48] [49]
 Overfull \hbox (2.0989pt too wide) in paragraph at lines 1237--1240
 []\T1/ptm/m/it/12 (-20) Se $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 f[]\OT1/ztmcm
 /m/n/12 ) \OMS/ztmcm/m/n/12 ^^Z \OML/ztmcm/m/it/12 M[]\OT1/ztmcm/m/n/12 (\OML/z
@@ -2319,10 +2230,10 @@ mcm/m/n/12 ([] [] \OML/ztmcm/m/it/12 f[]\OT1/ztmcm/m/n/12 )\OML/ztmcm/m/it/12 d
 -20) . 
  []
 
-[52] [53] [54]
+[50] [51] [52]
 
 LaTeX Warning: Reference `lem:decomposicao-da-funcao-em-partes-positiva-negativ
-a' on page 55 undefined on input line 1388.
+a' on page 53 undefined on input line 1388.
 
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
@@ -2352,10 +2263,10 @@ LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 14
 24.
 
 Missing character: There is no ® in font zptmcm7t!
-[55] [56] [57]) (./elementos-textuais/considera√ß√µes-finais.tex [58] [59
+[53] [54] [55]) (./elementos-textuais/considera√ß√µes-finais.tex [56] [57
 
 ])
-(./documento.bbl [60]
+(./documento.bbl [58]
 bibitemlist
 )
 
@@ -2363,7 +2274,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[61
+[59
 
 ]
 \tf@lof=\write10
@@ -2378,13 +2289,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58393 strings out of 478287
- 1247888 string characters out of 5849289
- 1894836 words of memory out of 5000000
- 74995 multiletter control sequences out of 15000+600000
- 576981 words of font info for 416 fonts, out of 8000000 for 9000
+ 58357 strings out of 478287
+ 1247806 string characters out of 5849289
+ 1890538 words of memory out of 5000000
+ 75003 multiletter control sequences out of 15000+600000
+ 570977 words of font info for 379 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,14n,120p,1231b,961s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,14n,120p,1231b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -2395,13 +2306,12 @@ ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on documento.pdf (62 pages, 845637 bytes).
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on documento.pdf (60 pages, 836758 bytes).
 PDF statistics:
- 757 PDF objects out of 1000 (max. 8388607)
- 658 compressed objects within 7 object streams
- 228 named destinations out of 1000 (max. 500000)
- 99978 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 671 compressed objects within 7 object streams
+ 240 named destinations out of 1000 (max. 500000)
+ 95882 words of extra memory for PDF output out of 106986 (max. 10000000)
 
