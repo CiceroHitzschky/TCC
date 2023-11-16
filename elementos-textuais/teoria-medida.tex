@@ -651,6 +651,21 @@ $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^
     Portanto, $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$.
 \end{prova}
 
+\begin{env}{Proposição}
+	\label{prop: duas partições}
+	Se $\displaystyle \bigcup_{j = 1}^n E_j$ e $\displaystyle \bigcup_{k = 1}^m F_k$ são duas partições distintas de um conjunto $X$, então
+	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^n (E_j \cap F_k)$.
+\end{env}
+\begin{prova}
+	Fixemos um $j_0 \in I_n$.
+	Assim, temos que $x \in \bigcup_{k = 1} (E_{j_0} \cap F_k)$ implica que existe um $k_0 \in I_m$ tal que  $x \in E_{j_0}\cap F_{k_0}$.
+	Logo, $x \in E_{j_0}$ e $x \in F_{k_0}$, isto é, $x \in E_{j_0}$.
+	Reciprocamente, se $y \in X$, então para algum $j_1 \in I_n$, $y \in E_{j_1}$, pois $\{E_j\}$ formam uma partição de $X$.
+	Como $\{F_k\}$ também é uma partição de $X$, deve existir um $k_1 \in I_m$ tal que $x \in F_{k_1}$.
+	Assim, $x \in E_{j_1} \cap F_{k_1}$. 
+	Desta forma, existe um $k_1 \in I_m$ tal que $x \in \displaystyle \bigcup_{k = 1} (E_{j_1} \cap F_{k_1})$ como queríamos.	 
+\end{prova}
+
 \begin{env}{Definição}
 \label{def:medida}
     Uma medida é uma função $\mu: (X, \mathcal{C}) \to \xreta$ tal que satisfaz as seguintes condições:
@@ -674,7 +689,6 @@ Quando temos que $\mu(E) < +\infty$ para qualquer que seja o conjunto $E \in \ma
 
 
 % Exemplos de medida
-
 \begin{env}{Exemplo}
     Seja $X$ um conjunto e $\mathcal{C}$ a \sigal formada por todos os subconjunto de $X$.    
     Defina $\mu_1, \mu_2:\mathcal{C} \to \xreta$ pondo $\mu_1(A) = 0$ para qualquer  $A \in \mathcal{C}$ e 
@@ -735,7 +749,7 @@ $$
 $$
 Portanto a função probabilidade é uma medida.
 Neste caso, o espaço de medida $(\Omega, \cc, \pp)$ é chamado de espaço de probabilidades.
-Além disso, uma função $\cc$-mensurável pela definição \ref{def:mensurabilidade-geral} em um espaço de probabilidades é chamada de variável aleatória.
+Além disso, uma função $\cc$-mensurável pela \ref{def:mensurabilidade-geral} em um espaço de probabilidades é chamada de variável aleatória.
 
 % Unidade de Medida Concentrada em p
 \begin{env}{Exemplo}[Unidade de Medida Concentrada em $p$]
@@ -756,6 +770,27 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 
 \end{env}
 
+% A função característica é uma medida
+\begin{env}{Exemplo}
+	\label{ex: função característica é uma medida}
+	Seja $\cc$ uma \sigal e $E \subset \cc$.
+	A função característica $\chi_{E}: \cc \to \R$ é uma medida sobre $\cc$.
+	De fato, $\chi_{\varnothing} = 0$, pois não há elementos em $\varnothing$.
+	Pela definição de função característica, temos que $\chi_E(x) \neq 0$ para qualquer que seja $E \in \cc$.
+	Por fim, Se $(E_n)$ é uma sequência disjunta de elementos de $\cc$, sempre temos $\chi_{\bigcap_{n \in \N}E_n} = 0$.
+	Caso $\chi_{\bigcup_{n \in \N}E_n}(x) = 0$, então $x \notin \bigcup_{n \in \N}E_n$. 
+	Logo, $x \notin E_n,\ \forall n \in \N$.
+	Logo, $\chi_{E_n}(x) = 0$ para qualquer que seja $n \in \N$, 
+	Com isso, $\sum_{n \in \N} \chi_{E_n}(x) = 0 = \chi_{\bigcup_{n \in \N}E_n}(x)$.
+	
+	Caso ocorra que  $\chi_{\bigcup_{n \in \N}E_n}(x) = 1$, então existe um $n_0 \in \N$ tal que $ x \in E_{n_0}$.
+	Como a sequência de conjuntos é disjunta, o $n_0$ é único.
+	Logo, $x \notin E_p$ para qualquer $p \neq n_0$, ou seja, $\chi_{E_p}(x) = 0, \ \forall p \neq n_0$.
+	Com isso, $\sum_{p \neq n_0} \chi_{E_p}(x) + \chi_{E_{n_0}}(x) = 0 + 1 =  \chi_{\bigcup_{n \in \N}E_n}(x)$.
+	Em todo caso, $\chi_{\bigcup_{n \in \N}E_n}(x) = \sum_{n \in \N} \chi_{E_n}(x)$. 
+	Portanto, $\chi_E$ é uma medida.
+\end{env}
+
 % Medida de contagem
 
 \begin{comment}
@@ -765,9 +800,30 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	\end{env}
 \end{comment}
 
+
+
+\begin{env}{Proposição}
+	\label{prop: igualdade da caracteristica como medida}
+	Se $\displaystyle \bigcup_{j \in I_n} E_j$ e $\displaystyle\bigcup_{k \in I_m} F_k$ são duas partições de um conjunto $X$, então 
+	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
+\end{env}
+
+\begin{prova}
+	Dado $j \in I_n$, pela \ref{prop: duas partições}, temos que
+	$E_j = \displaystyle \bigcup_{k = 1} (E_j\cap F_k)$.
+	Como $\{F_k\}$ é uma partição, para $k,l \in I_m$, temos
+	$(E_j\cap F_p) \cap (E_j\cap F_l) = \varnothing$.
+	Como $\chi_E$ é uma medida para todo $E \in \cc$, segue que
+	para todo $x$,
+	$$
+	\chi_{E_j}(x)
+	=
+	\chi_{\bigcup_{k = 1} (E_j\cap F_k)}(x)
+	=
+	\sum_{k = 1}^{m}\chi_{E_j\cap F_k}(x)
+	$$
+\end{prova}
 % Teorema
-
-
 \begin{env}{Teorema}
 \label{teo:medida-diferença}
 	Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
@@ -776,7 +832,7 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 \end{env}
 
 \begin{prova}
-	Suponha que $A \subset B$, então $B = A \cup (B - A)$ e $A \cap (B - A) = \varnothing$. Segue pela propriedade $(ii)$ da definição \ref{def:medida} que 
+	Suponha que $A \subset B$, então $B = A \cup (B - A)$ e $A \cap (B - A) = \varnothing$. Segue pela propriedade $(ii)$ da \ref{def:medida} que 
 	$$\mu(B) = \mu(A) + \mu(B-A)$$
 	Lembre que $B-A = B\cap A^c$ e $A \in \mathcal{C} \Rightarrow A^c \in \mathcal{C}$.
 	Além disso, como $B \in \mathcal{C}$ temos que $ B\cap A^c$ consequentemente $B - A \in \mathcal{C}$.
@@ -800,13 +856,13 @@ Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displ
     Ora, se $\mu(E_n) = +\infty$, para algum $n \in \N$, ambos os lados da equação acima são $+\infty$.
     Desta forma, vamos supor que $\mu(E_n) < +\infty$ para todo $n \in \N$.
     Com isso, vamos construir uma sequência $(A_n)$ pondo $A_1 = E_1$ e $A_n = E_n - E_{n-1}$ para qualquer $n>1$.
-    Então pela proposição \ref{prop:sequencia-crescente-conjuntos-resultado-A_n}, $(A_n)$ é uma sequência disjunta, temos $E_n = \bigcup_{j = 1}^n A_j$ e $\bigcup_{j = 1}^\infty E_j = \bigcup_{j = 1}^\infty A_j$.
+    Então pela \ref{prop:sequencia-crescente-conjuntos-resultado-A_n}, $(A_n)$ é uma sequência disjunta, temos $E_n = \bigcup_{j = 1}^n A_j$ e $\bigcup_{j = 1}^\infty E_j = \bigcup_{j = 1}^\infty A_j$.
     Como $\mu$ contavelmente aditiva, 
     $$\mu\left(\bigcup_{n = 1}^\infty E_n\right)
     =\mu\left(\bigcup_{n = 1}^\infty A_n\right)
     = \sum_{n = 1}^\infty \mu(A_n)
     = \lim_{m \to +\infty}\sum_{n = 1}^m \mu(A_n)$$
-    Pelo teorema \ref{teo:operacoes-com-medidas-1} vemos que $\mu(A_n) = \mu(E_n) - \mu(E_{n - 1 })$ para $n > 1$.
+    Pelo  \ref{teo:medida-diferença} vemos que $\mu(A_n) = \mu(E_n) - \mu(E_{n - 1 })$, para $n > 1$.
     Assim, 
     
     \begin{align*}
@@ -850,12 +906,12 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
 \end{env} 
 \begin{prova}
     Defina uma sequência $(T_n)$ de elementos de $\mathcal{C}$ pondo $T_n = B_1 - B_n$ para qualquer que seja $n \in \N$.
-    Pela proposição \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n}, $(T_n)$ é crescente.
-    Assim, aplicando o a proposição \ref{prop:limite-sequencia-crescente} temos que 
+    Pela \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n}, $(T_n)$ é crescente.
+    Assim, aplicando o a \ref{prop:limite-sequencia-crescente} temos que 
     $$
     \mu\left(\bigcap_{n \in \N} T_n\right) = \lim_{n \to +\infty} \mu(T_n)
     $$
-    Usando o teorema \ref{teo:operacoes-com-medidas-1}, obtemos
+    Usando o teorema \ref{teo:medida-diferença}, obtemos
     $$
     \lim_{n \to +\infty} \mu(T_n) = \lim_{n \to +\infty} [\mu(B_1) - \mu(B_n)] = \mu(B_1) - \lim_{n \to +\infty} \mu(B_n)
     $$
@@ -875,10 +931,10 @@ Da mesma forma, existe uma medida que é indispensável para o mesmo contexto.
 Essa, por sua vez, não será demonstrada, mas adotada como axioma à titulo de simplificação do trabalho.
 Assim, 
 
-\begin{axiom}
-	\label{ax: medida de lebesgue}
-	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos.
-\end{axiom}
+\begin{env}{Teorema}
+	\label{teo: medida de lebesgue}
+	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos(Bartle, 1995, p.104).
+\end{env}
 
 Em termos práticos, se $E$ é um intervalo real não vazio $(a,b)$, então $\lambda(E) = b - a$.
 Esta medida recebe o nome de Medida de Lebesgue. 
@@ -896,15 +952,17 @@ Formalmente,
 	\label{prop:medida-nula-subconjunto}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
 	Se $\mu(X) = 0$ e $Y \subset X$, então $\mu(Y) = 0$.
+	\vspace{-1cm}
 \end{env}
 \begin{prova}
 	Note que $(Y \cap X) \subset X$, pois $ Y \cap X = Y$.
-	Assim, pelo teorema \ref{teo:medida-diferença}, temos que
-	$$
+	Assim, pelo \ref{teo:medida-diferença}, temos que
+	$
 	\mu(Y) = \mu(X \cap Y) \leq \mu(X) = 0
-	$$
+	$.
 	Logo, $\mu(Y) \leq 0$.
 	Segue que $\mu(Y) = 0$, pois a medida é uma função não negativa.
+	\vspace{-0.4cm}
 \end{prova}
 
 \begin{env}{Proposição}
@@ -918,7 +976,7 @@ Formalmente,
 	\mu(Y)
 	=
 	\mu\left(\bigcup_{n \in \N}E_n\right)
-	\leq
+	=
 	\sum_{n = 1}^\infty \mu(E_n)
 	= 0.
 	$$
@@ -929,16 +987,17 @@ Formalmente,
 Como exemplo, temos por definição, que $\varnothing$ tem medida nula, pois para qualquer medida $\mu$, $\mu(\varnothing) = 0$.
 Mostraremos a seguir um exemplo menos trivial:
 
-\begin{env}{Exemplo}[Medida de Conjuntos Discretos]
+\begin{env}{Exemplo}
 	Se $X \subset \R$ é um conjunto discreto, então tem medida nula com respeito à medida $\lambda$ de Lebesgue.
+	De fato, se $X$ é discreto, então é formado por pontos isolados.
+	Assim, se $a \in X$, então pode ser representado degeneradamente, por 
+	$\{a\} = [a,a]$.
+	Logo, $\lambda(\{a\}) = a - a = 0$.
+	Assim, o conjunto $X$ é dado pela reunião enumerável de seus pontos e todos têm medida nula. 
+	Segue pela \ref{prop:medida-nula-união} que $X$ tem medida nula.
 \end{env}
 
-De fato, se $X$ é discreto, então é formado por pontos.
-Assim, se $a \in X$, então pode ser representado degeneradamente, por 
-$\{a\} = [a,a]$.
-Logo, $\lambda(\{a\}) = a - a = 0$.
-Assim, o conjunto $X$ é dado pela reunião enumerável de seus pontos e todos têm medida nula. 
-Segue pela proposição \ref{prop:medida-nula-união} que $X$ tem medida nula.
+
  
 % Espaços de Medida
 

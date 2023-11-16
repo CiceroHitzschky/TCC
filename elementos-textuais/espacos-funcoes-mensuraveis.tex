@@ -368,6 +368,40 @@ Para verificar se $X_A$ é $\cc$-mensurável precisamos, novamente, analisar os 
 		\item  se $\alpha < 0$, podemos notar que o conjunto $\{x \in X; \chi_A(x)>  \alpha\} = X$, pois para qualquer que seja $x \in X$, os valores $\chi_A(x) \geq 0$.
 	\end{enumerate}
 Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um elemento de $\mathcal{C}$, pois $\varnothing, X$ e $A$ são elementos de $\mathcal{C}$. Portanto, a função característica $\chi_A(x)$ é $\cc$-mensurável.
+
+\begin{env}{Proposição}
+	\label{prop: propriedades de função característica}
+	Dado um conjunto $X$. 
+	Sejam $A, B \subset X$, então $\chi_{A\cup B} = \chi_A + \chi_B - \chi_{A \cap B}$.
+	Em particular, se $A \cap B = \varnothing$, então $\chi_{A\cup B} = \chi_A + \chi_B$.
+\end{env}
+\begin{prova}
+	Vamos dividir a demonstração em casos:
+	\begin{enumerate}[label*=(\Roman*)]
+		\item Se $\chi_{A\cup B}(x) = 0$, então $ x \notin A\cup B$. 
+		Logo,  $x \notin A$ e $x \notin B$ acarretando que $x \notin A\cap B$.
+		Dessa forma, $\chi_A = \chi_B =\chi_{A\cap B} = 0$.
+		%
+		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 0$, então $x \in (A\cup Y)$ e $x \notin A\cap Y$.
+		Logo, $x \in (A\cup B) - (A\cap B)$.
+		Como $(A\cup B) - (A\cap B) = (A- B) \cup (B - A)$, concluímos que $x (A - B) \cup (B - A)$, ou seja, $x \in A - B$ ou $x \in B - A$.
+		Se $x \in A - B$, então $\chi_{A}(x) = 1$ e $\chi_B(x) = 0$.
+		Logo, 	$\chi_{A\cup B}(x) = 1 = 1 + 0 + 0 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
+		Se $x \in B - A$, então $\chi_B(x) = 1$ e $\chi_A(x) = 0$ acarretando que 
+		$\chi_{A\cup B}(x) = 1 = 1 + 0 + 0 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
+		%
+		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 1$, então
+		$x \in A \cup B$ e $x \in A \cap B$, isto é, $x \in A$ e $x \in B$.
+		Com isso, $\chi_A(x) = \chi_B(x) = 1$.
+		Logo, $\chi_{A\cup B} = 1 = 1 + 1 - 1 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
+		
+		Segue que em todo caso, temos $\chi_{A \cup B} = \chi_A + \chi_B - \chi_{A\cap B}$ como desejávamos.
+	\end{enumerate}
+	
+	Caso, tenhamos $A \cap B = \varnothing$, então $\chi_{A\cap B}(x) = 0$. 
+	Segue pela primeira parte dessa demonstração que $\chi_{A \cup B} = \chi_A + \chi_B$.
+	
+\end{prova}
 \begin{env}{Exemplo}
 \label{ex:função-continua-mensuravel}
     Considere o espaço mensurável $(\R, \borel)$. Toda função $f: \R \to \R$ contínua é Borel mensurável.
