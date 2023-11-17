@@ -15,9 +15,9 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Teoria da Integração}}{37}{chapter.4}%
 \contentsline {section}{\numberline {4.1}A Integral de Funções Simples}{37}{section.4.1}%
-\contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{43}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Funções Integráveis}{52}{section.4.3}%
+\contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Funções Integráveis}{53}{section.4.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{57}{chapter.5}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{59}{section*.19}%
+\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{59}{section*.20}%

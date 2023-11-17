@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 NOV 2023 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  16 NOV 2023 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2167,80 +2167,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[38]
+[38] [39]
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 429.
+(amsmath)                 on input line 469.
 
-[39] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 606--614
+[40] [41]
 
- []
-
-[42] [43]
-Overfull \hbox (22.1557pt too wide) in paragraph at lines 747--755
-\OT1/ztmcm/m/n/12 [2\OML/ztmcm/m/it/12 :\OT1/ztmcm/m/n/12 5\OML/ztmcm/m/it/12 ;
- \OT1/ztmcm/m/n/12 3)\OML/ztmcm/m/it/12 ; E[] \OT1/ztmcm/m/n/12 = [3\OML/ztmcm/
-m/it/12 ; \OT1/ztmcm/m/n/12 2\OML/ztmcm/m/it/12 :\OT1/ztmcm/m/n/12 5)\OML/ztmcm
-/m/it/12 ; E[] \OT1/ztmcm/m/n/12 = [3\OML/ztmcm/m/it/12 :\OT1/ztmcm/m/n/12 5\OM
-L/ztmcm/m/it/12 ; \OT1/ztmcm/m/n/12 4]$ \T1/ptm/m/n/12 (-20) e $\OML/ztmcm/m/it
-/12 a[] \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (0)\OML/ztmcm
-/m/it/12 ; a[] \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (0\OML
-/ztmcm/m/it/12 :\OT1/ztmcm/m/n/12 5)\OML/ztmcm/m/it/12 ; a[] \OT1/ztmcm/m/n/12 
-= \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (1)\OML/ztmcm/m/it/12 ; a[] \OT1/ztmcm/
-m/n/12 = \OML/ztmcm/m/it/12 f\OT1/ztmcm/m/n/12 (1\OML/ztmcm/m/it/12 :\OT1/ztmcm
-/m/n/12 5)\OML/ztmcm/m/it/12 ; a[] \OT1/ztmcm/m/n/12 = \OML/ztmcm/m/it/12 f\OT1
-/ztmcm/m/n/12 (2\OML/ztmcm/m/it/12 :\OT1/ztmcm/m/n/12 5)\OML/ztmcm/m/it/12 ; a[
-] \OT1/ztmcm/m/n/12 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 747--755
-
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45] [46] [47] [48] [49] [50] [51] [52]
+[42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
 
 LaTeX Warning: Reference `lem:decomposicao-da-funcao-em-partes-positiva-negativ
-a' on page 53 undefined on input line 1319.
+a' on page 53 undefined on input line 1514.
 
+[53]
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 1355.
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+            Default family used instead on input line 1550.
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
-55.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+50.
 
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
-55.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+50.
 
 Missing character: There is no � in font zptmcm7t!
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 1355.
+            Default family used instead on input line 1550.
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
-55.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+50.
 
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
-55.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+50.
 
 Missing character: There is no � in font zptmcm7t!
-[53] [54] [55]) (./elementos-textuais/considerações-finais.tex [56] [57
+[54] [55]) (./elementos-textuais/considerações-finais.tex [56] [57
 
 ])
 (./documento.bbl [58]
@@ -2266,13 +2243,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58083 strings out of 478287
- 1243156 string characters out of 5849289
- 1890321 words of memory out of 5000000
- 74747 multiletter control sequences out of 15000+600000
+ 58292 strings out of 478287
+ 1247455 string characters out of 5849289
+ 1890658 words of memory out of 5000000
+ 74953 multiletter control sequences out of 15000+600000
  567192 words of font info for 368 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,14n,120p,1231b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,14n,120p,1231b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -2285,10 +2262,10 @@ blic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (60 pages, 835877 bytes).
+Output written on documento.pdf (60 pages, 841989 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 673 compressed objects within 7 object streams
- 240 named destinations out of 1000 (max. 500000)
+ 785 PDF objects out of 1000 (max. 8388607)
+ 690 compressed objects within 7 object streams
+ 243 named destinations out of 1000 (max. 500000)
  91786 words of extra memory for PDF output out of 106986 (max. 10000000)
 

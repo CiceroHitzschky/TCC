@@ -406,11 +406,51 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     $$\int c \varphi\ d\mu = \dsum_{j = 1}^n c a_j\mu(E_j) = c \dsum_{j = 1}^n a_j\mu(E_j) = c\int \varphi \ d\mu.$$
     Com isso, concluímos que $\displaystyle \int c \varphi\ d\mu = c\int \varphi \ d\mu.$ 
     
-    Dadas as representações padrão de $\varphi$ e $\psi$, vemos que $\varphi +\psi$ tem a representação 
+    Dadas as representações padrão de $\varphi$ e $\psi$, vemos que
+    
+    \begin{equation}
+    	\label{eq:somatorio funções simples}
+    	\varphi +\psi
+    	=
+    	\dsum_{j = 1}^n a_j\chi_{E_j}
+    	+
+    	\dsum_{k = 1}^m b_k\chi_{F_k}
+    \end{equation}
+    
+    Como $\{E_n\}$ e $\{F_k\}$ são ambas partições de $X$, pela \ref{prop: igualdade da caracteristica como medida} temos que
+    $\chi_{E_j} = \dsum_{k = 1}^m \chi_{(E_j \cap F_k)}$ e 
+    $\chi_{F_k} = \dsum_{j = 1}^n \chi_{(E_j \cap F_k)}$.
+    Substituindo na equação \ref{eq:somatorio funções simples}, obtemos    
+    \begin{align*}
+    	\dsum_{j = 1}^n a_j\chi_{E_j}
+    	+
+    	\dsum_{k = 1}^m b_k\chi_{F_k}
+    	= &
+    	\dsum_{j = 1}^n a_j\left(\dsum_{k = 1}^m \chi_{(E_j \cap F_k)}\right)
+    	+
+    	\dsum_{k = 1}^m b_k\left(\dsum_{j = 1}^n \chi_{(E_j \cap F_k)}\right)\\
+    	= &
+    	\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
+    	+
+    	\dsum_{k = 1}^m \dsum_{j = 1}^n b_k\chi_{(E_j \cap F_k)}\\
+    	= &
+    	\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
+    	+
+    	\dsum_{j = 1}^n \dsum_{k = 1}^m  b_k\chi_{(E_j \cap F_k)}\\
+		= &
+		\dsum_{j = 1}^n\dsum_{k = 1}^m 
+		\left(a_j\chi_{(E_j \cap F_k)}
+		+
+		b_k\chi_{(E_j \cap F_k)}\right)\\
+		= &
+		\dsum_{j = 1}^n\dsum_{k = 1}^m 
+		(a_j + b_k)\chi_{(E_j \cap F_k)}.
+	\end{align*}
+    Com isso, concluímos que
     $$
     \varphi + \psi = \dsum_{j = 1}^n\dsum_{k = 1}^m(a_j + b_k)\chi_{E_j \cap F_k}.
     $$
-    Entretanto, essa representação não é, necessariamente, a representação padrão apresentada na definição \ref{def:integral-função-naonegativa-simples}, pois 
+    Entretanto, essa representação não é, necessariamente, a representação padrão apresentada na \ref{def:integral-função-naonegativa-simples}, pois 
     nada garante, previamente, que $a_j + b_k$ sejam distintos para $j \in I_n$ e $k \in I_m$.
     Com isso, sejam $c_h$, com $h \in I_p$, números distintos do conjunto $\{a_j + b_k; \ (j,k) \in I_n \times I_m\}$ e $G_h$ a união de todos os conjuntos $E_j \cap F_k \neq \varnothing$ tal que $a_j + b_k = c_h$.
     Assim, 
@@ -448,21 +488,13 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
         = &
         \sum_{j = 1}^n\sum_{k = 1}^m a_j \mu(E_j \cap F_k) + \sum_{j = 1}^n\sum_{k = 1}^m b_k \mu(E_j \cap F_k)
     \end{align*}
-    Ora, uma vez que $X$ é a união de ambas as famílias disjuntas $\{E_j\}$ e $\{F_k\}$, ou seja, 
-    $$
-    \bigcup_{j = 1}^n E_j = X = \bigcup_{k = 1}^m F_k 
-    $$
-    Se um elemento $x$ pertence à um conjunto $E_{j_0}$ para algum $j_0 \in I_n$, então deve existir um $k_0 \in I_m$ tal que $x \in F_{k_0}$.
-    Assim, se fixamos um $j \in I_n$, então $\bigcup_{k \in I_m} F_k$ forma uma cobertura de $E_j$, isto é, 
-    $\displaystyle E_j \subset \bigcup_{k \in I_m} F_k$.
-    Assim, 
-    $\displaystyle E_j \cap \left(\bigcup_{k \in I_m} F_k\right) = E_j$. Como ${F_k}$ é uma família disjunta segue que, para este $j$ fixado, temos
-    $$
-    \mu(E_j) = \mu\left(E_j \cap \bigcup_{k \in I_m} F_k\right)
-    = \mu\left(\bigcup_{k \in I_m} (E_j \cap F_k)\right)
-    = \sum_{k = 1}^m \mu(E_j \cap F_k).
-    $$
-    Analogamente, ao fixarmos um $k \in I_m$, vemos que $\displaystyle \mu(F_k) = \sum_{j = 1}^n \mu(E_j \cap F_k)$.
+	Pela \ref{prop: medida com partição}, temos
+	$
+	\displaystyle
+	\mu(E_j) = \sum_{k = 1}^m \mu(E_j \cap F_k)
+	$
+    e
+    $\displaystyle \mu(F_k) = \sum_{j = 1}^n \mu(E_j \cap F_k)$.
     Empregando estes resultados ao que foi desenvolvido anteriormente obtemos
     $$
     \sum_{j = 1}^n\sum_{k = 1}^m a_j \mu(E_j \cap F_k) + \sum_{j = 1}^n\sum_{k = 1}^m b_k \mu(E_j \cap F_k)
@@ -479,7 +511,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 
 \begin{env}{Lema}
 	\label{lem:medida-da-intersecao-de-um-fixado}
-	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall E \in \cc$ também é uma medida sobre $X$.
+	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall\  E \in \cc$ também é uma medida sobre $X$.
 \end{env}
 \begin{prova}
 	Basta mostrar que $\lambda$ satisfaz as condições impostas na definição \ref{def:medida}.
@@ -522,7 +554,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 \begin{env}{Lema}
 	\label{lem:medida-gerada-por-medidas-e-numeros-reais}
 	Se $\mu_1, ..., \mu_n$ são medidas sobre $X$ e $a_1, ... , a_n$ são números reais não negativos, então a função $\lambda$ definida por
-	$\lambda(E) = \dsum_{j =1}^n a_j\mu_j(E), \forall E \in \cc$ também é uma medida sobre $X$.
+	$\lambda(E) = \dsum_{j =1}^n a_j\mu_j(E), \forall\  E \in \cc$ também é uma medida sobre $X$.
 \end{env}
 \begin{prova}
 	Como $\mu_j$ é uma medida para todo $j \in I_n$ e cada $a_j$ é maior ou igual à zero, temos que cada $a_j\mu_j(E) \geq 0$.
@@ -536,28 +568,35 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 	\sum_{j = 1}^n a_j\mu_j\left(\bigcup_{p \in \N} E_p\right)
 	=
 	\sum_{j = 1}^n a_j\left(\sum_{p = 1}^\infty\mu_j(E_p)\right)
+	=
+	\sum_{p = 1}^\infty\left(\sum_{j = 1}^na_j\mu_j(E_p)\right)
+	=
+	\sum_{p = 1}^{\infty}\lambda(E_p)
 	$$
+	\begin{comment}
 	Afirmamos que $\displaystyle \sum_{j = 1}^n a_j\left(\sum_{p = 1}^\infty\mu_j(E_p)\right) = \sum_{p = 1}^\infty\left(\sum_{j = 1}^na_j\mu_j(E_p)\right)$.
 	Com efeito, 
-	
 	\begin{align*}
-		\sum_{j = 1}^n a_j\left(\sum_{p = 1}^\infty\mu_j(E_p)\right)
-		= &
-		\sum_{j = 1}^n a_j\left(\lim_{m \to +\infty}\sum_{p = 1}^m\mu_j(E_p)\right)\\
-		= &
-		\lim_{m \to +\infty}\left[\sum_{j = 1}^n a_j\left(\sum_{p = 1}^m\mu_j(E_p)\right)\right]\\
-		= &
-		\lim_{m \to +\infty}\left[a_1\left(\sum_{p = 1}^m\mu_1(E_p)\right)+ \cdots + a_n\left(\sum_{p = 1}^m\mu_n(E_p)\right)\right]\\
-		= &
-		\lim_{m \to +\infty}\left(\sum_{p = 1}^ma_1\mu_1(E_p)+ \cdots + \sum_{p = 1}^ma_n\mu_n(E_p)\right)\\
-		= &
-		\lim_{m \to +\infty}\sum_{p = 1}^m \left(a_1\mu_1(E_p)+ \cdots + a_n\mu_n(E_p)\right)\\
-		= &
-		\lim_{m \to +\infty}\sum_{p = 1}^m \left(\sum_{j = 1}^na_j\mu_j(E_p)\right)\\
-		= &
-		\sum_{p = 1}^\infty \left(\sum_{j = 1}^na_j\mu_j(E_p)\right)\\
-	\end{align*}
-	Disso tudo, obtemos que 
+	\sum_{j = 1}^n a_j\left(\sum_{p = 1}^\infty\mu_j(E_p)\right)
+	= &
+	\sum_{j = 1}^n a_j\left(\lim_{m \to +\infty}\sum_{p = 1}^m\mu_j(E_p)\right)\\
+	= &
+	\lim_{m \to +\infty}\left[\sum_{j = 1}^n a_j\left(\sum_{p = 1}^m\mu_j(E_p)\right)\right]\\
+	= &
+	\lim_{m \to +\infty}\left[a_1\left(\sum_{p = 1}^m\mu_1(E_p)\right)+ \cdots + a_n\left(\sum_{p = 1}^m\mu_n(E_p)\right)\right]\\
+	= &
+	\lim_{m \to +\infty}\left(\sum_{p = 1}^ma_1\mu_1(E_p)+ \cdots + \sum_{p = 1}^ma_n\mu_n(E_p)\right)\\
+	= &
+	\lim_{m \to +\infty}\sum_{p = 1}^m \left(a_1\mu_1(E_p)+ \cdots + a_n\mu_n(E_p)\right)\\
+	= &
+	\lim_{m \to +\infty}\sum_{p = 1}^m \left(\sum_{j = 1}^na_j\mu_j(E_p)\right)\\
+	= &
+	\sum_{p = 1}^\infty \left(\sum_{j = 1}^na_j\mu_j(E_p)\right)\\
+\end{align*}		
+	\end{comment}
+	
+\begin{comment}
+		Disso tudo, obtemos que 
 	$$
 	\lambda\left(\bigcup_{p \in \N} E_p\right)
 	=
@@ -567,6 +606,8 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 	=
 	\sum_{p = 1}^\infty \lambda(E_p)
 	$$
+\end{comment}
+
 	Como $\lambda$ satisfaz todas as condições impostas na definição \ref{def:medida} concluímos que $\lambda$ é uma medida.    
 \end{prova}
 
@@ -607,10 +648,10 @@ Até aqui trabalhos apenas com integrais de funções simples apenas.
 Nesta seção, desejamos expandir o conceito de integral para uma função qualquer não negativa.
 Vale ressaltar que a perspectiva que traremos aqui é a de Lebesgue.
 Com o intuito de enfatizar a diferença da construção, vamos lembrar da construção feita por Riemann.
-Considere a função $f: \R \to \R$ tal que $f(x) = \mathrm{seno}(x) + 3$.
+Considere a função $f: \R \to \R$ tal que $f(x) = \mathrm{sen}(x) + 3$.
 Claramente não é uma função simples, pois não possui uma quantidade finita de valores. 
 Nosso objetivo, agora, é tentar calcular a integral dessa função com o que construímos até aqui.
-Para facilitar, analisaremos o gráfico dessa função no intervalo $[0,4]$.\\
+Para facilitar, observe o gráfico dessa função no intervalo $[0,4]$ apresentado na figura \ref{fig:gráfico da função sen x + 3}.
 
 \begin{figure}[h!]
 	\centering
@@ -672,8 +713,8 @@ $$
 \phi_2(x) =\sum_{j = 1}^{2} a_j\chi_{E_j}
 $$
 onde $a_1 = f(0), a_2 = f(4); E_1 = [0, 2)$ e $E_2 = [2, 4]$.
-Assim, ao calcularmos sua integral, vemos não há preenchimento total da área delimitada pelo gráfico da função $f$, mas se aproxima com um erro conforme a seguinte figura.
-\pagebreak
+Assim, ao calcularmos sua integral, vemos não há preenchimento total da área delimitada pelo gráfico da função $f$, mas se aproxima com um erro conforme a figura \ref{fig: integral da funçao phi 2}.
+
 \begin{figure}[h!]
 	\centering
 	\Caption{\label{fig: integral da funçao phi 2} Integral da função $\phi_2$} 
@@ -707,9 +748,14 @@ Assim, ao calcularmos sua integral, vemos não há preenchimento total da área 
 
 \hspace{-2cm} Vamos escolher outra função simples $\phi_4$ tal que $\phi_4 =\sum_{j = 1}^{4} a_j\chi_{E_j}$
 onde 
-$E_1 = [0, 1), E_2 = [1, 2), E_3 = [2, 3), E_1 = [3, 4],
-a_1 = f(0), a_2 = f(1), a_3 = f(3)$ e $a_4 = f(4)$.
-Desta forma, com o dobro de valores da função $\phi_2$ escolhida anteriormente podemos observar que a integral de $\phi_4$ mais se aproxima da integral da função $f$.
+$E_1 = [0, 1),\ 
+ E_2 = [1, 2),\ 
+ E_3 = [2, 3),\ 
+ E_1 = [3, 4],\ 
+ a_1 = f(0), \ 
+ a_2 = f(1), \ 
+ a_3 = f(3)$ e $a_4 = f(4)$.
+Desta forma, com o dobro de valores da função $\phi_2$ escolhida anteriormente podemos observar que a integral de $\phi_4$, exibida na figura \ref{fig:integral da função phi 4}, mais se aproxima da integral da função $f$.
 \begin{figure}[h!]
 	\centering
 	\Caption{\label{fig:integral da função phi 4} Integral da função $\phi_4$} 
@@ -743,16 +789,27 @@ Desta forma, com o dobro de valores da função $\phi_2$ escolhida anteriormente
 		\Fonte{Elaborado pelo autor}
 	}   
 \end{figure}
-
-\hspace{-2cm} Para finalizarmos esta ideia, dobremos a quantidade de valores e escolhamos outra função 
+Para finalizarmos esta ideia, dobremos a quantidade de valores e escolhamos outra função 
 $\phi_8 =\displaystyle\sum_{j = 1}^{8} a_j\chi_{E_j}$ 
 onde 
-$E_1 = [0, 0.5), E_2 = [0.5, 1), E_3 = [1, 1.5), E_4 = [1.5, 2),
-E_5 = [2,2.5), E_6 = [2.5, 3), E_7 = [3, 2.5), E_8 = [3.5, 4]$ 
+$E_1 = [0, 0.5),\
+ E_2 = [0.5, 1),\ 
+ E_3 = [1, 1.5),\ 
+ E_4 = [1.5, 2),\ 
+ E_5 = [2,2.5), \ 
+ E_6 = [2.5, 3), \ 
+ E_7 = [3, 2.5), \ 
+ E_8 = [3.5, 4]$ 
 e
-$a_1 = f(0), a_2 = f(0.5), a_3 = f(1), a_4 = f(1.5),
-a_5 = f(2.5), a_6 = f(3), a_7 = f(3.5)$ e $a_8 = f(4)$.\\
-
+$a_1 = f(0),\ 
+ a_2 = f(0.5),\ 
+ a_3 = f(1), \ 
+ a_4 = f(1.5),\ 
+ a_5 = f(2.5), \ 
+ a_6 = f(3), \ 
+ a_7 = f(3.5)$ e $a_8 = f(4)$.
+A integral da função $\phi_8$ está representada na figura 
+figura \ref{fig:integrla da função phi 8}.
 \begin{figure}[h!]
 	\centering
 	\Caption{\label{fig:integrla da função phi 8} Integral da função $\phi_8$} 
@@ -800,7 +857,7 @@ a_5 = f(2.5), a_6 = f(3), a_7 = f(3.5)$ e $a_8 = f(4)$.\\
 
 Com isso, observamos que quanto mais valores a função simples possui, mais ela se aproxima da função $f$ desde que nenhum valor ultrapasse o gráfico da função.
 Assim, a área da função simples será próxima o suficiente da área delimitada pelo gráfico da função $f$.
-Assim, se tomarmos o supremo dessas funções obteremos
+Ou seja, se tomarmos o supremo dessas funções obteremos a integral exposta na figura \ref{fig:Integral da função f}.
 \begin{figure}[h!]
 	\centering
 	\Caption{\label{fig:Integral da função f} Integral da função $f$} 
@@ -842,13 +899,14 @@ $$
 \right.
 $$
 
-Note que a função $\phi_1$ é simples, mas seus valores são escolhidos por meio da partição da imagem conforme explicitado na imagem a seguir:
+Note que a função $\phi_1$ é simples, mas seus valores são escolhidos por meio da partição da imagem conforme explicitado na imagem da figura \ref{fig: Lebesgue gráfico da função phi 1}.
 
 \begin{figure}[h!]
 	\centering
-	\Caption{Gráfico da função $\phi_1$} 
+	\Caption{\label{fig: Lebesgue gráfico da função phi 1}Gráfico da função $\phi_1$} 
 	\UECEfig{}{
 		\begin{tikzpicture}[scale=2]
+			\draw[thick] (-2.5,-1.5) rectangle (2.5, 2.5);
 			% Eixos
 			\draw[->] (-2,0) -- (2,0) node[right] {$x$};
 			\draw[->] (0,-1) -- (0, 2) node[left] {$y$};
@@ -910,13 +968,137 @@ Note que a função $\phi_1$ é simples, mas seus valores são escolhidos por me
 	}   
 \end{figure}
 
-Na figura acima, o gráfico da função $\phi_1$ está representado pela cor verde.
+Vamos aproximar a função $f$ agora pela função simples $\phi_2$ construída da seguinte forma:
 
-Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então ela pode ser aproximada por uma sequência de funções simples conforme o teorema
+$$
+\phi_2(x) =\left\{
+\begin{array}{ll}
+	0, & \textrm{se\ } 0 \leq f(x) < 2^{-2} \\
+	2^{-2}, & \textrm{se\ } 2^{-2} \leq f(x) < 2\cdot2^{-2} \\
+	2\cdot 2^{-2}, & \textrm{se\ } 2\cdot 2^{-2} \leq f(x) < 3\cdot2^{-2}\\
+	3\cdot 2^{-2}, & \textrm{se\ } 3\cdot 2^{-2} \leq f(x) < 4\cdot2^{-2}\\
+	4\cdot 2^{-2}, & \textrm{se\ } 4\cdot 2^{-2} \leq f(x) < 5\cdot2^{-2}\\
+	5\cdot 2^{-2}, & \textrm{se\ } 5\cdot 2^{-2} \leq f(x) < 6\cdot2^{-2}\\
+	6\cdot 2^{-2}, & \textrm{se\ } 6\cdot 2^{-2} \leq f(x) < 7\cdot2^{-2}\\
+	7\cdot 2^{-2}, & \textrm{se\ } 7\cdot 2^{-2} \leq f(x) < 8\cdot2^{-2}\\
+	2, & \textrm{se\ } f(x) \geq 2\\
+\end{array}
+\right.
+$$
+
+Assim, na figura \ref{fig: Lebesgue gráfico da função phi 2} está a comparação com o gráfico da função $f(x) = x^2$.
+\begin{figure}[h!]
+	\centering
+	\Caption{\label{fig: Lebesgue gráfico da função phi 2}Gráfico da função $\phi_1$} 
+	\UECEfig{}{
+		\begin{tikzpicture}[scale=2]
+			\draw[thick] (-2.5,-1.5) rectangle (2.5, 2.5);
+			% Eixos
+			\draw[->] (-2,0) -- (2,0) node[right] {$x$};
+			\draw[->] (0,-1) -- (0, 2.5) node[left] {$y$};
+			% Rótulos
+			\foreach \i in {-1,1}{
+				\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+			}
+			
+			\foreach \i in {0.25, 0.5, 0.75, 1, 1.25, 1.5,  1.75, 2}{
+				\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
+			}
+			
+		%	\draw (2pt,0.5)--(-2pt, 0.5) node[above left]{\footnotesize $\frac{1}{2}$};
+			
+			%\fill[domain=-1:1,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{\x*\x})--(4,0)--(0,0);
+			% Yes, this is drawn twice, but I wanted the shading to match the over/under pictures following.
+			
+			
+			\draw[domain=-1.5:1.5,smooth,variable=\x, thick]  plot ({\x},{\x*\x})  node[above right] {{\small $f(x) = x^2$}};
+			
+			
+			% Função $\phi_2$
+			\draw[domain=-0.5:0.5,smooth,variable=\x,thick, blue]  plot ({\x},{0});
+			
+		
+			\draw[domain=-0.71:-0.5,smooth,variable=\x,thick, blue]  plot ({\x},{0.25});
+			\draw[domain=0.5:0.71,smooth,variable=\x,thick, blue]  plot ({\x},{0.25});
+			
+			\draw[domain=-0.87:-0.71,smooth,variable=\x,thick, blue]  plot ({\x},{0.5});
+			\draw[domain=0.71:0.87,smooth,variable=\x,thick, blue]  plot ({\x},{0.5});
+			
+			\draw[domain=-1:-0.87,smooth,variable=\x,thick, blue]  plot ({\x},{0.75});
+			\draw[domain=0.87:1,smooth,variable=\x,thick, blue]  plot ({\x},{0.75});
+						
+			\draw[domain=-1.12:-1,smooth,variable=\x,thick, blue]  plot ({\x},{1});
+			\draw[domain=1:1.12,smooth,variable=\x,thick, blue]  plot ({\x},{1});
+			
+			\draw[domain=-1.22:-1.12,smooth,variable=\x,thick, blue]  plot ({\x},{1.25});
+			\draw[domain=1.12:1.22,smooth,variable=\x,thick, blue]  plot ({\x},{1.25});
+			
+			\draw[domain=-1.32:-1.22,smooth,variable=\x,thick, blue]  plot ({\x},{1.5});
+			\draw[domain=1.22:1.22,smooth,variable=\x,thick, blue]  plot ({\x},{1.5});
+			
+			%\draw[domain=-2:-1,smooth,variable=\x,thick, blue]  plot ({\x},{1.75});
+			%\draw[domain=1:2,smooth,variable=\x,thick, blue]  plot ({\x},{1.75});
+			
+			%\draw[domain=-2:-1,smooth,variable=\x,thick, blue]  plot ({\x},{2});
+			%\draw[domain=1:2,smooth,variable=\x,thick, blue]  plot ({\x},{2});
+			
+			% Retas auxiliares
+			%\draw[dashed] (-0.71,0.09) -- (-0.71,0.5);
+			%\draw[dashed] (0.71,0.09) -- (0.71,0.5);
+			
+			%\draw[dashed] (-0.71,0.5) -- (0.71,0.5);
+			
+			%\draw[dashed] (-1,1) -- (1,1);
+			
+			%\draw[dashed] (-1,0) -- (-1,1);
+			%\draw[dashed] (1,0) -- (1,1);
+			
+			% Bolinhas
+			\draw[fill=white] (-0.5,0) circle (0.03);
+			\draw[fill=white] (0.5,0) circle (0.03);
+			
+			\draw[fill=blue] (-0.5, 0.25) circle (0.03);
+			\draw[fill=blue] (0.5, 0.25) circle (0.03);
+			
+			\draw[fill=white] (-0.71,0.25) circle (0.03);
+			\draw[fill=white] (0.71,0.25) circle (0.03);
+			
+			\draw[fill=blue] (-0.71,0.5) circle (0.03);
+			\draw[fill=blue] (0.71,0.5) circle (0.03);
+			
+			\draw[fill=white] (-0.87,0.5) circle (0.03);
+			\draw[fill=white] (0.87,0.5) circle (0.03);
+			
+			\draw[fill=blue] (-0.87,0.75) circle (0.03);
+			\draw[fill=blue] (0.87,0.75) circle (0.03);
+			
+			\draw[fill=white] (-1,0.75) circle (0.03);
+			\draw[fill=white] (1,0.75) circle (0.03);
+			
+			\draw[fill=blue] (-1,1) circle (0.03);
+			\draw[fill=blue] (1,1) circle (0.03);
+			
+			\draw[fill=white] (-1.12,1) circle (0.03);
+			\draw[fill=white] (1.12,1) circle (0.03);
+			
+			\draw[fill=blue] (-1.12,1.25) circle (0.03);
+			\draw[fill=blue] (1.12,1.25) circle (0.03);
+			
+			\draw[fill=white] (-1.22,1.5) circle (0.03);
+			\draw[fill=white] (1.22,1.5) circle (0.03);
+			
+		\end{tikzpicture}
+		
+	}{
+		\Fonte{Elaborado pelo autor}
+	}   
+\end{figure}
+
+Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então ela pode ser aproximada por uma sequência de funções simples conforme o teorema adiante.
 
 \begin{env}{Teorema}[Aproximação Via Funções Simples]
 	\label{teo:aproximação via funções simples}
-	Se $f$ é uma função não negativa em $\menfus$, então existe uma sequência de funções $(\varphi_n) \subset \menfus$ tal que
+	Se $f$ é uma função não negativa em $\menfus$, então existe uma sequência de funções $(\varphi_n)$ tal que $\phi \in \menfus, \forall \ n \in \N$ de forma que
 	\begin{enumerate}[label*=(\roman*)]
 		\item Cada $\varphi_n$ é uma função simples, isto é, possui apenas uma quantidade finita de valores reais;
 		\item $0 \leq \varphi_n(x) \leq f(x)$ para todo $x \in X$ e $n \in \N$;
@@ -951,18 +1133,31 @@ Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então 
 	\right.
 	$$
 	Com isso, podemos ver que $\varphi_n$ é uma função simples e que $0\leq \varphi_n(x)\leq f(x)$. Além disso, $\varphi_n$ é uma mensurável para todo $n \in \N$, pois trata-se de uma sequência de um funções simples.
-	
-	Observe que dado $n \in \N$ pelo que já provamos temos que 
+	Observe que dado $n \in \N$ temos que
+	$\phi_n(x) = k2^{-n}$ desde que 
+	$k2^{-n} \leq f(x) < (k+1)2^{-n}$.
+	Como  $k2^{-n}+2^{-n}$, percebemos que
 	$$
-	0\leq \varphi_n(x)\leq f(x)
-	\Leftrightarrow
-	0 \leq \varphi_n(x) - f(x) \leq 0
-	$$	
-	Pois, $\varphi_n$ e $f$ são funções não negativas.
-	Assim, 
-	$0 \leq \dlim_{n \to \infty} \varphi_n(x) - f(x) \leq 0$.
-	Segue pelo teorema do confronto que 
-	$\dlim_{n \to \infty}\varphi_n = f(x)$.
+	k2^{-n} \leq f(x) < (k+1)2^{-n}
+	\Rightarrow
+	k2^{-n} \leq f(x) < k2^{-n} + 2^{-n}
+	\Rightarrow
+	\phi_n(x) \leq f(x) < \phi_n(x) + 2^{-n}.
+	$$
+	Logo, 
+	$$
+	\dlim_{n \to +\infty}\phi_n(x)  
+	\leq 
+	\dlim_{n \to +\infty}f(x) 
+	\leq 
+	\dlim_{n \to +\infty}\phi_n(x) 
+	+ 
+	\dlim_{n \to +\infty}2^{-n}.
+	$$
+	Como $\dlim_{n \to +\infty} f(x) = f(x)$ e 
+	$\dlim_{n \to +\infty} 2^{-n} = 0$.
+	Segue, pelo teorema do confronto que
+	$\dlim_{n \to +\infty} \phi_n(x) = f(x)$.
 \end{prova}
 
 Esse teorema nos mostra que dada qualquer função não negativa mensurável, podemos aproximar seus valores por funções simples de maneira que o limite dessa sequência de funções simples convergem para a função que tomamos inicialmente.

@@ -801,11 +801,12 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 \end{comment}
 
 
-
 \begin{env}{Proposição}
-	\label{prop: igualdade da caracteristica como medida}
+	\label{prop: medida com partição}
 	Se $\displaystyle \bigcup_{j \in I_n} E_j$ e $\displaystyle\bigcup_{k \in I_m} F_k$ são duas partições de um conjunto $X$, então 
-	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
+	$\displaystyle \mu(E_j) 
+	= 
+	\sum_{k = 1}^{m} \mu(E_j\cap F_k)$.
 \end{env}
 
 \begin{prova}
@@ -816,13 +817,25 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	Como $\chi_E$ é uma medida para todo $E \in \cc$, segue que
 	para todo $x$,
 	$$
-	\chi_{E_j}(x)
+	\mu(E_j)
 	=
-	\chi_{\bigcup_{k = 1} (E_j\cap F_k)}(x)
+	\mu\left(\bigcup_{k = 1} (E_j\cap F_k)\right)
 	=
-	\sum_{k = 1}^{m}\chi_{E_j\cap F_k}(x)
+	\sum_{k = 1}^{m}\mu(E_j\cap F_k)
 	$$
 \end{prova}
+
+\begin{env}{Proposição}
+	\label{prop: igualdade da caracteristica como medida}
+	Se $\displaystyle \bigcup_{j \in I_n} E_j$ e $\displaystyle\bigcup_{k \in I_m} F_k$ são duas partições de um conjunto $X$, então 
+	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
+\end{env}
+
+\begin{prova}
+	Pela \ref{prop: igualdade da caracteristica como medida}, $\chi$ é uma medida. Segue pela \ref{prop: medida com partição} que
+	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
+\end{prova}
+
 % Teorema
 \begin{env}{Teorema}
 \label{teo:medida-diferença}
