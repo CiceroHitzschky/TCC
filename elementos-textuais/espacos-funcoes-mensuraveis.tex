@@ -4,36 +4,50 @@ Nesta seção, apresentaremos os conceitos que fundamentam a teoria da medida. T
 Embora estejamos assumindo que o leitor já esteja familiarizado com a teoria de conjuntos, faremos algumas observações sobre notação de alguns conjuntos com o objetivo de cessar o maior número de dúvidas.
 Iniciaremos definindo \sigal para que possamos construir espaços mensuráveis.
 Em seguida, abordaremos as funções mensuráveis.
-Todas as definições e resultados aqui explorados, bem como nas demais seções,  tiveram como principal fonte \cite{bartle}.
+Todas as definições e resultados aqui explorados, bem como nas demais seções,  tiveram como principal fonte o livro \textit{The Elements of Integration and Lebesgue Measure}\footnote{Em português: Os Elementos da Integração e Medida de Lebesgue.} do autor Robert G. Bartle.
 
 \section{O Conceito de \sigal}
 % Definição de Sigma álgebra
 Para que possamos estabelecer uma \enquote{medida} precisamos de um ambiente que permita ser \enquote{medido}. 
 Criamos um ambiente como este adicionando uma estrutura algébrica específica em um conjunto.
-Tal estrutura recebe o nome de $\sigma$-álgebra e é definida da seguinte forma:
+Tal estrutura recebe o nome de $\sigma$-álgebra e é definida em \cite{bartle} da seguinte forma:
 
 \begin{env}{Definição}
 \label{def:sigma-algebra}
+\index{$\sigma$-álgebra}
     Seja $X$ um conjunto não vazio. Uma família $\mathcal{C}$ de subconjuntos de $X$ é dita uma \sigal se as seguintes condições são atendidas:
     \begin{enumerate}[label*= (\roman*)]
         \item $\varnothing$ e $X$ são elementos de $\mathcal{C}$;     
         \item Se um elemento $A \in \mathcal{C}$, então $A^c \in \mathcal{C}$
-        \footnote{Em todo o texto, $X^c$ significa o \textit{complementar do conjunto} $X$.};
+        \footnote{Em todo o texto, $X^c$ significa o complementar do conjunto $X$.};
         \item Se $(A_n)$ é uma sequência de elementos de $\mathcal{C}$, 
         então $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
+        % RODAPÉ
+		\begin{comment}
+			        \footnote{No original: A family $X$ of subsets of a set $X$ is said to be a
+				$\sigma$-algebra (or a $\sigma$-field) in case:
+				(i) $\varnothing, X$ belong to $X$.
+				(ii) If A belongs to $X$, then the complement $\cc(A) = X \backslash \ A$ belongs
+				to $X$.
+				(iii) If $(A_n)$ is a sequence of sets in $X$, then the union $\bigcup_{n = 1}^\infty A_n$, be
+				longs to $X$.}
+		\end{comment}
         \vspace{-0.2cm}
     \end{enumerate}
 \end{env}
 
-Com isso, um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma \sigal sobre $X$ é chamado de  \textbf{espaço mensurável}.
+Com isso, um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma \sigal sobre $X$ é chamado, pelo mesmo autor, de  \textbf{espaço mensurável}.
 Além disso, cada elemento deste espaço é chamado de conjunto $\mathcal{C}-$mensurável.
 Quando não houver confusão ou quando a \sigal estiver fixada, dizemos simplesmente que cada elemento é um conjunto mensurável. 
-Observe que a terceira condição da definição \ref{def:sigma-algebra} nos diz que a união enumerável é um elemento da $\sigma$-álgebra.
+Observe que a terceira condição da \ref{def:sigma-algebra} nos diz que a união enumerável
+%
+\footnote{\enquote{Um conjunto $X$ diz-se \textit{enumerável} quando é finito ou quando existe uma bijeção $f : \N \to X$.} \cite[p.48]{elon}}
+%
+é um elemento da $\sigma$-álgebra.
 Logo, para um número finito $A_1, A_2, ..., A_n$ com $n \in \N$ de elementos $\cc$-mensuráveis de uma \sigal $\cc$, a união $\displaystyle \bigcup_{j \in I_n} A_j$ também será um elemento $\cc$-mensurável.
 
 \begin{env}{Observação}
 	Em todo o texto, indicaremos por $I_n$ o conjunto dos $n$ primeiros números naturais, isto é, $I_n = \{k \in \N; 1 \leq k \leq n\}$.
-	\vspace{-0.2cm}
 \end{env}
 % Exemplos de Sigmas Algebras 
 \begin{env}{Exemplo}
@@ -45,7 +59,7 @@ Logo, para um número finito $A_1, A_2, ..., A_n$ com $n \in \N$ de elementos $\
 	\label{ex:sigma-trivial}
 	Seja $X$ um conjunto qualquer.
 	O conjunto $\mathcal{C}_1 = \{\varnothing, X\}$ é uma \sigal de $X$.
-	De fato, podemos observar que, nesse exemplo, todas as condições impostas na definição \ref{def:sigma-algebra} são atendidas de maneira trivial, pois 
+	De fato, podemos observar que, nesse exemplo, todas as condições impostas na  \ref{def:sigma-algebra} são atendidas de maneira trivial, pois 
 	$\varnothing$ e $X$ são todos os elementos de $\mathcal{C}_1$. 
 	Assim,  $(X, \mathcal{C}_1)$ é um espaço mensurável.
 \vspace{-0.2cm}
@@ -92,25 +106,19 @@ Será que se construirmos $Z$ um conjunto que contenha $\varnothing$ e $X$ e out
     = \{y,z\}.
     $
     Entretanto, $\{y,z\} \notin \mathcal{C}$.
-    Assim, a segunda condição da definição \ref{def:sigma-algebra} não é satisfeita, impossibilitando que $\mathcal{C}$ seja uma \sigal de $X$.
+    Assim, a segunda condição da \ref{def:sigma-algebra} não é satisfeita, impossibilitando que $\mathcal{C}$ seja uma \sigal de $X$.
     \vspace{-0.2cm}
 \end{env}
-
 A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunto fixado não vazio em um conjunto.
-
-% Assim, pode ser preciso construir uma \sigal em algum momento com um conjunto $A$ específico.
-% A proposição adiante nos mostra como isso pode ser feito:
-
 \begin{env}{Proposição}
 \label{prop:sigma-complementar}
     Seja $X$ e $A$ dois conjuntos quaisquer com $A \neq \varnothing$.
     Se $A \subset X$, então o conjunto 
     $\mathcal{C}=\{\varnothing, X, A, A^c\}$ é uma \sigal de $X$.
-    \vspace{-0.2cm}
 \end{env}
 
 \begin{prova}
-    Perceba que as condições \textit{(i)} e \textit{(ii)} da definição \ref{def:sigma-algebra} são satisfeitas pela forma que o conjunto  $\mathcal{C}$ foi construído. Para verificar a última condição, basta perceber $A \cup A^c = X$. Portanto, $\mathcal{C}$ é uma \sigal de $X$ para qualquer que seja $ \varnothing \neq A \subset X$.
+    Perceba que as condições \textit{(i)} e \textit{(ii)} da  \ref{def:sigma-algebra} são satisfeitas pela forma que o conjunto  $\mathcal{C}$ foi construído. Para verificar a última condição, basta perceber $A \cup A^c = X$. Portanto, $\mathcal{C}$ é uma \sigal de $X$ para qualquer que seja $ \varnothing \neq A \subset X$.
 \end{prova}
 
 \begin{env}{Exemplo}
@@ -120,7 +128,7 @@ A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunt
     \vspace{-0.2cm}
 \end{env}
  
-Note que a definição \ref{def:sigma-algebra} trata apenas da reunião de enumerável de elementos da $\sigma$-álgebra. 
+Note que a  \ref{def:sigma-algebra} trata apenas da reunião de enumerável de elementos da $\sigma$-álgebra. 
 Nosso interesse, agora, é investigar se conseguirmos propriedades análogas para a operação de interseção. 
 Iniciaremos verificando o comportamento de interseção de elementos de uma \sigal com a seguinte proposição.
 % Propriedades de Interseção 
@@ -128,15 +136,14 @@ Iniciaremos verificando o comportamento de interseção de elementos de uma \sig
 \begin{env}{Proposição}
 \label{prop:interseção-elementos-sigmas}
     Seja $(X, \cc)$ um espaço mensurável.
-    Se $(A_j)$ é uma sequência  de conjuntos $\mathcal{C} $-mensuráveis, então $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um elemento $\mathcal{C}$-mensurável.
-    \vspace{-0.2cm}
+    Se $(A_j)$ é uma sequência  de conjuntos $\mathcal{C} $-mensuráveis, então $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um elemento $\mathcal{C}$-mensurável \cite{bartle}.
 \end{env}
 \begin{prova}
     Se $A_j \in \mathcal{C}$ para todo $j \in \N$, então cada complementar $A_j^c \in \mathcal{C}$, pois $\mathcal{C}$ é $\sigma$-álgebra. 
     Assim, $(A_j^c)$ forma uma sequência de conjuntos $\mathcal{C}$-mensuráveis acarretando que 
     $\displaystyle \bigcup_{j = 1}^\infty A_j^c \in \mathcal{C}$. 
     Segue, pelas \textit{Leis de Morgan}
-    \footnote{Vide \supercite{elon}{p.26}}, que 
+    \footnote{Para as demonstrações das Leis de Morgan veja \cite[p.26]{elon}}, que 
     $$
     \displaystyle \bigcup_{j = 1}^\infty A_j^c 
     = \left(\displaystyle \bigcap_{j = 1}^\infty A_j\right)^c
@@ -145,7 +152,7 @@ Iniciaremos verificando o comportamento de interseção de elementos de uma \sig
 	Portanto, $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um conjunto $\mathcal{C}$-mensurável.
 \end{prova}
 
-Considere a \sigal apresentada na proposição \ref{prop:sigma-complementar}. 
+Considere a \sigal apresentada na \ref{prop:sigma-complementar}. 
 Qualquer outra \sigal $\mathcal{F}$ que tiver $A$ como elemento, conterá $\mathcal{C}$.
 Assim, observamos que 
 $$
@@ -157,12 +164,11 @@ Esta \sigal $\mathcal{C}$   definimos como a \textit{menor} \sigal gerada por $A
 %
 Sabendo que a menor \sigal é gerada por meio de intersecções é natural questionarmos se a interseção entre \sigals ainda é uma \sigal de $X$.
 Responderemos à esta pergunta com a proposição adiante.
-
+\vspace{-0.1cm}
 %Interseção de Sigmas algebras
 \begin{env}{Proposição}
 \label{prop:interseção-2sigmas}
     Se $\mathcal{C}_1$ e $\mathcal{C}_2$ são duas \sigals de um conjunto $X$, então $\mathcal{C} = \mathcal{C}_1 \cap \mathcal{C}_2$ também é uma \sigal do conjunto $X$.
-    \vspace{-0.2cm}
 \end{env}
 \begin{prova}
     Se $\mathcal{C}_1$ e $\mathcal{C}_2$ são \sigals de $X$, então ambos possuem $\varnothing$ e $X$ como elementos.
@@ -174,19 +180,18 @@ Responderemos à esta pergunta com a proposição adiante.
     Assim, $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_1$ e 
     $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_2$ pela definição de \sigal.
     Logo, $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
-    Com isso, $\mathcal{C}$ satisfaz todas as condições da definição \ref{def:sigma-algebra}. 
+    Com isso, $\mathcal{C}$ satisfaz todas as condições da \ref{def:sigma-algebra}. 
     Portanto, $\mathcal{C}$ é uma \sigal de $X$.
 \end{prova}
 
 \begin{env}{Proposição}
 \label{prop:interseção-sigmas}
     Seja $(\mathcal{C}_j)$ uma sequência finita de $\mathcal{C}_j$-álgebras de um conjunto $X$, então 
-    $\mathcal{C} = \displaystyle \bigcap_{j =1}^n\mathcal{C}_j$, com $n \geq 2$, também é uma \sigal do conjunto $X$.
-    \vspace{-0.2cm}
+    $\mathcal{C} = \displaystyle \bigcap_{j =1}^n\mathcal{C}_j$, com $n \geq 2$, também é uma \sigal do conjunto $X$ \cite{magalhaes}.
 \end{env}
 \begin{prova}
     Provaremos esse resultado utilizando o método da indução finita sobre $n$.
-    Se $n = 2$, o resultado é verificado imediatamente pela proposição \ref{prop:interseção-2sigmas}.
+    Se $n = 2$, o resultado é verificado imediatamente pela  \ref{prop:interseção-2sigmas}.
     Suponha que se verifique para algum $k \in \N$, isto é, $\displaystyle \bigcap_{j =1}^k\mathcal{C}_j$ é uma \sigal de $X$.
     Vamos checar para o sucessor de $k$.
     Ora, pela associatividade da interseção, vemos que 
@@ -199,7 +204,7 @@ Responderemos à esta pergunta com a proposição adiante.
 	Portanto, $\displaystyle \bigcap_{j =1}^{k+1}\mathcal{C}_j$ é uma \sigal de $X$ como queríamos.
 \end{prova}
 
-Note que há uma diferença gritante entre as proposições \ref{prop:interseção-elementos-sigmas} e \ref{prop:interseção-2sigmas}.
+Note que há uma diferença gritante entre a \ref{prop:interseção-elementos-sigmas} e \ref{prop:interseção-2sigmas}.
 A primeira trata de conjuntos mensuráveis de uma \sigal e a outra refere-se à \sigals de um conjunto $X$.
 Além disso, perceba que até aqui trabalhamos o conceito de \sigal de maneira abstrata sendo utilizada em um conjunto qualquer. 
 Trataremos, agora, de uma \sigal extremamente importante e específica para o conjunto $\R$ dos números reais.
@@ -207,7 +212,7 @@ Trataremos, agora, de uma \sigal extremamente importante e específica para o co
 \begin{env}{Definição}
 \label{def:algebra-borel}
     Seja $X = \R$. A Álgebra de Borel é a \sigal $\borel$ gerada por todos os intervalos abertos $(-\infty,x)$ com $ x  \in \R$. 
-    Os elementos dessa \sigal são chamados de Borelianos.
+    Os elementos dessa \sigal são chamados de Borelianos \cite{magalhaes}.
     \index{Álgebra de Borel}
     \vspace{-0.2cm}
 \end{env}
@@ -290,7 +295,7 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
    Sejam $a$ e $b$ números reais, com $a<b$.
    Como $a - \dfrac{1}{n} \in \R$ para todo $n \in \N$, temos que o intervalo
    $\left(-\infty, a- \dfrac{1}{n}\right) \in \borel$ para todo $n \in \N$.
-   Segue, pela proposição \ref{prop:interseção-elementos-sigmas}, que
+   Segue, pela \ref{prop:interseção-elementos-sigmas}, que
    $\displaystyle \bigcap_{n = 1}^\infty \left(-\infty, a- \dfrac{1}{n}\right) \in \borel$.
    Com isso, afirmamos que a interseção de todos os intervalos $\left(-\infty, a - \dfrac{1}{n}\right)$ é igual ao intervalo $(-\infty, a]$.
    De fato,
@@ -305,14 +310,14 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
 	Logo, $(-\infty, a] \in \borel$ acarretando que $(a, +\infty) = (-\infty, a]^c \in \borel$.
 	Observe que podemos decompor $(-\infty, b) = (-\infty,a] \cup (a, b)$ enquanto que $(a, +\infty) = (a, b) \cup [b, +\infty)$.
 	Desta forma, vemos que $(-\infty, b) \cap (a, +\infty) = (a,b)$. 
-	Como $(-\infty, b)$ e $(a, +\infty)$ são elementos de $\borel$, segue pela proposição
+	Como $(-\infty, b)$ e $(a, +\infty)$ são elementos de $\borel$, segue pela 
 	\ref{prop:interseção-elementos-sigmas} que $(a,b) \in \borel$.
 	Com isso, $\borel$ pode ser gerada por intervalos do tipo $(a,b)$ com $a,b \in \R$.
    
 	Suponha, reciprocamente, que $\mathcal{C}$ é uma \sigal de $\R$.
 	Se $\cc$ é gerada por intervalos do tipo $(a,b)$ onde $a,b \in \R$, então
 	os conjuntos $A_n = (-n, b)$ são todos elementos de $\mathcal{C}$ para qualquer $n \in \N$.
-	Segue, pela definição \ref{def:sigma-algebra}, que 
+	Segue, pela  \ref{def:sigma-algebra}, que 
 	$\displaystyle \bigcup_{n = 1}^\infty (-n,b) \in \mathcal{C}$.
 	Só que $\displaystyle \bigcup_{n = 1}^\infty (-n,b) = (-\infty, b)$.
 	Com isso, os elementos de $\mathcal{C}$ são do tipo $(-\infty, b)$.
@@ -321,15 +326,12 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
 
 \section{Funções Mensuráveis}
 Agora que já estamos familiarizados com os conceitos de \sigal e espaços mensuráveis, vamos aplicar, sobre este espaço uma função e estudar seu comportamento
-%
-\footnote{Em todo o texto função e aplicação são sinônimos.}.
-%
 Iniciaremos tratando de funções reais e estenderemos o conceito conforme haja necessidade.
 A partir de agora fixemos que, quando não houver menção contrária, $X$ será um conjunto qualquer diferente de $\varnothing$ e $\mathcal{C}$ será uma \sigal desse conjunto. 
 
 \begin{env}{Definição}
 	\label{def:mensurabilidade-funções-reais}
-    Uma função $f: X \to \R $ é dita $\mathcal{C}$-mensurável se, para cada $\alpha \in \R$, o conjunto $\{x \in X;\ f(x) > \alpha\} \in \mathcal{C}$.
+    Uma função $f: X \to \R $ é dita $\mathcal{C}$-mensurável se, para cada $\alpha \in \R$, o conjunto $\{x \in X;\ f(x) > \alpha\} \in \mathcal{C}$ \cite{bartle}.
     \vspace{-0.2cm}
 \end{env}
 % Exemplos de Funções mensuráveis
@@ -373,7 +375,8 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 	\label{prop: propriedades de função característica}
 	Dado um conjunto $X$. 
 	Sejam $A, B \subset X$, então $\chi_{A\cup B} = \chi_A + \chi_B - \chi_{A \cap B}$.
-	Em particular, se $A \cap B = \varnothing$, então $\chi_{A\cup B} = \chi_A + \chi_B$.
+	Em particular, se $A \cap B = \varnothing$, então $\chi_{A\cup B} = \chi_A + \chi_B$
+	\footnote{Esta proposição é um exercício que pode ser encontrado em \cite[p.57]{elon}.}.
 \end{env}
 \begin{prova}
 	Vamos dividir a demonstração em casos:
@@ -382,7 +385,7 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 		Logo,  $x \notin A$ e $x \notin B$ acarretando que $x \notin A\cap B$.
 		Dessa forma, $\chi_A = \chi_B =\chi_{A\cap B} = 0$.
 		%
-		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 0$, então $x \in (A\cup Y)$ e $x \notin A\cap Y$.
+		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 0$, então $x \in (A\cup B)$ e $x \notin A\cap B$.
 		Logo, $x \in (A\cup B) - (A\cap B)$.
 		Como $(A\cup B) - (A\cap B) = (A- B) \cup (B - A)$, concluímos que $x (A - B) \cup (B - A)$, ou seja, $x \in A - B$ ou $x \in B - A$.
 		Se $x \in A - B$, então $\chi_{A}(x) = 1$ e $\chi_B(x) = 0$.
@@ -401,27 +404,29 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 	Caso, tenhamos $A \cap B = \varnothing$, então $\chi_{A\cap B}(x) = 0$. 
 	Segue pela primeira parte dessa demonstração que $\chi_{A \cup B} = \chi_A + \chi_B$.
 	
-\end{prova}
-\begin{env}{Exemplo}
-\label{ex:função-continua-mensuravel}
-    Considere o espaço mensurável $(\R, \borel)$. Toda função $f: \R \to \R$ contínua é Borel mensurável.
-    \vspace{-0.2cm}
-\end{env}
-
-	Para mostrar a validade do exemplo acima, precisamos de resultados auxiliares que encontraremos em \cite{elon}.
-	Um deles é a proposição abaixo.
-	\vspace{-0.2cm}
-\begin{env}{Proposição}
-\label{cit:função-continua-mensuravel}
-	Suponha que $f:X \to \R$ seja contínua em todos os pontos de $X$.
-	Se $X \subset \R$ é um aberto
-	\footnote{Em caso de dúvida sobre o que é um subconjunto $X$ de $\R$ aberto, consulte \supercite{elon}{p.164}.}, então o conjunto $A = \{a \in X;\ f(a)>k\}$ é um aberto (p.226).
-	\vspace{-0.2cm}
-\end{env}
-	Além disso, em \supercite{elon}{p.167}, encontramos o seguinte teorema:
+	\end{prova}
+	\begin{env}{Exemplo}
+	\label{ex:função-continua-mensuravel}
+	    Considere o espaço mensurável $(\R, \borel)$. Toda função $f: \R \to \R$ contínua é Borel mensurável.
+	    \vspace{-0.2cm}
+	\end{env}
+	
+		Para mostrar a validade do exemplo acima, precisamos de resultados auxiliares que serão enunciados a seguir sem demonstração para que o texto não descentralize do tema.
+		\vspace{-0.2cm}
+	\begin{env}{Proposição}
+	\label{cit:função-continua-mensuravel}
+		Suponha que $f:X \to \R$ seja contínua em todos os pontos de $X$.
+		Se $X \subset \R$ é um aberto, 
+		%
+		\footnote{\enquote{Um subconjunto $A \subset \R$ chama-se um \textit{conjunto aberto} quando
+			todos os seus pontos são interiores [...] \cite[p.164]{elon}.}}
+		%
+		então o conjunto $A = \{a \in X;\ f(a)>k\}$ é um aberto \cite[p.226]{elon}.
+		\vspace{-0.2cm}
+	\end{env}
 	\begin{env}{Teorema}
 		\label{teo:estrutura-abertos-reta}
-		Todo subconjunto aberto $A \subset R$ se exprime, de modo único, como um reunião enumerável de intervalos abertos dois a dois disjuntos.
+		Todo subconjunto aberto $A \subset R$ se exprime, de modo único, como um reunião enumerável de intervalos abertos dois a dois disjuntos \cite[p.167]{elon}.
 		\vspace{-0.2cm}
 	\end{env}
 
@@ -430,7 +435,7 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 	Com isso, pela \ref{def:sigma-algebra}, o conjunto $\{x \in \R; f(x) > \alpha\} \in \borel$.
 	Portanto, qualquer função contínua $f: \R \to \R$ é Borel mensurável.
     Lembre que ao apresentarmos a Álgebra de Borel (\ref{def:algebra-borel}), mostramos no \ref{teo:equiv-borel} que há mais de uma maneira de definir os borelianos.
-    Para uma função $f: X \to \R$ $\cc$-mensurável, também podemos definir uma função $\cc$-mensurável por meio de conjuntos diferentes conforme o seguinte teorema.
+    Para uma função $f: X \to \R$ $\cc$-mensurável, também podemos definir uma função $\cc$-mensurável por meio de conjuntos diferentes conforme expõe \cite{bartle} no seguinte teorema:
 \begin{env}{Teorema}
 \label{teo:equiv-funcoes-mensuraveis}
     Sendo $(X,\mathcal{C})$ um espaço mensurável, para uma função $f: X \to \R$ $\cc$-mensurável as seguintes afirmações são equivalentes:
@@ -508,7 +513,7 @@ Seja $f: X \to \R$ uma função real $\cc$-mensurável e $c \in \R$. Então as f
     \begin{enumerate}[label*=(\alph*)]
         \item Mostraremos que $cf$ é $\cc$-mensurável para todos os casos possíveis do número real $c \in \R$.
             \begin{enumerate}[label=(\roman*)]
-                \item Se $c = 0$, então $c\cdot f(x) = 0, \ \forall \ x \in X$, ou seja, $cf$ se torna a função constante. Segue pelo exemplo \ref{ex:funcao-constante} que $cf$ é $\cc$-mensurável.
+                \item Se $c = 0$, então $c\cdot f(x) = 0, \ \forall \ x \in X$, ou seja, $cf$ se torna a função constante. Segue pelo  \ref{ex:funcao-constante} que $cf$ é $\cc$-mensurável.
                 
                 \item Se $c>0$, então  dado $\alpha \in \R$, temos $cf(x) > \alpha \Leftrightarrow f(x) >\dfrac{\alpha}{c}$. 
                 Logo, 
@@ -524,7 +529,7 @@ Seja $f: X \to \R$ uma função real $\cc$-mensurável e $c \in \R$. Então as f
                 Assim, 
                 $$cf(x) >\alpha \Leftrightarrow -zf(x) >\alpha \Leftrightarrow f(x) < -\dfrac{\alpha}{z}$$
                 Assim, o conjunto $\{x \in X; cf(x) > \alpha \} = \left\{x \in X; f(x) < -\dfrac{\alpha}{z}\right\}$.
-                Desta forma, o conjunto  $\left\{x \in X; f(x) < -\dfrac{\alpha}{z}\right\}  \in \mathcal{C}$ pelo  item $(d)$ do teorema \ref{teo:equiv-funcoes-mensuraveis}. Portanto,  $cf$ é $\cc$-mensurável em todos os casos de $c \in \R$.
+                Desta forma, o conjunto  $\left\{x \in X; f(x) < -\dfrac{\alpha}{z}\right\}  \in \mathcal{C}$ pelo  item $(d)$ do  \ref{teo:equiv-funcoes-mensuraveis}. Portanto,  $cf$ é $\cc$-mensurável em todos os casos de $c \in \R$.
             \end{enumerate}
         %  
         \item Para mostrar a mensurabilidade de $f^2$ é também necessário analisar os casos de $\alpha$.
@@ -556,7 +561,7 @@ Antes de provarmos a próxima proposição, vamos enunciar um teorema que nos au
 \begin{env}{Lema}
 	\label{lem:densidade de Q em R}
 	O conjunto $\Q$ dos números racionais e o conjunto
-	$\R - \Q$ dos números irracionais são ambos densos em $\R$ (Elon, 2019, p.84).
+	$\R - \Q$ dos números irracionais são ambos densos em $\R$ \cite[p.84]{elon}.
 	\vspace{-0.2cm}
 \end{env}
 A prova desse teorema será omitida para que o texto não prolongue-se mais do que o necessário.
@@ -604,7 +609,7 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     Logo, $a \in H_{r_0}$.
     Como existe um $r \in \Q$ tal que $a \in H_{r}$ concluímos que $ \displaystyle a \in \bigcup_{r \in \Q} H_r$.
     
-    Reciprocamente, sendo $a \in \bigcup_{r \in \Q} H_r$ existe um elemento $r_0 \in \Q$ tal que $a \in H_{r_0}$.
+    Reciprocamente, sendo $ \displaystyle a \in \bigcup_{r \in \Q} H_r$ existe um elemento $r_0 \in \Q$ tal que $a \in H_{r_0}$.
     Logo, $f(a) > r_0$ e $g(a) > \alpha -r_0$.
     Ao somarmos membro à membro temos
     \vspace{-0.2cm}
@@ -617,7 +622,7 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     Com isso, $a \in \{x \in X; (f +g)(x) > \alpha\}$ como queríamos.
     Concluindo que a afirmação é verdadeira. 
     
-    Além disso, para cada $r \in \Q$, o conjunto $H_r$ é um elemento de $\mathcal{C}$, pois é  a interseção de dois elementos de $\mathcal{C}$ (proposição \ref{prop:interseção-elementos-sigmas}).
+    Além disso, para cada $r \in \Q$, o conjunto $H_r$ é um elemento de $\mathcal{C}$, pois é  a interseção de dois elementos de $\mathcal{C}$ ( \ref{prop:interseção-elementos-sigmas}).
     Note também que, pela definição de $\mathcal{C}$, a coleção $\displaystyle \bigcup_{r \in \Q} H_r$ é um elemento de $\mathcal{C}$, pois $\Q$ é enumerável
     \footnote{Em caso de dúvida, vide \supercite{elon}{p.51}.}.
     Segue que $f+g$ é $\cc$-mensurável.
@@ -638,13 +643,22 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     Perceba que  $f-g$ é mensurável, pois sendo $g$ mensurável, podemos usar a \ref{prop:aritmetica-uma-funcao} pondo $c= -1$.
     Assim, temos $(-1)g = -g$ acarretando que $-g$ é mensurável.
     Além disso, pela parte \textit{(a)} desta proposição, $f - g = f+ (-g)$.
-    Segue que $fg$ é $\cc$-mensurável.
+    Segue que $fg$ é $\cc$-mensurável
+    \footnote{A \ref{prop:aritmetica-uma-funcao} e \ref{prop:aritmetica-duas-funcoes} encontram-se enunciadas na forma de um único lema em \cite[p.9]{bartle}}.
 \end{prova}
 \begin{env}{Definição}
 	\label{def:parte-positiva e negativa}
-    Seja $f: X \to \R$ uma função real. Dizemos que a \textbf{parte positiva} da função $f$ é a função $f^+: X \to \R$ definida por $f^+(x) = \sup\{f(x), 0\}$.
+    Seja $f: X \to \R$ uma função real. 
+    Dizemos que a \textbf{parte positiva} da função $f$ é a função $f^+: X \to \R$ definida por $f^+(x) = \sup\{f(x), 0\}$
+    %
+    \footnote{A notação $\sup X$ indica o supremo do conjunto $X$. 
+    	Segundo \citeauthor{elon}, \enquote{Sejam $K$ um corpo ordenado e $X \subset K$ um subconjunto limitado superiormente. 
+    	Um elemento $b \in K$ chama-se \textit{supremo} do
+    	subconjunto $X$ quando $b$ é a menor das cotas superiores de $X$ em $K$} \cite[p.75]{elon}.  
+	}.
+	%
     Semelhantemente, chamamos de a \textbf{parte negativa} da função $f$, a função $f^-: X \to \R$ definida por $f^-(x) = \sup\{-f(x), 0\}$
-    \footnote{Em caso de dúvidas sobre o supremo de um conjunto real, vide \supercite{elon}{p.75}.}.
+    \cite{bartle}.
 \vspace{-0.2cm}\end{env}
 
 É possível  que a definição de parte positiva e negativa de funções fique um pouco abstrata em um primeiro contato. 
@@ -654,8 +668,9 @@ Numa tentativa de esclarecer ao máximo, daremos o seguinte exemplo:
     Seja $f: \R^* \to \R$ definida por $f(x) =\dfrac{|x|}{x}$. 
     Então $f^+(x) = 1$ e $f^-(x) = -1$.
     De fato, ao tomarmos um elemento real $x< 0$, vemos que sua imagem $f(x) < 0$ sendo $f(x) = \dfrac{-x}{x} = -1$.
+    Assim, $f^+(x) = \sup\{f(x), 0\} = 0$ enquanto que $f^-(x) = \sup\{-f(x), 0\} = 1$.
     Se $x>0$, então $f(x) =\dfrac{x}{x} = 1$. 
-    Assim, $f^+(x) = \sup\{f(x), 0\} = 1$ enquanto que $f^-(x) = \sup\{-f(x), 0\} = -1$.
+    Logo, $f^+(x) = \sup\{f(x), 0\} = 1$ enquanto que $f^-(x) = \sup\{-f(x), 0\} = -1$.
 \vspace{-0.2cm}\end{env}
 
 Neste caso, podemos perceber, ao olhar para a Figura \ref{fig: Gráfico da Função f(x) =|x|/x} que tanto a parte positiva quanto a parte negativa da função $f$, apresentada no \ref{ex:parte-positiva e negativa}, são ambas funções constantes.
@@ -693,7 +708,7 @@ Neste caso, podemos perceber, ao olhar para a Figura \ref{fig: Gráfico da Funç
 Com isso, finalizaremos esta seção apresentando alguns resultados importantes sobre parte positiva e negativa de uma função.
     \begin{env}{Lema}
     \label{lem:f = f^+ - f^-}
-        Seja $f: X \to \R$ uma função real. Então $f = f^+ - f^-$ e $|f| = f^+ + f^-$.
+        Seja $f: X \to \R$ uma função real. Então $f = f^+ - f^-$ e $|f| = f^+ + f^-$ \cite{bartle}.
     \end{env}
     \begin{prova}
             Para provar que $f = f^+ - f^-$, devemos avaliar os casos de $f(x)$. 
@@ -728,19 +743,19 @@ De modo semelhante, conseguimos subtrair membro a membro e obter a expressão $f
 Isso demonstra o lema adiante:
 \begin{env}{Lema}
 \label{lem:forma-explicita-partes-de-uma-funcao}
-    Se $f: X \to \R$ é uma função real, então $f^+ = \dfrac{|f| + f}{2}$ e $f^- = \dfrac{|f| - f}{2}$.
+    Se $f: X \to \R$ é uma função real, então $f^+ = \dfrac{|f| + f}{2}$ e $f^- = \dfrac{|f| - f}{2}$ \cite{bartle}.
     \vspace{-0.2cm}
 \end{env}
 \begin{env}{Teorema}
-    Uma função $f: X \to \R$ é $\cc$-mensurável se, e somente se, suas partes negativa e positiva são ambas $\cc$-mensuráveis. 
+    Uma função $f: X \to \R$ é $\cc$-mensurável se, e somente se, suas partes negativa e positiva são ambas $\cc$-mensuráveis \cite{bartle}. 
     \vspace{-0.2cm}
 \end{env}
     \begin{prova}
         Suponha que $f$ seja $\cc$-mensurável.
-        Pela proposição \ref{prop:aritmetica-uma-funcao} vemos que a função $|f|$ é $\cc$-mensurável e pelo lema \ref{lem:forma-explicita-partes-de-uma-funcao} as funções $f^+ = \dfrac{1}{2}(|f| + f)$ e $f^+ = \dfrac{1}{2}(|f| - f)$ também são $\cc$-mensuráveis.
+        Pela  \ref{prop:aritmetica-uma-funcao} vemos que a função $|f|$ é $\cc$-mensurável e pelo \ref{lem:forma-explicita-partes-de-uma-funcao} as funções $f^+ = \dfrac{1}{2}(|f| + f)$ e $f^+ = \dfrac{1}{2}(|f| - f)$ também são $\cc$-mensuráveis.
         Reciprocamente, supondo que $f^+$ e $f^-$ são mensuráveis, temos pelo \ref{lem:f = f^+ - f^-} que
-        $f = f^+ - f^-$. Segue, novamente pela proposição \ref{prop:aritmetica-duas-funcoes}, que $f$ é $\cc$-mensurável. 
+        $f = f^+ - f^-$. Segue, novamente pela \ref{prop:aritmetica-duas-funcoes}, que $f$ é $\cc$-mensurável. 
     \end{prova}
 
-Assim, se retornarmos à figura \ref{fig: Gráfico da Função f(x) =|x|/x}, vemos que a função do exemplos \ref{ex:parte-positiva e negativa} é $\cc$-mensurável, pois
+Assim, se retornarmos à figura \ref{fig: Gráfico da Função f(x) =|x|/x}, vemos que a função do  \ref{ex:parte-positiva e negativa} é $\cc$-mensurável, pois
 suas partes positiva e negativa são ambas funções constantes que são mensuráveis conforme a \ref{prop:aritmetica-uma-funcao}.

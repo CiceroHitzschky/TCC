@@ -1164,7 +1164,7 @@ Esse teorema nos mostra que dada qualquer função não negativa mensurável, po
 Diante disso, nada mais natural que definir a integral de Lebesgue para funções não negativas quaisquer da maneira que segue
 \begin{env}{Definição}
 	\label{def:integral de uma função qualquer não negativa}
-	Se $f \in M^+(X,\cc)$, nós definimos a integral de $f$ com respeito à medida $\mu$ sendo o valor real estendido
+	Se $f \in M^+(X,\cc)$, nós definimos a integral de $f$ com respeito à medida $\mu$, sendo o valor real estendido
 	$$
 	\int f d\mu = sup \int \varphi d\mu
 	$$
@@ -1194,8 +1194,8 @@ Isso faremos por meio dos lemas a seguir
 	Se $\varphi$ é uma função simples em $M^+(X,\cc)$ tal que 
 	$0 \leq \varphi \leq f$, então $0 \leq \varphi \leq g$, uma vez que $f \leq g$.
 	Assim, 
-	$\sup_{\varphi leq f} \int\varphi d\mu \leq \int f d\mu$ e
-	$\sup_{\varphi leq f} \int\varphi d\mu \leq \int g d\mu$.
+	$\displaystyle\sup_{\varphi \leq f} \int\varphi d\mu \leq \int f d\mu$ e
+	$\displaystyle\sup_{\varphi \leq f} \int\varphi d\mu \leq \int g d\mu$.
 	Subtraindo membro à membro temos 
 	$$
 	0 \leq  \int f d\mu  - \int g d\mu
@@ -1212,8 +1212,8 @@ Isso faremos por meio dos lemas a seguir
 	$$
 \end{env}
 \begin{prova}
-	Como $E \subseteq F$, então $chi_E \leq \chi_F$.
-	Assim, $fchi_E \leq f\chi_F$.
+	Como $E \subseteq F$, então $\chi_E \leq \chi_F$.
+	Assim, $f\chi_E \leq f\chi_F$.
 	Segue, pelo lema anterior que, 
 	$$
 	\int_E f d\mu 
@@ -1226,7 +1226,7 @@ Isso faremos por meio dos lemas a seguir
 	$$
 	Portanto, $ \displaystyle 
 	\int_E f d\mu 
-	=
+	\leq 
 	\int_F f d\mu.
 	$
 \end{prova}
@@ -1239,10 +1239,10 @@ Isso faremos por meio dos lemas a seguir
 	$$
 \end{env}
 \begin{prova}
-	Pelo corolário \ref{cor:convergencia-de-uma-sequencia-mensuravel}, se temos uma sequência de funções mensuráveis que converge para uma função $f$, então $f$ também é mensurável.
+	Pelo \ref{cor:convergencia-de-uma-sequencia-mensuravel}, se temos uma sequência de funções mensuráveis que converge para uma função $f$, então $f$ também é mensurável.
 	Além disso,
 	como $(f_n)$ é crescente, então $f_n \leq f\ \forall n \in \N$.
-	Seque, pelo lema \ref{lem:monoticiadade da integral de funções não negativas} que 
+	Seque, pelo \ref{lem:monoticiadade da integral de funções não negativas} que 
 	$$
 	\int f_n\ d\mu \leq \int f\ d\mu
 	$$
@@ -1256,7 +1256,7 @@ Isso faremos por meio dos lemas a seguir
 	Tomando $n \in \N$ tais que $f_n(x) \geq \alpha \varphi(x)$, construa
 	os conjuntos 
 	$$
-	A_n =\{x \in ;\ f_n(x) \geq \alpha \varphi(x)\}.
+	A_n =\{x \in X ;\ f_n(x) \geq \alpha \varphi(x)\}.
 	$$
 	Com isso, podemos observar que cada $A_n \in X$, $A_{n} \subseteq A_{n+1}$
 	e que $X = \bigcup_{n \in \N}A_n$.
@@ -1310,7 +1310,7 @@ Isso faremos por meio dos lemas a seguir
 O teorema anterior nos permite mostrar as operações aritméticas para integral de Lebesgue para funções não negativas quaisquer como apresentaremos adiante.
 
 \begin{env}{Corolário}
-	Se $f \in M^+$ e $c \geq 0$, então $cf \in M^+$ e vale
+	Se $f \in M^+(X, \cc)$ e $c \geq 0$, então $cf \in M^+(X, \cc)$ e vale
 	$$
 	\int cf d\mu = c\int f d\mu.
 	$$
@@ -1320,9 +1320,9 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 \begin{prova}
 	Se o número real for zero, então o resultado sai de forma imediata.
 	Suponha que $c > 0$. 
-	Assim, pelo teorema \ref{teo:aproximação via funções simples}, existe uma sequência de funções simples $(\varphi_n) \subset M^+$ que converge para a função $f$.
+	Assim, pelo  \ref{teo:aproximação via funções simples}, existe uma sequência de funções simples $\varphi_n \in M^+$ para todo $n \in \N$ que converge para a função $f$.
 	Logo, a sequência $(c\varphi_n)$ converge para $cf$.
-	Desta forma, ao aplicarmos os teoremas \ref{teo:aritmetica-com-integrais-de-funções-simples} e 
+	Desta forma, ao aplicarmos o \ref{teo:aritmetica-com-integrais-de-funções-simples} e 
 	\ref{teo:Convergencia Monótona}, obtemos
 	$$
 	\int c f d\mu 
@@ -1337,7 +1337,7 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 
 \begin{env}{Corolário}
 	\label{cor:soma de integrais de funções não negativas}
-	Se $f, g \in M^+$, então $f + g \in M^+$ e vale
+	Se $f, g \in M^+(X, \cc)$, então $f + g \in M^+(X, \cc)$ e vale
 	$$
 	\int (f + g) d\mu = \int f d\mu + \int g d\mu.
 	$$ 	
@@ -1382,7 +1382,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 \end{prova}
 
 \begin{env}{Corolário}
-	Se $f \in M^+$ e $\lambda$ é definida sobre $\cc$ pondo
+	Se $f \in M^+(X, \cc)$ e $\lambda$ é definida sobre $\cc$ pondo
 	$
 	\lambda(E) = \int_E fd\mu 
 	$,
@@ -1416,7 +1416,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 \end{env}
 
 \begin{env}{Corolário}
-	Suponha que $f \in M^+$. Então
+	Suponha que $f \in M^+(X, \cc)$. Então
 	$f(x) = 0$ em quase todo ponto de $X$ se, e somente se $\displaystyle \int fd\mu = 0$.
 \end{env}
 
@@ -1467,7 +1467,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 Finalizaremos esta subseção apresentando um corolário do Teorema da Convergência Monótona que enfatiza claramente a diferença entre a Integral de Riemann e a Integral de Lebesgue.
 
 \begin{env}{Corolário}
-	Se $(g_n)$ é uma sequência de funções em $M^+$, então 
+	Se $(g_n)$ é uma sequência de funções em $M^+(X, \cc)$, então 
 	$$
 	\int \left(\dsum_{n = 1} ^\infty g_n\right)d\mu
 	=
@@ -1475,7 +1475,7 @@ Finalizaremos esta subseção apresentando um corolário do Teorema da Convergê
 	$$
 \end{env}
 \begin{prova}
-	O resultado sai imediatamente da aplicação do Teorema da Convergência Monótona considerando a sequência de funções $(f_n) \subset M^+$ tais que
+	O resultado sai imediatamente da aplicação do Teorema da Convergência Monótona considerando a sequência de funções $f_n \in M^+(X, \cc)\ \forall n \in \N$ tais que
 	$f_n = g_1 + \cdots + g_n  $.
 \end{prova}
 \section{Funções Integráveis}
@@ -1509,12 +1509,12 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	$$
 		\int |f| d\mu = \int |f|^+ d\mu - \int |f|^-d\mu
 	$$
-	Pela definição \ref{def:parte-positiva e negativa}, $|f|^- = 0$, logo 
+	Pela \ref{def:parte-positiva e negativa}, $|f|^- = 0$, logo 
 	$\int |f|^- d\mu = 0$.
-	Pelo lema \ref{lem:decomposicao-da-funcao-em-partes-positiva-negativa} temos que
+	Pelo \ref{lem:f = f^+ - f^-} temos que
 	$|f|^+ = |f| = f^+ + f^-$.
 	Assim, $\displaystyle \int |f|^+ d\mu = \int (f^+ + f^-)d\mu$.
-	Como $f^+ + f^- \in M^+$, segue pelo corolário \ref{cor:soma de integrais de funções não negativas} que 
+	Como $f^+ + f^- \in M^+(X, \cc)$, segue pelo corolário \ref{cor:soma de integrais de funções não negativas} que 
 	$\displaystyle\int (f^+ + f^-)d\mu = \int f^+ d\mu + \int f^- d\mu$, ou seja $\displaystyle\int |f|^+d\mu$ é finita.
 	Desta forma, 
 	$$

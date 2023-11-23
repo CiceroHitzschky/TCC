@@ -10,6 +10,11 @@
 {BARTLE, R.~G. \textbf{The Elements of Integration and Lebesgue Measure}. 1.
   ed. New York: Wiley-Interscience, 1995.}
 
+\bibitem[Boyer 2012]{boy}
+\abntrefinfo{Boyer}{BOYER}{2012}
+{BOYER, C.~B. \textbf{\textbf{História da Matemática}}. 3. ed. São Paulo:
+  Blucher, 2012.}
+
 \bibitem[Gil 2002]{gil}
 \abntrefinfo{Gil}{GIL}{2002}
 {GIL, A.~C. \textbf{{Como elaborar projetos de pesquisa}}. 4. ed. São Paulo:
@@ -21,6 +26,11 @@
 \abntrefinfo{Lima}{LIMA}{2019}
 {LIMA, E.~L. \textbf{\textbf{Um Curso de Análise}}. 15. ed. Rio de Janeiro:
   IMPA, 2019. v.~1.}
+
+\bibitem[Magalhaes 2011]{magalhaes}
+\abntrefinfo{Magalhaes}{MAGALHAES}{2011}
+{MAGALHAES, M.~N. \textbf{Probabilidade e Variáveis Aleatórias}. 3. ed. São
+  Paulo: EdUsp, 2011.}
 
 \bibitem[Prodanov e Freitas 2013]{profreitas}
 \abntrefinfo{Prodanov e Freitas}{PRODANOV; FREITAS}{2013}

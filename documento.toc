@@ -2,22 +2,23 @@
 \babel@toc {brazil}{}\relax 
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{5}{chapter.1}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Espaços e Funções Mensuráveis}}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}O Conceito de $\sigma $-álgebra\tmspace +\thickmuskip {.2777em}}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Funções Mensuráveis}{13}{section.2.2}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {A Teoria da Medida}}{22}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Os Espaços de Funções Mensuráveis}{22}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Espaços de Medida}{29}{section.3.2}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Teoria da Integração}}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Integral de Funções Simples}{37}{section.4.1}%
-\contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{42}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Funções Integráveis}{53}{section.4.3}%
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{57}{chapter.5}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{59}{section*.20}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{10}{chapter.1}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Espaços e Funções Mensuráveis}}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}O Conceito de $\sigma $-álgebra\tmspace +\thickmuskip {.2777em}}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Funções Mensuráveis}{18}{section.2.2}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {A Teoria da Medida}}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Os Espaços de Funções Mensuráveis}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Espaços de Medida}{34}{section.3.2}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Teoria da Integração}}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Integral de Funções Simples}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{47}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Funções Integráveis}{58}{section.4.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{62}{chapter.5}%
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\MakeTextUppercase {REFER\^ENCIAS}}{64}{section*.24}%
