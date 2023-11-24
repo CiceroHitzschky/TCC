@@ -1,22 +1,26 @@
 \chapter{A Teoria da Medida}
 %%%%%%%%% ESPAÇOS MENSURÁVEIS
-    Nesta seção, apresentaremos o conceito chave desse trabalho: a teoria da medida.
+    Nesta seção, apresentaremos o conceito chave deste trabalho: a teoria da medida.
     Conhecemos este conceito de forma intuitiva pelo o que vemos, geralmente, na geometria euclidiana plana.
     Aqui, trataremos de medida de modo generalizado. 
     Para isso, precisaremos ampliar o conjunto dos números reais para que ele possa atender novas exigências.
-    Isso é necessário porquê, as vezes, teremos conjuntos tão \enquote{grandes} que nenhum número real poderá representar sua medida. 
+    Isso é necessário porquê, as vezes, teremos conjuntos tão \enquote{grandes} que nenhum número real poderá representar sua \enquote{medida}. 
     Assim, estenderemos o conjunto dos números reais na primeira seção.
     Na seguinte, estenderemos o conceito de função mensurável para o conjunto dos números reais estendidos e, na seção final, apresentaremos a definição de medida bem como exemplos dela.
+    
 \section{Os Espaços de Funções Mensuráveis}
-
+	Adiante apresentaremos conjuntos tão \enquote{grandes} que nenhum número real poderá expressar seu \enquote{tamanho}.
+	Assim, antes de prosseguirmos expandiremos o conjunto da reta real que temos trabalhado anteriormente.
     \begin{env}{Definição}
     \label{def:reta-estendida}
-        A coleção $\xreta$ que consiste de $\R \cup \{-\infty, +\infty\}$ é chamada de \textbf{Sistema Estendido de Números Reais}.
-        \vspace{-0.2cm}
+        A coleção $\xreta$ que consiste de $\R \cup \{-\infty, +\infty\}$ é chamada de \textbf{Sistema Estendido de Números Reais}
+        \cite[p.5, tradução nossa]{bartle}
+        \footnote{No original: The collection $\xreta$ consisting of
+        	the set $\R \cup \{ -\infty , + \infty\}$ is called the extended real number system.}.
     \end{env}
 
     Ou seja, $\xreta$ nada mais é que o conjunto dos números reais com a possibilidade de se ter $-\infty$ ou $+\infty$.
-    Com isso, parece que nosso problema de medir conjuntos muito grandes se resolveu.
+    Com isso, parece que nosso problema de \enquote{medir} conjuntos muito grandes se resolveu.
     Entretanto, alguns cuidados são necessários para operarmos em $\xreta$.
     Um deles, por exemplo, é que $\xreta$ não é fechado para operações de $\R$ tais como $(+\infty) + (-\infty)$ que nem definido é.
     Dito isso, para $x \in \R$, as operações dos símbolos $+\infty$ e $-\infty$ são dadas da seguinte forma:
@@ -58,11 +62,11 @@
     $$  
     \end{multicols}
 	\vspace{-0.4cm}
-    Neste novo contexto de números reais a \sigal de Borel não é mais válida uma vez que a definição \ref{def:algebra-borel} não inclui $+\infty$ nem $-\infty$.
+    Neste novo contexto de números reais a \sigal de Borel não é mais válida uma vez que a \ref{def:algebra-borel} não inclui $+\infty$ nem $-\infty$.
     Logo, precisaremos de uma $\sigma$-álgebra em $\xreta$ para dar continuidade aos nossos estudos. 
     Com isso, considere $\xreta$.
-    Tomando um conjunto arbitrário $E \in \borel$, com $\varnothing \neq E$, defina $E_1 = E \cup \{-\infty\}, E_2 = E \cup \{+\infty\}$ e $E_3 = E \cup \{-\infty, +\infty\}$. 
-    Desta forma, o conjunto $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ é uma \sigal de $\xreta$.
+    Tomando um conjunto arbitrário $E \in \borel$, com $\varnothing \neq E$, defina $E_1 = E \cup \{-\infty\}, E_2 = E \cup \{+\infty\}$ e $E_3 = E \cup \{-\infty, +\infty\}$. Com isso podemos fazer o seguinte enunciado: 
+    % Desta forma, o conjunto $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ é uma \sigal de $\xreta$.
     \begin{comment}
     Com efeito, se $E \in \borel$, então é um intervalo aberto conforme o teorema \ref{teo:equiv-borel}.
     Assim, $E_1, E_2, E_3$ e $E_4$ serão intervalos do tipo $[-\infty,x)$ ou $(x, +\infty]$ que são elementos de $\borel$ acrescidos de $+\infty$ ou $-\infty$. 
@@ -74,15 +78,14 @@
     
     \begin{env}{Definição}
     \label{def:algebra-borel-estendida}
-        A \sigal $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ do conjunto $\xreta$ é chamada de Álgebra de Borel Estendida. 
-        \vspace{-0.2cm}
+        A \sigal $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ do conjunto $\xreta$ é chamada de Álgebra de Borel Estendida \cite{bartle}.
     \end{env}
 
     Uma vez que estamos familiarizados com os conceitos de funções de valores reais mensuráveis, estamos prontos para estender este conceito para o conjunto $\xreta$.
     \begin{env}{Definição}
     \label{def:familia-funcoes-mensuraveis}
         Sendo $(X, \mathcal{C})$ um espaço mensurável, uma função de valores reais estendidos $f: X \to \xreta$ é dita $\mathcal{C}$-mensurável caso o conjunto
-        $\{x \in X; f(x) > \alpha\} \in \mathcal{C}$ para qualquer que seja $\alpha \in \R$. 
+        $\{x \in X; f(x) > \alpha\} \in \mathcal{C}$ para qualquer que seja $\alpha \in \R$ \cite{bartle}. 
         \vspace{-0.4cm}
     \end{env}
 
@@ -90,7 +93,8 @@
 	Além disso, caso estivermos tratando apenas das funções não negativas usaremos $M^+(X, \mathcal{C})$.
     \begin{env}{Proposição}
     \label{prop:identidade-intersecao-mais-infinito}
-        Se $f \in \menfus$, então $\{x \in X; f(x) = +\infty\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\}$.
+        Se $f \in \menfus$, então $\{x \in X; f(x) = +\infty\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\}$
+        \cite{bartle}.
     \end{env}
     \begin{prova}
         Tome, de modo arbitrário, um elemento $a \in X$. 
@@ -107,14 +111,15 @@
 
     \begin{env}{Proposição}
     \label{prop:identidade-união-menos-infinito}
-        Se $f \in \menfus$, então $\{x \in X; f(x) = -\infty\} = \displaystyle \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c$.
+        Se $f \in \menfus$, então $\{x \in X; f(x) = -\infty\} = \displaystyle \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c$
+        \cite{bartle}.
         \vspace{-0.4cm}
     \end{env}
 	%
     \begin{prova}
     	
     	\vspace{-0.6cm}
-        Analogamente à proposição \ref{prop:identidade-intersecao-mais-infinito} tomemos $a \in X$. 
+        Analogamente à \ref{prop:identidade-intersecao-mais-infinito} tomemos $a \in X$. 
         Segue que 
         \begin{align*}
             a \in \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c
@@ -147,7 +152,16 @@
 		 \end{array}\right.
 	 	 \vspace{-0.2cm}
 		 $$
-		 é $\cc$-mensurável.
+		 é $\cc$-mensurável \cite[p.11, tradução nossa, adaptação nossa]{bartle}
+		 \footnote{No original: An extended real-valued function $f$ is measurable if and
+		 	only if the sets
+		 	$A = \{x \in X : f(x) = +\infty\}, B = \{x \in X : f(x) = -\infty\}$
+		 	belong to $X$ and the real-valued function $f_1$ defined by
+		 	$$f_1(x) = \left\{\begin{array}{cc}
+		 		f(x), & \textrm{\ se } x \notin A\cup B  \\
+		 		0,& \textrm{\ se } x \in A\cup B
+		 	\end{array}\right.$$
+		 is measurable.}.
 		 \vspace{-0.2cm}
 	 \end{env}
 \begin{prova}
@@ -158,7 +172,7 @@
     Com isso, 
     \vspace{-0.2cm}
     $$
-    \{x \in X; h(x) > \alpha\} = A^c\cap \{x \in X; f(x) > \alpha\} \in \cc
+    \{x \in X; h(x) > \alpha\} = A^c\cap \{x \in X; f(x) > \alpha\} \in \cc.
     \vspace{-0.2cm}
     $$
     Segue, pela  \ref{prop:interseção-elementos-sigmas} que $\{x \in X; h(x) > \alpha\} \in \cc$, ou seja, $h$ é $\cc$-mensurável.
@@ -188,7 +202,17 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 	F(x) = \sup f_n(x),\  
 	f^*(x) = \lim\inf f_n(x),\   
 	F^*(x) = \lim\sup f_n(x).$$
-	Então as funções $f, f^*, F$ e $F^*$ são elementos de $\menfus$.
+	Então as funções $f, f^*, F$ e $F^*$ são elementos de $\menfus$
+	\cite[p. 12, tradução nossa, adaptação nossa]{bartle}
+	\footnote{No original: 
+		Let $(f_n)$ be a sequence in $M(X, \textbf{X})$ and define the functions
+		\begin{align*}
+			f(x) = \inf f_n(x),\ & 
+			F(x) = \sup f_n(x),\\
+			f^*(x) = \lim \inf f_n(x),\ & 
+			F^*(x) = \lim \sup f_n(x).
+		\end{align*}
+		Then $f, F, f^*$ and $F^*$ belong to $M(X, \textbf{X})$.}.
 \end{env}
 \begin{prova}
 	Como $(f_n)$ é uma sequência de funções $\cc$-mensuráveis e $f = \inf f_n$, afirmamos que $\{x \in X; f(x) \geq \alpha\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\}$.
@@ -206,7 +230,7 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 			\Leftrightarrow	&
 			y \in \{x \in X; f(x) \geq \alpha\}
 		\end{align*}
-	Como cada $\{x \in X; f_n(x) \geq \alpha\}$ é $\cc$-mensurável, segue pela proposição \ref{prop:interseção-elementos-sigmas} que o conjunto $\{x \in X; f(x) \geq \alpha\} \in \cc$ para todo $\alpha \in \R$.
+	Como cada $\{x \in X; f_n(x) \geq \alpha\}$ é $\cc$-mensurável, segue pela \ref{prop:interseção-elementos-sigmas} que o conjunto $\{x \in X; f(x) \geq \alpha\} \in \cc$ para todo $\alpha \in \R$.
 	Desta forma, $f$ é $\cc$-mensurável.
 	
 	Observe, também, que $\{x \in X; F(x) >\alpha\} = \displaystyle \bigcup_{n = 1}^\infty \{x \in X; f_(x) >\alpha\}$.
@@ -234,8 +258,13 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 \begin{env}{Corolário}
 	\label{cor:convergencia-de-uma-sequencia-mensuravel}
 	Se $(f_n)$ é uma sequência em $\menfus$ que converge para $f$ em $X$, então
-	$f$ também está em $\menfus$.
-	\vspace{-0.2cm}
+	$f$ também está em $\menfus$
+	\cite[p. 12, tradução nossa, adaptação nossa]{bartle}
+	\footnote{No original:
+		If $(f_n)$ is a sequence in $M(X, \textbf{X})$ which converges to $f$ on $X$, 
+		then $f$ is in $M(X, \textbf{X})$.
+	}.
+	
 \end{env}
 \begin{prova}
 	Ora, por hipótese $\displaystyle f(x) = \lim_{n \to +\infty} f_n(x)$.
@@ -251,7 +280,7 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 	\left\{\begin{array}{cc}
 		f(x), & \textrm{se\ } |f(x)| \leq A \\
 		A, & \textrm{se\ } f(x) > A \\
-		-A, & \textrm{se\ } f(x) < -A 
+		-A, & \textrm{se\ } f(x) < -A.
 	\end{array}\right.
 	\vspace{-0.4cm}
 	$$
@@ -327,11 +356,8 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 	
 \end{env}
 \end{comment}
-Para que possamos entender melhor o truncamento de uma função, apresentamos o seguinte exemplo:
-\pagebreak
-\begin{env}{Exemplo}
-	Seja $g \in \menfus$ tal que $g(x) = 3\cos(2x)$.
-\end{env}
+Para que possamos entender melhor o truncamento de uma função, vamos observar o gráfico da função $g(x) = 3\cos(2x)$ apresentada na figura
+\ref{fig:3cosseno_de_2x}. 
 	\begin{figure}[h!]
 		\centering
 		\Caption{\label{fig:3cosseno_de_2x} Gráfico da função $g(x) = 3\cos (2x)$} 
@@ -363,7 +389,6 @@ Para que possamos entender melhor o truncamento de uma função, apresentamos o 
 		}{
 			\Fonte{Elaborado pelo autor}		}   
 	\end{figure}
-
 	Uma truncamento faz, didaticamente falando, uma espécie de limitação no gráfico da função original.
 	Ao tomarmos como constante o número real 1, vemos que o truncamento $g_1$ da função $g$, apresentada anteriormente, \enquote{amassa} o gráfico de $g$ nas ordenadas 1 e $-1$ como exposto na figura \ref{fig:truncamentog_1}.
 		\begin{figure}[h!]
@@ -458,9 +483,9 @@ Note que o mesmo ocorre com o truncamento $g_2$ apresentado na figura \ref{fig:t
 			}{
 				\Fonte{Elaborado pelo autor}		}   
 		\end{figure}
-Assim, quanto maior o número $n$ do truncamento $g_n$ de uma função mensurável $g$, mais próximo $g_n$ está de $g$ uma vez que a \enquote{limitação} vai desaparecendo.
+Assim, quanto maior o número $n$ do truncamento $g_n$ de uma função mensurável $g$, mais próximo o truncamento $g_n$ está de $g$ uma vez que a \enquote{limitação} vai desaparecendo.
 
-Com essas observações podemos voltar a analisar o produto de duas funções com valores reais estendidos.
+Com esses resultados e observações podemos voltar a analisar o produto de duas funções com valores reais estendidos.
 Considere $f,g \in \menfus$. 
 Tomemos duas sequências $(f_n)$ e $(g_m)$ tais que para cada $k \in \N$, $f_k$ e $g_k$ são truncamentos de $f$ e $g$, respectivamente.
 Ou seja,
@@ -509,9 +534,8 @@ Dito isso, encerraremos esta seção apresentando a definição generalizada de 
 \begin{env}{Definição}
 	\label{def:mensurabilidade-geral}
 	Sejam $(X, \cc)$ e $(Y,\mathcal{F})$ dois espaços mensuráveis.
-	Dizemos que uma função $\phi:X \to Y$ é dita mensurável se o conjunto $f^{-1}(E) = \{x \in X; f(x)\in E\} \in \cc$ para todo conjunto $E \in \mathcal{F}$. 
+	Dizemos que uma função $\phi:X \to Y$ é dita mensurável se o conjunto $f^{-1}(E) = \{x \in X; f(x)\in E\} \in \cc$ para todo conjunto $E \in \mathcal{F}$ \cite{bartle}. 
 \end{env}
-
 Embora essa definição pareça ser totalmente distinta da \ref{def:mensurabilidade-funções-reais}, as duas são equivalentes no caso particular de $Y = \R$ e $\mathcal{F} = \borel$ conforme demonstrado a seguir.
 
 \begin{env}{Proposição}
@@ -520,15 +544,17 @@ Embora essa definição pareça ser totalmente distinta da \ref{def:mensurabilid
 \end{env}
 \begin{prova}
 	Suponha $f$ uma função $\cc$-mensurável. 
-	Sabemos pela definição \ref{def:algebra-borel} que os elementos da álgebra de Borel são do tipo $(-\infty,x)$ com $x \in \R$.
+	Sabemos pela \ref{def:algebra-borel} que os elementos da álgebra de Borel são gerados por intervalos do tipo $(-\infty,x)$ com $x \in \R$.
 	Assim, dado arbitrariamente $\alpha \in \R$ temos que
 	$$
 	f^{-1}(-\infty, \alpha)
 	=\{x \in X; f(x) \in (-\infty, \alpha)\}
-	=\{x \in X; f(x) \leq \alpha\}
-	%\footnote{$f^{-1}(-\infty, \alpha)$ indica a pré imagem de $(-\infty, \alpha)$.}
+	=\{x \in X; f(x) < \alpha\}
+	\footnote{Por abuso de notação, $f^{-1}(-\infty, \alpha)$ \textrm{\ indica a pré imagem de\ } $(-\infty, \alpha)$.}.
 	$$
-	Como $f$ é $\cc$-mensurável segue pelo teorema \ref{teo:equiv-funcoes-mensuraveis} que $f^{-1}(-\infty, \alpha) \in \cc$.
+	Como $f$ é $\cc$-mensurável segue pelo \ref{teo:equiv-funcoes-mensuraveis} que $f^{-1}(-\infty, \alpha) \in \cc$.
+	Note que um $E \subset \borel$ qualquer, é gerado por uniões ou intersecções de intervalos do tipo $(-\infty,x)$ com $x \in \R$ e cada pré imagem desses serão elementos  de $\cc$ por um raciocínio análogo ao que fora feito anteriormente. 
+	Disso, concluímos pela \ref{prop:interseção-elementos-sigmas} e pela \ref{def:sigma-algebra} que $f^{-1}(E) \in \cc$ para todo $E \in \borel$.
 	Reciprocamente se 
 	$f^{-1}(-\infty, \alpha) \in \cc$ para qualquer $\alpha$ concluímos, imediatamente, que $\{x \in X; f(x) < \alpha\} \in \cc$ para todo $\alpha \in \R$.
 	Portanto, $f$ é $\cc$-mensurável.
@@ -541,7 +567,8 @@ Antes de definimos uma medida, lembraremos de alguns conceitos e resultados da t
 \begin{env}{Definição}
 \label{def:sequência-crescente-decrescente-de-conjuntos}
     Uma sequência de conjuntos $(A_n)$ é dita \textbf{não-decrescente} se $A_n \subseteq A_{n+1}$ para todo $n \in \N$.
-    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência  de conjuntos é \textbf{não-crescente}.
+    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência  de conjuntos é \textbf{não-crescente}
+    \cite{bartle}.
 \end{env}
 
 \begin{env}{Proposição}
@@ -551,7 +578,7 @@ Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 =
     \item $A_n$ é uma sequência disjunta;
         \footnote{Lembre que uma sequência disjunta significa que $A_i \cap A_j = \varnothing$ para todo $i \neq j$}
     \item $E_n = \displaystyle \bigcup_{j = 1}^n A_j$;
-    \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$;
+    \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$ \cite{bartle}.
 \end{enumerate}
 \end{env}
 
@@ -631,7 +658,8 @@ Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 =
 \label{prop:sequencia-decrescente-conjuntos-resultado-A_n}
 Seja $(F_n)$ uma sequência não-crescente de conjuntos. 
 Se $(E_n)$ é tal que $E_n = F_1 - F_n$ para todo $n \in \N$, então $(E_n)$ é não-decrescente e 
-$\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$.
+$\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$
+\cite{bartle}.
 \end{env}
 
 \begin{prova}
@@ -654,7 +682,8 @@ $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^
 \begin{env}{Proposição}
 	\label{prop: duas partições}
 	Se $\displaystyle \bigcup_{j = 1}^n E_j$ e $\displaystyle \bigcup_{k = 1}^m F_k$ são duas partições distintas de um conjunto $X$, então
-	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^n (E_j \cap F_k)$.
+	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^n (E_j \cap F_k)$
+	\cite{bartle}.
 \end{env}
 \begin{prova}
 	Fixemos um $j_0 \in I_n$.
@@ -673,7 +702,7 @@ $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^
         \item $\mu(\varnothing) = 0$;
         \item $\mu(A) \geq 0, \ \forall \ A \in \mathcal{C}$;
         \item Se $(A_n)$ é uma sequência disjunta de elementos de  $\mathcal{C}$, então 
-        $\displaystyle\mu\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mu(A_n)$.
+        $\displaystyle\mu\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mu(A_n)$ \cite[p.19, tradução nossa]{bartle}.
         
     \end{enumerate}
 \end{env}
@@ -684,7 +713,7 @@ Quando temos que $\mu(E) < +\infty$ para qualquer que seja o conjunto $E \in \ma
 
 \begin{env}{Definição}
 	\label{def:espaço-de-medida}
-	Dizemos que uma tripla ordenada $(X, \mathcal{C}, \mu)$ constituída por um conjunto $X$, uma \sigal $\mathcal{C}$ desse conjunto e uma medida $\mu$ sobre o espaço mensurável $(X, \mathcal{C})$ é um espaço de medida.
+	Dizemos que uma tripla ordenada $(X, \mathcal{C}, \mu)$ constituída por um conjunto $X$, uma \sigal $\mathcal{C}$ desse conjunto e uma medida $\mu$ sobre o espaço mensurável $(X, \mathcal{C})$ é um espaço de medida \cite{bartle}.
 \end{env}
 
 
@@ -727,6 +756,7 @@ Portanto $\mu_1$ e $\mu_2$ são medidas.
 		\item $\mathcal{P}(A) \geq 0,\ \forall\  A \in \cc$;
 		\item Se $(A_n)$ é uma sequência disjunta de elementos de  $\mathcal{C}$, então 
 		$\displaystyle\mathcal{P}\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mathcal{P}(A_n)$
+		\cite[p.11, adaptação nossa]{magalhaes}
 		\footnote{As propriedades \textit{K1, K2} e \textit{K3} são chamadas de \textit{Axiomas de Kolmogorov}}.
 	\end{enumerate}
 \end{env}
@@ -752,7 +782,7 @@ Neste caso, o espaço de medida $(\Omega, \cc, \pp)$ é chamado de espaço de pr
 Além disso, uma função $\cc$-mensurável pela \ref{def:mensurabilidade-geral} em um espaço de probabilidades é chamada de variável aleatória.
 
 % Unidade de Medida Concentrada em p
-\begin{env}{Exemplo}[Unidade de Medida Concentrada em $p$]
+\begin{env}{Exemplo}\textbf{(Unidade de Medida Concentrada em $p$)}
 \label{ex:medida-concentrada-em-p}
     Seja $(X, \mathcal{C})$ um espaço mensurável onde $\cc = \mathcal{P}(X)$ e $p$ um elemento de $X$.
     Defina $\mu: \mathcal{C} \to \xreta$  como sendo
@@ -781,13 +811,13 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	Caso $\chi_{\bigcup_{n \in \N}E_n}(x) = 0$, então $x \notin \bigcup_{n \in \N}E_n$. 
 	Logo, $x \notin E_n,\ \forall n \in \N$.
 	Logo, $\chi_{E_n}(x) = 0$ para qualquer que seja $n \in \N$, 
-	Com isso, $\sum_{n \in \N} \chi_{E_n}(x) = 0 = \chi_{\bigcup_{n \in \N}E_n}(x)$.
+	Com isso, $\dsum_{n \in \N} \chi_{E_n}(x) = 0 = \chi_{\bigcup_{n \in \N}E_n}(x)$.
 	
 	Caso ocorra que  $\chi_{\bigcup_{n \in \N}E_n}(x) = 1$, então existe um $n_0 \in \N$ tal que $ x \in E_{n_0}$.
 	Como a sequência de conjuntos é disjunta, o $n_0$ é único.
 	Logo, $x \notin E_p$ para qualquer $p \neq n_0$, ou seja, $\chi_{E_p}(x) = 0, \ \forall p \neq n_0$.
-	Com isso, $\sum_{p \neq n_0} \chi_{E_p}(x) + \chi_{E_{n_0}}(x) = 0 + 1 =  \chi_{\bigcup_{n \in \N}E_n}(x)$.
-	Em todo caso, $\chi_{\bigcup_{n \in \N}E_n}(x) = \sum_{n \in \N} \chi_{E_n}(x)$. 
+	Com isso, $\dsum_{p \neq n_0} \chi_{E_p}(x) + \chi_{E_{n_0}}(x) = 0 + 1 =  \chi_{\bigcup_{n \in \N}E_n}(x)$.
+	Em todo caso, $\chi_{\bigcup_{n \in \N}E_n}(x) = \dsum_{n \in \N} \chi_{E_n}(x)$. 
 	Portanto, $\chi_E$ é uma medida.
 \end{env}
 
@@ -841,7 +871,7 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 \label{teo:medida-diferença}
 	Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
 	Se $A$ e $B$ são elementos de $\mathcal{C}$ e $A \subset B$, então $\mu(A) \leq \mu(B)$.
-	Se $\mu(A) < +\infty$, então $\mu(B-A) = \mu(B) - \mu(A)$.
+	Se $\mu(A) < +\infty$, então $\mu(B-A) = \mu(B) - \mu(A)$ \cite{bartle}.
 \end{env}
 
 \begin{prova}
@@ -862,7 +892,8 @@ Como desejávamos.
 \begin{env}{Proposição}
 \label{prop:limite-sequencia-crescente}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$.
+Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$
+\cite{bartle}.
 \end{env} 
 
 \begin{prova}
@@ -915,7 +946,7 @@ Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displ
 \begin{env}{Proposição}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
 Se $(B_n)$ é uma sequência decrescente de $\mathcal{C}$ e $\mu(B_1) < +\infty$, então 
-$\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty} \mu(B_n)$.
+$\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty} \mu(B_n)$ \cite{bartle}.
 \end{env} 
 \begin{prova}
     Defina uma sequência $(T_n)$ de elementos de $\mathcal{C}$ pondo $T_n = B_1 - B_n$ para qualquer que seja $n \in \N$.
@@ -924,11 +955,11 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
     $$
     \mu\left(\bigcap_{n \in \N} T_n\right) = \lim_{n \to +\infty} \mu(T_n)
     $$
-    Usando o teorema \ref{teo:medida-diferença}, obtemos
+    Usando o \ref{teo:medida-diferença}, obtemos
     $$
     \lim_{n \to +\infty} \mu(T_n) = \lim_{n \to +\infty} [\mu(B_1) - \mu(B_n)] = \mu(B_1) - \lim_{n \to +\infty} \mu(B_n)
     $$
-    Segue pela proposição \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n} que 
+    Segue pela \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n} que 
     $$
     \lim_{n \to +\infty} \mu(T_n) = \mu(B_1) - \mu\left(\bigcap_{n \in \N} B_n\right)
     $$
@@ -941,12 +972,11 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
 
 Vimos quando tratamos de \sigals a \sigal de Borel que é muito relevante para o estudo da reta real.
 Da mesma forma, existe uma medida que é indispensável para o mesmo contexto.
-Essa, por sua vez, não será demonstrada, mas adotada como axioma à titulo de simplificação do trabalho.
-Assim, 
-
+Essa, por sua vez, não será demonstrada a titulo de simplificação do trabalho, mas será enunciada aditante pela importância. 
 \begin{env}{Teorema}
 	\label{teo: medida de lebesgue}
-	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos(Bartle, 1995, p.104).
+	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos \cite[p.20, tradução nossa, adaptação nossa]{bartle}
+	\footnote{No original: If $X = \textbf{R}$ and $\textbf{X} = \textbf{B}$, the Borel algebra, then [...] there exists a unique measure $\lambda$ defined on $\textbf{B}$ which coincides with length on open intervals.}.
 \end{env}
 
 Em termos práticos, se $E$ é um intervalo real não vazio $(a,b)$, então $\lambda(E) = b - a$.
@@ -961,11 +991,11 @@ Formalmente,
 	Dizemos que um conjunto $E \subset \cc$ tem medida nula em relação à medida $\mu$ se $\mu(E) = 0$.
 \end{env}
 
+Podemos usar este conceito de \enquote{quase todo ponto} ou \enquote{quase todo lugar} para qualquer proposição que queiramos desde que ela não seja válida apenas em um subconjunto de medida nula \cite{bartle}.
 \begin{env}{Proposição}
 	\label{prop:medida-nula-subconjunto}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
-	Se $\mu(X) = 0$ e $Y \subset X$, então $\mu(Y) = 0$.
-	\vspace{-1cm}
+	Se $\mu(X) = 0$ e $Y \subset X$, então $\mu(Y) = 0$ \cite[p.343, adaptação nossa]{elon}.
 \end{env}
 \begin{prova}
 	Note que $(Y \cap X) \subset X$, pois $ Y \cap X = Y$.
@@ -981,7 +1011,7 @@ Formalmente,
 \begin{env}{Proposição}
 	\label{prop:medida-nula-união}
 	Seja $(X, \cc, \mu)$ um espaço de medida e $\{E_n\}$ uma sequência disjunta de elementos de $\cc$.
-	Se $Y = \displaystyle\bigcup_{n \in \N}E_n$ e $\mu(E_n) = 0$ para todo $n \in \N$, então $\mu(Y) = 0$.
+	Se $Y = \displaystyle\bigcup_{n \in \N}E_n$ e $\mu(E_n) = 0$ para todo $n \in \N$, então $\mu(Y) = 0$ \cite[p.343, adaptação nossa]{elon}.
 \end{env}
 \begin{prova}
 	Analogamente à proposição anterior segue, imediatamente, que

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  22 NOV 2023 22:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  23 NOV 2023 20:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2162,8 +2162,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--228
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24] [25]) (./elementos-textuais/teoria-medida.tex [26]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-6.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+0.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -2173,49 +2173,55 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [30] [31]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (9.78143pt too wide) in paragraph at lines 463--488
+Overfull \hbox (9.78143pt too wide) in paragraph at lines 488--513
 []$ \T1/ptm/m/n/12 (-20) e $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--488
+Underfull \hbox (badness 10000) in paragraph at lines 488--513
 
  []
 
-[32]
-Overfull \hbox (0.43129pt too wide) in paragraph at lines 518--520
+[32] [33]
+Overfull \hbox (0.43129pt too wide) in paragraph at lines 542--544
 []\T1/ptm/m/n/12 (-20) Seja $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 X; []\OT1/zt
 mcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) um es-paÁo men-su-r·-vel e $\OML/ztmcm/m/it/
 12 f$ \T1/ptm/m/n/12 (-20) uma fun-Á„o. En-t„o $\OML/ztmcm/m/it/12 f$ \T1/ptm/m
 /n/12 (-20) È $[]$-mensur·vel
  []
 
-[33] [34]
-Overfull \hbox (6.02373pt too wide) detected at line 618
+[34]
+Overfull \hbox (6.02373pt too wide) detected at line 645
 []
  []
 
-[35] [36] [37] [38] [39] [40]) (./elementos-textuais/teoria-integracao.tex
-[41] [42
+[35] [36] [37] [38] [39] [40] [41] [42])
+(./elementos-textuais/teoria-integracao.tex [43] [44
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-[43] [44]
+[45] [46]
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 469.
 
-[45] [46]
+[47] [48]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2225,7 +2231,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]
+[49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60]
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
             Default family used instead on input line 1550.
@@ -2255,10 +2261,10 @@ LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
 50.
 
 Missing character: There is no ® in font zptmcm7t!
-[59] [60]) (./elementos-textuais/considera√ß√µes-finais.tex [61] [62
+[61] [62]) (./elementos-textuais/considera√ß√µes-finais.tex [63] [64
 
 ])
-(./documento.bbl [63]
+(./documento.bbl [65]
 bibitemlist
 )
 No file documento.ind.
@@ -2267,7 +2273,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[64
+[66
 
 ]
 \tf@lof=\write10
@@ -2278,13 +2284,13 @@ This document will not have a glossary.
 
  (./documento.aux) ) 
 Here is how much of TeX's memory you used:
- 58732 strings out of 478287
- 1256159 string characters out of 5849289
- 1894596 words of memory out of 5000000
- 75353 multiletter control sequences out of 15000+600000
- 568087 words of font info for 378 fonts, out of 8000000 for 9000
+ 58758 strings out of 478287
+ 1256419 string characters out of 5849289
+ 1898643 words of memory out of 5000000
+ 75357 multiletter control sequences out of 15000+600000
+ 572838 words of font info for 390 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,14n,120p,1231b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,16n,120p,1231b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
@@ -2297,10 +2303,10 @@ e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/us
 yr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (65 pages, 850766 bytes).
+Output written on documento.pdf (67 pages, 857786 bytes).
 PDF statistics:
- 880 PDF objects out of 1000 (max. 8388607)
- 779 compressed objects within 8 object streams
- 260 named destinations out of 1000 (max. 500000)
- 91810 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 952 PDF objects out of 1000 (max. 8388607)
+ 848 compressed objects within 9 object streams
+ 267 named destinations out of 1000 (max. 500000)
+ 95906 words of extra memory for PDF output out of 106986 (max. 10000000)
 
