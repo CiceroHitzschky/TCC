@@ -9,7 +9,8 @@ O conjunto de todas as funções $f:X \to \xreta$ mensuráveis será simplesment
 	Com isso, iniciaremos entendo a integral para funções simples.
 
 \begin{env}{Definição}
-    Uma função real é dita simples quando possui apenas uma quantidade finita de valores.
+    Uma função real é dita \textbf{simples} quando possui apenas uma quantidade finita de valores \cite[p.27, tradução nossa]{bartle}
+    \footnote{A real-valued function is \textbf{simple} if it has only a finite number of values.}.
 \end{env}
 
 Representaremos esse tipo de função de forma padronizada em todo o texto.
@@ -162,10 +163,18 @@ Note que em ambos os casos estamos, basicamente, aplicando o valor $a_j$ na medi
 \begin{env}{Definição}
 \label{def:integral-função-naonegativa-simples}
     Se $\varphi$ é uma função simples de $M^+(X, \cc)$ com a representação 
-    $$\varphi =  \sum_{j = 1}^n a_j\chi_{E_j},$$ então a integral da função $\varphi$ com respeito à medida $\mu$ é o valor real estendido
-    $$
-    \int\varphi d\mu = \sum_{j = 1}^n a_j\mu(E_j).
-    $$
+    $\displaystyle\varphi =  \sum_{j = 1}^n a_j\chi_{E_j},$ então a integral da função $\varphi$ com respeito à medida $\mu$ é o valor real estendido
+    \linebreak $
+    \displaystyle\int\varphi d\mu = \sum_{j = 1}^n a_j\mu(E_j)
+    $
+    \cite[p.28, tradução nossa]{bartle}
+    \footnote{No original: 
+    	If $\phi$ is a simple function in $M^+(X, \textbf{X})$ [...], we define the integral of $\phi$ with respect to
+    	$\mu$ to be the extended real number  
+    	$
+    	\displaystyle\int\varphi d\mu = \sum_{j = 1}^n a_j\mu(E_j)
+    	$.
+    }.
 \end{env}
 
 Para a \ref{def:integral-função-naonegativa-simples} empregamos a convenção que $0 \cdot (+\infty) = 0$.
@@ -395,8 +404,8 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     $
 	e
     $
-    \displaystyle \int (\varphi + \psi) d\mu = \int \varphi d\mu + \int \psi d\mu.
-    $
+    \displaystyle \int (\varphi + \psi) d\mu = \int \varphi d\mu + \int \psi d\mu
+    $ \cite{bartle}.
 \end{env}
 \begin{prova}
     Representaremos as funções simples não negativas por $\varphi = \dsum_{j = 1}^n a_j\chi_{E_j}$ e $\psi = \dsum_{k = 1}^m b_k\chi_{F_k}$.
@@ -405,9 +414,9 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     Supondo $c> 0$, temos que
     $$\int c \varphi\ d\mu = \dsum_{j = 1}^n c a_j\mu(E_j) = c \dsum_{j = 1}^n a_j\mu(E_j) = c\int \varphi \ d\mu.$$
     Com isso, concluímos que $\displaystyle \int c \varphi\ d\mu = c\int \varphi \ d\mu.$ 
-    
-    Dadas as representações padrão de $\varphi$ e $\psi$, vemos que
-    
+ 	
+    Agora provaremos que a integral da soma é igual a soma das integrais. 
+    Assim, dadas as representações padrão de $\varphi$ e $\psi$, vemos que
     \begin{equation}
     	\label{eq:somatorio funções simples}
     	\varphi +\psi
@@ -416,7 +425,6 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     	+
     	\dsum_{k = 1}^m b_k\chi_{F_k}
     \end{equation}
-    
     Como $\{E_n\}$ e $\{F_k\}$ são ambas partições de $X$, pela \ref{prop: igualdade da caracteristica como medida} temos que
     $\chi_{E_j} = \dsum_{k = 1}^m \chi_{(E_j \cap F_k)}$ e 
     $\chi_{F_k} = \dsum_{j = 1}^n \chi_{(E_j \cap F_k)}$.
@@ -433,10 +441,12 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     	\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
     	+
     	\dsum_{k = 1}^m \dsum_{j = 1}^n b_k\chi_{(E_j \cap F_k)}\\
-    	= &
-    	\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
-    	+
-    	\dsum_{j = 1}^n \dsum_{k = 1}^m  b_k\chi_{(E_j \cap F_k)}\\
+	\end{align*}
+	\begin{align*}
+		= &
+		\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
+		+
+		\dsum_{j = 1}^n \dsum_{k = 1}^m  b_k\chi_{(E_j \cap F_k)}\\
 		= &
 		\dsum_{j = 1}^n\dsum_{k = 1}^m 
 		\left(a_j\chi_{(E_j \cap F_k)}
@@ -511,10 +521,10 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 
 \begin{env}{Lema}
 	\label{lem:medida-da-intersecao-de-um-fixado}
-	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall\  E \in \cc$ também é uma medida sobre $X$.
+	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall\  E \in \cc$ também é uma medida sobre $X$ \cite{bartle}.
 \end{env}
 \begin{prova}
-	Basta mostrar que $\lambda$ satisfaz as condições impostas na definição \ref{def:medida}.
+	Basta mostrar que $\lambda$ satisfaz as condições impostas na  \ref{def:medida}.
 	Com isso, se $E = \varnothing$, então
 	$$
 	\lambda(\varnothing) = \mu(A \cap \varnothing) = \mu(\varnothing) = 0
@@ -554,7 +564,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 \begin{env}{Lema}
 	\label{lem:medida-gerada-por-medidas-e-numeros-reais}
 	Se $\mu_1, ..., \mu_n$ são medidas sobre $X$ e $a_1, ... , a_n$ são números reais não negativos, então a função $\lambda$ definida por
-	$\lambda(E) = \dsum_{j =1}^n a_j\mu_j(E), \forall\  E \in \cc$ também é uma medida sobre $X$.
+	$\lambda(E) = \dsum_{j =1}^n a_j\mu_j(E), \forall\  E \in \cc$ também é uma medida sobre $X$  \cite{bartle}.
 \end{env}
 \begin{prova}
 	Como $\mu_j$ é uma medida para todo $j \in I_n$ e cada $a_j$ é maior ou igual à zero, temos que cada $a_j\mu_j(E) \geq 0$.
@@ -608,7 +618,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 	$$
 \end{comment}
 
-	Como $\lambda$ satisfaz todas as condições impostas na definição \ref{def:medida} concluímos que $\lambda$ é uma medida.    
+	Como $\lambda$ satisfaz todas as condições impostas na  \ref{def:medida} concluímos que $\lambda$ é uma medida.    
 \end{prova}
 
 \begin{env}{Teorema}
@@ -621,7 +631,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 \end{env}
 
 \begin{prova}
-	De maneira análoga ao teorema \ref{teo:aritmetica-com-integrais-de-funções-simples}
+	De maneira análoga ao  \ref{teo:aritmetica-com-integrais-de-funções-simples}
 	podemos verificar que 
 	$$
 	\varphi\chi_E = \sum_{j = 1}^n a_j\chi_{E_j \cap E}
@@ -634,10 +644,10 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 		= \sum_{j = 1}^n\left(a_j\int \chi_{E_j \cap E}d\mu\right) 
 		= \sum_{j = 1}^n a_j\mu(E_j\cap E)
 	\end{align*}
-	Pelo lema \ref{lem:medida-da-intersecao-de-um-fixado} a aplicação que leva 
+	Pelo  \ref{lem:medida-da-intersecao-de-um-fixado} a aplicação que leva 
 	$E \to \mu(E_j\cap E)$ é uma medida para cada $j \in I_n$.
 	Disso, concluímos que $\lambda$ pode ser expressada por uma combinação linear de medidas sobre $\cc$.
-	Segue, pelo lema \ref{lem:medida-gerada-por-medidas-e-numeros-reais}, que 
+	Segue, pelo  \ref{lem:medida-gerada-por-medidas-e-numeros-reais}, que 
 	$\lambda$ também é uma medida sobre $\cc$.
 \end{prova}
 
@@ -854,7 +864,6 @@ figura \ref{fig:integrla da função phi 8}.
 		\Fonte{Elaborado pelo autor}
 	}   
 \end{figure}
-
 Com isso, observamos que quanto mais valores a função simples possui, mais ela se aproxima da função $f$ desde que nenhum valor ultrapasse o gráfico da função.
 Assim, a área da função simples será próxima o suficiente da área delimitada pelo gráfico da função $f$.
 Ou seja, se tomarmos o supremo dessas funções obteremos a integral exposta na figura \ref{fig:Integral da função f}.
@@ -888,7 +897,7 @@ Ou seja, se tomarmos o supremo dessas funções obteremos a integral exposta na 
 \end{figure}
 
 Agora, tomemos como exemplo a função $f(x) = x^2$, mas não invés de particionarmos o domínio da função, a função simples é construída conforme uma partição feita na imagem.
-Assim, tomemos uma função $\phi_1$ pondo
+Assim, tomemos uma função $\phi_1$ pondo 
 $$
 \phi_1(x) =\left\{
 \begin{array}{ll}
@@ -898,15 +907,13 @@ $$
 \end{array}
 \right.
 $$
-
 Note que a função $\phi_1$ é simples, mas seus valores são escolhidos por meio da partição da imagem conforme explicitado na imagem da figura \ref{fig: Lebesgue gráfico da função phi 1}.
-
 \begin{figure}[h!]
 	\centering
 	\Caption{\label{fig: Lebesgue gráfico da função phi 1}Gráfico da função $\phi_1$} 
 	\UECEfig{}{
-		\begin{tikzpicture}[scale=2]
-			\draw[thick] (-2.5,-1.5) rectangle (2.5, 2.5);
+		\begin{tikzpicture}[scale=1.7]
+			\draw[thick] (-2.2,-1.2) rectangle (2.4, 2.3);
 			% Eixos
 			\draw[->] (-2,0) -- (2,0) node[right] {$x$};
 			\draw[->] (0,-1) -- (0, 2) node[left] {$y$};
@@ -967,9 +974,7 @@ Note que a função $\phi_1$ é simples, mas seus valores são escolhidos por me
 		\Fonte{Elaborado pelo autor}
 	}   
 \end{figure}
-
 Vamos aproximar a função $f$ agora pela função simples $\phi_2$ construída da seguinte forma:
-
 $$
 \phi_2(x) =\left\{
 \begin{array}{ll}
@@ -985,7 +990,6 @@ $$
 \end{array}
 \right.
 $$
-
 Assim, na figura \ref{fig: Lebesgue gráfico da função phi 2} está a comparação com o gráfico da função $f(x) = x^2$.
 \begin{figure}[h!]
 	\centering
@@ -1096,7 +1100,7 @@ Assim, na figura \ref{fig: Lebesgue gráfico da função phi 2} está a compara�
 
 Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então ela pode ser aproximada por uma sequência de funções simples conforme o teorema adiante.
 
-\begin{env}{Teorema}[Aproximação Via Funções Simples]
+\begin{env}{Teorema}\textbf{(Aproximação Via Funções Simples)}
 	\label{teo:aproximação via funções simples}
 	Se $f$ é uma função não negativa em $\menfus$, então existe uma sequência de funções $(\varphi_n)$ tal que $\phi \in \menfus, \forall \ n \in \N$ de forma que
 	\begin{enumerate}[label*=(\roman*)]
@@ -1168,14 +1172,14 @@ Diante disso, nada mais natural que definir a integral de Lebesgue para funçõe
 	$$
 	\int f d\mu = sup \int \varphi d\mu
 	$$
-	Onde o supremo é sobre todas as funções simples $\varphi \in \menfus$ tal que a condição $0 \leq \varphi \leq f(x)$ para todo $x \in X$. 
+	Onde o supremo é sobre todas as funções simples $\varphi \in \menfus$ tal que  $0 \leq \varphi \leq f(x)$ para todo $x \in X$
+	\cite{bartle}. 
 \end{env}
-
 \begin{env}{Definição}
 	\label{def: integral de uma função não neg com respeito a um conjunto específico}
-	Se $f \in \menfus$ e $E \in \cc$, então $f\chi_{E} \in \menfus$ e nós definimos a integral de $f$ sobre o conjunto $E$ com respeito à medida $\mu$ como sendo o número real estendido
+	Se $f \in \menfus$ e $E \in \cc$, então $f\chi_{E} \in \menfus$ e \citeauthor{bartle} (\citeyear{bartle}) define a integral de $f$ sobre o conjunto $E$ com respeito à medida $\mu$ como sendo o número real estendido
 	$$
-	\int_E f d\mu = \int f\chi_E d\mu
+	\displaystyle \int_E f d\mu = \int f\chi_E d\mu.
 	$$
 \end{env}
 
@@ -1187,7 +1191,7 @@ Isso faremos por meio dos lemas a seguir
 	\label{lem:monoticiadade da integral de funções não negativas}
 	Se $f$ e $g$ são elementos de $M^+(X,\cc)$ com $f \leq g$, então 
 	$$
-	\int fd\mu \leq \int g d\mu.
+	\displaystyle\int fd\mu \leq \int g d\mu.
 	$$
 \end{env}
 \begin{prova}
@@ -1210,6 +1214,7 @@ Isso faremos por meio dos lemas a seguir
 	$$
 	\int_E fd\mu \leq \int_F f d\mu.
 	$$
+	\vspace{-0.2cm}
 \end{env}
 \begin{prova}
 	Como $E \subseteq F$, então $\chi_E \leq \chi_F$.
@@ -1231,7 +1236,7 @@ Isso faremos por meio dos lemas a seguir
 	$
 \end{prova}
 
-\begin{env}{Teorema}[Teorema da Convergência Monótona]
+\begin{env}{Teorema}\textbf{(Teorema da Convergência Monótona)}
 	\label{teo:Convergencia Monótona}
 	Se $(f_n)$ é uma sequência monótona crescente de funções não negativas mensuráveis que converge para a $f$, então
 	$$
@@ -1259,8 +1264,8 @@ Isso faremos por meio dos lemas a seguir
 	A_n =\{x \in X ;\ f_n(x) \geq \alpha \varphi(x)\}.
 	$$
 	Com isso, podemos observar que cada $A_n \in X$, $A_{n} \subseteq A_{n+1}$
-	e que $X = \bigcup_{n \in \N}A_n$.
-	Desta maneira, usando o lema \ref{lem:monoticiadade da integral com conjunto em funções não negativas} e \ref{lem:monoticiadade da integral de funções não negativas} temos que 
+	e que $X = \displaystyle \bigcup_{n \in \N}A_n$.
+	Desta maneira, usando o  \ref{lem:monoticiadade da integral com conjunto em funções não negativas} e \ref{lem:monoticiadade da integral de funções não negativas} temos que 
 	\begin{equation}
 		\label{eq:desigualdade da volta}
 		\int_{A_n} \alpha\varphi d\mu
@@ -1269,11 +1274,11 @@ Isso faremos por meio dos lemas a seguir
 		\leq
 		\int f_n d\mu.		
 	\end{equation}
-	Como $(A_n)$ é uma sequência monótona crescente que a união é igual ao conjunto $X$, observamos que, pela proposição \ref{prop:limite-sequencia-crescente} que para uma medida $\mu$ vale
+	Como $(A_n)$ é uma sequência monótona crescente que a união é igual ao conjunto $X$, observamos que, pela  \ref{prop:limite-sequencia-crescente} que para uma medida $\mu$ vale
 	$$
 	\mu(X) = \mu\left(\bigcup_{n \in \N}A_n\right) = \lim_{n \to +\infty} \mu(A_n)
 	$$
-	Só que pelo teorema \ref{teo:medida-atraves-de-uma-integral} $\int \varphi \chi_E d\mu$ é uma medida.
+	Só que pelo  \ref{teo:medida-atraves-de-uma-integral} $\int \varphi \chi_E d\mu$ é uma medida.
 	Desta forma, 
 	$$
 	\dlim_{n \to +\infty} \int_{A_n} \varphi d\mu 
@@ -1322,7 +1327,7 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 	Suponha que $c > 0$. 
 	Assim, pelo  \ref{teo:aproximação via funções simples}, existe uma sequência de funções simples $\varphi_n \in M^+$ para todo $n \in \N$ que converge para a função $f$.
 	Logo, a sequência $(c\varphi_n)$ converge para $cf$.
-	Desta forma, ao aplicarmos o \ref{teo:aritmetica-com-integrais-de-funções-simples} e 
+	Desta forma, ao aplicarmos o \ref{teo:aritmetica-com-integrais-de-funções-simples} e o
 	\ref{teo:Convergencia Monótona}, obtemos
 	$$
 	\int c f d\mu 
@@ -1345,7 +1350,7 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 
 \begin{prova}
 	Analogamente ao corolário anterior, tomemos duas sequências de funções simples $(\varphi_n)$ e $(\psi_n)$ ambas monótonas e crescentes tal que convergem, respectivamente, para $f$ e $g$.
-	Segue, pelos teoremas \ref{teo:aritmetica-com-integrais-de-funções-simples} e 
+	Segue, pelo  \ref{teo:aritmetica-com-integrais-de-funções-simples} e o
 	\ref{teo:Convergencia Monótona} que
 	$$
 	\int(f+ g) d\mu
@@ -1358,14 +1363,14 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 Note que os resultados tratam apenas de funções monótonas e nem sempre teremos essa condição \enquote{perfeita} para nossas sequências.
 Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequências que não são monótonas.
 
-\begin{env}{Teorema}[Lema de Fatou]
+\begin{env}{Teorema}\textbf{(Lema de Fatou)}
 	\label{teo:lema de fatou}
 	Se $(f_n) \subset M^+(X, \cc)$, então 
 	$\displaystyle
 	\int(\lim \inf f_n)d\mu \leq \lim \inf \int f_n d\mu$. 
 \end{env}
 \begin{prova}
-	Tome a sequência $g_m = \inf_{n \in \N}\{f_m, f_{m+1},...\}$.
+	Tome a sequência $g_m = \displaystyle \inf_{n \in \N}\{f_m, f_{m+1},...\}$.
 	Assim, enquanto $m\leq n$ nós temos $g_m \leq f_n$.
 	Neste caso,
 	$$
@@ -1384,7 +1389,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 \begin{env}{Corolário}
 	Se $f \in M^+(X, \cc)$ e $\lambda$ é definida sobre $\cc$ pondo
 	$
-	\lambda(E) = \int_E fd\mu 
+	\displaystyle\lambda(E) = \int_E fd\mu 
 	$,
 	então $\lambda$ é uma medida.
 \end{env}
