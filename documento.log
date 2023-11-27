@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  23 NOV 2023 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  26 NOV 2023 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2247,49 +2247,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[52] [53] [54] [55] [56]
-Overfull \hbox (1.35246pt too wide) in paragraph at lines 1366--1371
-[]\T1/ptm/b/n/12 (-20) (Lema de Fa-tou) []\T1/ptm/m/n/12 (-20) Se $\OT1/ztmcm/m
-/n/12 (\OML/ztmcm/m/it/12 f[]\OT1/ztmcm/m/n/12 ) \OMS/ztmcm/m/n/12 ^^Z \OML/ztm
-cm/m/it/12 M[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 X; []\OT1/ztmcm/m/n/12 )$\T
-1/ptm/m/n/12 (-20) , en-tão $[]\OT1/ztmcm/m/n/12 ([] [] \OML/ztmcm/m/it/12 f[]\
-OT1/ztmcm/m/n/12 )\OML/ztmcm/m/it/12 d^^V \OMS/ztmcm/m/n/12 ^^T [] [] [] \OML/z
-tmcm/m/it/12 f[]d^^V$\T1/ptm/m/n/12 (-20) .
- []
-
-[57] [58] [59]
+[52] [53] [54] [55] [56] [57] [58] [59]
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 1555.
- (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+            Default family used instead on input line 1577.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 
 LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-55.
+77.
 
 
 LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-55.
+77.
 
 Missing character: There is no ¨ in font zptmcm7t!
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 1555.
+            Default family used instead on input line 1577.
 
 LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-55.
+77.
 
 
 LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-55.
+77.
 
 Missing character: There is no ¨ in font zptmcm7t!
-[60] [61] [62]) (./elementos-textuais/consideraÃ§Ãµes-finais.tex [63] [64
+[60] [61]) (./elementos-textuais/consideraÃ§Ãµes-finais.tex [62] [63
 
 ])
-(./documento.bbl [65]
+(./documento.bbl [64]
 bibitemlist
 )
 No file documento.ind.
@@ -2298,7 +2289,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[66
+[65
 
 ]
 \tf@lof=\write10
@@ -2309,11 +2300,11 @@ This document will not have a glossary.
 
  (./documento.aux) ) 
 Here is how much of TeX's memory you used:
- 58764 strings out of 478287
- 1256487 string characters out of 5849289
- 1898643 words of memory out of 5000000
- 75358 multiletter control sequences out of 15000+600000
- 572968 words of font info for 392 fonts, out of 8000000 for 9000
+ 58830 strings out of 478287
+ 1257767 string characters out of 5849289
+ 1899172 words of memory out of 5000000
+ 75420 multiletter control sequences out of 15000+600000
+ 573098 words of font info for 394 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,16n,120p,1231b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
@@ -2328,10 +2319,10 @@ e1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/us
 yr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (67 pages, 860609 bytes).
+Output written on documento.pdf (66 pages, 865342 bytes).
 PDF statistics:
- 970 PDF objects out of 1000 (max. 8388607)
- 866 compressed objects within 9 object streams
- 269 named destinations out of 1000 (max. 500000)
+ 987 PDF objects out of 1000 (max. 8388607)
+ 884 compressed objects within 9 object streams
+ 270 named destinations out of 1000 (max. 500000)
  95906 words of extra memory for PDF output out of 106986 (max. 10000000)
 

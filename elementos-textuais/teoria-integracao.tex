@@ -996,7 +996,7 @@ Assim, na figura \ref{fig: Lebesgue gráfico da função phi 2} está a compara�
 	\Caption{\label{fig: Lebesgue gráfico da função phi 2}Gráfico da função $\phi_1$} 
 	\UECEfig{}{
 		\begin{tikzpicture}[scale=2]
-			\draw[thick] (-2.5,-1.5) rectangle (2.5, 2.5);
+			\draw[thick] (-2.5,-1.2) rectangle (2.5, 2.7);
 			% Eixos
 			\draw[->] (-2,0) -- (2,0) node[right] {$x$};
 			\draw[->] (0,-1) -- (0, 2.5) node[left] {$y$};
@@ -1005,10 +1005,13 @@ Assim, na figura \ref{fig: Lebesgue gráfico da função phi 2} está a compara�
 				\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
 			}
 			
-			\foreach \i in {0.25, 0.5, 0.75, 1, 1.25, 1.5,  1.75, 2}{
+			\foreach \i in {0.5, 1, 1.5, 2}{
 				\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
 			}
 			
+			\foreach \i in {0.25, 0.75, 1.25, 1.75}{
+				\draw (2pt,\i)--(-2pt, \i);
+			}
 		%	\draw (2pt,0.5)--(-2pt, 0.5) node[above left]{\footnotesize $\frac{1}{2}$};
 			
 			%\fill[domain=-1:1,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{\x*\x})--(4,0)--(0,0);
@@ -1038,59 +1041,63 @@ Assim, na figura \ref{fig: Lebesgue gráfico da função phi 2} está a compara�
 			\draw[domain=1.12:1.22,smooth,variable=\x,thick, blue]  plot ({\x},{1.25});
 			
 			\draw[domain=-1.32:-1.22,smooth,variable=\x,thick, blue]  plot ({\x},{1.5});
-			\draw[domain=1.22:1.22,smooth,variable=\x,thick, blue]  plot ({\x},{1.5});
+			\draw[domain=1.22:1.32,smooth,variable=\x,thick, blue]  plot ({\x},{1.5});
 			
-			%\draw[domain=-2:-1,smooth,variable=\x,thick, blue]  plot ({\x},{1.75});
-			%\draw[domain=1:2,smooth,variable=\x,thick, blue]  plot ({\x},{1.75});
 			
-			%\draw[domain=-2:-1,smooth,variable=\x,thick, blue]  plot ({\x},{2});
-			%\draw[domain=1:2,smooth,variable=\x,thick, blue]  plot ({\x},{2});
+			\draw[domain=-1.41:-1.32,thick,variable=\x,thick, blue]  plot ({\x},{1.75});
+			\draw[domain=1.32:1.41,thick,variable=\x,thick, blue]  plot ({\x},{1.75});
 			
-			% Retas auxiliares
-			%\draw[dashed] (-0.71,0.09) -- (-0.71,0.5);
-			%\draw[dashed] (0.71,0.09) -- (0.71,0.5);
-			
-			%\draw[dashed] (-0.71,0.5) -- (0.71,0.5);
-			
-			%\draw[dashed] (-1,1) -- (1,1);
-			
-			%\draw[dashed] (-1,0) -- (-1,1);
-			%\draw[dashed] (1,0) -- (1,1);
+			\draw[domain=-2:-1.41,thick,variable=\x,thick, blue]  plot ({\x},{2});
+			\draw[domain=1.41:2,thick,variable=\x,thick, blue]  plot ({\x},{2});
 			
 			% Bolinhas
-			\draw[fill=white] (-0.5,0) circle (0.03);
-			\draw[fill=white] (0.5,0) circle (0.03);
+			\draw[fill=white] (-0.5,0) circle (0.02);
+			\draw[fill=white] (0.5,0) circle (0.02);
 			
-			\draw[fill=blue] (-0.5, 0.25) circle (0.03);
-			\draw[fill=blue] (0.5, 0.25) circle (0.03);
+			\draw[fill=blue] (-0.5, 0.25) circle (0.02);
+			\draw[fill=blue] (0.5, 0.25) circle (0.02);
 			
-			\draw[fill=white] (-0.71,0.25) circle (0.03);
-			\draw[fill=white] (0.71,0.25) circle (0.03);
+			\draw[fill=white] (-0.71,0.25) circle (0.02);
+			\draw[fill=white] (0.71,0.25) circle (0.02);
 			
-			\draw[fill=blue] (-0.71,0.5) circle (0.03);
-			\draw[fill=blue] (0.71,0.5) circle (0.03);
+			\draw[fill=blue] (-0.71,0.5) circle (0.02);
+			\draw[fill=blue] (0.71,0.5) circle (0.02);
 			
-			\draw[fill=white] (-0.87,0.5) circle (0.03);
-			\draw[fill=white] (0.87,0.5) circle (0.03);
+			\draw[fill=white] (-0.87,0.5) circle (0.02);
+			\draw[fill=white] (0.87,0.5) circle (0.02);
 			
-			\draw[fill=blue] (-0.87,0.75) circle (0.03);
-			\draw[fill=blue] (0.87,0.75) circle (0.03);
+			\draw[fill=blue] (-0.87,0.75) circle (0.02);
+			\draw[fill=blue] (0.87,0.75) circle (0.02);
 			
-			\draw[fill=white] (-1,0.75) circle (0.03);
-			\draw[fill=white] (1,0.75) circle (0.03);
+			\draw[fill=white] (-1,0.75) circle (0.02);
+			\draw[fill=white] (1,0.75) circle (0.02);
 			
-			\draw[fill=blue] (-1,1) circle (0.03);
-			\draw[fill=blue] (1,1) circle (0.03);
+			\draw[fill=blue] (-1,1) circle (0.02);
+			\draw[fill=blue] (1,1) circle (0.02);
 			
-			\draw[fill=white] (-1.12,1) circle (0.03);
-			\draw[fill=white] (1.12,1) circle (0.03);
+			\draw[fill=white] (-1.12,1) circle (0.02);
+			\draw[fill=white] (1.12,1) circle (0.02);
 			
-			\draw[fill=blue] (-1.12,1.25) circle (0.03);
-			\draw[fill=blue] (1.12,1.25) circle (0.03);
+			\draw[fill=blue] (-1.12,1.25) circle (0.02);
+			\draw[fill=blue] (1.12,1.25) circle (0.02);
 			
-			\draw[fill=white] (-1.22,1.5) circle (0.03);
-			\draw[fill=white] (1.22,1.5) circle (0.03);
+			\draw[fill=white] (-1.22,1.25) circle (0.02);
+			\draw[fill=white] (1.22, 1.25) circle (0.02);
 			
+			\draw[fill=blue] (-1.22,1.5) circle (0.02);
+			\draw[fill=blue] (1.22, 1.5) circle (0.02);
+			
+			\draw[fill=white] (-1.32,1.5) circle (0.02);
+			\draw[fill=white] (1.32, 1.5) circle (0.02);
+			
+			\draw[fill=blue] (-1.32,1.75) circle (0.02);
+			\draw[fill=blue] (1.32, 1.75) circle (0.02);
+			
+			\draw[fill=white] (-1.41,1.75) circle (0.02);
+			\draw[fill=white] (1.41, 1.75) circle (0.02);
+			
+			\draw[fill=blue] (-1.41,2) circle (0.02);
+			\draw[fill=blue] (1.41, 2) circle (0.02);
 		\end{tikzpicture}
 		
 	}{
@@ -1190,9 +1197,9 @@ Isso faremos por meio dos lemas a seguir
 \begin{env}{Lema}
 	\label{lem:monoticiadade da integral de funções não negativas}
 	Se $f$ e $g$ são elementos de $M^+(X,\cc)$ com $f \leq g$, então 
-	$$
+	$ \displaystyle
 	\displaystyle\int fd\mu \leq \int g d\mu.
-	$$
+	$
 \end{env}
 \begin{prova}
 	Se $\varphi$ é uma função simples em $M^+(X,\cc)$ tal que 
@@ -1238,19 +1245,19 @@ Isso faremos por meio dos lemas a seguir
 
 \begin{env}{Teorema}\textbf{(Teorema da Convergência Monótona)}
 	\label{teo:Convergencia Monótona}
-	Se $(f_n)$ é uma sequência monótona crescente de funções não negativas mensuráveis que converge para a $f$, então
-	$$
+	Se $(f_n)$ é uma sequência monótona crescente de funções não negativas mensuráveis que converge para uma função $f$, então
+	$ \displaystyle
 	\int f d\mu = \dlim_{n \to \infty} \int f_n d\mu
-	$$
+	$
 \end{env}
 \begin{prova}
 	Pelo \ref{cor:convergencia-de-uma-sequencia-mensuravel}, se temos uma sequência de funções mensuráveis que converge para uma função $f$, então $f$ também é mensurável.
 	Além disso,
 	como $(f_n)$ é crescente, então $f_n \leq f\ \forall n \in \N$.
 	Seque, pelo \ref{lem:monoticiadade da integral de funções não negativas} que 
-	$$
+	$ \displaystyle
 	\int f_n\ d\mu \leq \int f\ d\mu
-	$$
+	$
 	Para todo $n \in \N$.
 	Desta maneira, 
 	$$
@@ -1316,9 +1323,9 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 
 \begin{env}{Corolário}
 	Se $f \in M^+(X, \cc)$ e $c \geq 0$, então $cf \in M^+(X, \cc)$ e vale
-	$$
+	$ \displaystyle
 	\int cf d\mu = c\int f d\mu.
-	$$
+	$
 \end{env}
 
 
@@ -1339,15 +1346,13 @@ O teorema anterior nos permite mostrar as operações aritméticas para integral
 	Como queríamos demonstrar.
 \end{prova}
 
-
 \begin{env}{Corolário}
 	\label{cor:soma de integrais de funções não negativas}
-	Se $f, g \in M^+(X, \cc)$, então $f + g \in M^+(X, \cc)$ e vale
-	$$
-	\int (f + g) d\mu = \int f d\mu + \int g d\mu.
-	$$ 	
+	Se $f$ e $g$ são funções não negativas e $\cc$-mensuráveis, então  a soma $f + g$ também é uma função $\cc$-mensurável e vale
+	$ \displaystyle
+	\int (f + g) d\mu = \int f d\mu + \int g d\mu
+	$ \cite{bartle}. 	
 \end{env}
-
 \begin{prova}
 	Analogamente ao corolário anterior, tomemos duas sequências de funções simples $(\varphi_n)$ e $(\psi_n)$ ambas monótonas e crescentes tal que convergem, respectivamente, para $f$ e $g$.
 	Segue, pelo  \ref{teo:aritmetica-com-integrais-de-funções-simples} e o
@@ -1365,9 +1370,9 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 
 \begin{env}{Teorema}\textbf{(Lema de Fatou)}
 	\label{teo:lema de fatou}
-	Se $(f_n) \subset M^+(X, \cc)$, então 
+	Se $(f_n)$ é uma sequência tal que $f_n \in M^+(X, \cc)$ para qualquer que seja $n \in \N$, então 
 	$\displaystyle
-	\int(\lim \inf f_n)d\mu \leq \lim \inf \int f_n d\mu$. 
+	\int(\lim \inf f_n)d\mu \leq \lim \inf \int f_n d\mu$ \cite{bartle}. 
 \end{env}
 \begin{prova}
 	Tome a sequência $g_m = \displaystyle \inf_{n \in \N}\{f_m, f_{m+1},...\}$.
@@ -1385,7 +1390,8 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	\int (\lim \inf f_n)d\mu = \lim \int g_m d\mu \leq \lim \inf \int f_n d\mu.
 	$$ 
 \end{prova}
-
+ % Discurssão sobre a integral de Rienmann
+  
 \begin{env}{Corolário}
 	Se $f \in M^+(X, \cc)$ e $\lambda$ é definida sobre $\cc$ pondo
 	$
@@ -1402,7 +1408,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	$$
 	f_n = \sum_{k =1}^nf\chi_{E_k}
 	$$
-	Segue do corolário \ref{cor:soma de integrais de funções não negativas} que
+	Segue do \ref{cor:soma de integrais de funções não negativas} que
 	$$
 	\int f_n d\mu
 	= \int \left(\sum_{k =1}^nf\chi_{E_k}\right) d\mu
@@ -1429,7 +1435,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	Suponha $f(x) = 0$ $\mu$-q.t.p.
 	Assim, se $E = \{ x \in X: f(x) > 0\}$, então $\mu(E) = 0$.
 	Tome a sequência $f_n = n\chi_E$.
-	Dessa forma $f \leq \lim \inf_{n \in \N} f_n$.
+	Dessa forma $\displaystyle f \leq \lim \inf_{n \in \N} f_n$.
 	Segue, pelo Lema de Fatou que
 	$$
 	0 
@@ -1460,7 +1466,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	$$
 	Ou seja $\mu(E_n) = 0$ para todo $n \in \N$.
 	Assim, todo $E_n$ tem medida nula.
-	Segue, pela proposição \ref{prop:medida-nula-união}
+	Segue, pela \ref{prop:medida-nula-união}
 	que o conjunto $\{x \in X; f(x) > 0\}$ tem medida nula, pois
 	$\{x \in X; f(x) > 0\}
 	=
@@ -1472,6 +1478,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 Finalizaremos esta subseção apresentando um corolário do Teorema da Convergência Monótona que enfatiza claramente a diferença entre a Integral de Riemann e a Integral de Lebesgue.
 
 \begin{env}{Corolário}
+	\label{contraexemplo}
 	Se $(g_n)$ é uma sequência de funções em $M^+(X, \cc)$, então 
 	$$
 	\int \left(\dsum_{n = 1} ^\infty g_n\right)d\mu
@@ -1483,6 +1490,22 @@ Finalizaremos esta subseção apresentando um corolário do Teorema da Convergê
 	O resultado sai imediatamente da aplicação do Teorema da Convergência Monótona considerando a sequência de funções $f_n \in M^+(X, \cc)\ \forall n \in \N$ tais que
 	$f_n = g_1 + \cdots + g_n  $.
 \end{prova}
+
+Pode ser que, até agora, tudo que definimos e discorremos não apresente diferença relevante da teoria da Integral de Riemann, a menos de sua construção.
+Para que não haja dúvidas que a teoria da integração de Lebesgue generaliza a teoria da integração Riemann, vamos mostrar um contraexemplo do \ref{contraexemplo} para a integral de Riemann. 
+Seja $C = \Q \cap [0,1]$ e defina a sequência de funções $f_n: [0,1] \to \R$ definida por $f_n(x) \equiv \chi_C$ para todo $n \in \N$.
+Desta forma, como $C$ é enumerável, segue que $\displaystyle \int_{0}^{1} f_n(x)dx = \int_{0}^{1} \chi_C(x) dx = 0$
+\footnote{Isso é válido pelo seguinte teorema:
+	\enquote{Para que uma função limitada $f : [a, b] \to \R$ seja
+		integrável, é necessário e suficiente que o conjunto \textbf{D} dos seus
+		pontos de descontinuidade tenha medida nula} \cite[p.344]{elon}.
+}.
+Com isso, $\dsum_{n = 1}^\infty \int_{0}^{1} f_n(x)dx = 0$.
+Por outro lado, temos que
+$
+\dsum_{n = 1}^\infty f_n(x)
+$
+não é integrável segundo Rienmann.
 \section{Funções Integráveis}
 Definimos anteriormente apenas integrais de funções não negativas com respeito à uma medida $\mu$.
 Nesta estenderemos, finalmente, este conceito para uma função qualquer de valores reais estendidos. Com isso,
@@ -1491,22 +1514,21 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	Seja $L = (X, \cc, \mu)$ a coleção de funções integráveis que consiste de todas as funções reais $\cc$-mensuráveis $f:X \to \R$ tais que as funções
 	$f^+$ e $f^-$ são ambas integrais finitas com respeito à medida $\mu$.
 	Neste caso, nós definimos a integral de $f$ com respeito à medida $\mu$ como
-	$$
+	$
 	\int fd\mu
 	= \int f^+ d\mu - \int f^- d\mu
-	$$
+	$
 	Se, por ventura, $E$ for um elemento da \sigal $\cc$, então definimos
-	$$
+	$
 	\int_E fd\mu
 	= \int_E f^+ d\mu - \int_E f^- d\mu
-	$$
+	$ \cite{bartle}.
 \end{env}
 
 \begin{env}{Teorema}
 	\label{teo:f é integrável se, só, se |f| o é}
-	Uma função mensurável $f$ é um elemento de $L$ se, e somente se, $|f|$ é um elemento de $L$.
+	Uma função mensurável $f$ é um elemento de $L$ se, e somente se, $|f|$ é um elemento de $L$ \cite{bartle}.
 \end{env}
-
 \begin{prova}
 	Suponha que $f \in L$.
 	Por definição, isso ocorre se, e somente se, as artes positiva e negativa de $f$ são ambas elementos de $M^+$ e suas, respectivas integrais, são finitas.
@@ -1532,7 +1554,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 \end{prova}
 
 \begin{env}{Corolário}
-	Se $|f| \in L$, então $\displaystyle \left|\int f d\mu\right| \leq \int |f| d\mu$.
+	Se $|f| \in L$, então $\displaystyle \left|\int f d\mu\right| \leq \int |f| d\mu$ \cite{bartle}.
 \end{env}
 \begin{prova}
 	Se $|f| \in L$, então $f \in L$ pelo teorema anterior.
@@ -1558,7 +1580,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 
 \begin{env}{Corolário}
 	\label{cor: f é mensurável, g é integrável então f é integrável}
-	Se $f$ é mensurável, $g$ é integrável e $|f| \leq |g|$, então  $f$ é integrável e $\displaystyle \int |f| d\mu \leq \int |g| d\mu$.
+	Se $f$ é mensurável, $g$ é integrável e temos que $|f(x)| \leq |g(x)|$ para todo $x$, então  $f$ é integrável e $\displaystyle \int |f| d\mu \leq \int |g| d\mu$ \cite{bartle}.
 \end{env}
 \begin{prova}
 	Se $f$ é mensurável, então para uma medida $\mu$ definida sobre $(X,\cc)$, tem-se que $f \in L$. Assim, pelo teorema \ref{teo:f é integrável se, só, se |f| o é} tem-se que $|f|$ é integrável.
@@ -1632,16 +1654,15 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	\end{enumerate}
 \end{prova}
 
-\begin{env}{Teorema}[Teorema da Convergência Dominada de Lebesgue]
+\begin{env}{Teorema}\textbf{(Teorema da Convergência Dominada de Lebesgue)}
 	Seja $(f_n)$ uma sequência de funções integráveis que converge em quase todo ponto para uma uma função real mensurável $f$.
-	Se existir uma função integrável $g$ tal que $|f_n| \leq g$ para todo $n \in \N$, então $f$ é integrável e $\displaystyle \int f d\mu = \dlim_{n \to +\infty} \int f_n d\mu$.
+	Se existir uma função integrável $g$ tal que $|f_n| \leq g$ para todo $n \in \N$, então $f$ é integrável e $\displaystyle \int f d\mu = \dlim_{n \to +\infty} \int f_n d\mu$ \cite{bartle}.
 \end{env}
 
 \begin{prova}
 	Se $(f_n)$ converge em quase todo ponto para a função $f$ e $|f_n| \leq g$ para cada $n \in \N$, então $f \leq g$ em quase todo ponto.
-	Como $g$ é integrável, segue pelo corolário \ref{cor: f é mensurável, g é integrável então f é integrável} que $f$ é integrável.
+	Como $g$ é integrável, segue pelo \ref{cor: f é mensurável, g é integrável então f é integrável} que $f$ é integrável.
 	Além disso, note que para todo $n \in \N$, temos
-	
 	$$
 	|f_n| \leq g 
 	\Leftrightarrow 
@@ -1653,8 +1674,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	\textrm{\ ou \ }
 	g + f_n \geq 0
 	$$
-	Caso tenhamos $g + f_n \geq 0$ podemos utilizar o Lema de Fatou e o teorema \ref{teo: soma e multiplicação por escalar de funções integráveis} de forma que 
-	
+	Caso tenhamos $g + f_n \geq 0$ podemos utilizar o Lema de Fatou e o \ref{teo: soma e multiplicação por escalar de funções integráveis} de forma que 
 	\begin{align*}
 		\int g d\mu + \int f d\mu =& \int (g + f) d\mu \\
 		\leq & \lim \inf \int (g + f_n) d\mu \\
@@ -1663,7 +1683,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	\end{align*}
 	isso acarreta que 
 	$$
-	\int g d\mu + \int f d\mu = \int g d\mu + \lim \inf \int f_n d\mu.
+	\int g d\mu + \int f d\mu \leq  \int g d\mu + \lim \inf \int f_n d\mu.
 	$$
 	Logo, $\displaystyle \int f d\mu \leq \lim \inf \int f_n d\mu$.
 	
