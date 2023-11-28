@@ -109,7 +109,7 @@ Será que se construirmos $Z$ um conjunto que contenha $\varnothing$ e $X$ e out
     Assim, a segunda condição da \ref{def:sigma-algebra} não é satisfeita, impossibilitando que $\mathcal{C}$ seja uma \sigal de $X$.
     \vspace{-0.2cm}
 \end{env}
-A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunto fixado não vazio em um conjunto.
+A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunto fixado,  não vazio, em um conjunto.
 \begin{env}{Proposição}
 \label{prop:sigma-complementar}
     Seja $X$ e $A$ dois conjuntos quaisquer com $A \neq \varnothing$.
@@ -128,7 +128,7 @@ A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunt
     \vspace{-0.2cm}
 \end{env}
  
-Note que a  \ref{def:sigma-algebra} trata apenas da reunião de enumerável de elementos da $\sigma$-álgebra. 
+Note que a  \ref{def:sigma-algebra} trata apenas da reunião enumerável de elementos da $\sigma$-álgebra. 
 Nosso interesse, agora, é investigar se conseguirmos propriedades análogas para a operação de interseção. 
 Iniciaremos verificando o comportamento de interseção de elementos de uma \sigal com a seguinte proposição.
 % Propriedades de Interseção 
@@ -174,11 +174,11 @@ Responderemos à esta pergunta com a proposição adiante.
     Se $\mathcal{C}_1$ e $\mathcal{C}_2$ são \sigals de $X$, então ambos possuem $\varnothing$ e $X$ como elementos.
     Assim, $\varnothing$ e $X$ estão na intersecção $\mathcal{C}$.
     Além disso, se $A \in \mathcal{C}$, então $A \in \mathcal{C}_1$ e $A \in \mathcal{C}_2$. 
-    Por serem ambas \sigals, $A^c \in \mathcal{C}$ e $A^c \in \mathcal{C}_2$.
+    Por serem ambas $\sigma$-álgebras, $A^c \in \mathcal{C}$ e $A^c \in \mathcal{C}_2$.
     Ou seja, $A^c \in \mathcal{C}_1 \cap \mathcal{C}_2 = \mathcal{C}$.
     Por fim, se tomarmos uma sequência $(A_n)$ de elementos de $\mathcal{C}$, observamos que $A_j \in \mathcal{C}_1$ e $A_j \in \mathcal{C}_2$ para cada $j \in \N$.
     Assim, $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_1$ e 
-    $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_2$ pela definição de \sigal.
+    $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_2$ pela definição de $\sigma$-álgebra.
     Logo, $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
     Com isso, $\mathcal{C}$ satisfaz todas as condições da \ref{def:sigma-algebra}. 
     Portanto, $\mathcal{C}$ é uma \sigal de $X$.
@@ -251,7 +251,7 @@ Por exemplo, utilizando a reta real, podemos representar intervalo $(-\infty, b)
 	    \Fonte{Elaborado pelo autor}
 	}	
 \end{figure}
-Se tomarmos um $a \in \R$ fixo, com $a<b$, então a decomposição do intervalo $(-\infty, b)$ pode ser expressa por meio da união dos intervalos $(-\infty, a]$ e $(a,b)$, onde estão representados na figura a seguir pelas cores azul e vermelha respectivamente.\\
+Se tomarmos um $a \in \R$ fixo, com $a<b$, então a decomposição do intervalo $(-\infty, b)$ pode ser expressa por meio da união dos intervalos $(-\infty, a]$ e $(a,b)$, onde estão representados na figura a seguir pelas cores azul e vermelha, respectivamente.\\
 \begin{figure}[h!]
 	\centering
 	\Caption{\label{fig:boreliano-decomposto} Representação de uma decomposição do intervalo $(-\infty, b)$ na reta real}	
@@ -383,11 +383,11 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 	\begin{enumerate}[label*=(\Roman*)]
 		\item Se $\chi_{A\cup B}(x) = 0$, então $ x \notin A\cup B$. 
 		Logo,  $x \notin A$ e $x \notin B$ acarretando que $x \notin A\cap B$.
-		Dessa forma, $\chi_A = \chi_B =\chi_{A\cap B} = 0$.
+		Dessa forma, $\chi_A(x) = \chi_B(x) =\chi_{A\cap B}(x) = 0$.
 		%
 		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 0$, então $x \in (A\cup B)$ e $x \notin A\cap B$.
 		Logo, $x \in (A\cup B) - (A\cap B)$.
-		Como $(A\cup B) - (A\cap B) = (A- B) \cup (B - A)$, concluímos que $x (A - B) \cup (B - A)$, ou seja, $x \in A - B$ ou $x \in B - A$.
+		Como $(A\cup B) - (A\cap B) = (A- B) \cup (B - A)$, concluímos que $x \in (A - B) \cup (B - A)$.
 		Se $x \in A - B$, então $\chi_{A}(x) = 1$ e $\chi_B(x) = 0$.
 		Logo, 	$\chi_{A\cup B}(x) = 1 = 1 + 0 + 0 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
 		Se $x \in B - A$, então $\chi_B(x) = 1$ e $\chi_A(x) = 0$ acarretando que 
@@ -561,7 +561,11 @@ Antes de provarmos a próxima proposição, vamos enunciar um teorema que nos au
 \begin{env}{Lema}
 	\label{lem:densidade de Q em R}
 	O conjunto $\Q$ dos números racionais e o conjunto
-	$\R - \Q$ dos números irracionais são ambos densos em $\R$ \cite[p.84]{elon}.
+	$\R - \Q$ dos números irracionais são ambos densos
+	\footnote{
+		\enquote{Um conjunto $X \subset \R$ chama-se denso em $\R$ quando todo
+			intervalo aberto $(a, b)$ contém algum ponto de $X$}\cite[p.83]{elon}.}
+	 em $\R$ \cite[p.84]{elon}.
 	\vspace{-0.2cm}
 \end{env}
 A prova desse teorema será omitida para que o texto não prolongue-se mais do que o necessário.
@@ -607,7 +611,7 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     Segue que $f(a) - r_0 > 0 $ e $g(a) -\alpha + r_0 > 0$. 
     Consequentemente, $f(a) > r_0  $ e $g(a) > \alpha - r_0$.
     Logo, $a \in H_{r_0}$.
-    Como existe um $r \in \Q$ tal que $a \in H_{r}$ concluímos que $ \displaystyle a \in \bigcup_{r \in \Q} H_r$.
+    Portanto, $ \displaystyle a \in \bigcup_{r \in \Q} H_r$.
     
     Reciprocamente, sendo $ \displaystyle a \in \bigcup_{r \in \Q} H_r$ existe um elemento $r_0 \in \Q$ tal que $a \in H_{r_0}$.
     Logo, $f(a) > r_0$ e $g(a) > \alpha -r_0$.
@@ -623,8 +627,7 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     Concluindo que a afirmação é verdadeira. 
     
     Além disso, para cada $r \in \Q$, o conjunto $H_r$ é um elemento de $\mathcal{C}$, pois é  a interseção de dois elementos de $\mathcal{C}$ ( \ref{prop:interseção-elementos-sigmas}).
-    Note também que, pela definição de $\mathcal{C}$, a coleção $\displaystyle \bigcup_{r \in \Q} H_r$ é um elemento de $\mathcal{C}$, pois $\Q$ é enumerável
-    \footnote{Em caso de dúvida, vide \supercite{elon}{p.51}.}.
+    Note também que, pela definição de $\mathcal{C}$, a coleção $\displaystyle \bigcup_{r \in \Q} H_r$ é um elemento de $\mathcal{C}$, pois $\Q$ é enumerável.
     Segue que $f+g$ é $\cc$-mensurável.
 
     Para mostrar que $fg$ é mensurável basta notar que é a combinação de outras funções $\cc$-mensuráveis.
@@ -713,7 +716,7 @@ Com isso, finalizaremos esta seção apresentando alguns resultados importantes 
     \begin{prova}
             Para provar que $f = f^+ - f^-$, devemos avaliar os casos de $f(x)$. 
             Logo, se $f(x) \geq 0$, então $f^+(x) = \sup\{f(x), 0\} = f(x)$ e $f^-(x) = \sup\{-f(x), 0\} = 0$, pois $f(x) \geq 0 \Rightarrow  - f(x) \leq~0$.
-            Disso, $f^+(x) - f^-(x) = f(x) - 0 = f(x)$, ou seja, $(f^+ - f^-)(x) = f(x),  \forall \ f(x) \geq 0$.
+            Disso, $f^+(x) - f^-(x) = f(x) - 0 = f(x)$, ou seja, $(f^+ - f^-)(x) = f(x)$ tal que $f(x) \geq 0$.
             Caso $f(x) <~0$, então $- f(x) > 0$. 
             Com isso,  $\sup\{f(x), 0\} = 0$ e $\sup\{-f(x), 0\} = -f(x)$.
             Desta forma vemos que
