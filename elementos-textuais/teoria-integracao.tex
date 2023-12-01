@@ -20,7 +20,7 @@ $$
 $$
 onde $a_j \in \R$ e $\chi_{E_j}$ é a função característica do conjunto $E_j \in \cc$.
 Nessa representação estamos supondo que cada $a_j \neq a_i$ quando $j \neq i$ e que
-$\displaystyle \bigcup_{j = 1}^n E_j = X$ onde a sequência finita de conjuntos $(E_n)$ formam uma partição do conjunto $X$.
+$\displaystyle \bigcup_{j = 1}^n E_j = X$, onde a sequência finita de conjuntos $(E_n)$ formam uma partição do conjunto $X$.
 
 \begin{env}{Exemplo}
 \label{ex:função-escada-part-2}
@@ -29,10 +29,10 @@ $\displaystyle \bigcup_{j = 1}^n E_j = X$ onde a sequência finita de conjuntos 
     
     $$g(x) = \left\{
     \begin{array}{cc}
-         1, & \textrm{\ se } x \in [0,1] \\
-         2, & \textrm{\ se } x \in [1,2) \\
-         3, & \textrm{\ se } x \in [2,3) \\
-         4, & \textrm{\ se } x \in [3,4]
+         1, & \textrm{\ se } x \in [0,1) \\
+         3, & \textrm{\ se } x \in [1,2) \\
+         4, & \textrm{\ se } x \in [2,3) \\
+         2, & \textrm{\ se } x \in [3,4]
     \end{array}\right.
     $$
     Claramente, $g$ também é uma função simples.
@@ -44,7 +44,7 @@ $\displaystyle \bigcup_{j = 1}^n E_j = X$ onde a sequência finita de conjuntos 
      $ a_i = i$ para $1 \leq i \leq 4$.
     Com isso, vemos que para $x \in [0,4]$
     $$
-    g(x) = 1\cdot \chi_{[0,1]}(x) + 2\cdot \chi_{(1,2]}(x) + 3\cdot \chi_{(2,3]}(x) + 4\cdot \chi_{(3,4]}(x)
+    g(x) = 1\cdot \chi_{[0,1)}(x) + 3\cdot \chi_{[1,2)}(x) + 4\cdot \chi_{[2,3)}(x) + 2\cdot \chi_{[3,4]}(x)
     $$
     Concluindo que $g = \dsum_{j = 1}^4 a_j\chi_{E_j}$. 
 \end{env}
@@ -179,7 +179,7 @@ Note que em ambos os casos estamos, basicamente, aplicando o valor $a_j$ na medi
 
 Para a \ref{def:integral-função-naonegativa-simples} empregamos a convenção que $0 \cdot (+\infty) = 0$.
 Isso é feito para garantir que a função identicamente nula tenha integral nula independentemente da medida ser finita ou não.
-A seguir veremos propriedades elementares sobre a integral de funções simples.
+A seguir, veremos propriedades elementares sobre a integral de funções simples.
 
 \begin{comment}
 	
@@ -444,10 +444,6 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 	\end{align*}
 	\begin{align*}
 		= &
-		\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
-		+
-		\dsum_{j = 1}^n \dsum_{k = 1}^m  b_k\chi_{(E_j \cap F_k)}\\
-		= &
 		\dsum_{j = 1}^n\dsum_{k = 1}^m 
 		\left(a_j\chi_{(E_j \cap F_k)}
 		+
@@ -473,7 +469,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     \end{minipage}} E_j \cap F_k
     $$
     A notação utilizada acima indica que a soma é realizada sobre todos os índices $j$ e $k$ tais que $a_j + b_k =c_h$.
-    Como $E_j \cap F_k = \varnothing$, temos que 
+    Como $(E_j \cap F_k) \cap (E_l \cap F_p)= \varnothing$ para todo $j \neq l$ e $k \neq p$ , temos que 
     $$
     \mu(G_h) = \mu\left(\bigcup_{
         j,k\atop
@@ -529,11 +525,12 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 	$$
 	\lambda(\varnothing) = \mu(A \cap \varnothing) = \mu(\varnothing) = 0
 	$$
-	Como $A$ e $E$ são elementos de $\cc$, então $A \cap H$ também está em $\cc$.
+	Como $A$ e $E$ são elementos de $\cc$, então $A \cap E$ também está em $\cc$.
 	Assim, por $\mu$ ser uma medida, temos que $\mu(A\cap E) \geq 0$ acarretando que $\lambda(E) \geq 0$.
 	Por fim, tomemos uma sequência de elementos disjuntos $(E_n)$ em $\cc$.
-	Se $A = E_j$ para algum $j \in \N$, não há o que fazer.
-	Caso $A \cap E_j = \varnothing$ para qualquer que seja $j \in \N$, então $\displaystyle \left( \bigcup_{n \in \N} E_n\right) \cap A = \varnothing$.
+	Se $A \cap E_j \neq \varnothing$ para algum $j \in \N$ 
+	não há o que fazer, pois $(A \cap E_j) \subset E_j \in \cc$.
+	Caso $A \cap E_j = \varnothing$ para todo $j \in \N$, então $\displaystyle \left( \bigcup_{n \in \N} E_n\right) \cap A = \varnothing$.
 	Com isso, 
 	
 	\begin{align*}
@@ -623,19 +620,20 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 
 \begin{env}{Teorema}
 	\label{teo:medida-atraves-de-uma-integral}
-	A função $\lambda: \cc \to \xreta$ definida por
+	Se $\phi$ é uma função simples com  a representação padrão dada por $\phi = \dsum_{j = 1}^n a_j\chi_{E_j}$, então a função $\lambda: \cc \to \xreta$ definida por
 	$
 	\displaystyle\lambda(E) = \int \varphi\chi_E\ d\mu
 	$
-	para todo $E \in \cc$ é uma medida sobre $\cc$. 
+	para todo $E \in \cc$ é uma medida sobre $\cc$
+	\cite{bartle}. 
 \end{env}
 
 \begin{prova}
 	De maneira análoga ao  \ref{teo:aritmetica-com-integrais-de-funções-simples}
 	podemos verificar que 
-	$$
-	\varphi\chi_E = \sum_{j = 1}^n a_j\chi_{E_j \cap E}
-	$$
+	$
+	\varphi\chi_E = \dsum_{j = 1}^n a_j\chi_{E_j \cap E}.
+	$
 	Assim, temos que 
 	\begin{align*}
 		\lambda(E) 
@@ -654,7 +652,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 % Mostrar que existe uma função simples que aproxima uma função
 \section{A Integral de Funções Não-Negativas}
 
-Até aqui trabalhos apenas com integrais de funções simples apenas.
+Até aqui trabalhos apenas com integrais de funções simples.
 Nesta seção, desejamos expandir o conceito de integral para uma função qualquer não negativa.
 Vale ressaltar que a perspectiva que traremos aqui é a de Lebesgue.
 Com o intuito de enfatizar a diferença da construção, vamos lembrar da construção feita por Riemann.
@@ -722,7 +720,7 @@ Para facilitar, observe o gráfico dessa função no intervalo $[0,4]$ apresenta
 $$
 \phi_2(x) =\sum_{j = 1}^{2} a_j\chi_{E_j}
 $$
-onde $a_1 = f(0), a_2 = f(4); E_1 = [0, 2)$ e $E_2 = [2, 4]$.
+onde $a_1 = f(0), a_2 = f(2); E_1 = [0, 2)$ e $E_2 = [2, 4]$.
 Assim, ao calcularmos sua integral, vemos não há preenchimento total da área delimitada pelo gráfico da função $f$, mas se aproxima com um erro conforme a figura \ref{fig: integral da funçao phi 2}.
 
 \begin{figure}[h!]
@@ -745,7 +743,7 @@ Assim, ao calcularmos sua integral, vemos não há preenchimento total da área 
 			}
 				% Plot do gráfico
 			\filldraw[domain=0:2,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3})--(2,0)--(0,0);
-			\filldraw[domain=2:4,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{2.24})--(4,0)--(2,0);	
+			\filldraw[domain=2:4,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.96})--(4,0)--(2,0);	
 			
 			\draw[domain=0:4,smooth,variable=\x, ultra thick]  plot ({\x},{3+sin(\x r)})  node[above right] {{\small $f(x) = \textrm{sen}\,x + 3$}};
 	
@@ -778,9 +776,9 @@ Desta forma, com o dobro de valores da função $\phi_2$ escolhida anteriormente
 			
 			% Plot do gráfico
 			\filldraw [domain=0:1,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{3})--(1,0)--(0,0);
-			\filldraw[domain=1:2,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.87})--(2,0)--(1,0);	
-			\filldraw[domain=2:3,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.14})--(3,0)--(2,0);
-			\filldraw[domain=3:4,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{2.24})--(4,0)--(3,0);
+			\filldraw[domain=1:2,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.84})--(2,0)--(1,0);	
+			\filldraw[domain=2:3,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.96})--(3,0)--(2,0);
+			\filldraw[domain=3:4,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.14})--(4,0)--(3,0);
 					
 			% Rótulos
 			\foreach \i in {-1,1,2,3,4}{
@@ -837,15 +835,15 @@ figura \ref{fig:integrla da função phi 8}.
 			
 			\filldraw[domain=1:1.5,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.84})--(1.5,0)--(1,0);	
 			
-			\filldraw[domain=1.5:2,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.91})--(2,0)--(1.5,0);
+			\filldraw[domain=1.5:2,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.96})--(2,0)--(1.5,0);
 			
-			\filldraw[domain=2:2.5,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.6})--(2.5,0)--(2,0);
+			\filldraw[domain=2:2.5,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.9})--(2.5,0)--(2,0);
 			
-			\filldraw[domain=2.5:3,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.14})--(3,0)--(2.5,0);
+			\filldraw[domain=2.5:3,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.6})--(3,0)--(2.5,0);
 			
-			\filldraw[domain=3:3.5,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{2.65})--(3.5,0)--(3,0);
+			\filldraw[domain=3:3.5,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{3.2})--(3.5,0)--(3,0);
 			
-			\filldraw[domain=3.5:4,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{2.24})--(4,0)--(3.5,0);
+			\filldraw[domain=3.5:4,smooth,variable=\x, cyan, fill opacity=0.4] plot ({\x},{2.6})--(4,0)--(3.5,0);
 			
 			% Rótulos
 			\foreach \i in {-1,1,2,3,4}{
@@ -864,7 +862,7 @@ figura \ref{fig:integrla da função phi 8}.
 		\Fonte{Elaborado pelo autor}
 	}   
 \end{figure}
-Com isso, observamos que quanto mais valores a função simples possui, mais ela se aproxima da função $f$ desde que nenhum valor ultrapasse o gráfico da função.
+Com isso, observamos que quanto mais valores a função simples possui, mais ela se aproxima da função $f$.
 Assim, a área da função simples será próxima o suficiente da área delimitada pelo gráfico da função $f$.
 Ou seja, se tomarmos o supremo dessas funções obteremos a integral exposta na figura \ref{fig:Integral da função f}.
 \begin{figure}[h!]
@@ -1148,26 +1146,20 @@ Dito isto, adiante formalizaremos que dada uma função $f \in \menfus$, então 
 	$\phi_n(x) = k2^{-n}$ desde que 
 	$k2^{-n} \leq f(x) < (k+1)2^{-n}$.
 	Como  $k2^{-n}+2^{-n}$, percebemos que
-	$$
-	k2^{-n} \leq f(x) < (k+1)2^{-n}
-	\Rightarrow
-	k2^{-n} \leq f(x) < k2^{-n} + 2^{-n}
-	\Rightarrow
-	\phi_n(x) \leq f(x) < \phi_n(x) + 2^{-n}.
-	$$
-	Logo, 
-	$$
-	\dlim_{n \to +\infty}\phi_n(x)  
-	\leq 
-	\dlim_{n \to +\infty}f(x) 
-	\leq 
-	\dlim_{n \to +\infty}\phi_n(x) 
-	+ 
-	\dlim_{n \to +\infty}2^{-n}.
-	$$
-	Como $\dlim_{n \to +\infty} f(x) = f(x)$ e 
+	\begin{align*}
+		k2^{-n} \leq f(x) < (k+1)2^{-n}
+		\Rightarrow &
+		\ k2^{-n} \leq f(x) < k2^{-n} + 2^{-n}\\
+		\Rightarrow &
+		\ \phi_n(x) \leq f(x) < \phi_n(x) + 2^{-n}\\
+		\Rightarrow &
+		\ \phi_n(x) - 2^{-n} \leq f(x) < \phi_n(x) + 2^{-n}\\
+		\Rightarrow &
+		\ |f(x) - \phi_n(x)| <  2^{-n}.		
+	\end{align*}
+	Como 
 	$\dlim_{n \to +\infty} 2^{-n} = 0$.
-	Segue, pelo teorema do confronto que
+	Segue que
 	$\dlim_{n \to +\infty} \phi_n(x) = f(x)$.
 \end{prova}
 
@@ -1184,13 +1176,13 @@ Diante disso, nada mais natural que definir a integral de Lebesgue para funçõe
 \end{env}
 \begin{env}{Definição}
 	\label{def: integral de uma função não neg com respeito a um conjunto específico}
-	Se $f \in \menfus$ e $E \in \cc$, então $f\chi_{E} \in \menfus$ e \citeauthor{bartle} (\citeyear{bartle}) define a integral de $f$ sobre o conjunto $E$ com respeito à medida $\mu$ como sendo o número real estendido
+	Se $f \in \menfus$ e $E \in \cc$, então $f\chi_{E} \in \menfus$, definimos a integral de $f$ sobre o conjunto $E$ com respeito à medida $\mu$ como sendo o número real estendido
 	$$
 	\displaystyle \int_E f d\mu = \int f\chi_E d\mu.
 	$$
 \end{env}
 
-Agora desejamos realizar operações aritméticas com essa expansão da definição conforme fizemos para a integral de funções simples.
+Agora desejamos realizar operações aritméticas com essa expansão da definição, conforme fizemos para a integral de funções simples.
 Para tal, precisamos mostrar a monoticidade da integral de funções não negativas tanto à respeito de uma outra função integral quanto à um conjunto.
 Isso faremos por meio dos lemas a seguir
 
@@ -1202,17 +1194,25 @@ Isso faremos por meio dos lemas a seguir
 	$
 \end{env}
 \begin{prova}
-	Se $\varphi$ é uma função simples em $M^+(X,\cc)$ tal que 
-	$0 \leq \varphi \leq f$, então $0 \leq \varphi \leq g$, uma vez que $f \leq g$.
-	Assim, 
-	$\displaystyle\sup_{\varphi \leq f} \int\varphi d\mu \leq \int f d\mu$ e
-	$\displaystyle\sup_{\varphi \leq f} \int\varphi d\mu \leq \int g d\mu$.
-	Subtraindo membro à membro temos 
+	Suponha que $\int f d\mu = \sup \varphi d\mu$ e $\int g d\mu = \sup \psi d\mu$ onde $\psi, \varphi$ são funções simples não negativas tais que
+	$ \varphi \leq f$ e $\psi \leq g$.
+	Sejam $A$ e $B$ os conjuntos das integrais de todas as funções simples que satisfazem $ 0\leq \varphi \leq f$ e $0\leq \psi \leq g$, respectivamente.
+	Isto é, 
 	$$
-	0 \leq  \int f d\mu  - \int g d\mu
-	\Leftrightarrow
-	\int f d\mu \leq \int g d\mu.
+	A =\left\{
+	\dsum_{j =1}^n a_j \mu(E_j); \ \phi = \dsum_{j =1}^n a_j\chi_{E_j}\ \textrm{e}\  0 \leq \varphi(x) \leq f(x)
+	\right\}
 	$$
+	e
+	$$
+	B =\left\{
+	\dsum_{k =1}^m b_k \mu(F_k); \ \phi = \dsum_{k =1}^m b_k\chi_{F_k}\ \textrm{e}\  0 \leq \psi(x) \leq g(x)
+	\right\}
+	$$
+	Por hipótese, $ f\leq g$. 
+	Logo, $0 \leq \varphi(x) \leq f(x) \leq g(x)$ para todo $x \in X$ acarretando que $A \subset B$.
+	Desta forma, $\displaystyle\sup_A \dsum_{j =1}^n a_j \mu(E_j) \leq \sup_B \dsum_{k =1}^m b_k \mu(F_k)$.
+	Portanto, $\displaystyle\int f d\mu \leq \int g d\mu$.
 	
 \end{prova}
 \begin{env}{Lema}
@@ -1245,7 +1245,7 @@ Isso faremos por meio dos lemas a seguir
 
 \begin{env}{Teorema}\textbf{(Teorema da Convergência Monótona)}
 	\label{teo:Convergencia Monótona}
-	Se $(f_n)$ é uma sequência monótona crescente de funções não negativas mensuráveis que converge para uma função $f$, então
+	Se $(f_n)$ é uma sequência monótona crescente de funções mensuráveis, não negativas, que converge para uma função $f$, então
 	$ \displaystyle
 	\int f d\mu = \dlim_{n \to \infty} \int f_n d\mu
 	$
@@ -1270,7 +1270,7 @@ Isso faremos por meio dos lemas a seguir
 	$$
 	A_n =\{x \in X ;\ f_n(x) \geq \alpha \varphi(x)\}.
 	$$
-	Com isso, podemos observar que cada $A_n \in X$, $A_{n} \subseteq A_{n+1}$
+	Com isso, podemos observar que cada $A_n \subset X$, $A_{n} \subseteq A_{n+1}$
 	e que $X = \displaystyle \bigcup_{n \in \N}A_n$.
 	Desta maneira, usando o  \ref{lem:monoticiadade da integral com conjunto em funções não negativas} e \ref{lem:monoticiadade da integral de funções não negativas} temos que 
 	\begin{equation}
@@ -1381,7 +1381,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	$$
 	\int g_m d\mu \leq \int f_n d\mu.
 	$$
-	Como $(g_m)$ é crescente e converge para $\lim\inf f_n$ nós temos que 
+	Como $(g_m)$ é crescente e converge para $\lim\inf f_n$, nós temos que 
 	$$
 	\int g_m d\mu \leq \lim \inf \int f_n d\mu.
 	$$
@@ -1414,7 +1414,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	= \int \left(\sum_{k =1}^nf\chi_{E_k}\right) d\mu
 	= \sum_{k =1}^n \left(\int f\chi_{E_k}\right) d\mu
 	= \sum_{k =1}^n \left(\int_{E_k} f\right) d\mu
-	= \sum_{k =1}^n \lambda(E_k) d\mu
+	= \sum_{k =1}^n \lambda(E_k)
 	$$
 \end{prova}
 
@@ -1460,7 +1460,7 @@ Assim, o próximo resultado nos apresenta uma maneira de trabalhar com sequênci
 	$
 	Segue que
 	$$
-	0 = \inf f d\mu 
+	0 = \int f d\mu 
 	\geq 
 	\dfrac{1}{n}\mu(E_n) \geq 0
 	$$
@@ -1487,13 +1487,13 @@ Finalizaremos esta subseção apresentando um corolário do Teorema da Convergê
 	$$
 \end{env}
 \begin{prova}
-	O resultado sai imediatamente da aplicação do Teorema da Convergência Monótona considerando a sequência de funções $f_n \in M^+(X, \cc)\ \forall n \in \N$ tais que
+	O resultado sai imediatamente da aplicação do Teorema da Convergência Monótona considerando a sequência de funções $f_n \in M^+(X, \cc)\ \forall\  n \in \N$ tais que
 	$f_n = g_1 + \cdots + g_n  $.
 \end{prova}
 
 Pode ser que, até agora, tudo que definimos e discorremos não apresente diferença relevante da teoria da Integral de Riemann, a menos de sua construção.
 Para que não haja dúvidas que a teoria da integração de Lebesgue generaliza a teoria da integração Riemann, vamos mostrar um contraexemplo do \ref{contraexemplo} para a integral de Riemann. 
-Seja $C = \Q \cap [0,1]$ e defina a sequência de funções $f_n: [0,1] \to \R$ definida por $f_n(x) \equiv \chi_C$ para todo $n \in \N$.
+Seja $C = \Q \cap [0,1]$ e defina a sequência de funções $f_n: [0,1] \to \R$ definida por $f_n(x) = \chi_C$ para todo $n \in \N$.
 Desta forma, como $C$ é enumerável, segue que $\displaystyle \int_{0}^{1} f_n(x)dx = \int_{0}^{1} \chi_C(x) dx = 0$
 \footnote{Isso é válido pelo seguinte teorema:
 	\enquote{Para que uma função limitada $f : [a, b] \to \R$ seja
@@ -1531,7 +1531,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 \end{env}
 \begin{prova}
 	Suponha que $f \in L$.
-	Por definição, isso ocorre se, e somente se, as artes positiva e negativa de $f$ são ambas elementos de $M^+$ e suas, respectivas integrais, são finitas.
+	Por definição, isso ocorre se, e somente se, as partes positiva e negativa de $f$ são ambas elementos de $M^+$ e suas, respectivas integrais, são finitas.
 	Devemos mostrar que 
 	$$
 		\int |f| d\mu = \int |f|^+ d\mu - \int |f|^-d\mu
@@ -1668,7 +1668,7 @@ Nesta estenderemos, finalmente, este conceito para uma função qualquer de valo
 	\Leftrightarrow 
 	f_n \leq g 
 	\textrm{\ ou \ }
-	 f_n \leq -g
+	 f_n \geq -g
 	\Leftrightarrow
 	g - f_n \geq 0
 	\textrm{\ ou \ }

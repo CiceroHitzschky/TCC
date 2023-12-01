@@ -14,9 +14,9 @@
 \contentsline {section}{\numberline {3.1}Os Espaços de Funções Mensuráveis}{27}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Espaços de Medida}{35}{section.3.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Teoria da Integração}}{44}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Integral de Funções Simples}{44}{section.4.1}%
-\contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{49}{section.4.2}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Teoria da Integração}}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Integral de Funções Simples}{43}{section.4.1}%
+\contentsline {section}{\numberline {4.2}A Integral de Funções Não-Negativas}{48}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Funções Integráveis}{59}{section.4.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{63}{chapter.5}%

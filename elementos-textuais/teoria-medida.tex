@@ -1,10 +1,10 @@
 \chapter{A Teoria da Medida}
 %%%%%%%%% ESPAÇOS MENSURÁVEIS
     Nesta seção, apresentaremos o conceito chave deste trabalho: a teoria da medida.
-    Conhecemos este conceito de forma intuitiva pelo o que vemos, geralmente, na geometria euclidiana plana.
-    Aqui, trataremos de medida de modo generalizado. 
+    %Conhecemos este conceito de forma intuitiva pelo o que vemos, geralmente, na geometria euclidiana plana.
+    %Aqui, trataremos de medida de modo generalizado. 
     Para isso, precisaremos ampliar o conjunto dos números reais para que ele possa atender novas exigências.
-    Isso é necessário porquê, as vezes, teremos conjuntos tão \enquote{grandes} que nenhum número real poderá representar sua \enquote{medida}. 
+    Isso é necessário porque, as vezes, teremos conjuntos tão \enquote{grandes} que nenhum número real poderá representar sua \enquote{medida}. 
     Assim, estenderemos o conjunto dos números reais na primeira seção.
     Na seguinte, estenderemos o conceito de função mensurável para o conjunto dos números reais estendidos e, na seção final, apresentaremos a definição de medida bem como exemplos dela.
     
@@ -13,7 +13,7 @@
 	Assim, antes de prosseguirmos expandiremos o conjunto da reta real que temos trabalhado anteriormente.
     \begin{env}{Definição}
     \label{def:reta-estendida}
-        A coleção $\xreta$ que consiste de $\R \cup \{-\infty, +\infty\}$ é chamada de \textbf{Sistema Estendido de Números Reais}
+        O conjunto $\xreta$ que consiste de $\R \cup \{-\infty, +\infty\}$ é chamada de \textbf{Sistema Estendido de Números Reais}
         \cite[p.5, tradução nossa]{bartle}
         \footnote{No original: The collection $\xreta$ consisting of
         	the set $\R \cup \{ -\infty , + \infty\}$ is called the extended real number system.}.
@@ -22,7 +22,7 @@
     Ou seja, $\xreta$ nada mais é que o conjunto dos números reais com a possibilidade de se ter $-\infty$ ou $+\infty$.
     Com isso, parece que nosso problema de \enquote{medir} conjuntos muito grandes se resolveu.
     Entretanto, alguns cuidados são necessários para operarmos em $\xreta$.
-    Um deles, por exemplo, é que $\xreta$ não é fechado para operações de $\R$ tais como $(+\infty) + (-\infty)$ que nem definido é.
+    Um deles, por exemplo, é que $\xreta$ não é fechado para operações de $\R$ tais como $(+\infty) + (-\infty)$.
     Dito isso, para $x \in \R$, as operações dos símbolos $+\infty$ e $-\infty$ são dadas da seguinte forma:
     \vspace{-0.4cm}
     \begin{multicols}{2}
@@ -101,11 +101,11 @@
         Assim, 
         \begin{align*}
             a \in \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\} 
-            \Leftrightarrow & a \in \{x \in X; f(x) > n\}, \ \forall n \in \N\\
-            \Leftrightarrow & \forall\ n \in \N,\ f(a) > n\\
+            \Leftrightarrow &\ a \in \{x \in X; f(x) > n\}, \ \forall\  n \in \N\\
+            \Leftrightarrow &\  \forall\ n \in \N,\ f(a) > n\\
             \Leftrightarrow & f(a) = +\infty.  
         \end{align*}
-    Além disso, note que cada $\{x \in X; f(x) > n\} \in \mathcal{C}$.
+    Além disso, note que cada $\{x \in X;\, f(x) > n\} \in \mathcal{C}$.
     Segue, pela \ref{prop:interseção-elementos-sigmas}, que \linebreak $\displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\} \in \mathcal{C}$ acarretando que $\{x \in X; f(x) = +\infty\} \in \mathcal{C}$. 
     \end{prova}
 
@@ -124,10 +124,10 @@
         \begin{align*}
             a \in \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c
             \Leftrightarrow & \ a \in \bigcap_{n = 1}^\infty \left(\{x \in X; f(x) > - n\}\right)^c\\
-            \Leftrightarrow & \forall \ n \in \N, a \in \left(\{x \in X; f(x) > - n\}\right)^c\\
-            \Leftrightarrow & \forall \ n \in \N, a \notin \{x \in X; f(x) > - n\}\\
-            \Leftrightarrow & \forall \ n \in \N, a \in \{x \in X; f(x) \leq - n\}\\    
-            \Leftrightarrow & \forall \ n \in \N, f(a) \leq - n\\
+            \Leftrightarrow & \ \forall \ n \in \N,\ a \in \left(\{x \in X; f(x) > - n\}\right)^c\\
+            \Leftrightarrow & \ \forall \ n \in \N,\ a \notin \{x \in X; f(x) > - n\}\\
+            \Leftrightarrow & \ \forall \ n \in \N,\ a \in \{x \in X; f(x) \leq - n\}\\    
+            \Leftrightarrow & \ \forall \ n \in \N,\ f(a) \leq - n\\
             \Leftrightarrow & \lim_{n \to \infty} f(a) \leq \lim_{n \to \infty} (- n)\\  
             \Leftrightarrow & f(a) = -\infty.                  
         \end{align*}
@@ -135,7 +135,7 @@
     Com isso, podemos perceber que 
     $\displaystyle a \in \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c \Leftrightarrow  a \in \{x \in X; f(x) = -\infty\}$.
     Ora, cada $\{x \in X; f(x) > - n\} \in \mathcal{C}$.
-    Assim, por definição de \sigal, temos que $ \displaystyle\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\} \in \mathcal{C}$ e também 
+    Assim, por definição de $\sigma$-álgebra, temos que $ \displaystyle\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\} \in \mathcal{C}$ e também 
     $\displaystyle\left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c \in \mathcal{C}$.
     Concluímos disso que $\{x \in X; f(x) = -\infty\} \in \mathcal{C}$ como queríamos provar. 
     \end{prova}
@@ -389,7 +389,7 @@ Para que possamos entender melhor o truncamento de uma função, vamos observar 
 		}{
 			\Fonte{Elaborado pelo autor}		}   
 	\end{figure}
-	Uma truncamento faz, didaticamente falando, uma espécie de limitação no gráfico da função original.
+	Um truncamento faz, didaticamente falando, uma espécie de limitação no gráfico da função original.
 	Ao tomarmos como constante o número real 1, vemos que o truncamento $g_1$ da função $g$, apresentada anteriormente, \enquote{amassa} o gráfico de $g$ nas ordenadas 1 e $-1$ como exposto na figura \ref{fig:truncamentog_1}.
 		\begin{figure}[h!]
 			\centering
@@ -491,7 +491,7 @@ Tomemos duas sequências $(f_n)$ e $(g_m)$ tais que para cada $k \in \N$, $f_k$ 
 Ou seja,
 	\hspace{-0.2cm}
 	\begin{minipage}{0.5\linewidth}
-	$$ g_k(x) =
+	$$ g_p(x) =
 	\left\{\begin{array}{cc}
 		g(x), & \textrm{se\ } |g(x)| \leq k \\
 		k, & \textrm{se\ } g(x) > k \\
@@ -573,10 +573,11 @@ Antes de definimos uma medida, lembraremos de alguns conceitos e resultados da t
 
 \begin{env}{Proposição}
 \label{prop:sequencia-crescente-conjuntos-resultado-A_n}
-Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 = E_1$ e $A_n = E_n - E_{n -1}$ para todo $n > 1$, então:
+Seja $(E_n)$ uma sequência não-decrescente de conjuntos. Se $(A_n)$ é tal que $A_1 = E_1$ e $A_n = E_n - E_{n -1}$ para todo $n > 1$, então:
 \begin{enumerate}[label* = (\roman*)]
-    \item $A_n$ é uma sequência disjunta;
-        \footnote{Lembre que uma sequência disjunta significa que $A_i \cap A_j = \varnothing$ para todo $i \neq j$}
+    \item $A_n$ é uma sequência disjunta
+        \footnote{
+        	Lembre que uma sequência disjunta significa que $A_i \cap A_j = \varnothing$ para todo $i \neq j$};
     \item $E_n = \displaystyle \bigcup_{j = 1}^n A_j$;
     \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$ \cite{bartle}.
 \end{enumerate}
@@ -597,14 +598,15 @@ Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 =
     $$
     (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c
     =
-    E_m \cap E_{m-1}^c
+    E_m \cap E_{n-1}^c
     = \varnothing.
     $$
-	Pois, se $x$ não é elemento de $E_{m-1}$ e $E_{m-1} \subseteq E_m$, então $x$ não pode ser elemento de $E_m$.
+	Pois se $E_{m} \subseteq E_{n-1}$, então $E_{n-1}^c \subseteq E_{m}^c$.
+	Disso, $E_{m} \subseteq E_{n-1}^c \subset E_{m} \subseteq E_{m}^c$.
     
     Provaremos agora o item $(b)$.
- 	Se $m = 1$, então não há o que fazer.
- 	Suponha $m > 1$.
+ 	Se $m = 2$, então não há o que fazer.
+ 	Suponha $m > 2$.
  	Assim, 
  	\begin{align*}
  		\bigcup_{j = 1}^m A_j
@@ -658,7 +660,7 @@ Seja $(E_n)$ uma sequência crescente de conjuntos. Se $(A_n)$ é tal que $A_1 =
 \label{prop:sequencia-decrescente-conjuntos-resultado-A_n}
 Seja $(F_n)$ uma sequência não-crescente de conjuntos. 
 Se $(E_n)$ é tal que $E_n = F_1 - F_n$ para todo $n \in \N$, então $(E_n)$ é não-decrescente e 
-$\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$
+$\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcap_{j = 1}^\infty F_n$
 \cite{bartle}.
 \end{env}
 
@@ -670,29 +672,37 @@ $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^
     Assim, $x \notin F_n \Rightarrow x \notin F_{n+1}$.
     Com isso, $x \in F_1$ e $x \notin F_{n+1}$, ou seja,
     $x \in E_{n+1}$.
-    Desta maneira, $E_n \subseteq E_{n+1}$ para qualquer $n \in \N$ como queríamos.
-    Além disso, um elemento $y \in \displaystyle \bigcup_{n \in \N} E_n$ se, e somente se,
-    $y \in \displaystyle \bigcup_{n \in \N} (F_1 - F_n)$.
-    Isso é equivalente a dizer que existe um $n_0 \in \N$ tal que $y \in F_1 - F_{n_0}$.
-    Correspondentemente, $ y \in F_1$ e $y \notin F_{n_0}$ para algum $n_0 \in \N$.
-    Isso ocorre se, e somente se, $y \in F_1$ e $y \notin \displaystyle \bigcup_{n \in \N} F_n$.
-    Portanto, $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^\infty F_n$.
+    Desta maneira, $E_n \subseteq E_{n+1}$ para qualquer $n \in \N$, como queríamos.
+    Além disso, perceba que
+$$
+    	\bigcup_{j = 1}^\infty E_n 
+    	= 
+    	\bigcup_{j = 1}^\infty (F_1-F_n)\\
+    	= 
+    	\bigcup_{j = 1}^\infty (F_1 \cap F_n^c)\\
+    	= 
+    	F_1 \cap \left(\bigcup_{j = 1}^\infty F_n^c\right)\\
+    	= 
+    	F_1 \cap \left(\bigcap_{j = 1}^\infty F_n\right)^c\\
+    	= 
+    	F_1 -\bigcup_{j = 1}^\infty F_n
+$$
 \end{prova}
 
 \begin{env}{Proposição}
 	\label{prop: duas partições}
 	Se $\displaystyle \bigcup_{j = 1}^n E_j$ e $\displaystyle \bigcup_{k = 1}^m F_k$ são duas partições distintas de um conjunto $X$, então
-	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^n (E_j \cap F_k)$
+	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^m (E_j \cap F_k)$
 	\cite{bartle}.
 \end{env}
 \begin{prova}
 	Fixemos um $j_0 \in I_n$.
-	Assim, temos que $x \in \bigcup_{k = 1} (E_{j_0} \cap F_k)$ implica que existe um $k_0 \in I_m$ tal que  $x \in E_{j_0}\cap F_{k_0}$.
+	Assim, temos que $\displaystyle x \in \bigcup_{k = 1}^m (E_{j_0} \cap F_k)$ implica que existe um $k_0 \in I_m$ tal que  $x \in E_{j_0}\cap F_{k_0}$.
 	Logo, $x \in E_{j_0}$ e $x \in F_{k_0}$, isto é, $x \in E_{j_0}$.
 	Reciprocamente, se $y \in X$, então para algum $j_1 \in I_n$, $y \in E_{j_1}$, pois $\{E_j\}$ formam uma partição de $X$.
 	Como $\{F_k\}$ também é uma partição de $X$, deve existir um $k_1 \in I_m$ tal que $x \in F_{k_1}$.
 	Assim, $x \in E_{j_1} \cap F_{k_1}$. 
-	Desta forma, existe um $k_1 \in I_m$ tal que $x \in \displaystyle \bigcup_{k = 1} (E_{j_1} \cap F_{k_1})$ como queríamos.	 
+	Desta forma, existe um $k_1 \in I_m$ tal que $x \in \displaystyle \bigcup_{k = 1}^m (E_{j_1} \cap F_{k})$ como queríamos.	 
 \end{prova}
 
 \begin{env}{Definição}
@@ -707,8 +717,7 @@ $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcup_{j = 1}^
     \end{enumerate}
 \end{env}
 
-Ou seja, uma medida é uma função não negativa que é contavelmente aditiva.
-Além disso, o valor de $\mu$ pode ser igual à $+\infty$ para algum conjunto $A \in \mathcal{C}$.
+O valor de $\mu$ pode ser igual à $+\infty$ para algum conjunto $A \in \mathcal{C}$.
 Quando temos que $\mu(E) < +\infty$ para qualquer que seja o conjunto $E \in \mathcal{C}$, dizemos que temos uma medida finita.
 
 \begin{env}{Definição}
@@ -719,7 +728,7 @@ Quando temos que $\mu(E) < +\infty$ para qualquer que seja o conjunto $E \in \ma
 
 % Exemplos de medida
 \begin{env}{Exemplo}
-    Seja $X$ um conjunto e $\mathcal{C}$ a \sigal formada por todos os subconjunto de $X$.    
+    Sejam $X$ um conjunto e $\mathcal{C}$ a \sigal formada por todos os subconjunto de $X$.    
     Defina $\mu_1, \mu_2:\mathcal{C} \to \xreta$ pondo $\mu_1(A) = 0$ para qualquer  $A \in \mathcal{C}$ e 
     $\mu_2$ é  pondo 
 
@@ -751,7 +760,7 @@ Portanto $\mu_1$ e $\mu_2$ são medidas.
 \begin{env}{Exemplo}
 	Seja $(\Omega, \cc)$ um espaço mensurável.
 	A função $\mathcal{P}:\cc \to [0,1]$ é dita uma probabilidade se satisfaz as propriedades:
-	\begin{enumerate}[label* =(K\arabic*)]
+	\begin{enumerate}[label* =(\textit{K\arabic*})]
 		\item $\mathcal{P}(\Omega) = 1$;
 		\item $\mathcal{P}(A) \geq 0,\ \forall\  A \in \cc$;
 		\item Se $(A_n)$ é uma sequência disjunta de elementos de  $\mathcal{C}$, então 
@@ -761,7 +770,7 @@ Portanto $\mu_1$ e $\mu_2$ são medidas.
 	\end{enumerate}
 \end{env}
 
-Observe que as condições da \textit{(ii)} e \textit{(iii)} da definição \ref{def:medida} são satisfeitas, por definição, na função de probabilidade.
+Observe que as condições da \textit{(ii)} e \textit{(iii)} da \ref{def:medida} são satisfeitas, por definição, na função de probabilidade.
 Resta provar que $\mathcal{P}(\varnothing) = 0$.
 Assim, com o auxilio das propriedades \textit{(K1)} e \textit{(K3)}, segue que 
 $$
@@ -799,6 +808,8 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 
 
 \end{env}
+\begin{comment}
+	
 
 % A função característica é uma medida
 \begin{env}{Exemplo}
@@ -820,6 +831,7 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	Em todo caso, $\chi_{\bigcup_{n \in \N}E_n}(x) = \dsum_{n \in \N} \chi_{E_n}(x)$. 
 	Portanto, $\chi_E$ é uma medida.
 \end{env}
+\end{comment}
 
 % Medida de contagem
 
@@ -841,11 +853,11 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 
 \begin{prova}
 	Dado $j \in I_n$, pela \ref{prop: duas partições}, temos que
-	$E_j = \displaystyle \bigcup_{k = 1} (E_j\cap F_k)$.
+	$E_j = \displaystyle \bigcup_{k = 1}^m (E_j\cap F_k)$.
 	Como $\{F_k\}$ é uma partição, para $k,l \in I_m$, temos
-	$(E_j\cap F_p) \cap (E_j\cap F_l) = \varnothing$.
-	Como $\chi_E$ é uma medida para todo $E \in \cc$, segue que
-	para todo $x$,
+	$(E_j\cap F_p) \cap (E_j\cap F_l) = \varnothing$ para todo $l$ e $p$ com  $l \neq p$.
+	Ou seja, a sequência formada por $(E_j\cap F_k)$ com $k \in I_m$ é disjunta.
+	Como $\mu$ é uma medida, segue que
 	$$
 	\mu(E_j)
 	=
@@ -854,6 +866,9 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	\sum_{k = 1}^{m}\mu(E_j\cap F_k)
 	$$
 \end{prova}
+
+\begin{comment}
+	
 
 \begin{env}{Proposição}
 	\label{prop: igualdade da caracteristica como medida}
@@ -865,6 +880,7 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	Pela \ref{prop: igualdade da caracteristica como medida}, $\chi$ é uma medida. Segue pela \ref{prop: medida com partição} que
 	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
 \end{prova}
+\end{comment}
 
 % Teorema
 \begin{env}{Teorema}
@@ -878,8 +894,8 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	Suponha que $A \subset B$, então $B = A \cup (B - A)$ e $A \cap (B - A) = \varnothing$. Segue pela propriedade $(ii)$ da \ref{def:medida} que 
 	$$\mu(B) = \mu(A) + \mu(B-A)$$
 	Lembre que $B-A = B\cap A^c$ e $A \in \mathcal{C} \Rightarrow A^c \in \mathcal{C}$.
-	Além disso, como $B \in \mathcal{C}$ temos que $ B\cap A^c$ consequentemente $B - A \in \mathcal{C}$.
-	Assim, como $\mu$ é uma medida e $B-A \in \mathcal{C}$, temos que $\mu(B-A) \geq 0$.
+	Além disso, como $B \in \mathcal{C}$ temos que $ B\cap A^c = B - A \in \mathcal{C}$.
+	Com isso, $\mu(B-A) \geq 0$.
 	Segue que $\mu(B) \geq \mu(A)$.
 	Observe que se $\mu(A) < \infty$, temos que 
 
@@ -892,7 +908,7 @@ Como desejávamos.
 \begin{env}{Proposição}
 \label{prop:limite-sequencia-crescente}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$
+Se $(E_n)$ é uma sequência não-decrescente de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$
 \cite{bartle}.
 \end{env} 
 
@@ -900,7 +916,9 @@ Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displ
     Ora, se $\mu(E_n) = +\infty$, para algum $n \in \N$, ambos os lados da equação acima são $+\infty$.
     Desta forma, vamos supor que $\mu(E_n) < +\infty$ para todo $n \in \N$.
     Com isso, vamos construir uma sequência $(A_n)$ pondo $A_1 = E_1$ e $A_n = E_n - E_{n-1}$ para qualquer $n>1$.
-    Então pela \ref{prop:sequencia-crescente-conjuntos-resultado-A_n}, $(A_n)$ é uma sequência disjunta, temos $E_n = \bigcup_{j = 1}^n A_j$ e $\bigcup_{j = 1}^\infty E_j = \bigcup_{j = 1}^\infty A_j$.
+    Então pela \ref{prop:sequencia-crescente-conjuntos-resultado-A_n}, $(A_n)$ é uma sequência disjunta, temos 
+    $\displaystyle E_n = \bigcup_{j = 1}^n A_j$ e 
+    $\displaystyle\bigcup_{j = 1}^\infty E_j = \bigcup_{j = 1}^\infty A_j$.
     Como $\mu$ contavelmente aditiva, 
     $$\mu\left(\bigcup_{n = 1}^\infty E_n\right)
     =\mu\left(\bigcup_{n = 1}^\infty A_n\right)
@@ -945,15 +963,15 @@ Se $(E_n)$ é uma sequência crescente de $\mathcal{C}$, então $\mu\left(\displ
 
 \begin{env}{Proposição}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-Se $(B_n)$ é uma sequência decrescente de $\mathcal{C}$ e $\mu(B_1) < +\infty$, então 
+Se $(B_n)$ é uma sequência não-crescente de $\mathcal{C}$ e $\mu(B_1) < +\infty$, então 
 $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty} \mu(B_n)$ \cite{bartle}.
 \end{env} 
 \begin{prova}
     Defina uma sequência $(T_n)$ de elementos de $\mathcal{C}$ pondo $T_n = B_1 - B_n$ para qualquer que seja $n \in \N$.
-    Pela \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n}, $(T_n)$ é crescente.
+    Pela \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n}, $(T_n)$ é não-decrescente.
     Assim, aplicando o a \ref{prop:limite-sequencia-crescente} temos que 
     $$
-    \mu\left(\bigcap_{n \in \N} T_n\right) = \lim_{n \to +\infty} \mu(T_n)
+    \mu\left(\bigcup_{n \in \N} T_n\right) = \lim_{n \to +\infty} \mu(T_n)
     $$
     Usando o \ref{teo:medida-diferença}, obtemos
     $$
@@ -988,7 +1006,7 @@ Formalmente,
 \begin{env}{Definição}
 	\label{def:conjunto-medida-nula}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
-	Dizemos que um conjunto $E \subset \cc$ tem medida nula em relação à medida $\mu$ se $\mu(E) = 0$.
+	Dizemos que um conjunto $E \in \cc$ tem medida nula em relação à medida $\mu$ se $\mu(E) = 0$.
 \end{env}
 
 Podemos usar este conceito de \enquote{quase todo ponto} ou \enquote{quase todo lugar} para qualquer proposição que queiramos desde que ela não seja válida apenas em um subconjunto de medida nula \cite{bartle}.
