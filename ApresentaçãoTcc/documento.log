@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  10 DEC 2023 23:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 DEC 2023 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,10 +1202,10 @@ your preamble.
  on input line 8.
 
 (./documento.nav)
-Overfull \hbox (82.7404pt too wide) detected at line 8
+Overfull \hbox (110.62398pt too wide) detected at line 8
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 (./capa.tex
@@ -1215,7 +1215,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
-<figuras/logo.png, id=155, 543.4704pt x 520.344pt>
+<figuras/logo.png, id=162, 543.4704pt x 520.344pt>
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
 Package pdftex.def Info: figuras/logo.png  used on input line 20.
@@ -1245,10 +1245,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 14.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [2
@@ -1259,10 +1259,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 12.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [3
@@ -1273,10 +1273,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 29.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [4
@@ -1287,10 +1287,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 41.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [5
@@ -1301,10 +1301,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 54.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [6
@@ -1315,10 +1315,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 68.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [7
@@ -1329,10 +1329,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 68.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [8
@@ -1343,10 +1343,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 68.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [9
@@ -1357,10 +1357,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 68.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [10
@@ -1371,10 +1371,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 68.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [11
@@ -1385,10 +1385,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 78.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [12
@@ -1399,10 +1399,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 94.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [13
@@ -1413,10 +1413,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 94.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [14
@@ -1427,10 +1427,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 94.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [15
@@ -1441,10 +1441,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 94.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [16
@@ -1455,10 +1455,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 94.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [17
@@ -1469,10 +1469,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 106.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [18
@@ -1483,10 +1483,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 106.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [19
@@ -1497,10 +1497,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 106.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [20
@@ -1511,10 +1511,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 106.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [21
@@ -1525,10 +1525,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 12.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [22
@@ -1555,10 +1555,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 26.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [23
@@ -1569,10 +1569,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 26.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [24
@@ -1583,10 +1583,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 26.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [25
@@ -1600,10 +1600,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 43.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [26
@@ -1617,10 +1617,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 43.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [27
@@ -1634,10 +1634,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 43.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [28
@@ -1651,10 +1651,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 43.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [29
@@ -1668,10 +1668,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 43.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [30
@@ -1682,10 +1682,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 53.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [31
@@ -1696,10 +1696,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 53.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [32
@@ -1710,10 +1710,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 61.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [33
@@ -1724,10 +1724,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 73.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [34
@@ -1738,10 +1738,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 73.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [35
@@ -1752,10 +1752,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 73.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [36
@@ -1766,10 +1766,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 73.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [37
@@ -1780,10 +1780,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 82.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [38
@@ -1794,10 +1794,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 82.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [39
@@ -1808,10 +1808,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 90.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [40
@@ -1822,10 +1822,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 96.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [41
@@ -1836,10 +1836,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 105.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [42
@@ -1850,10 +1850,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 122.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [43
@@ -1864,10 +1864,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 122.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [44
@@ -1883,10 +1883,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 136.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [45
@@ -1899,10 +1899,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 169.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [46
@@ -1914,10 +1914,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 209.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [47
@@ -1929,10 +1929,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 249.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [48
@@ -1943,10 +1943,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 260.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [49
@@ -1957,10 +1957,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 260.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [50
@@ -1971,10 +1971,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 260.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [51
@@ -1985,10 +1985,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 260.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [52
@@ -1996,13 +1996,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 268.
+Package pdftex.def Info: figuras/logo.png  used on input line 273.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [53
@@ -2010,13 +2010,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 281.
+Package pdftex.def Info: figuras/logo.png  used on input line 286.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [54
@@ -2024,13 +2024,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 294.
+Package pdftex.def Info: figuras/logo.png  used on input line 286.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [55
@@ -2038,13 +2038,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 294.
+Package pdftex.def Info: figuras/logo.png  used on input line 286.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [56
@@ -2052,13 +2052,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 294.
+Package pdftex.def Info: figuras/logo.png  used on input line 293.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [57
@@ -2069,10 +2069,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 301.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [58
@@ -2080,13 +2080,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 309.
+Package pdftex.def Info: figuras/logo.png  used on input line 311.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [59
@@ -2094,13 +2094,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 319.
+Package pdftex.def Info: figuras/logo.png  used on input line 311.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [60
@@ -2111,10 +2111,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 319.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [61
@@ -2122,13 +2122,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 327.
+Package pdftex.def Info: figuras/logo.png  used on input line 330.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [62
@@ -2136,61 +2136,61 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 338.
+Package pdftex.def Info: figuras/logo.png  used on input line 343.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [63
 
 ]
+Overfull \vbox (2.06648pt too high) detected at line 390
+ []
+
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 351.
+Package pdftex.def Info: figuras/logo.png  used on input line 390.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [64
 
 ]
-Overfull \vbox (2.06648pt too high) detected at line 398
+Overfull \vbox (2.06648pt too high) detected at line 436
  []
 
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 398.
+Package pdftex.def Info: figuras/logo.png  used on input line 436.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [65
 
 ]
-Overfull \vbox (2.06648pt too high) detected at line 444
- []
-
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 444.
+Package pdftex.def Info: figuras/logo.png  used on input line 447.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [66
@@ -2198,13 +2198,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 455.
+Package pdftex.def Info: figuras/logo.png  used on input line 457.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [67
@@ -2212,13 +2212,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 465.
+Package pdftex.def Info: figuras/logo.png  used on input line 467.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [68
@@ -2226,13 +2226,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 475.
+Package pdftex.def Info: figuras/logo.png  used on input line 494.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [69
@@ -2240,13 +2240,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 502.
+Package pdftex.def Info: figuras/logo.png  used on input line 520.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [70
@@ -2254,13 +2254,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 528.
+Package pdftex.def Info: figuras/logo.png  used on input line 549.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [71
@@ -2268,13 +2268,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 557.
+Package pdftex.def Info: figuras/logo.png  used on input line 589.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [72
@@ -2282,13 +2282,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 597.
+Package pdftex.def Info: figuras/logo.png  used on input line 613.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [73
@@ -2296,13 +2296,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 621.
+Package pdftex.def Info: figuras/logo.png  used on input line 629.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [74
@@ -2310,13 +2310,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 637.
+Package pdftex.def Info: figuras/logo.png  used on input line 689.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [75
@@ -2324,13 +2324,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 697.
+Package pdftex.def Info: figuras/logo.png  used on input line 709.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [76
@@ -2338,13 +2338,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 717.
+Package pdftex.def Info: figuras/logo.png  used on input line 811.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [77
@@ -2352,13 +2352,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 819.
+Package pdftex.def Info: figuras/logo.png  used on input line 829.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [78
@@ -2366,13 +2366,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 837.
+Package pdftex.def Info: figuras/logo.png  used on input line 839.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [79
@@ -2380,13 +2380,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 847.
+Package pdftex.def Info: figuras/logo.png  used on input line 849.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [80
@@ -2394,13 +2394,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 857.
+Package pdftex.def Info: figuras/logo.png  used on input line 858.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [81
@@ -2408,13 +2408,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 866.
+Package pdftex.def Info: figuras/logo.png  used on input line 872.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [82
@@ -2425,10 +2425,10 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 880.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [83
@@ -2436,13 +2436,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 888.
+Package pdftex.def Info: figuras/logo.png  used on input line 887.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [84
@@ -2450,13 +2450,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 895.
+Package pdftex.def Info: figuras/logo.png  used on input line 898.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [85
@@ -2464,13 +2464,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 906.
+Package pdftex.def Info: figuras/logo.png  used on input line 910.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [86
@@ -2478,13 +2478,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 919.
+Package pdftex.def Info: figuras/logo.png  used on input line 920.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [87
@@ -2492,55 +2492,64 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 931.
+Package pdftex.def Info: figuras/logo.png  used on input line 932.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [88
 
 ]
+Overfull \vbox (0.37492pt too high) detected at line 944
+ []
+
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 943.
+Package pdftex.def Info: figuras/logo.png  used on input line 944.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [89
 
 ]
+Overfull \vbox (0.37492pt too high) detected at line 944
+ []
+
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 954.
+Package pdftex.def Info: figuras/logo.png  used on input line 944.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [90
 
 ]
+Overfull \vbox (0.37492pt too high) detected at line 944
+ []
+
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 954.
+Package pdftex.def Info: figuras/logo.png  used on input line 944.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [91
@@ -2548,27 +2557,27 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 961.
+Package pdftex.def Info: figuras/logo.png  used on input line 955.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [92
 
-]) (./seções/Sumário.tex (./documento.toc)
+]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 12.
+Package pdftex.def Info: figuras/logo.png  used on input line 955.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [93
@@ -2576,13 +2585,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 965.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [94
@@ -2590,13 +2599,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 986.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [95
@@ -2604,13 +2613,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 986.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [96
@@ -2618,13 +2627,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 999.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [97
@@ -2632,13 +2641,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 999.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [98
@@ -2646,13 +2655,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1011.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [99
@@ -2660,13 +2669,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1011.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [100
@@ -2674,13 +2683,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1026.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [101
@@ -2688,13 +2697,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1026.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [102
@@ -2702,13 +2711,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1042.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [103
@@ -2716,13 +2725,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1042.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [104
@@ -2730,13 +2739,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1053.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [105
@@ -2744,41 +2753,41 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 38.
+Package pdftex.def Info: figuras/logo.png  used on input line 1053.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [106
 
-]) (./seções/conclusão.tex (./documento.toc)
+]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 8.
+Package pdftex.def Info: figuras/logo.png  used on input line 1058.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [107
 
-]
+]) (./seções/Sumário.tex (./documento.toc)
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 17.
+Package pdftex.def Info: figuras/logo.png  used on input line 12.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [108
@@ -2786,13 +2795,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 17.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [109
@@ -2800,13 +2809,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 17.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [110
@@ -2814,13 +2823,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 30.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [111
@@ -2828,13 +2837,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 30.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [112
@@ -2842,13 +2851,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 30.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [113
@@ -2856,13 +2865,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 30.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [114
@@ -2870,13 +2879,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 44.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [115
@@ -2884,13 +2893,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 44.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [116
@@ -2898,13 +2907,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 44.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [117
@@ -2912,13 +2921,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 44.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [118
@@ -2926,13 +2935,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 58.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [119
@@ -2940,13 +2949,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 58.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [120
@@ -2954,16 +2963,226 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 ]
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
-Package pdftex.def Info: figuras/logo.png  used on input line 58.
+Package pdftex.def Info: figuras/logo.png  used on input line 38.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
 [121
+
+]) (./seções/conclusão.tex (./documento.toc)
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 8.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[122
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 17.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[123
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 17.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[124
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 17.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[125
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 30.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[126
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 30.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[127
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 30.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[128
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 30.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[129
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 44.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[130
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 44.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[131
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 44.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[132
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 44.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[133
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 58.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[134
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 58.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[135
+
+]
+File: figuras/logo.png Graphic file (type png)
+<use figuras/logo.png>
+Package pdftex.def Info: figuras/logo.png  used on input line 58.
+(pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
+
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
+  [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
+ []
+
+[136
 
 ]) (./seções/referências.tex
 Overfull \vbox (41.55103pt too high) detected at line 34
@@ -2974,13 +3193,13 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 34.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
-[122
+[137
 
 ]) (./seções/resultados.tex (./documento.toc)
 File: figuras/logo.png Graphic file (type png)
@@ -2988,13 +3207,13 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 12.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
-[123
+[138
 
 ]
 File: figuras/logo.png Graphic file (type png)
@@ -3002,13 +3221,13 @@ File: figuras/logo.png Graphic file (type png)
 Package pdftex.def Info: figuras/logo.png  used on input line 15.
 (pdftex.def)             Requested size: 16.3034pt x 15.60963pt.
 
-Overfull \hbox (82.7404pt too wide) has occurred while \output is active
+Overfull \hbox (110.62398pt too wide) has occurred while \output is active
   [] [][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][][][][] [][] []
-[][]  
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][] [][][]
+[][][] [][] [][][]  
  []
 
-[124
+[139
 
 ])
 \tf@nav=\write6
@@ -3022,13 +3241,13 @@ Overfull \hbox (82.7404pt too wide) has occurred while \output is active
 
  (./documento.aux)
 Package rerunfilecheck Info: File `documento.out' has not changed.
-(rerunfilecheck)             Checksum: A04D91A991219CF9EE1C1487021CEC78;1567.
+(rerunfilecheck)             Checksum: F5751B5AC3E3B9A49B76CB6DB43E27DB;1568.
  ) 
 Here is how much of TeX's memory you used:
- 42878 strings out of 478287
- 1022433 string characters out of 5849289
- 1485024 words of memory out of 5000000
- 60013 multiletter control sequences out of 15000+600000
+ 43026 strings out of 478287
+ 1027099 string characters out of 5849289
+ 1506270 words of memory out of 5000000
+ 60131 multiletter control sequences out of 15000+600000
  541330 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  133i,20n,125p,767b,904s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3046,10 +3265,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb>
-Output written on documento.pdf (124 pages, 1113713 bytes).
+Output written on documento.pdf (139 pages, 1259130 bytes).
 PDF statistics:
- 14304 PDF objects out of 15390 (max. 8388607)
- 13216 compressed objects within 133 object streams
- 266 named destinations out of 1000 (max. 500000)
- 4438 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 17142 PDF objects out of 18468 (max. 8388607)
+ 15839 compressed objects within 159 object streams
+ 296 named destinations out of 1000 (max. 500000)
+ 5440 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -260,14 +260,6 @@
 	\end{frame}
 
 	\begin{frame}{Percurso do Trabalho}
-		\begin{block}{Teorema}
-			\justify Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-			Se $A$ e $B$ são elementos de $\mathcal{C}$ e $A \subset B$, então $\mu(A) \leq \mu(B)$.
-			Se $\mu(A) < +\infty$, então $\mu(B-A) = \mu(B) - \mu(A)$.
-		\end{block}
-	\end{frame}
-
-	\begin{frame}{Percurso do Trabalho}
 		\begin{block}{Exemplos}
 			Sejam $X$ um conjunto e $\mathcal{C}$ a \sigal formada por todos os subconjunto de $X$.    
 			Defina $\mu_1, \mu_2:\mathcal{C} \to \xreta$ pondo $\mu_1(A) = 0$ para qualquer  $A \in \mathcal{C}$ e 
@@ -907,14 +899,23 @@
 
 	\begin{frame}{Percurso do Trabalho}
 		\begin{block}{Contra-exemplo}
-			\justify Seja $C = \Q \cap [0,1]$ e defina a sequência de funções $f_n: [0,1] \to \R$ definida por $f_n(x) = \chi_C$ para todo $n \in \N$.
-			Desta forma, como $C$ é enumerável, segue que $\displaystyle \int_{0}^{1} f_n(x)dx = \int_{0}^{1} \chi_C(x) dx = 0$.
-			Com isso, $\sum_{n = 1}^\infty \int_{0}^{1} f_n(x)dx = 0$.
-			Por outro lado, temos que
-			$
-			\sum_{n = 1}^\infty f_n(x)
-			$
-			não é integrável segundo Rienmann.
+			\justify Seja $\Q \cap [0,1] = \{x_1, x_2, x_3, ...\}$ e defina a sequência de funções $f_n: [0,1] \to \R$ pondo 
+			$$f_n(x) = \left\{\begin{array}{ll}
+				1, & \text{se\ } x = x_n\\
+				0, & \text{se\ } x \neq x_n
+			\end{array}\right.$$
+			Desta forma, $\displaystyle \int_{0}^{1} f_n(x)dx = 0$.
+			Logo, $\displaystyle \sum_{n = 1}^\infty \int_{0}^{1} f_n(x)dx = 0$.
+		\end{block}
+	\end{frame}
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}{Contra-exemplo}
+			\justify Por outro lado, temos que
+			$$\sum_{n = 1}^\infty f_n(x) = \left\{\begin{array}{ll}
+				1, & \text{se\ } x \in \Q \cap [0,1]\\
+				0, & \text{se\ } x \notin \Q \cap [0,1]
+			\end{array}\right.$$
+			Que não é integrável segundo Rienmann.
 		\end{block}
 	\end{frame}
 
@@ -932,20 +933,20 @@
 	
 	\begin{frame}{Percurso do Trabalho}
 		\begin{block}<+->{Teorema}
-			Uma função mensurável $f$ é um elemento de $L$ se, e somente se, $|f|$ é um elemento de $L$
+			\justify Uma função mensurável $f$ é um elemento de $L$ se, e somente se, $|f|$ é um elemento de $L$
 		\end{block}
-		\begin{block}{Corolário}
-			Se $|f| \in L$, então $\displaystyle \left|\int f d\mu\right| \leq \int |f| d\mu$.
+		\begin{block}<+->{Corolário}
+			\justify Se $|f| \in L$, então $\displaystyle \left|\int f d\mu\right| \leq \int |f| d\mu$.
 		\end{block}
-		\begin{block}{Corolário}
-			Se $f$ é mensurável, $g$ é integrável e temos que $|f(x)| \leq |g(x)|$ para todo $x$, então  $f$ é integrável e $\displaystyle \int |f| d\mu \leq \int |g| d\mu$.
+		\begin{block}<+->{Corolário}
+			\justify Se $f$ é mensurável, $g$ é integrável e temos que $|f(x)| \leq |g(x)|$ para todo $x$, então  $f$ é integrável e $\displaystyle \int |f| d\mu \leq \int |g| d\mu$.
 		\end{block}
 	\end{frame}
 
 
 	\begin{frame}{Percurso do Trabalho}
 		\begin{block}{Teorema}
-			Se $f, g \in L$ e $\alpha \in \R$. Então
+			\justify Se $f, g \in L$ e $\alpha \in \R$. Então
 			\begin{enumerate}[<+->]
 				\item A multiplicação por escalar $\alpha f \in L$ com $\displaystyle \int \alpha fd\mu = \alpha \int f d\mu$;
 				\item A soma $(f + g) \in L$ com $\displaystyle \int (f + g) d\mu = \int f d\mu + \int g d\mu$. 
@@ -955,15 +956,106 @@
 
 	\begin{frame}{Percurso do Trabalho}
 		\begin{block}{Teorema da Convergência Dominada de Lebesgue}
-			Seja $(f_n)$ uma sequência de funções integráveis que converge em quase todo ponto para uma uma função real mensurável $f$.
-			Se existir uma função integrável $g$ tal que $|f_n| \leq g$ para todo $n \in \N$, então $f$ é integrável e $\displaystyle \int f d\mu = \lim_{n \to +\infty} \int f_n d\mu$
+			\justify Seja $(f_n)$ uma sequência de funções integráveis que converge em quase todo ponto para uma uma função real mensurável $f$.
+			Se existir uma função integrável $g$ tal que $|f_n| \leq g$ para todo $n \in \N$, então $f$ é integrável e 
+			$$
+			\displaystyle \int f d\mu = \lim_{n \to +\infty} \int f_n d\mu
+			$$
 		\end{block}
 	\end{frame}
 	
+	\begin{frame}{Percurso do Trabalho}
+			\begin{block}<+->{Demonstração}
+				\justify Se $(f_n)$ converge em quase todo ponto para a função $f$ e $|f_n| \leq g$ para cada $n \in \N$, então $f \leq g$ em quase todo ponto.
+				Como $g$ é integrável, segue pelo Corolário 4.3.4 que $f$ é integrável.
+			\end{block}
+			\begin{block}<+->{}
+				\justify Além disso, note que para todo $n \in \N$, temos
+				$$
+				|f_n| \leq g 
+				\Leftrightarrow 
+				f_n \leq g 
+				\textrm{\ ou \ }
+				f_n \geq -g
+				\Leftrightarrow
+				g - f_n \geq 0
+				\textrm{\ ou \ }
+				g + f_n \geq 0
+				$$
+			\end{block}
+	\end{frame}	
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}<+->{}
+			Caso tenhamos $g + f_n \geq 0$ podemos utilizar o Lema de Fatou e o Teorema 4.3.5 de forma que 
+		\end{block}
+		\begin{block}<+->{}
+			\begin{align*}
+				\int g d\mu + \int f d\mu =& \int (g + f) d\mu \\
+				\leq & \lim \inf \int (g + f_n) d\mu \\
+				=& \lim \inf \left(\int g d\mu + \int f_n d\mu\right)\\
+				=& \int g d\mu + \lim \inf \int f_n d\mu
+			\end{align*}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}<+->{}
+			isso acarreta que 
+			$$
+			\int g d\mu + \int f d\mu \leq  \int g d\mu + \lim \inf \int f_n d\mu.
+			$$
+		\end{block}
+		\begin{block}<+->{}
+			Logo, $\displaystyle \int f d\mu \leq \lim \inf \int f_n d\mu$.
+		\end{block}
+	\end{frame}
 
 
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}<+->{}
+			Caso ocorra $g - f_n \geq 0$, aplicamos novamente o Lema de Fatou e o Teorema 4.3.5.
+		\end{block}
+		\begin{block}<+->{}
+			Assim, 
+			\begin{align*}
+				\int g d\mu - \int f d\mu = &\int (g - f) d\mu\\
+				\leq  &\lim \inf \int (g - f_n) d\mu\\
+				\leq &\int g d\mu + \lim \inf \int (- f_n) d\mu.
+			\end{align*}
+		\end{block}
+	\end{frame}
 
-
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}<+->{}
+			Lembre que $\displaystyle \lim \inf \int (- f_n) d\mu = - \lim \sup \int f_n d\mu$.
+			Com isso, 
+		\end{block}
+		\begin{block}<+->{}
+			\begin{align*}	
+			\int g d\mu - \int f d\mu 
+			\leq& 
+			\int g d\mu + \lim \inf \int (- f_n) d\mu\\
+			=&
+			\int g d\mu - \lim \sup \int f_n d\mu.
+			\end{align*}
+		\end{block}
+	\end{frame}
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}<+->{}
+			Desta forma, $\displaystyle \int f d\mu \geq \lim \sup \int f_n d\mu$.
+		\end{block}
+		\begin{block}<+->{}
+			Disso tudo,
+			$$
+			\lim \sup \int f_n d\mu \leq  \int f d\mu \leq \lim \inf \int f_n d\mu. 
+			$$			
+		\end{block}
+	\end{frame}
+	\begin{frame}{Percurso do Trabalho}
+		\begin{block}{}
+			Portanto, $\displaystyle \lim \int f_n d\mu =  \int f d\mu $.
+		\end{block}
+	\end{frame}
 
 
 
