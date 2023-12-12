@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  9 DEC 2023 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  12 DEC 2023 20:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2097,21 +2097,12 @@ Overfull \hbox (4.80414pt too wide) in paragraph at lines 176--177
 ] (./documento.lof) [8
 
 ]
-(./documento.toc) [9] (./elementos-textuais/1Introdu√ß√£o.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
- [10
-
-
-] [11])
-(./elementos-textuais/espacos-funcoes-mensuraveis.tex [12]
+(./documento.toc) [9] (./elementos-textuais/espacos-funcoes-mensuraveis.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 
 
@@ -2136,6 +2127,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removed on input line 9.
 
 
+LaTeX Warning: Citation `bartle' on page 10 undefined on input line 13.
+
+
+LaTeX Warning: Citation `elon' on page 10 undefined on input line 44.
+
+
 Overfull \hbox (11.39914pt too wide) in paragraph at lines 39--48
 []\T1/ptm/m/n/12 (-20) Com isso, um par or-de-nado $\OT1/ztmcm/m/n/12 (\OML/ztm
 cm/m/it/12 X; \OMS/ztmcm/m/n/12 C\OT1/ztmcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) cons
@@ -2143,181 +2140,122 @@ cm/m/it/12 X; \OMS/ztmcm/m/n/12 C\OT1/ztmcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) cons
 ML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -·lgebrasobre
  []
 
-[13
+[10
 
-] [14]
+
+] [11]
+
+LaTeX Warning: Citation `bartle' on page 12 undefined on input line 139.
+
+
+LaTeX Warning: Citation `elon' on page 12 undefined on input line 146.
+
+
 Overfull \hbox (0.6585pt too wide) in paragraph at lines 155--158
 []\T1/ptm/m/n/12 (-20) Considere a $\OML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20)
- -·lgebraapresentada na [][]Pro-po-si-Á„o 2.1.7[][]. Qual-quer ou-tra $\OML/ztm
+ -·lgebraapresentada na [][]Pro-po-si-Á„o 1.1.7[][]. Qual-quer ou-tra $\OML/ztm
 cm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -·lgebra$\OMS/ztmcm/m/n/12 F$
  []
 
-[15] [16]
+[12]
+
+LaTeX Warning: Citation `magalhaes' on page 13 undefined on input line 190.
+
+
+LaTeX Warning: Citation `magalhaes' on page 13 undefined on input line 216.
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 227--229
 
  []
 
-[17] [18] [19] [20] [21] [22] [23]
+[14]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `bartle' on page 15 undefined on input line 335.
 
-[24] [25]) (./elementos-textuais/teoria-medida.tex [26]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-0.
+[15]
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [27
+LaTeX Warning: Citation `elon' on page 16 undefined on input line 380.
 
-] [28] [29]
-[30] [31]
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ] in font nullfont!
+[16]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `elon' on page 17 undefined on input line 423.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `elon' on page 17 undefined on input line 425.
 
 
-Overfull \hbox (9.78143pt too wide) in paragraph at lines 488--513
-[]$ \T1/ptm/m/n/12 (-20) e $[]$ 
- []
+LaTeX Warning: Citation `elon' on page 17 undefined on input line 430.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--513
+LaTeX Warning: Citation `bartle' on page 17 undefined on input line 439.
 
- []
+[17] [18] [19]
 
-[32] [33]
-Overfull \hbox (0.43129pt too wide) in paragraph at lines 542--544
-[]\T1/ptm/m/n/12 (-20) Seja $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 X; []\OT1/zt
-mcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) um es-paÁo men-su-r·-vel e $\OML/ztmcm/m/it/
-12 f$ \T1/ptm/m/n/12 (-20) uma fun-Á„o. En-t„o $\OML/ztmcm/m/it/12 f$ \T1/ptm/m
-/n/12 (-20) È $[]$-mensur·vel
- []
-
-[34]
-Overfull \hbox (6.02373pt too wide) detected at line 647
-[]
- []
-
-[35] [36] [37] [38] [39] [40] [41]) (./elementos-textuais/teoria-integracao.tex
-[42] [43
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
-
- []
+LaTeX Warning: Citation `elon' on page 20 undefined on input line 568.
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 165--178
-\T1/ptm/m/n/12 (+20) en-t„o a in-te-gral da fun-Á„o $\OML/ztmcm/m/it/12 '$ \T1/
-ptm/m/n/12 (+20) com res-peito ‡ me-dida $\OML/ztmcm/m/it/12 ^^V$ \T1/ptm/m/n/1
-2 (+20) È o va-lor real es-ten-dido
- []
+LaTeX Warning: Citation `elon' on page 20 undefined on input line 569.
 
-[44]
+[20]
 
-LaTeX Warning: Reference `prop: igualdade da caracteristica como medida' on pag
-e 45 undefined on input line 428.
-
-[45]
-
-Package amsmath Warning: Foreign command \atop;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 475.
-
-[46] [47]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `bartle' on page 21 undefined on input line 651.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `elon' on page 21 undefined on input line 662.
 
-[48]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `elon' on page 21 undefined on input line 662.
+
+
+LaTeX Warning: Citation `bartle' on page 21 undefined on input line 665.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `bartle' on page 21 undefined on input line 715.
 
-[49] [50]
+[21]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[51] [52] [53] [54] [55] [56] [57] [58]
-LaTeX Info: Symbol \textasciidieresis not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 1577.
-
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-77.
+LaTeX Warning: Citation `bartle' on page 22 undefined on input line 750.
 
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-77.
+LaTeX Warning: Citation `bartle' on page 22 undefined on input line 754.
 
-Missing character: There is no ® in font zptmcm7t!
-LaTeX Info: Symbol \textasciidieresis not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 1577.
+[22]) (./documento.bbl [23]
+bibitemlist
+) (./documento.ind [24
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-77.
+] [25
 
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-77.
-
-Missing character: There is no ® in font zptmcm7t!
-[59] [60] [61]) (./elementos-textuais/considera√ß√µes-finais.tex [62] [63
 
 ])
-(./documento.bbl [64]
-bibitemlist
-)
-No file documento.ind.
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[65
-
-]
 \tf@lof=\write10
 \openout10 = `documento.lof'.
 
 \tf@toc=\write11
 \openout11 = `documento.toc'.
 
- (./documento.aux)
+(./documento.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58831 strings out of 478287
- 1257778 string characters out of 5849289
- 1900076 words of memory out of 5000000
- 75423 multiletter control sequences out of 15000+600000
- 575533 words of font info for 393 fonts, out of 8000000 for 9000
+ 55139 strings out of 478287
+ 1183399 string characters out of 5849289
+ 1791949 words of memory out of 5000000
+ 72025 multiletter control sequences out of 15000+600000
+ 539050 words of font info for 284 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,16n,120p,1231b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,14n,120p,1231b,876s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -2330,10 +2268,10 @@ blic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr
 /texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (66 pages, 862659 bytes).
+Output written on documento.pdf (26 pages, 681385 bytes).
 PDF statistics:
- 981 PDF objects out of 1000 (max. 8388607)
- 878 compressed objects within 9 object streams
- 268 named destinations out of 1000 (max. 500000)
- 100002 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 67170 words of extra memory for PDF output out of 74296 (max. 10000000)
 
