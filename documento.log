@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  12 DEC 2023 22:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  13 DEC 2023 20:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2136,18 +2136,22 @@ me o exem-plo an-te-rior. Con-si-dere, agora, o con-junto
  []
 
 [11] [12]
-Overfull \hbox (0.6585pt too wide) in paragraph at lines 171--182
+Overfull \hbox (0.6585pt too wide) in paragraph at lines 171--178
 []\T1/ptm/m/n/12 (-20) Considere a $\OML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20)
  -álgebraapresentada na [][]Pro-po-si-ção 1.1.7[][]. Qual-quer ou-tra $\OML/ztm
 cm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -álgebra$\OMS/ztmcm/m/n/12 F$
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
 
  []
 
-[14] [15] [16] [17] [18] [19] [20] [21] [22]) (./documento.bbl [23]
+[14] [15] [16] [17] [18] [19] [20]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21] [22]) (./documento.bbl [23]
 bibitemlist
 ) (./documento.ind [24
 
@@ -2169,11 +2173,11 @@ This document will not have a glossary.
 
 (./documento.aux) ) 
 Here is how much of TeX's memory you used:
- 55139 strings out of 478287
- 1183486 string characters out of 5849289
- 1790261 words of memory out of 5000000
- 72022 multiletter control sequences out of 15000+600000
- 539374 words of font info for 285 fonts, out of 8000000 for 9000
+ 55127 strings out of 478287
+ 1183365 string characters out of 5849289
+ 1792151 words of memory out of 5000000
+ 72021 multiletter control sequences out of 15000+600000
+ 538889 words of font info for 279 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,14n,120p,1231b,876s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
@@ -2188,10 +2192,10 @@ st/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type
 r.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (26 pages, 684839 bytes).
+Output written on documento.pdf (26 pages, 682285 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 385 compressed objects within 4 object streams
- 121 named destinations out of 1000 (max. 500000)
+ 436 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
  67170 words of extra memory for PDF output out of 74296 (max. 10000000)
 

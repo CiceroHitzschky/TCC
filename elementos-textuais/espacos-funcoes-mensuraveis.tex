@@ -170,54 +170,35 @@ Iniciaremos verificando o comportamento de interseção de elementos de uma \sig
 
 Considere a \sigal apresentada na \ref{prop:sigma-complementar}. 
 Qualquer outra \sigal $\mathcal{F}$ que tiver $A$ como elemento, conterá $\mathcal{C}$.
-$\mathcal{C}$ é a álgebra gerada por $A$.
-Esta \sigal $\mathcal{C}$   definimos como a \textit{menor} \sigal gerada por $A$ 
-%
-\footnote{Lembre que a noção de \enquote{menor} aqui é trazida por meio da ordem parcial gerada pela relação de inclusão entre conjuntos.}.
-%
+Logo, $\cc$ é a álgebra gerada por $A$.
 Sabendo que a menor \sigal é gerada por meio de intersecções é natural questionarmos se a interseção entre \sigals ainda é uma \sigal de $X$.
 Responderemos à esta pergunta com a proposição adiante.
 \vspace{-0.1cm}
 %Interseção de Sigmas algebras
 \begin{env}{Proposição}
-\label{prop:interseção-2sigmas}
-    Se $\mathcal{C}_1$ e $\mathcal{C}_2$ são duas \sigals de um conjunto $X$, então $\mathcal{C} = \mathcal{C}_1 \cap \mathcal{C}_2$ também é uma \sigal do conjunto $X$.
+\label{prop:interseção-sigmas-quaisquer}
+    Sejam $X$ um conjunto não vazio e $\mathcal{F}$ uma família arbitrária de conjuntos.
+    Se $\cc_A$ é uma \sigal para todo $A \in \mathcal{F}$, então
+    $
+    \displaystyle \cc = \bigcap_{A \in \mathcal{F}} \cc_A$ é uma $\sigma$-álgebra de $X$. 
 \end{env}
 \begin{prova}
-    Se $\mathcal{C}_1$ e $\mathcal{C}_2$ são \sigals de $X$, então ambos possuem $\varnothing$ e $X$ como elementos.
-    Assim, $\varnothing$ e $X$ estão na intersecção $\mathcal{C}$.
-    Além disso, se $A \in \mathcal{C}$, então $A \in \mathcal{C}_1$ e $A \in \mathcal{C}_2$. 
-    Por serem ambas $\sigma$-álgebras, $A^c \in \mathcal{C}$ e $A^c \in \mathcal{C}_2$.
-    Ou seja, $A^c \in \mathcal{C}_1 \cap \mathcal{C}_2 = \mathcal{C}$.
-    Por fim, se tomarmos uma sequência $(A_n)$ de elementos de $\mathcal{C}$, observamos que $A_j \in \mathcal{C}_1$ e $A_j \in \mathcal{C}_2$ para cada $j \in \N$.
-    Assim, $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_1$ e 
-    $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_2$ pela definição de $\sigma$-álgebra.
-    Logo, $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
-    Com isso, $\mathcal{C}$ satisfaz todas as condições da \ref{def:sigma-algebra}. 
-    Portanto, $\mathcal{C}$ é uma \sigal de $X$.
+    Como $\cc_A$ é uma \sigal para todo $A \in \mathcal{F}$, então 
+    $\varnothing, X \in \cc$.
+    Tome um $E \in \cc$. 
+    Assim, $E \in \cc_A\ \forall\  A \in \mathcal{F}$.
+    Logo, $E^c \in \cc_A\ \forall\  A \in \mathcal{F}$ pela \ref{def:sigma-algebra}.
+    Com isso, $E^c \in \cc$.
+    Por fim, tome uma sequência de elementos $(E_j)$ com $E_j \in \cc$ para todo $j \in \N$.
+    Desta forma, $E_j \in \cc_A$ para todo $A \in \mathcal{F}$ e $j \in \N$.
+    Daí, pela definição de $\sigma$-álgebra, 
+    $\displaystyle\bigcup_{j \in \N} E_j \in \cc_A \ \forall\ A \in \mathcal{F}$.
+    Disso, $\displaystyle \bigcup_{j \in \N} E_j \in \cc$.
+    Portanto, $\cc$ é uma $\sigma$-álgebra.
 \end{prova}
 
-\begin{env}{Proposição}
-\label{prop:interseção-sigmas}
-    Seja $(\mathcal{C}_j)$ uma sequência finita de $\mathcal{C}_j$-álgebras de um conjunto $X$, então 
-    $\mathcal{C} = \displaystyle \bigcap_{j =1}^n\mathcal{C}_j$, com $n \geq 2$, também é uma \sigal do conjunto $X$ \cite{magalhaes}.
-\end{env}
-\begin{prova}
-    Provaremos esse resultado utilizando o método da indução finita sobre $n$.
-    Se $n = 2$, o resultado é verificado imediatamente pela  \ref{prop:interseção-2sigmas}.
-    Suponha que se verifique para algum $k \in \N$, isto é, $\displaystyle \bigcap_{j =1}^k\mathcal{C}_j$ é uma \sigal de $X$.
-    Vamos checar para o sucessor de $k$.
-    Ora, pela associatividade da interseção, vemos que 
-    \begin{align*}
-        \displaystyle \bigcap_{j =1}^{k+1}\mathcal{C}_j = \left(\displaystyle \bigcap_{j =1}^k\mathcal{C}_j\right) \cap \cc_{k+1}.
-  	\end{align*}
-	Denote $\displaystyle \bigcap_{j =1}^k\mathcal{C}_j = H$. 
-	Sabemos por hipótese de indução que $H$  e $\cc_{k+1}$ são  \sigals de $X$. 
-	Segue, pela base de indução, que $H \cap \cc_{k+1}$ é uma \sigal de $X$.
-	Portanto, $\displaystyle \bigcap_{j =1}^{k+1}\mathcal{C}_j$ é uma \sigal de $X$ como queríamos.
-\end{prova}
 
-Note que há uma diferença gritante entre a \ref{prop:interseção-elementos-sigmas} e \ref{prop:interseção-2sigmas}.
+Note que há uma diferença gritante entre a \ref{prop:interseção-elementos-sigmas} e \ref{prop:interseção-sigmas-quaisquer}.
 A primeira trata de conjuntos mensuráveis de uma \sigal e a outra refere-se à \sigals de um conjunto $X$.
 Além disso, perceba que até aqui trabalhamos o conceito de \sigal de maneira abstrata sendo utilizada em um conjunto qualquer. 
 Trataremos, agora, de uma \sigal extremamente importante e específica para o conjunto $\R$ dos números reais.
