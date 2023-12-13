@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  12 DEC 2023 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  12 DEC 2023 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2130,20 +2130,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ]
-Underfull \hbox (badness 1354) in paragraph at lines 76--89
+Underfull \hbox (badness 1354) in paragraph at lines 66--79
 []\T1/ptm/m/n/12 (+20) Seja $\OML/ztmcm/m/it/12 X$ \T1/ptm/m/n/12 (+20) con-for
 me o exem-plo an-te-rior. Con-si-dere, agora, o con-junto
  []
 
-[11]
-Overfull \hbox (0.6585pt too wide) in paragraph at lines 162--165
+[11] [12]
+Overfull \hbox (0.6585pt too wide) in paragraph at lines 171--182
 []\T1/ptm/m/n/12 (-20) Considere a $\OML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20)
  -álgebraapresentada na [][]Pro-po-si-ção 1.1.7[][]. Qual-quer ou-tra $\OML/ztm
 cm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -álgebra$\OMS/ztmcm/m/n/12 F$
  []
 
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
 
  []
 
@@ -2169,11 +2169,11 @@ This document will not have a glossary.
 
 (./documento.aux) ) 
 Here is how much of TeX's memory you used:
- 55130 strings out of 478287
- 1183333 string characters out of 5849289
- 1789044 words of memory out of 5000000
- 72020 multiletter control sequences out of 15000+600000
- 538967 words of font info for 281 fonts, out of 8000000 for 9000
+ 55139 strings out of 478287
+ 1183486 string characters out of 5849289
+ 1790261 words of memory out of 5000000
+ 72022 multiletter control sequences out of 15000+600000
+ 539374 words of font info for 285 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,14n,120p,1231b,876s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}<
@@ -2188,10 +2188,10 @@ st/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type
 r.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (26 pages, 682501 bytes).
+Output written on documento.pdf (26 pages, 684839 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 382 compressed objects within 4 object streams
- 119 named destinations out of 1000 (max. 500000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
+ 121 named destinations out of 1000 (max. 500000)
  67170 words of extra memory for PDF output out of 74296 (max. 10000000)
 

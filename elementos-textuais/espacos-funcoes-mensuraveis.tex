@@ -20,18 +20,8 @@ Tal estrutura recebe o nome de $\sigma$-álgebra e é definida em \cite{bartle} 
         \item $\varnothing$ e $X$ são elementos de $\mathcal{C}$;     
         \item Se um elemento $A \in \mathcal{C}$, então $A^c \in \mathcal{C}$
         \footnote{Em todo o texto, $X^c$ significa o complementar do conjunto $X$.};
-        \item Se $(A_n)$ é uma sequência de elementos de $\mathcal{C}$, 
+        \item Se $(A_j)$ é uma sequência de elementos de $\mathcal{C}$, 
         então $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
-        % RODAPÉ
-		\begin{comment}
-			        \footnote{No original: A family $X$ of subsets of a set $X$ is said to be a
-				$\sigma$-algebra (or a $\sigma$-field) in case:
-				(i) $\varnothing, X$ belong to $X$.
-				(ii) If A belongs to $X$, then the complement $\cc(A) = X \backslash \ A$ belongs
-				to $X$.
-				(iii) If $(A_n)$ is a sequence of sets in $X$, then the union $\bigcup_{n = 1}^\infty A_n$, be
-				longs to $X$.}
-		\end{comment}
         \vspace{-0.2cm}
     \end{enumerate}
 \end{env}
@@ -88,8 +78,6 @@ Para evidenciar essa percepção, observe o exemplo a seguir:
 	\vspace{-0.2cm}
 \end{env}
 
-% Como todo estudo de matemática, após vermos definição e exemplos precisamos aprofundar-nos na natureza do objeto que estamos estudando.
-% Partindo deste ponto, vamos dar início a uma sequencia de proposições que servirão como ferramenta para caracterizações futuras dos espaços mensuráveis.
 Os exemplos apresentados acima são todos de conjuntos que são uma \sigal de um conjunto $X$ arbitrário.
 Por definição, o conjunto $\mathcal{C}$ é composto de subconjuntos do conjunto $X$. 
 Será que se construirmos $\cc_3$ um conjunto que contenha $\varnothing$ e $X$ e outros subconjuntos do conjunto $X$ tomados aleatoriamente teremos $(X,\cc_3)$ um espaço mensurável? A resposta é negativa e para convencê-lo disso, mostraremos o seguinte contra-exemplo.
@@ -127,45 +115,63 @@ Perceba que a \ref{prop:sigma-complementar} generaliza o \ref{ex:Primeiro Exempl
 Por exemplo, considere $X = \N$.
 Tome $P =\{2k; \ k \in \N\}$ e $I = \{2k - 1;\ k \in \N\}$.
 Como $P^c = I$, então $\mathcal{C} = \{\varnothing, \N, P, I\}$ é uma \sigal de $\N$ pela proposição anterior.
-
-\begin{env}{Exemplo}
-    Considere $X = \N$. 
-    Sejam $P =\{2k; \ k \in \N\}$ e $I = \{2k - 1;\ k \in \N\}$. 
-    Como $P^c = I$, então $\mathcal{C} = \{\varnothing, \N, P, I\}$ é uma \sigal de $\N$ pela proposição anterior.
-    \vspace{-0.2cm}
-\end{env}
- 
 Note que a  \ref{def:sigma-algebra} trata apenas da reunião enumerável de elementos da $\sigma$-álgebra. 
 Nosso interesse, agora, é investigar se conseguirmos propriedades análogas para a operação de interseção. 
-Iniciaremos verificando o comportamento de interseção de elementos de uma \sigal com a seguinte proposição.
+Iniciaremos verificando o comportamento de interseção de elementos de uma \sigal com a seguinte proposição:
 % Propriedades de Interseção 
 
 \begin{env}{Proposição}
 \label{prop:interseção-elementos-sigmas}
     Seja $(X, \cc)$ um espaço mensurável.
-    Se $(A_j)$ é uma sequência  de conjuntos $\mathcal{C} $-mensuráveis, então $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um elemento $\mathcal{C}$-mensurável \cite{bartle}.
+    Se $(A_j)$ é uma sequência  de conjuntos $\mathcal{C} $-mensuráveis, então $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um elemento $\mathcal{C}$-mensurável.
 \end{env}
 \begin{prova}
     Se $A_j \in \mathcal{C}$ para todo $j \in \N$, então cada complementar $A_j^c \in \mathcal{C}$, pois $\mathcal{C}$ é $\sigma$-álgebra. 
     Assim, $(A_j^c)$ forma uma sequência de conjuntos $\mathcal{C}$-mensuráveis acarretando que 
     $\displaystyle \bigcup_{j = 1}^\infty A_j^c \in \mathcal{C}$. 
-    Segue, pelas \textit{Leis de Morgan}
-    \footnote{Para as demonstrações das Leis de Morgan veja \cite[p.26]{elon}}, que 
+    Segue, pelas \textit{Leis de De Morgan}
+    \footnote{O enunciado e as demonstrações dessas leis podem ser encontrados em \cite[p.26]{elon}}, que 
     $$
     \displaystyle \bigcup_{j = 1}^\infty A_j^c 
     = \left(\displaystyle \bigcap_{j = 1}^\infty A_j\right)^c
   	$$
-	Logo, $\left(\displaystyle \bigcap_{j = 1}^\infty A_j\right)^c \in \mathcal{C}$ o que implica $\displaystyle \bigcap_{j = 1}^\infty A_j \in \mathcal{C}$. 
-	Portanto, $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um conjunto $\mathcal{C}$-mensurável.
+	Logo, $\left(\displaystyle \bigcap_{j = 1}^\infty A_j\right)^c \in \mathcal{C}$ implica $\displaystyle \bigcap_{j = 1}^\infty A_j \in \mathcal{C}$, pois $(X^c)^c = X$, para qualquer conjunto $X$.
+	Portanto, $\displaystyle \bigcap_{j = 1}^\infty A_j$ é um elemento $\mathcal{C}$-mensurável.
 \end{prova}
+
+\begin{env}{Proposição}
+	\label{prop: provar que a menor sigma algebra e algebra}
+	Dada uma coleção de conjuntos $\mathcal{T}$ de subconjuntos de $X$, a interseção de todas as $\sigma$-álgebras que contêm $\mathcal{T}$ é uma $\sigma$-álgebra.
+\end{env}
+\begin{prova}
+	Seja $\Sigma$ a interseção de todas as $\sigma$-álgebras $\cc$ que contêm $\mathcal{T}$, isto é, 
+	$\Sigma = \displaystyle \bigcap_{\mathcal{T} \in \cc } \cc$.
+	Pela \ref{def:sigma-algebra}, $\varnothing, X \in \cc$ para qualquer $\cc$ $\sigma$-álgebra.
+	Logo, $\varnothing, X \in \Sigma$.
+	Tome um elemento $A \in \Sigma$.
+	Assim, $A \in \cc$ para toda $\cc$ que contêm $\mathcal{T}$.
+	Ou seja, $A^c \in \cc$ para toda \sigal $\cc$. 
+	Logo, $A^c \in \Sigma$.
+	Analogamente, tomando uma sequência de elementos $(A_j) \in \Sigma$, vemos que $A_j \in \cc$ para todo $j \in \N$. 
+	Dessa forma, $\displaystyle \bigcap_{j \in \N} A_j \in \cc,\ \forall \cc$ acarretando que $\displaystyle \bigcap_{j \in \N} A_j \in \Sigma$.
+	Portanto, $\Sigma$ é uma $\sigma$-álgebra.
+\end{prova}
+
+\begin{env}{Definição}
+	\label{deff: sigma algebra gerada}
+	\index{$\sigma$-álgebra! gerada}
+	Dada uma coleção de conjuntos $\mathcal{T}$ de subconjuntos de $X$ e $\cc$ uma $\sigma$-álgebra que contêm $\mathcal{T}$, dizemos que
+	$
+	\Sigma = \displaystyle \bigcap_{\mathcal{T} \in \cc } \cc
+	$
+	é a $\sigma$-álgebra gerada por $\mathcal{T}$
+	\footnote{Também pode ser definida como a \textit{menor} $\sigma$-álgebra de $\mathcal{T}$ sendo a noção de \enquote{menor} trazida por meio da ordem parcial gerada pela relação de inclusão entre conjuntos.}.
+\end{env}
 
 Considere a \sigal apresentada na \ref{prop:sigma-complementar}. 
 Qualquer outra \sigal $\mathcal{F}$ que tiver $A$ como elemento, conterá $\mathcal{C}$.
-Assim, observamos que 
-$$
-\mathcal{C} = \displaystyle \bigcap_{\mathcal{F} \supset A} \mathcal{F}.
-$$
-Esta \sigal $\mathcal{C}$   definimos como a \textit{menor} \sigal gerada por $A$ \index{gerada por um conjunto}
+$\mathcal{C}$ é a álgebra gerada por $A$.
+Esta \sigal $\mathcal{C}$   definimos como a \textit{menor} \sigal gerada por $A$ 
 %
 \footnote{Lembre que a noção de \enquote{menor} aqui é trazida por meio da ordem parcial gerada pela relação de inclusão entre conjuntos.}.
 %
