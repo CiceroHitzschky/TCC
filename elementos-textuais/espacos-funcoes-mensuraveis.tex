@@ -36,12 +36,12 @@ Tal estrutura recebe o nome de $\sigma$-álgebra e é definida em \cite{bartle} 
     \end{enumerate}
 \end{env}
 
-Com isso, um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma \sigal sobre $X$ é chamado, pelo mesmo autor, de  \textbf{espaço mensurável}.
+Com isso, um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma $\sigma$-álgebra sobre $X$ é chamado, pelo mesmo autor, de  \textbf{espaço mensurável}.
 Além disso, cada elemento deste espaço é chamado de conjunto $\mathcal{C}-$mensurável.
 Quando não houver confusão ou quando a \sigal estiver fixada, dizemos simplesmente que cada elemento é um conjunto mensurável. 
 Observe que a terceira condição da \ref{def:sigma-algebra} nos diz que a união enumerável
 %
-\footnote{\enquote{Um conjunto $X$ diz-se \textit{enumerável} quando é finito ou quando existe uma bijeção $f : \N \to X$.} \cite[p.48]{elon}}
+\footnote{Para esse tipo de conjunto, utilizaremos a definição \enquote{Um conjunto $X$ diz-se \textit{enumerável} quando é finito ou quando existe uma bijeção $f : \N \to X$.} \cite[p.48]{elon}}
 %
 é um elemento da $\sigma$-álgebra.
 Logo, para um número finito $A_1, A_2, ..., A_n$ com $n \in \N$ de elementos $\cc$-mensuráveis de uma \sigal $\cc$, a união $\displaystyle \bigcup_{j \in I_n} A_j$ também será um elemento $\cc$-mensurável.
@@ -51,6 +51,7 @@ Logo, para um número finito $A_1, A_2, ..., A_n$ com $n \in \N$ de elementos $\
 \end{env}
 % Exemplos de Sigmas Algebras 
 \begin{env}{Exemplo}
+	\label{ex:Primeiro Exemplo Sigma Algebra}
     Seja $X = \{-1,0,1\}$. Se considerarmos $\mathcal{C} = \{\varnothing, X, \{0\}, \{-1,1\}\}$, temos que $(X, \mathcal{C})$ é um espaço mensurável.
     \vspace{-0.2cm}
 \end{env}
@@ -73,7 +74,7 @@ Para evidenciar essa percepção, observe o exemplo a seguir:
 \begin{env}{Exemplo}
 	\label{ex:sigma-subconjuntos}
 	Seja $X$ conforme o exemplo anterior.
-	Considere, agora, o conjunto $\mathcal{C}_2 = \{ A; \ A \subset X\}$, ou seja, o conjunto formado por todos os subconjuntos do conjunto $X$
+	Considere, agora, o conjunto \linebreak $\mathcal{C}_2 = \{ A; \ A \subset X\}$, ou seja, o conjunto formado por todos os subconjuntos do conjunto $X$
 	%
 	\footnote{O conjunto $\cc_2$ também é chamado de conjunto das partes de $X$ e, as vezes, é representado por $\mathcal{P}(X)$.}.
 	Sabemos que $\varnothing \subset X$ e $X \subset X$. 
@@ -91,7 +92,7 @@ Para evidenciar essa percepção, observe o exemplo a seguir:
 % Partindo deste ponto, vamos dar início a uma sequencia de proposições que servirão como ferramenta para caracterizações futuras dos espaços mensuráveis.
 Os exemplos apresentados acima são todos de conjuntos que são uma \sigal de um conjunto $X$ arbitrário.
 Por definição, o conjunto $\mathcal{C}$ é composto de subconjuntos do conjunto $X$. 
-Será que se construirmos $Z$ um conjunto que contenha $\varnothing$ e $X$ e outros subconjuntos do conjunto $X$ tomados aleatoriamente teremos $(X,Z)$ um espaço mensurável? A resposta é negativa e para convencê-lo disso, mostraremos o seguinte contra-exemplo.
+Será que se construirmos $\cc_3$ um conjunto que contenha $\varnothing$ e $X$ e outros subconjuntos do conjunto $X$ tomados aleatoriamente teremos $(X,\cc_3)$ um espaço mensurável? A resposta é negativa e para convencê-lo disso, mostraremos o seguinte contra-exemplo.
 
 %Contra Exemplo
 \begin{env}{Contraexemplo}
@@ -105,10 +106,11 @@ Será que se construirmos $Z$ um conjunto que contenha $\varnothing$ e $X$ e out
     -\{x\} 
     = \{y,z\}.
     $
-    Entretanto, $\{y,z\} \notin \mathcal{C}$.
+    Mas $\{y,z\} \notin \mathcal{C}$.
     Assim, a segunda condição da \ref{def:sigma-algebra} não é satisfeita, impossibilitando que $\mathcal{C}$ seja uma \sigal de $X$.
     \vspace{-0.2cm}
 \end{env}
+
 A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunto fixado,  não vazio, em um conjunto.
 \begin{env}{Proposição}
 \label{prop:sigma-complementar}
@@ -120,6 +122,11 @@ A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunt
 \begin{prova}
     Perceba que as condições \textit{(i)} e \textit{(ii)} da  \ref{def:sigma-algebra} são satisfeitas pela forma que o conjunto  $\mathcal{C}$ foi construído. Para verificar a última condição, basta perceber $A \cup A^c = X$. Portanto, $\mathcal{C}$ é uma \sigal de $X$ para qualquer que seja $ \varnothing \neq A \subset X$.
 \end{prova}
+
+Perceba que a \ref{prop:sigma-complementar} generaliza o \ref{ex:Primeiro Exemplo Sigma Algebra}. Além disso, possibilita uma criação de uma \sigal em um conjunto qualquer não vazio.
+Por exemplo, considere $X = \N$.
+Tome $P =\{2k; \ k \in \N\}$ e $I = \{2k - 1;\ k \in \N\}$.
+Como $P^c = I$, então $\mathcal{C} = \{\varnothing, \N, P, I\}$ é uma \sigal de $\N$ pela proposição anterior.
 
 \begin{env}{Exemplo}
     Considere $X = \N$. 
