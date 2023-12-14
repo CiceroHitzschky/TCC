@@ -319,8 +319,12 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
 	Segue, pela  \ref{def:sigma-algebra}, que 
 	$\displaystyle \bigcup_{n = 1}^\infty (-n,b) \in \mathcal{C}$.
 	Só que $\displaystyle \bigcup_{n = 1}^\infty (-n,b) = (-\infty, b)$.
-	Com isso, os elementos de $\mathcal{C}$ são do tipo $(-\infty, b)$.
+	Com isso, os elementos de $\mathcal{C}$ são do tipo $(-\infty, b)$, ou seja, $\mathcal{C} \supset \borel$.
+	Por outro lado, se $A \in \cc$ e $\cc$ é composto por subconjuntos de $\R$, então $A$ é gerado por intervalos.
+	Como todo intervalo é gerado por elementos do tipo 
+	$(-\infty, x),\ x \in \R$, segue que $\mathcal{C} \subset \borel$. 
 	Portanto, $\mathcal{C} = \borel$.
+	%% FFALTA PROVAR AINDA DIREITINHO.
 \end{prova}
 
 \section{Funções Mensuráveis}
@@ -381,35 +385,46 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 	\footnote{Esta proposição é um exercício que pode ser encontrado em \cite[p.57]{elon}.}.
 \end{env}
 \begin{prova}
-	Vamos dividir a demonstração em casos:
-	\begin{enumerate}[label*=(\Roman*)]
-		\item Se $\chi_{A\cup B}(x) = 0$, então $ x \notin A\cup B$. 
-		Logo,  $x \notin A$ e $x \notin B$ acarretando que $x \notin A\cap B$.
-		Dessa forma, $\chi_A(x) = \chi_B(x) =\chi_{A\cap B}(x) = 0$.
-		%
-		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 0$, então $x \in (A\cup B)$ e $x \notin A\cap B$.
-		Logo, $x \in (A\cup B) - (A\cap B)$.
-		Como $(A\cup B) - (A\cap B) = (A- B) \cup (B - A)$, concluímos que $x \in (A - B) \cup (B - A)$.
-		Se $x \in A - B$, então $\chi_{A}(x) = 1$ e $\chi_B(x) = 0$.
-		Logo, 	$\chi_{A\cup B}(x) = 1 = 1 + 0 + 0 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
-		Se $x \in B - A$, então $\chi_B(x) = 1$ e $\chi_A(x) = 0$ acarretando que 
-		$\chi_{A\cup B}(x) = 1 = 1 + 0 + 0 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
-		%
-		\item Caso $\chi_{A\cup B}(x) = 1$ e $\chi_{A\cap B}(x) = 1$, então
-		$x \in A \cup B$ e $x \in A \cap B$, isto é, $x \in A$ e $x \in B$.
-		Com isso, $\chi_A(x) = \chi_B(x) = 1$.
-		Logo, $\chi_{A\cup B} = 1 = 1 + 1 - 1 = \chi_A(x) + \chi_B(x) - \chi_{A\cap B}(x)$.
-		
-		Segue que em todo caso, temos $\chi_{A \cup B} = \chi_A + \chi_B - \chi_{A\cap B}$ como desejávamos.
-	\end{enumerate}
-	
-	Caso, tenhamos $A \cap B = \varnothing$, então $\chi_{A\cap B}(x) = 0$. 
-	Segue pela primeira parte dessa demonstração que $\chi_{A \cup B} = \chi_A + \chi_B$.
+	\hspace{-2.1cm}Perceba que 
+	$\chi_{A^c} = 1 - \chi_A$ e que 
+	$\chi_{A\cap B} = \chi_A\cdot \chi_B$.
+	Logo, 
+	\begin{equation}
+		\chi_{A\cup B} = 1 - \chi_{(A\cup B)^c}
+		= 1 - \chi_{A^c\cap B^c}
+		= 1 - \chi_{A^c}\chi_{B^c}
+		= 1 - (1-\chi_{A})(1-\chi_B)
+	\end{equation}
+	Daí, por meio da propriedade distributiva, 
+	\begin{equation}
+		1 - (1-\chi_{A})(1-\chi_B)
+		=
+		1 - (1 -\chi_{A} - \chi_{B} - \chi_{A}\chi_{B})
+		=
+		\chi_{A} + \chi_{B} + \chi_{A}\chi_{B}
+		=
+		\chi_{A} + \chi_{B} + \chi_{A\cap B}
+	\end{equation}
+	Combinando as equações (1) e (2) concluímos que 
+	$
+	\chi_{A\cup B}
+	=
+	\chi_{A} + \chi_{B} + \chi_{A\cap B}
+	$
 	
 	\end{prova}
 	\begin{env}{Exemplo}
 	\label{ex:função-continua-mensuravel}
-	    Considere o espaço mensurável $(\R, \borel)$. Toda função $f: \R \to \R$ contínua é Borel mensurável.
+	    Considere o espaço mensurável $(\R, \borel)$. 
+	    Toda função $f: \R \to \R$ contínua
+	    \footnote{
+	    	Lembre que \enquote{Uma função $f : X \to \R$ diz-se contínua no ponto $a \in X$ quando é possível tornar 
+	    	$f(x)$ arbitrariamente próximo de $f(a)$ desde que
+	    	se tome $x$ suficientemente próximo de $a$} \cite[p.222]{elon}.
+    		Quando a função é contínua em todo ponto, dizemos apenas que ela é contínua.
+    	}
+     		 é Borel mensurável.
+	    \index{Função! contínua}
 	    \vspace{-0.2cm}
 	\end{env}
 	
@@ -418,13 +433,14 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 	\begin{env}{Proposição}
 	\label{cit:função-continua-mensuravel}
 		Suponha que $f:X \to \R$ seja contínua em todos os pontos de $X$.
-		Se $X \subset \R$ é um aberto, 
+		Se $X \subset \R$ é um aberto 
 		%
 		\footnote{\enquote{Um subconjunto $A \subset \R$ chama-se um \textit{conjunto aberto} quando
-			todos os seus pontos são interiores [...] \cite[p.164]{elon}.}}
+			todos os seus pontos são interiores [...] \cite[p.164]{elon}.}}, 
 		%
 		então o conjunto $A = \{a \in X;\ f(a)>k\}$ é um aberto \cite[p.226]{elon}.
 		\vspace{-0.2cm}
+		\index{Conjunto! aberto}
 	\end{env}
 	\begin{env}{Teorema}
 		\label{teo:estrutura-abertos-reta}
@@ -432,15 +448,15 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 		\vspace{-0.2cm}
 	\end{env}
 
-	Segue disso que o
-	$\{x \in \R; f(x) > \alpha\} = \displaystyle \bigcup_{j = 1}^\infty A_n$ onde cada $A_n$ é um intervalo aberto, ou seja, $A_n \in \borel$ para todo $n \in \N$.
+	Segue disso que
+	$\{x \in \R; f(x) > \alpha\} = \displaystyle \bigcup_{j = 1}^\infty A_j$ onde cada $A_j$ é um intervalo aberto, ou seja, $A_j \in \borel$ para todo $j \in \N$.
 	Com isso, pela \ref{def:sigma-algebra}, o conjunto $\{x \in \R; f(x) > \alpha\} \in \borel$.
 	Portanto, qualquer função contínua $f: \R \to \R$ é Borel mensurável.
-    Lembre que ao apresentarmos a Álgebra de Borel (\ref{def:algebra-borel}), mostramos no \ref{teo:equiv-borel} que há mais de uma maneira de definir os borelianos.
-    Para uma função $f: X \to \R$ $\cc$-mensurável, também podemos definir uma função $\cc$-mensurável por meio de conjuntos diferentes conforme expõe \cite{bartle} no seguinte teorema:
+    Lembre que ao apresentarmos a $\sigma$-álgebra de Borel (\ref{def:algebra-borel}), mostramos no \ref{teo:equiv-borel} que há mais de uma maneira de definir os borelianos.
+    Para uma função $f: X \to \R$ $\cc$-mensurável, também podemos definir uma função $\cc$-mensurável por meio de conjuntos diferentes conforme exposto no seguinte teorema:
 \begin{env}{Teorema}
 \label{teo:equiv-funcoes-mensuraveis}
-    Sendo $(X,\mathcal{C})$ um espaço mensurável, para uma função $f: X \to \R$ $\cc$-mensurável as seguintes afirmações são equivalentes:
+    Sendo $(X,\mathcal{C})$ um espaço mensurável, para uma função $f: X \to \R$ $\cc$-mensurável qualquer as seguintes afirmações são equivalentes:
     \vspace{-0.4cm}
     \begin{multicols}{2}    	
 	    \begin{enumerate}[label=(\alph*)]
@@ -455,13 +471,19 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 \begin{prova}
     Dividiremos esta demonstração em três partes. A estratégia será mostrar que a afirmação $(a)$ é equivalente à afirmação $(b)$; depois que a afirmação $(c)$ é equivalente à afirmação $(d)$ ; e por fim que a firmação $(a)$ ocorre se, e somente se, a afirmação $(c)$ ocorre. 
     \begin{enumerate}[label* = (\Roman*)]
-        \item Suponha a validade da afirmação $(a)$. Se $A_\alpha \in \mathcal{C}$, então $A_\alpha^c \in \mathcal{C}$, pela definição de $\mathcal{C}$-álgebra.
+        \item Suponha a validade da afirmação $(a)$. 
+        Disso, $A_\alpha \in \cc \Leftrightarrow A_\alpha^c \in \cc$, pela definição de $\sigma$-álgebra.
 	    Perceba que 
 	    $$
-	    x \in A_\alpha^c \Leftrightarrow   x \notin A_\alpha\\
-	    \Leftrightarrow  x \in X \textrm{\ e \ } f(x) \leq \alpha, \forall\ \alpha \in \R
-	    \Leftrightarrow x \in B_\alpha    
-		$$ Assim, um elemento está em $A_\alpha^c$ se, e somente se, está em $B_\alpha$. Segue que $A_\alpha^c = B_\alpha$. Logo, $B_\alpha$ é elemento de $\mathcal{C}$.
+	    x \in A_\alpha^c 
+	    \Leftrightarrow
+	    x \notin A_\alpha
+	    \Leftrightarrow  
+	    x \in X \textrm{\ e \ } f(x) \leq \alpha
+	    \Leftrightarrow 
+	    x \in B_\alpha    
+		$$ 
+		Assim, um elemento está em $A_\alpha^c$ se, e somente se, está em $B_\alpha$. Segue que $A_\alpha^c = B_\alpha$ e daí, $A_\alpha$ é um elemento de $\cc \Leftrightarrow B_\alpha$ é elemento de $\cc$.
 		\item Para mostrar a equivalência entre as afirmações $(c)$ e $(d)$ utilizamos um argumento totalmente análogo à parte $(I)$, pois se $x \notin C_\alpha$, então $f(x) < \alpha$ acarretando que $x \in D_\alpha$ e vice-versa.
 		\item Suponha que $A_\alpha \in \mathcal{C}$. Tome a sequência $\left(A_{\alpha -\frac{1}{n}}\right)$. Claramente, cada $A_{\alpha - \frac{1}{n}}$ é um elemento de $\mathcal{C}$ por definição.
 		Logo, pela \ref{prop:interseção-elementos-sigmas}, a interseção $\displaystyle \bigcap_{n = 1}^\infty A_{\alpha -\frac{1}{n}} \in \mathcal{C}$.
