@@ -206,19 +206,19 @@ Trataremos, agora, de uma \sigal extremamente importante e específica para o co
 % Álgebra de Borel
 \begin{env}{Definição}
 \label{def:algebra-borel}
-    Seja $X = \R$. A Álgebra de Borel é a \sigal $\borel$ gerada por todos os intervalos abertos $(-\infty,x)$ com $ x  \in \R$. 
-    Os elementos dessa \sigal são chamados de Borelianos \cite{magalhaes}.
-    \index{Álgebra de Borel}
+    Seja $X = \R$. Definimos como a \sigal de Borel, e representaremos por $\borel$, a \sigal gerada por todos os intervalos abertos $(-\infty,x)$ com $ x  \in \R$. 
+    \index{$\sigma$-álgebra! de Borel}
     \vspace{-0.2cm}
 \end{env}
 
+Os elemez'ntos da \sigal de Borel recebem o nome de Borelianos.
 Esta \sigal é extremamente relevante para os estudos de medida e integração e pode ser definida de várias formas diferentes, mas todas são equivalentes.
 Isso quer dizer que $(-\infty, x)$ não é a única forma dos elementos de $\borel$. 
 De fato, se  $(-\infty, x) \in \borel$, então $(-\infty, x)^c \in \borel$ só que $(-\infty, x)^c = [x, +\infty$).
 Assim, poderíamos  definir  $\borel$ por meio de intervalos do tipo $[x, +\infty)$.
 Em particular, poderíamos ter definido a $\borel$ por meio da \sigal gerada por intervalos do tipo $(a,b)$ com $a,b \in \R$. 
 
-Antes de provamos este fato, observe que podemos decompor intervalos reais como a união de outros intervalos reais. 
+Antes de provarmos este fato, observe que podemos decompor intervalos reais como a união de outros intervalos reais. 
 Por exemplo, utilizando a reta real, podemos representar intervalo $(-\infty, b)$ da seguinte maneira\\
 
 % Imagem da decomposição de intervalos.
@@ -286,21 +286,25 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
     \vspace{-0.2cm}
 \end{env}
 \begin{prova}
-   Suponha que $(\R,\borel)$ é um espaço mensurável. 
+   Suponha que $\borel$ seja a $\sigma$-álgebra de Borel. 
    Sejam $a$ e $b$ números reais, com $a<b$.
-   Como $a - \dfrac{1}{n} \in \R$ para todo $n \in \N$, temos que o intervalo
-   $\left(-\infty, a- \dfrac{1}{n}\right) \in \borel$ para todo $n \in \N$.
+   Como $a + \dfrac{1}{n} \in \R$ para todo $n \in \N$, temos que o intervalo
+   $
+   \left(-\infty, a + \dfrac{1}{n}\right) \in \borel$ para todo $n \in \N
+   $.
    Segue, pela \ref{prop:interseção-elementos-sigmas}, que
-   $\displaystyle \bigcap_{n = 1}^\infty \left(-\infty, a- \dfrac{1}{n}\right) \in \borel$.
-   Com isso, afirmamos que a interseção de todos os intervalos $\left(-\infty, a - \dfrac{1}{n}\right)$ é igual ao intervalo $(-\infty, a]$.
+   $
+   \displaystyle \bigcap_{n = 1}^\infty \left(-\infty, a+ \dfrac{1}{n}\right) \in \borel
+   $.
+   Com isso, afirmamos que a interseção de todos os intervalos $\left(-\infty, a + \dfrac{1}{n}\right)$ é igual ao intervalo $(-\infty, a]$.
    De fato,
    \begin{align*}
-   		x \in \bigcap_{n \in \N} \left(-\infty, a - \dfrac{1}{n}\right)
-   		\Leftrightarrow & x \in \left(-\infty, a - \dfrac{1}{n}\right), \ \forall \ n \in \N\\
-   		\Leftrightarrow & x < a - \dfrac{1}{n}, \ \forall \ n \in \N\\
-   		\Leftrightarrow & \dlim_{n \to +\infty} x \leq \dlim_{n \to +\infty} \left(a - \dfrac{1}{n}\right)\\
-   		\Leftrightarrow & x \leq a\\
-   		\Leftrightarrow & x \in (-\infty, a].
+	x \in \bigcap_{n \in \N} \left(-\infty, a + \dfrac{1}{n}\right)
+   	\Leftrightarrow & x \in \left(-\infty, a + \dfrac{1}{n}\right), \ \forall \ n \in \N\\
+   	\Leftrightarrow & x < a + \dfrac{1}{n}, \ \forall \ n \in \N\\
+   	\Leftrightarrow & \dlim_{n \to +\infty} x \leq \dlim_{n \to +\infty} \left(a + \dfrac{1}{n}\right)\\
+   	\Leftrightarrow & x \leq a\\
+   	\Leftrightarrow & x \in (-\infty, a].
    \end{align*}
 	Logo, $(-\infty, a] \in \borel$ acarretando que $(a, +\infty) = (-\infty, a]^c \in \borel$.
 	Observe que podemos decompor $(-\infty, b) = (-\infty,a] \cup (a, b)$ enquanto que $(a, +\infty) = (a, b) \cup [b, +\infty)$.
@@ -320,22 +324,25 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
 \end{prova}
 
 \section{Funções Mensuráveis}
-Agora que já estamos familiarizados com os conceitos de \sigal e espaços mensuráveis, vamos aplicar, sobre este espaço uma função e estudar seu comportamento
+Agora que já estamos familiarizados com os conceitos de \sigal e espaços mensuráveis, vamos aplicar, sobre este espaço uma função e estudar seu comportamento.
 Iniciaremos tratando de funções reais e estenderemos o conceito conforme haja necessidade.
 A partir de agora fixemos que, quando não houver menção contrária, $X$ será um conjunto qualquer diferente de $\varnothing$ e $\mathcal{C}$ será uma \sigal desse conjunto. 
 
 \begin{env}{Definição}
 	\label{def:mensurabilidade-funções-reais}
-    Uma função $f: X \to \R $ é dita $\mathcal{C}$-mensurável se, para cada $\alpha \in \R$, o conjunto $\{x \in X;\ f(x) > \alpha\} \in \mathcal{C}$ \cite{bartle}.
+    Uma função $f: X \to \R $ é dita $\mathcal{C}$-mensurável se, para cada $\alpha \in \R$, o conjunto $\{x \in X;\ f(x) > \alpha\} \in \mathcal{C}$.
     \vspace{-0.2cm}
+    \index{Função! $\cc$-mensurável}
 \end{env}
 % Exemplos de Funções mensuráveis
 \begin{env}{Exemplo}
 \label{ex:funcao-constante}
 	Seja $K \in \R$ um número fixado. 
-	A função $f: X \to \R$ definida por $f(x) = K$, para todo $x \in \R$  é $\cc$-mensurável.
+	A função constante $f: X \to \R$ definida por $f(x) = K$, para todo $x \in X$ é $\cc$-mensurável.
+	\index{Função! constante}
 	\vspace{-0.2cm}
 \end{env}
+
 Para mostrarmos este fato, precisamos analisar os casos de $\alpha$.
 Assim
 	\begin{enumerate}[label*= (\Roman*)]
@@ -347,7 +354,7 @@ Em todo caso, para todo $\alpha \in \R$, o conjunto  $\{x \in X;\ f(x) > \alpha\
 Portanto, a função constante $f$ é $\cc$-mensurável.
 \begin{env}{Exemplo}
     Seja $(X, \mathcal{C})$ uma espaço mensurável e $A \in \mathcal{C}$.
-    A função característica \footnote{As vezes também é chamada  função indicadora.} de $A$ 
+    A função característica \index{Função! característica}\footnote{As vezes também é chamada  função indicadora.} de $A$ 
     $\chi_A: X \to \{0,1\}$ definida por 
     $$\chi_A(x) =\left\{\begin{array}{cc}
          1, & \textrm{\ se \ } x \in A \\
@@ -368,8 +375,8 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 
 \begin{env}{Proposição}
 	\label{prop: propriedades de função característica}
-	Dado um conjunto $X$. 
-	Sejam $A, B \subset X$, então $\chi_{A\cup B} = \chi_A + \chi_B - \chi_{A \cap B}$.
+	Dado um conjunto $X$, sejam $A, B \subset X$.
+	Então $\chi_{A\cup B} = \chi_A + \chi_B - \chi_{A \cap B}$.
 	Em particular, se $A \cap B = \varnothing$, então $\chi_{A\cup B} = \chi_A + \chi_B$
 	\footnote{Esta proposição é um exercício que pode ser encontrado em \cite[p.57]{elon}.}.
 \end{env}
