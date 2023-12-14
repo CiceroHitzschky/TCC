@@ -503,8 +503,7 @@ Em todo o caso, vemos que o conjunto $\{x \in X; \chi_A(x)>  \alpha\}$ é um ele
 			\Leftrightarrow
 			x \in C_\alpha
 		\end{equation}
-		Segue das equivalências (1) e (2) que $C_\alpha \Leftrightarrow \displaystyle \bigcap_{n = 1}^\infty A_{\alpha -\frac{1}{n}}$
-		acarretando que $C_\alpha = \displaystyle \bigcap_{n = 1}^\infty A_{\alpha -\frac{1}{n}} $.
+		Segue das equivalências (1) e (2) que $C_\alpha = \displaystyle \bigcap_{n = 1}^\infty A_{\alpha -\frac{1}{n}} $.
 		Portanto $C_\alpha \in \mathcal{C}$ como queríamos.
    \end{enumerate}
 	
@@ -617,23 +616,9 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     (f+g)(a) > \alpha 
     \Rightarrow 
     f(a) + g(a) > \alpha 
-    \Rightarrow f(a) + g(a) - \alpha > 0. 
+    \Rightarrow f(a) > \alpha - g(a). 
     $$
-    Para que os cálculos fiquem simplificados, denotaremos $f(a) + g(a) - \alpha = b$.
-    Com isso, para qualquer que seja $r \in \Q$, temos
-    $$
-    b 
-    =
-    f(a) + g(a) -\alpha 
-    =
-    f(a) + g(a) -\alpha - r + r
-    =
-    (f(a) -r) + (g(a) -\alpha + r).
-    $$ 
-    Pelo \ref{lem:densidade de Q em R}, podemos escolher um $r_0 \in \Q$ de modo que obtemos $f(a) - r_0 \approx \dfrac{b}{2}$ acarretando que $g(a) -\alpha + r_0 \approx \dfrac{b}{2}$.
-    Se $b > 0$, então $\dfrac{b}{2} > 0$.
-    Segue que $f(a) - r_0 > 0 $ e $g(a) -\alpha + r_0 > 0$. 
-    Consequentemente, $f(a) > r_0  $ e $g(a) > \alpha - r_0$.
+    Agora, por densidade, tome um racional $r_0 \in \Q$ tal que  $f(a) > r_0 >\alpha - g(a)$, de forma que $f(a) > r_0$ e $g(a) > \alpha - r_0.$
     Logo, $a \in H_{r_0}$.
     Portanto, $ \displaystyle a \in \bigcup_{r \in \Q} H_r$.
     
@@ -667,9 +652,9 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     	\end{align*}
     \vspace{-0.2cm}
     Logo, $fg = \dfrac{1}{4}\left[(f+g)^2 - (f-g)^2\right]$.
-    Perceba que  $f-g$ é mensurável, pois sendo $g$ mensurável, podemos usar a \ref{prop:aritmetica-uma-funcao} pondo $c= -1$.
+    Sendo $g$ mensurável, podemos usar a \ref{prop:aritmetica-uma-funcao} pondo $c= -1$.
     Assim, temos $(-1)g = -g$ acarretando que $-g$ é mensurável.
-    Além disso, pela parte \textit{(a)} desta proposição, $f - g = f+ (-g)$.
+    Além disso, pela parte \textit{(a)} desta proposição, $f - g = f+ (-g)$ é mensurável.
     Segue que $fg$ é $\cc$-mensurável
     \footnote{A \ref{prop:aritmetica-uma-funcao} e \ref{prop:aritmetica-duas-funcoes} encontram-se enunciadas na forma de um único lema em \cite[p.9]{bartle}}.
 \end{prova}
