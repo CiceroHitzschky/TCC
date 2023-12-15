@@ -589,9 +589,9 @@ Antes de provarmos a próxima proposição, vamos enunciar um teorema que nos au
 		\enquote{Um conjunto $X \subset \R$ chama-se denso em $\R$ quando todo
 			intervalo aberto $(a, b)$ contém algum ponto de $X$}\cite[p.83]{elon}.}
 	 em $\R$ \cite[p.84]{elon}.
-	\vspace{-0.2cm}
 \end{env}
-A prova desse teorema será omitida para que o texto não prolongue-se mais do que o necessário.
+
+A prova do \ref{lem:densidade de Q em R} será omitida para que o texto não prolongue-se mais do que o necessário.
 \begin{env}{Proposição}
 \label{prop:aritmetica-duas-funcoes}
     Sejam $f,g:X \to \R$. Se $f$ e $g$ são ambas $\cc$-mensuráveis, então as funções $f+g$ e $f\cdot g$ são também $\cc$-mensuráveis.
@@ -661,7 +661,8 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
 \begin{env}{Definição}
 	\label{def:parte-positiva e negativa}
     Seja $f: X \to \R$ uma função real. 
-    Dizemos que a \textbf{parte positiva} da função $f$ é a função $f^+: X \to \R$ definida por $f^+(x) = \sup\{f(x), 0\}$
+    Dizemos que a \textbf{parte positiva} da função $f$ é a função $f^+: X \to \R$ definida por $f^+(x) = \max\{f(x), 0\}$
+    \index{Parte! positiva}
     %
     \footnote{A notação $\sup X$ indica o supremo do conjunto $X$. 
     	Segundo \citeauthor{elon}, \enquote{Sejam $K$ um corpo ordenado e $X \subset K$ um subconjunto limitado superiormente. 
@@ -669,23 +670,40 @@ A prova desse teorema será omitida para que o texto não prolongue-se mais do q
     	subconjunto $X$ quando $b$ é a menor das cotas superiores de $X$ em $K$} \cite[p.75]{elon}.  
 	}.
 	%
-    Semelhantemente, chamamos de a \textbf{parte negativa} da função $f$, a função $f^-: X \to \R$ definida por $f^-(x) = \sup\{-f(x), 0\}$
-    \cite{bartle}.
+    Semelhantemente, chamamos de a \textbf{parte negativa} da função $f$, a função $f^-: X \to \R$ definida por $f^-(x) = \max\{-f(x), 0\}$ \index{Parte! negativa}.
 \vspace{-0.2cm}\end{env}
 
 É possível  que a definição de parte positiva e negativa de funções fique um pouco abstrata em um primeiro contato. 
 Numa tentativa de esclarecer ao máximo, daremos o seguinte exemplo:
 \begin{env}{Exemplo}
 	\label{ex:parte-positiva e negativa}
-    Seja $f: \R^* \to \R$ definida por $f(x) =\dfrac{|x|}{x}$. 
-    Então $f^+(x) = 1$ e $f^-(x) = -1$.
-    De fato, ao tomarmos um elemento real $x< 0$, vemos que sua imagem $f(x) < 0$ sendo $f(x) = \dfrac{-x}{x} = -1$.
-    Assim, $f^+(x) = \sup\{f(x), 0\} = 0$ enquanto que $f^-(x) = \sup\{-f(x), 0\} = 1$.
-    Se $x>0$, então $f(x) =\dfrac{x}{x} = 1$. 
-    Logo, $f^+(x) = \sup\{f(x), 0\} = 1$ enquanto que $f^-(x) = \sup\{-f(x), 0\} = -1$.
+    Seja $f: \R^* \to \R$ definida por $f(x) =\dfrac{|x|}{x}$, ou seja, 
+    $f(x) = \left\{
+    \begin{array}{ll}
+    1,& \text{se\ } x > 0\\
+    -1,& \text{se\ } x < 0\\	
+    \end{array}\right. 
+    $.
+    Assim sua parte positiva e negativa são, respectivamente:
+    \begin{center}
+	    $f^+(x) = \left\{
+	    \begin{array}{ll}
+	    	1,& \text{se\ } x > 0\\
+	    	0,& \text{se\ } x < 0\\	
+	    \end{array}\right. 
+	    $
+	    e
+	    $f^-(x) = \left\{
+	    \begin{array}{ll}
+	    	0,& \text{se\ } x > 0\\
+	    	1,& \text{se\ } x < 0\\	
+	    \end{array}\right. 
+	    $	
+    \end{center}
+    
 \vspace{-0.2cm}\end{env}
 
-Neste caso, podemos perceber, ao olhar para a Figura \ref{fig: Gráfico da Função f(x) =|x|/x} que tanto a parte positiva quanto a parte negativa da função $f$, apresentada no \ref{ex:parte-positiva e negativa}, são ambas funções constantes.
+Com isso, a figura \ref{fig: Gráfico da Função f(x) =|x|/x} apresenta o gráfico da função $f$ do \ref{ex:parte-positiva e negativa} ao passo que as figuras \ref{fig: GrafPartPosFunção f(x) =|x|/x} e \ref{fig: GrafPartNegFunção f(x) =|x|/x} representam os gráficos das partes positiva e negativa de $f$, respectivamente.
 
     \begin{figure}[h!]
 	\centering
@@ -701,10 +719,12 @@ Neste caso, podemos perceber, ao olhar para a Figura \ref{fig: Gráfico da Funç
 	    	\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
 	    		\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
 	    	}
-	    	\foreach \i in {-2,-1,1,2}{
+	    	\foreach \i in {1,2}{
 	    		\draw (2pt,\i)--(-2pt,\i) node[left]{{\footnotesize $\i$}};
 	    	}
-                
+            \foreach \i in {-2,-1}{
+            	\draw (2pt,\i)--(-2pt,\i) node[right]{{\footnotesize $\i$}};
+            }    
             \draw[domain=-4:-0.1,ultra thick,variable=\x,blue] plot ({\x},{abs(\x)/\x});
             \draw[domain=0.1:4,ultra thick,variable=\x,blue] plot ({\x},{abs(\x)/\x});
         
@@ -716,23 +736,83 @@ Neste caso, podemos perceber, ao olhar para a Figura \ref{fig: Gráfico da Funç
 	    \Fonte{Elaborado pelo autor}
 	}	
     \end{figure}    
+	\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig: GrafPartPosFunção f(x) =|x|/x} Gráfico da parte positiva da função $f(x) =\dfrac{|x|}{x}$}	
+		\UECEfig{}{
+			\begin{tikzpicture}[scale=0.7]
+				% Retangulo em volta
+				\draw[thick] (-5, -3) rectangle (5, 4);
+				% Eixos
+				\draw[->] (-4,0) -- (4.2,0) node[right] {$x$};
+				\draw[->] (0,-2.5) -- (0, 3) node[left] {$y$};
+				% Rótulos
+				\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
+					\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+				}
+				\foreach \i in {-2,-1,1,2}{
+					\draw (2pt,\i)--(-2pt,\i) node[left]{{\footnotesize $\i$}};
+				}
+				
+				\draw[domain=-4:-0.1,ultra thick,variable=\x,green!40!black] plot ({\x},{0});
+				\draw[domain=0.1:4,ultra thick,variable=\x,green!40!black] plot ({\x},{1});
+				
+				\draw[fill=white] (0,1) circle (0.1);
+				\draw[fill=white] (0,0) circle (0.1);
+				
+			\end{tikzpicture}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+\begin{figure}[h!]
+	\centering
+	\Caption{\label{fig: GrafPartNegFunção f(x) =|x|/x} Gráfico da parte negativa da função $f(x) =\dfrac{|x|}{x}$}
+	\UECEfig{}{
+		\begin{tikzpicture}[scale=0.7]
+			% Retangulo em volta
+			\draw[thick] (-5, -3) rectangle (5, 4);
+			% Eixos
+			\draw[->] (-4,0) -- (4.2,0) node[right] {$x$};
+			\draw[->] (0,-2.5) -- (0, 3) node[left] {$y$};
+			% Rótulos
+			\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
+				\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
+			}
+			\foreach \i in {1,2}{
+				\draw (2pt,\i)--(-2pt,\i) node[right]{{\footnotesize $\i$}};
+			}
+			\foreach \i in {-2,-1}{
+				\draw (2pt,\i)--(-2pt,\i) node[left]{{\footnotesize $\i$}};
+			}
+			\draw[domain=-4:-0.1,ultra thick,variable=\x,red!80!black] plot ({\x},{1});
+			\draw[domain=0.1:4,ultra thick,variable=\x,red!80!black] plot ({\x},{0});
+			
+			\draw[fill=white] (0,1) circle (0.1);
+			\draw[fill=white] (0,0) circle (0.1);
+			
+		\end{tikzpicture}
+	}{
+		\Fonte{Elaborado pelo autor}
+	}	
+\end{figure}
 
-Com isso, finalizaremos esta seção apresentando alguns resultados importantes sobre parte positiva e negativa de uma função.
+Para finalizarmos esta seção apresentaremos uma relação interessantes sobre uma função mensurável e suas partes positiva e negativa.
+
     \begin{env}{Lema}
     \label{lem:f = f^+ - f^-}
-        Seja $f: X \to \R$ uma função real. Então $f = f^+ - f^-$ e $|f| = f^+ + f^-$ \cite{bartle}.
+        Seja $f: X \to \R$ uma função real. Então $f = f^+ - f^-$ e $|f| = f^+ + f^-$.
     \end{env}
     \begin{prova}
             Para provar que $f = f^+ - f^-$, devemos avaliar os casos de $f(x)$. 
-            Logo, se $f(x) \geq 0$, então $f^+(x) = \sup\{f(x), 0\} = f(x)$ e $f^-(x) = \sup\{-f(x), 0\} = 0$, pois $f(x) \geq 0 \Rightarrow  - f(x) \leq~0$.
+            Logo, se $f(x) \geq 0$, então $f^+(x) = \max\{f(x), 0\} = f(x)$ e $f^-(x) = \max\{-f(x), 0\} = 0$, pois $f(x) \geq 0$ implica  $- f(x) \leq~0$.
             Disso, $f^+(x) - f^-(x) = f(x) - 0 = f(x)$, ou seja, $(f^+ - f^-)(x) = f(x)$ tal que $f(x) \geq 0$.
             Caso $f(x) <~0$, então $- f(x) > 0$. 
-            Com isso,  $\sup\{f(x), 0\} = 0$ e $\sup\{-f(x), 0\} = -f(x)$.
+            Com isso,  $\max\{f(x), 0\} = 0$ e $\max\{-f(x), 0\} = -f(x)$.
             Desta forma vemos que
             $f^+(x) - f^-(x) = 0 - (-f(x)) = f(x)$.
             Em todo caso, $f = f^+ - f^-$.
-
-            Analogamente, se $f(x) \geq 0$, então  $\sup\{f(x), 0\} = f(x)$ e $\sup\{-f(x), 0\} = 0$.
+			Analogamente, se $f(x) \geq 0$, então  $\sup\{f(x), 0\} = f(x)$ e $\sup\{-f(x), 0\} = 0$.
             Assim, $f^+(x) + f^-(x) = f(x)$.
             Caso, $f(x) < 0$, então $ - f(x) > 0$.
             Com isso, obtemos $\sup\{f(x), 0\} = 0$ e $\sup\{-f(x), 0\} = -f(x)$.
@@ -747,7 +827,7 @@ Com isso, finalizaremos esta seção apresentando alguns resultados importantes 
 Observe que o \ref{lem:f = f^+ - f^-} nos dá a forma das funções $f^+$ e $f^-$ de maneira implícita.
 De fato, somando as duas expressões membro a membro vemos que
 \vspace{-0.2cm}
-$$f + |f| = (f^+ + f^+) - (f^- + f^-) = 2f^+$$
+$$f + |f| = (f^+ - f^-) + (f^+ + f^-) = 2f^+$$
 
 \vspace{-0.2cm}
 Assim, podemos expressar $f^+ = \dfrac{|f| + f}{2}$.
@@ -755,7 +835,7 @@ De modo semelhante, conseguimos subtrair membro a membro e obter a expressão $f
 Isso demonstra o lema adiante:
 \begin{env}{Lema}
 \label{lem:forma-explicita-partes-de-uma-funcao}
-    Se $f: X \to \R$ é uma função real, então $f^+ = \dfrac{|f| + f}{2}$ e $f^- = \dfrac{|f| - f}{2}$ \cite{bartle}.
+    Se $f: X \to \R$ é uma função real, então $f^+ = \dfrac{|f| + f}{2}$ e $f^- = \dfrac{|f| - f}{2}$.
     \vspace{-0.2cm}
 \end{env}
 \begin{env}{Teorema}
@@ -764,10 +844,11 @@ Isso demonstra o lema adiante:
 \end{env}
     \begin{prova}
         Suponha que $f$ seja $\cc$-mensurável.
-        Pela  \ref{prop:aritmetica-uma-funcao} vemos que a função $|f|$ é $\cc$-mensurável e pelo \ref{lem:forma-explicita-partes-de-uma-funcao} as funções $f^+ = \dfrac{1}{2}(|f| + f)$ e $f^+ = \dfrac{1}{2}(|f| - f)$ também são $\cc$-mensuráveis.
+        Pela  \ref{prop:aritmetica-uma-funcao} vemos que a função $|f|$ é $\cc$-mensurável e pelo \ref{lem:forma-explicita-partes-de-uma-funcao} as funções $f^+ = \dfrac{1}{2}(|f| + f)$ e $f^- = \dfrac{1}{2}(|f| - f)$ também são $\cc$-mensuráveis.
         Reciprocamente, supondo que $f^+$ e $f^-$ são mensuráveis, temos pelo \ref{lem:f = f^+ - f^-} que
         $f = f^+ - f^-$. Segue, novamente pela \ref{prop:aritmetica-duas-funcoes}, que $f$ é $\cc$-mensurável. 
     \end{prova}
 
-Assim, se retornarmos à figura \ref{fig: Gráfico da Função f(x) =|x|/x}, vemos que a função do  \ref{ex:parte-positiva e negativa} é $\cc$-mensurável, pois
-suas partes positiva e negativa são ambas funções constantes que são mensuráveis conforme a \ref{prop:aritmetica-uma-funcao}.
+Nesta seção, vimos o conceito de $\sigma$-álgebra e, por meio dele, definimos a mensurabilidade de uma função bem como mostramos propriedades disso.
+Todos esses conceitos e definições serviram para as seções expostas adiante. 
+Na seção seguinte, exploraremos o conceito central deste trabalho: a teoria da medida.´ 

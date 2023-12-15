@@ -1,10 +1,26 @@
 \begin{theindex}
 
   \item $\sigma$-álgebra, \hyperpage{10}
-    \subitem  gerada, \hyperpage{12}
+    \subitem  de Borel, \hyperpage{13}
+    \subitem  gerada, \hyperpage{13}
 
   \indexspace
 
-  \item Álgebra de Borel, \hyperpage{14}
+  \item Conjunto
+    \subitem  aberto, \hyperpage{17}
+
+  \indexspace
+
+  \item Função
+    \subitem  $\cc$-mensurável, \hyperpage{15}
+    \subitem  característica, \hyperpage{16}
+    \subitem  constante, \hyperpage{15}
+    \subitem  contínua, \hyperpage{17}
+
+  \indexspace
+
+  \item Parte
+    \subitem  negativa, \hyperpage{21}
+    \subitem  positiva, \hyperpage{21}
 
 \end{theindex}
