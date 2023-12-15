@@ -22,44 +22,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 7 entries,
+You've used 9 entries,
             6714 wiz_defined-function locations,
-            1216 strings with 9617 characters,
-and the built_in function-call counts, 3326 in all, are:
-= -- 341
-> -- 36
-< -- 7
-+ -- 61
-- -- 13
-* -- 153
-:= -- 440
-add.period$ -- 9
-call.type$ -- 9
-change.case$ -- 29
-chr.to.int$ -- 24
-cite$ -- 2
-duplicate$ -- 107
-empty$ -- 372
-format.name$ -- 46
-if$ -- 865
+            1230 strings with 9859 characters,
+and the built_in function-call counts, 4680 in all, are:
+= -- 445
+> -- 68
+< -- 9
++ -- 71
+- -- 23
+* -- 235
+:= -- 625
+add.period$ -- 19
+call.type$ -- 11
+change.case$ -- 43
+chr.to.int$ -- 32
+cite$ -- 4
+duplicate$ -- 192
+empty$ -- 501
+format.name$ -- 92
+if$ -- 1195
 int.to.chr$ -- 4
 int.to.str$ -- 3
-missing$ -- 92
-newline$ -- 16
-num.names$ -- 10
-pop$ -- 93
+missing$ -- 133
+newline$ -- 25
+num.names$ -- 20
+pop$ -- 141
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 27
 quote$ -- 0
-skip$ -- 370
+skip$ -- 441
 stack$ -- 1
-substring$ -- 107
-swap$ -- 40
+substring$ -- 143
+swap$ -- 78
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 14
+while$ -- 26
 width$ -- 0
-write$ -- 39
+write$ -- 71

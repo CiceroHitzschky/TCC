@@ -1,8 +1,6 @@
 \chapter{A Teoria da Medida}
 %%%%%%%%% ESPAÇOS MENSURÁVEIS
     Nesta seção, apresentaremos o conceito chave deste trabalho: a teoria da medida.
-    %Conhecemos este conceito de forma intuitiva pelo o que vemos, geralmente, na geometria euclidiana plana.
-    %Aqui, trataremos de medida de modo generalizado. 
     Para isso, precisaremos ampliar o conjunto dos números reais para que ele possa atender novas exigências.
     Isso é necessário porque, as vezes, teremos conjuntos tão \enquote{grandes} que nenhum número real poderá representar sua \enquote{medida}. 
     Assim, estenderemos o conjunto dos números reais na primeira seção.
@@ -13,55 +11,55 @@
 	Assim, antes de prosseguirmos expandiremos o conjunto da reta real que temos trabalhado anteriormente.
     \begin{env}{Definição}
     \label{def:reta-estendida}
-        O conjunto $\xreta$ que consiste de $\R \cup \{-\infty, +\infty\}$ é chamada de \textbf{Sistema Estendido de Números Reais}
-        \cite[p.5, tradução nossa]{bartle}
-        \footnote{No original: The collection $\xreta$ consisting of
-        	the set $\R \cup \{ -\infty , + \infty\}$ is called the extended real number system.}.
+        O sistema estendido de números reais, denotado por $\xreta$, consiste do corpo
+        \footnote{
+        \enquote{Um \textit{corpo} é um conjunto $K$, munido de duas operações, chamadas \textit{adição} e \textit{multiplicação}, que satisfazem a certas condições,chamadas os \textit{axiomas de corpo}[...]}
+        \cite[p.61]{elon}. Os axiomas que ele se refere são as propriedades comutativa, associativa, elemento neutro e elemento simétrico para ambas operações juntamente com  
+        a propriedade distributiva.
+    	} 
+        dos números reais $\R$ e dos símbolos $+\infty$ e $-\infty$, isto é, $\R \cup \{-\infty, +\infty\}$.
+        \index{Sistema estendido de números reais}
     \end{env}
-
-    Ou seja, $\xreta$ nada mais é que o conjunto dos números reais com a possibilidade de se ter $-\infty$ ou $+\infty$.
+	
+	Assim, nós preservamos a ordem original de $\R$ e definimos
+	$-\infty < x < +\infty$ para todo $x \in \R$.
+	Fica então claro que $+\infty$ é uma cota superior
+	\index{Cota superior}
+	\footnote{
+		\enquote{
+		Um subconjunto $X$ de um corpo ordenado $K$ chama-se limitado superiormente quando existe $b \in K$ tal que 
+		$b \geq x$ para todo $x \in X$. 
+		Em outras palavras, tem-se $X \subset (-\infty, b]$.
+		Cada $b \in K$ com esta propriedade chama-se uma cota superior de $X$
+		} \cite[p.74]{elon}.
+	} 
+	de cada subconjunto do estendido sistema de números reais, e que todo subconjunto não vazio tem um supremo
+	\index{Supremo}
+	\footnote{
+		\enquote{
+		Sejam $K$ um corpo ordenado e $X \subset K$ um subconjunto limitado superiormente. 
+		Um elemento $b \in K$ chama-se supremo do subconjunto $X$ quando $b$ é a menor das cotas superiores de $X$ em	$K$
+		} \cite[p.75]{elon}.
+	}.
+	Se, por exemplo, $E$ é um conjunto não vazio de números reais que não é limitado superiormente em $\R$, então $\sup E = + \infty$ no sistema de números reais estendido
+	\footnote{
+	Exatamente as mesmas observações se aplicam aos limites inferiores.
+	Essas definições podem ser encontradas em \cite[p.12]{rudin}.
+	}.
+	
     Com isso, parece que nosso problema de \enquote{medir} conjuntos muito grandes se resolveu.
     Entretanto, alguns cuidados são necessários para operarmos em $\xreta$.
-    Um deles, por exemplo, é que $\xreta$ não é fechado para operações de $\R$ tais como $(+\infty) + (-\infty)$.
-    Dito isso, para $x \in \R$, as operações dos símbolos $+\infty$ e $-\infty$ são dadas da seguinte forma:
-    \vspace{-0.4cm}
-    \begin{multicols}{2}
-        \begin{itemize}
-            \item $(+ \infty) + (+ \infty)  = + \infty$;
-            \item $x + (+ \infty) = (+ \infty) + x = + \infty$;
-            \item $(- \infty) + (- \infty)  = - \infty$;
-            \item $x + (- \infty) = (- \infty) + x = - \infty$;
-            \item $(+ \infty)\cdot (+ \infty) =  +\infty $;
-            \item $(- \infty)\cdot (- \infty) =  +\infty $;
-            \item $(+ \infty)\cdot (- \infty) =  -\infty $;
-            \item $(- \infty)\cdot (+ \infty) =  -\infty $.
-        \end{itemize}
-    \end{multicols}
-	
-	\vspace{-0.4cm}
-    Na multiplicação, dependendo do número real, a operação diferencia-se.
-    Assim, podemos ter
-    \vspace{-1cm}
-    \begin{multicols}{2}
-    $$
-    x \cdot (+\infty) = (+\infty) \cdot x =
-    \left\{\begin{array}{cc}
-          +\infty, & \ \textrm{se } x > 0\\
-          0, & \ \textrm{se } x = 0\\
-          - \infty, & \textrm{se } x < 0
-    \end{array}\right.
-    $$
+    Note que $\xreta$ não é um corpo, pois não é fechado para operação de adição uma vez que $(+\infty) + (-\infty)$ não é definido.
+    Dito isso, para $x \in \R$, aplicaremos as seguintes convenções:
+    \begin{enumerate}[label*=(\alph*)]
+    	\item Se $x > 0$, então $x \cdot (+\infty) = +\infty, x \cdot (-\infty) = -\infty$;
+    	\item Se $x < 0$, então $x \cdot (+\infty) = -\infty, x \cdot (-\infty) = +\infty$;
+    	\item Se $x = 0$, então 
+    	$x\cdot (+\infty) = x\cdot (-\infty) = 0$;
+    	\item $(+ \infty) + (+ \infty)  = x + \infty = (+ \infty) \cdot  (+ \infty) = (- \infty) \cdot (- \infty) = + \infty$;
+    	\item $(- \infty) + (- \infty)  = x - \infty = (- \infty) \cdot  (+ \infty) = (+ \infty) \cdot (- \infty) = - \infty$.
+    \end{enumerate}
     
-    $$
-    x \cdot (-\infty) = (-\infty) \cdot x =
-    \left\{\begin{array}{cc}
-          -\infty, & \ \textrm{se } x > 0\\
-          0, & \ \textrm{se } x = 0\\
-          + \infty, & \textrm{se } x < 0
-    \end{array}\right.
-    $$  
-    \end{multicols}
-	\vspace{-0.4cm}
     Neste novo contexto de números reais a \sigal de Borel não é mais válida uma vez que a \ref{def:algebra-borel} não inclui $+\infty$ nem $-\infty$.
     Logo, precisaremos de uma $\sigma$-álgebra em $\xreta$ para dar continuidade aos nossos estudos. 
     Com isso, considere $\xreta$.
@@ -78,14 +76,15 @@
     
     \begin{env}{Definição}
     \label{def:algebra-borel-estendida}
-        A \sigal $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ do conjunto $\xreta$ é chamada de Álgebra de Borel Estendida \cite{bartle}.
+        A \sigal $\overline{\borel} = \displaystyle \bigcup_{E \in \borel} \{E, E_1, E_2, E_3\}$ do conjunto $\xreta$ é chamada de $\sigma$-álgebra de Borel Estendida.
+        \index{$\sigma$-álgebra! de Borel estendida}
     \end{env}
 
     Uma vez que estamos familiarizados com os conceitos de funções de valores reais mensuráveis, estamos prontos para estender este conceito para o conjunto $\xreta$.
     \begin{env}{Definição}
     \label{def:familia-funcoes-mensuraveis}
         Sendo $(X, \mathcal{C})$ um espaço mensurável, uma função de valores reais estendidos $f: X \to \xreta$ é dita $\mathcal{C}$-mensurável caso o conjunto
-        $\{x \in X; f(x) > \alpha\} \in \mathcal{C}$ para qualquer que seja $\alpha \in \R$ \cite{bartle}. 
+        $\{x \in X; f(x) > \alpha\} \in \mathcal{C}$ para qualquer que seja $\alpha \in \R$. 
         \vspace{-0.4cm}
     \end{env}
 
@@ -93,8 +92,8 @@
 	Além disso, caso estivermos tratando apenas das funções não negativas usaremos $M^+(X, \mathcal{C})$.
     \begin{env}{Proposição}
     \label{prop:identidade-intersecao-mais-infinito}
-        Se $f \in \menfus$, então $\{x \in X; f(x) = +\infty\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\}$
-        \cite{bartle}.
+        Se $f \in \menfus$, então $\{x \in X; f(x) = +\infty\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f(x) > n\}$.
+        Em particular, $\{x \in X; f(x) = +\infty\} \in \cc$.
     \end{env}
     \begin{prova}
         Tome, de modo arbitrário, um elemento $a \in X$. 
@@ -111,33 +110,29 @@
 
     \begin{env}{Proposição}
     \label{prop:identidade-união-menos-infinito}
-        Se $f \in \menfus$, então $\{x \in X; f(x) = -\infty\} = \displaystyle \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c$
-        \cite{bartle}.
+        Se $f \in \menfus$, então $\{x \in X; f(x) = -\infty\} = \displaystyle \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c$.
+        Particularmente, $\{x \in X; f(x) = -\infty\} \in \cc$.
         \vspace{-0.4cm}
     \end{env}
 	%
     \begin{prova}
-    	
-    	\vspace{-0.6cm}
-        Analogamente à \ref{prop:identidade-intersecao-mais-infinito} tomemos $a \in X$. 
-        Segue que 
+    	Por hipótese, $f \in \menfus$.
+    	Assim, pela \ref{prop:aritmetica-uma-funcao}, 
+    	$-f \in \menfus$.
+    	Logo, pela \ref{prop:identidade-intersecao-mais-infinito}, temos que 
+    	$\{x \in X; -f(x) = +\infty\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; -f(x) > n\}$.
+    	Note que 
         \begin{align*}
-            a \in \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c
-            \Leftrightarrow & \ a \in \bigcap_{n = 1}^\infty \left(\{x \in X; f(x) > - n\}\right)^c\\
-            \Leftrightarrow & \ \forall \ n \in \N,\ a \in \left(\{x \in X; f(x) > - n\}\right)^c\\
-            \Leftrightarrow & \ \forall \ n \in \N,\ a \notin \{x \in X; f(x) > - n\}\\
-            \Leftrightarrow & \ \forall \ n \in \N,\ a \in \{x \in X; f(x) \leq - n\}\\    
-            \Leftrightarrow & \ \forall \ n \in \N,\ f(a) \leq - n\\
-            \Leftrightarrow & \lim_{n \to \infty} f(a) \leq \lim_{n \to \infty} (- n)\\  
-            \Leftrightarrow & f(a) = -\infty.                  
+            \bigcap_{n = 1}^\infty \{x \in X; -f(x) > n\}
+            =& \bigcap_{n = 1}^\infty \{x \in X; f(x) < -n\}\\
+            =& \bigcap_{n = 1}^\infty \{x \in X; f(x) \geq -n\}^c\\
+            =& \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) \geq -n\}\right)^c 
         \end{align*}
-    
-    Com isso, podemos perceber que 
-    $\displaystyle a \in \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c \Leftrightarrow  a \in \{x \in X; f(x) = -\infty\}$.
-    Ora, cada $\{x \in X; f(x) > - n\} \in \mathcal{C}$.
-    Assim, por definição de $\sigma$-álgebra, temos que $ \displaystyle\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\} \in \mathcal{C}$ e também 
-    $\displaystyle\left(\bigcup_{n = 1}^\infty \{x \in X; f(x) > - n\}\right)^c \in \mathcal{C}$.
-    Concluímos disso que $\{x \in X; f(x) = -\infty\} \in \mathcal{C}$ como queríamos provar. 
+    	e que $\{x \in X; -f(x) = +\infty\} = \{x \in X; f(x) = -\infty\}$. Portanto, 
+    	$$
+    	\{x \in X; f(x) = -\infty\} 
+    	= 
+    	\displaystyle \left(\bigcup_{n = 1}^\infty \{x \in X; f(x) \geq -n\}\right)^c.$$
     \end{prova}
     \begin{env}{Teorema}
     \label{teo:condição-de-mensurabilidade}

@@ -15,4 +15,15 @@
 {LIMA, E.~L. \textbf{\textbf{Um Curso de Análise}}. 15. ed. Rio de Janeiro:
   IMPA, 2019. v.~1.}
 
+\bibitem[Magalhaes 2011]{magalhaes}
+\abntrefinfo{Magalhaes}{MAGALHAES}{2011}
+{MAGALHAES, M.~N. \textbf{Probabilidade e Variáveis Aleatórias}. 3. ed. São
+  Paulo: EdUsp, 2011.}
+
+\bibitem[Rudin 1976]{rudin}
+\abntrefinfo{Rudin}{RUDIN}{1976}
+{RUDIN, W. \textbf{Principles of mathematical analysis}. 3d ed. ed. [S.l.]:
+  McGraw-Hill, 1976.  (International series in pure and applied mathematics).
+ISBN 007054235X; 9780070542358.}
+
 \end{thebibliography}
