@@ -147,16 +147,7 @@
 		 \end{array}\right.
 	 	 \vspace{-0.2cm}
 		 $$
-		 é $\cc$-mensurável \cite[p.11, tradução nossa, adaptação nossa]{bartle}
-		 \footnote{No original: An extended real-valued function $f$ is measurable if and
-		 	only if the sets
-		 	$A = \{x \in X : f(x) = +\infty\}, B = \{x \in X : f(x) = -\infty\}$
-		 	belong to $X$ and the real-valued function $f_1$ defined by
-		 	$$f_1(x) = \left\{\begin{array}{cc}
-		 		f(x), & \textrm{\ se } x \notin A\cup B  \\
-		 		0,& \textrm{\ se } x \in A\cup B
-		 	\end{array}\right.$$
-		 is measurable.}.
+		 é $\cc$-mensurável.
 		 \vspace{-0.2cm}
 	 \end{env}
 \begin{prova}
@@ -175,51 +166,72 @@
     Desta forma $h$ é $\cc$-mensurável.
 
     Por outro lado, se supormos que $A$ e $B$ são elementos de $\mathcal{C}$ e $h$ é $\cc$-mensurável, então
-    $$\{x \in X; f(x) > \alpha\} = \{x \in  X ; h(x) > \alpha\} \cup A $$
+    $
+    \{x \in X; f(x) > \alpha\} 
+    = 
+    \{x \in  X ; h(x) > \alpha\} \cup A
+    $
     quando $\alpha \geq 0$, e 
-    $$\{x \in X; f(x) > \alpha\} = \{x \in  X ; h(x) > \alpha\} \cap B^c $$
+    $
+    \{x \in X; f(x) > \alpha\} 
+    = 
+    \{x \in  X ; h(x) > \alpha\} \cap B^c 
+    $
     quando  $\alpha < 0$, por motivos análogos à primeira parte da demonstração.
     Portanto, $f$ é uma função $\cc$-mensurável como desejávamos.
 \end{prova}
 
 Como consequência do \ref{prop:aritmetica-uma-funcao} e o \ref{teo:condição-de-mensurabilidade} obtemos, imediatamente, que se $ f \in M(X,\mathcal{C})$, então as funções $cf, f^2, |f|, f^+$ e $f^-$ também são elementos de $M(X, \mathcal{C})$.
 Entretanto, um resultado análogo à \ref{prop:aritmetica-duas-funcoes} não é possível em $\xreta$.
-Isso acontece porquê em $\xreta$ a operação de adição não é bem definida.
+Isso acontece porque em $\xreta$ a operação de adição não é bem definida.
 Então caso $f(x) = +\infty$ e $g(x) = -\infty$ para algum $x \in \R$ a adição
 $f(x) + g(x)$ não é realizada.
 Por outro lado, a função $fg$ é $\cc$-mensurável se $f$ e $g$ forem ambas $\cc$-mensuráveis.
-Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
+Antes disso, lembraremos de dois conceitos importantes nos estudos de análise: limite superior e inferior.
 
+Seja $(x_n)$ uma sequência limitada de números reais.
+Então existem $\alpha, \beta \in \R$ tais que $\alpha \leq x_n \leq \beta$ para todo $n \in \N$.
+Denotando $X_n =\{x_n, x_{n+1}, ...\}$ podemos perceber que 
+$X_n \subset [\alpha, \beta]$ para cada $n$ e que $X_1 \supset X_2 \ldots X_n \supset \ldots$
+Definimos o limite superior e inferior pondo, respectivamente, 
+\begin{center}
+	$\displaystyle
+	\lim_{n \to \infty}\sup X_n 
+	=\sup_{n \to \infty} \left\{\inf X_n\right\}
+	$
+	e
+	$\displaystyle
+	\lim_{n \to \infty}\inf X_n 
+	=\inf_{n \to \infty} \left\{\sup X_n\right\}
+	$
+\end{center}
+\index{Limite! superior}
+\index{Limite! inferior}
+Podemos relacionar esses conceitos com as funções mensuráveis conforme o teorema a seguir:
 \begin{env}{Teorema}
 \label{teo:mensurabilidade-sequencia-funcoes-mensuraveis}
 	Seja $(f_n)$ uma sequência de elementos de $\menfus$ e defina as funções
-	$$f(x) = \inf f_n(x),\  
-	F(x) = \sup f_n(x),\  
-	f^*(x) = \lim\inf f_n(x),\   
-	F^*(x) = \lim\sup f_n(x).$$
-	Então as funções $f, f^*, F$ e $F^*$ são elementos de $\menfus$
-	\cite[p. 12, tradução nossa, adaptação nossa]{bartle}
-	\footnote{No original: 
-		Let $(f_n)$ be a sequence in $M(X, \textbf{X})$ and define the functions
-		\begin{align*}
-			f(x) = \inf f_n(x),\ & 
-			F(x) = \sup f_n(x),\\
-			f^*(x) = \lim \inf f_n(x),\ & 
-			F^*(x) = \lim \sup f_n(x).
-		\end{align*}
-		Then $f, F, f^*$ and $F^*$ belong to $M(X, \textbf{X})$.}.
+	$\displaystyle
+	f(x) = \inf_{n \to \infty} f_n(x),\  
+	F(x) = \sup_{n \to \infty} f_n(x),\  
+	f^*(x) = \lim_{n \to \infty}\inf f_n(x)$ e
+	$\displaystyle 
+	F^*(x) = \lim_{n \to \infty}\sup f_n(x).$
+	Então as funções $f, f^*, F$ e $F^*$ são elementos de $\menfus$.
 \end{env}
 \begin{prova}
-	Como $(f_n)$ é uma sequência de funções $\cc$-mensuráveis e $f = \inf f_n$, afirmamos que $\{x \in X; f(x) \geq \alpha\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\}$.
+	Como $(f_n)$ é uma sequência de funções $\cc$-mensuráveis e 
+	$\displaystyle f = \inf_{n \to \infty} f_n$, afirmamos que $\{x \in X; f(x) \geq \alpha\} = \displaystyle \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\}$.
 	De fato, tomemos um elemento $y \in X$.
 	Assim, 
 		\begin{align*}
-			y \in \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\} \Leftrightarrow	&
+			y \in \bigcap_{n = 1}^\infty \{x \in X; f_n(x) \geq \alpha\} 
+			\Leftrightarrow&
 			y \in \{x \in X; f_n(x) \geq \alpha\}\ \forall\  n \in \N\\
+			\Leftrightarrow&	
+			f_n(y) \geq \alpha\ \forall \ n \in \N \\
 			\Leftrightarrow	&	
-			f_n(y) \geq \alpha\ \forall \ n \in \N\\
-			\Leftrightarrow	&	
-			\inf_{n \in \N}f_n(y) \geq \inf_{n \in \N}\alpha\ \forall \ n \in \N\\
+			\inf_{n \to \infty}f_n(y) \geq \inf_{n \to \infty}\alpha\ \forall \ n \in \N\\
 			\Leftrightarrow	&	
 			f(y) \geq \alpha\ \forall\  n \in \N\\
 			\Leftrightarrow	&
@@ -228,22 +240,18 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 	Como cada $\{x \in X; f_n(x) \geq \alpha\}$ é $\cc$-mensurável, segue pela \ref{prop:interseção-elementos-sigmas} que o conjunto $\{x \in X; f(x) \geq \alpha\} \in \cc$ para todo $\alpha \in \R$.
 	Desta forma, $f$ é $\cc$-mensurável.
 	
-	Observe, também, que $\{x \in X; F(x) >\alpha\} = \displaystyle \bigcup_{n = 1}^\infty \{x \in X; f_(x) >\alpha\}$.
-	Com efeito, para $y \in X$ 
-	\begin{align*}
-		y \in \bigcup_{n = 1}^\infty \{x \in X; f_n(x) > \alpha\} \Leftrightarrow	&
-		\ \exists\ k \in \N \textrm{tal que\ } y \in \{x \in X; f_k(x) > \alpha\}\\
-		\Leftrightarrow	&	
-		f_k(y) > \alpha\\
-		\Leftrightarrow	&	
-		F(x) \geq f_k(y) > \alpha\\
-		\Leftrightarrow	&	
-		F(x) > \alpha,\ \forall \alpha \in \R\\
-		\Leftrightarrow	&
-		y \in \{x \in X; F(x) > \alpha\}
-	\end{align*}
-	Assim, concluímos que $f$ e $F$ são $\cc$-mensuráveis. 
-	Note que a mensurabilidade de $f^*$ e $F^*$ vem de $f$ e $F$ uma vez que
+	Além disso, por hipótese $(f_n)$ é uma sequência de funções mensuráveis.
+	Logo, pela \ref{prop:aritmetica-uma-funcao}, a sequência $(-f_n)$ também é composta de funções mensuráveis.
+	Logo, da primeira parte dessa demonstração, a função 
+	$ g = -\inf (-f_n)$ é mensurável.
+	lembre que, por propriedades de supremo e ínfimo
+	\footnote{
+		Especificamente o exercício 35 encontrado em \cite[p.92]{elon}.
+		}, 
+	$F = \sup f_n = -\inf(-f_n)$. 
+	Disso, $F$ também é uma função $\cc$-mensurável.
+	
+	Note que a mensurabilidade de $f^*$ e $F^*$ vem da mensurabilidade de $f$ e $F$ uma vez que
 	$$
 	f^*(x) = \sup_{n \geq 1} \left\{\inf_{m \geq n} f_m(x)\right\}
 	\textrm{\ e\ }
@@ -252,21 +260,19 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 \end{prova}
 \begin{env}{Corolário}
 	\label{cor:convergencia-de-uma-sequencia-mensuravel}
-	Se $(f_n)$ é uma sequência em $\menfus$ que converge para $f$ em $X$, então
-	$f$ também está em $\menfus$
-	\cite[p. 12, tradução nossa, adaptação nossa]{bartle}
-	\footnote{No original:
-		If $(f_n)$ is a sequence in $M(X, \textbf{X})$ which converges to $f$ on $X$, 
-		then $f$ is in $M(X, \textbf{X})$.
-	}.
-	
+	Se $(f_n)$ é uma sequência em $\menfus$ que converge
+	\footnote{
+		A convergência que nos referimos é a convergência pontual.
+	} para $f$ em $X$, então
+	$f$ também está em $\menfus$.
 \end{env}
 \begin{prova}
-	Ora, por hipótese $\displaystyle f(x) = \lim_{n \to +\infty} f_n(x)$.
-	Só que $\displaystyle \lim_{n \to +\infty} f_n(x) = \lim_{n \in \N} \inf f_n(x)$.
-	Segue que $\displaystyle f(x) = \lim_{n \in \N} \inf f_n(x)$ que, por sua vez, é $\cc$-mensurável pelo teorema anterior.
+	Ora, por hipótese $\displaystyle f(x) = \lim_{n \to \infty} f_n(x)$.
+	Só que $\displaystyle \lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} \inf f_n(x)$.
+	Segue que $\displaystyle f(x) = \lim_{n \to \infty} \inf f_n(x)$ que, por sua vez, é $\cc$-mensurável pelo teorema anterior.
 \end{prova}
 
+Para mostrar que o produto de duas funções mensuráveis em $\xreta$ é mensurável, precisamos ainda de um tipo particular de função que é definida adiante:
 % Parte final do Capítulo - Truncamento
 \begin{env}{Definição}
 	Seja $f$ uma função em $\menfus$ e $A > 0$.
@@ -279,6 +285,7 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 	\end{array}\right.
 	\vspace{-0.4cm}
 	$$
+	\index{truncamento de uma função}
 \end{env}
 \begin{env}{Proposição}
 	\label{prop:truncamento-mensurável}
@@ -288,69 +295,51 @@ Para mostrar isso, precisamos de alguns resultados que serão expostos adiante
 \begin{prova}
 	Basta provar que para qualquer que seja $\alpha \in \R$, tem-se $\{x \in X; f_A(x) > \alpha\} \in \cc$.
 	Para isso, vamos analisar os casos de $\alpha$.
-	Se $-A \leq \alpha \leq A$, então $f_A(x) = f(x)$ para todo $x \in X$.
-	Logo, 
-	$$
-	\{x \in X; f_A(x) > \alpha \} = \{x \in X; f(x) > \alpha \}
-	$$
-	Como $f$ é mensurável, $\{x \in X; f(x) > \alpha \} \in \cc$.
-	Caso $\alpha > A$, então
-	$$
-	\{x \in X; f_A(x) > \alpha \} = \varnothing \in \cc.
-	$$
-	Pois, por definição de $f_A$, não existe valor maior que $A$.
-	Caso tenhamos $\alpha < -A$, ocorre que
-	$$
-	\{x \in X; f_A(x) > \alpha \} = X \in \cc.
-	$$
-	Pois todos os valores que $f_A$ assume são maiores ou igual à $-A$.
+		\begin{enumerate}[label*=(\Roman*)]
+			\item $\alpha = A$. 
+			Assim, 
+			$
+			\{x \in X; f_A(x) > \alpha\}
+			=
+			\{x \in X; f_A(x) > A\}
+			= \varnothing
+			$, pois a função $f_A$ não assume valor maior que $A$.
+			%
+			\item $-A \leq \alpha < A$.
+			Esse caso gera dois novos casos à analisar:
+				\begin{enumerate}
+					\item $\alpha < f(x) < A$. 
+					Disso, 
+					$
+					-A \leq \alpha < f(x) < A
+					\Rightarrow
+					|f(x)| < A
+					$.
+					Logo, $f_A = f$, ou seja, $f_A$ é mensurável.
+					\item $f(x) > A$.
+					Logo, por definição, $f_A(x) = A$, isto é, $f_A$ é constante.
+					Segue do \ref{ex:funcao-constante} que $f_A$ é mensurável.
+				\end{enumerate} 
+			$
+			\{x \in X; f_A(x) > \alpha\}
+			=
+			\{x \in X; f(x) > \alpha\}
+			\in \cc
+			$, 
+			pois $f$ é mensurável.
+			%
+			\item $\alpha < -A$.
+			Ocorre que
+			$
+			\{x \in X; f_A(x) > \alpha \} = X \in \cc.
+			$
+			Pois todos os valores que $f_A$ assume são maiores ou igual à $-A$.
+		\end{enumerate}
 	Em todo caso, o conjunto $\{x \in X; f_A(x) > \alpha\}$ é um elemento de $\cc$.
 	Portanto, $f_A$ é $\cc$-mensurável. 
 \end{prova}
-% Exemplos de Truncamento
+% Exemplo de Truncamento
 
-\begin{comment}
-
-\begin{env}{Exemplo}
-	Seja $f \in \menfus$ tal que $f(x) = x^2-2$.
-	Então o truncamento $f_2$ é representado, graficamente, como
-	\begin{figure}[h!]
-		\centering
-		\Caption{\label{fig:representação do truncamento da função} representação do truncamento $f_2$ da função $f(x) = x^2-2$} 
-		\UECEfig{}{
-			\begin{tikzpicture}[scale=0.5]
-				\draw[thick] (-5.5, -4.5) rectangle (6, 7);
-				% Defina o intervalo x
-				\def\xmin{-3}
-				\def\xmax{3}
-%				
-%				% Desenhe a função f(x)
-%				\draw[domain=\xmin+0.4:\xmax-0.4, smooth, samples=100, blue] plot (\x, {\x*\x -2});
-				
-				% Desenhando a função f_2
-				\draw[domain=2:4.5, thick, samples=100, red] plot (\x, {2});
-				\draw[domain=-4.5:-2, thick, samples=100, red] plot (\x, {2});
-				\draw[domain=-2:2, thick, samples=100, red] plot (\x, {\x*\x -2});
-				\draw[domain=-2:2, thick, samples=100, red] plot (\x, {\x*\x -2});
-				% Adicione rótulos aos eixos
-				\draw[->] (\xmin-2,0) -- (\xmax+2,0) node[right] {$x$};
-				\draw[->] (0,\xmin-1) -- (0,\xmax+2.5) node[above] {$y$};
-				
-                % Rótulos
-				\foreach \i in {-4,-3,-2,-1,1,2,3,4}{
-					\draw (\i,2pt)--(\i, -2pt) node[below]{{\footnotesize $\i$}};
-				}
-				
-				\foreach \i in {-2, -1, 1,2,3,4,5}{
-					\draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
-				}
-			\end{tikzpicture}
-		}{
-			\Fonte{Elaborado pelo autor}		}   
-	\end{figure}
-	
-\end{env}
-\end{comment}
 Para que possamos entender melhor o truncamento de uma função, vamos observar o gráfico da função $g(x) = 3\cos(2x)$ apresentada na figura
 \ref{fig:3cosseno_de_2x}. 
 	\begin{figure}[h!]
@@ -482,15 +471,14 @@ Assim, quanto maior o número $n$ do truncamento $g_n$ de uma função mensuráv
 
 Com esses resultados e observações podemos voltar a analisar o produto de duas funções com valores reais estendidos.
 Considere $f,g \in \menfus$. 
-Tomemos duas sequências $(f_n)$ e $(g_m)$ tais que para cada $k \in \N$, $f_k$ e $g_k$ são truncamentos de $f$ e $g$, respectivamente.
+Tomemos duas sequências $(f_k)$ e $(g_p)$ tais que para cada $k,p \in \N$, $f_k$ e $g_p$ são truncamentos de $f$ e $g$, respectivamente.
 Ou seja,
-	\hspace{-0.2cm}
 	\begin{minipage}{0.5\linewidth}
 	$$ g_p(x) =
 	\left\{\begin{array}{cc}
 		g(x), & \textrm{se\ } |g(x)| \leq k \\
-		k, & \textrm{se\ } g(x) > k \\
-		-k, & \textrm{se\ } g(x) < k 
+		p, & \textrm{se\ } g(x) > p \\
+		-p, & \textrm{se\ } g(x) < p 
 	\end{array}\right.	
 	$$	
 	\end{minipage}
@@ -505,31 +493,43 @@ e
 		$$	
 	\end{minipage}
 \\
-
-Para qualquer que seja o valor de $k \in \N$.
 Pela \ref{prop:truncamento-mensurável}, $f_k$ e $g_p$ são $\cc$-mensuráveis para cada $k$ e $p$ números naturais.
 Assim, pela \ref{prop:aritmetica-duas-funcoes}, $f_kg_p$ também é $\cc$-mensurável para quaisquer $k, p \in \N$.
 Como mencionado anteriormente, o truncamento de uma função $f$ causa uma \enquote{limitação} em sua imagem.
-Logo, se tomarmos $n$ grande o suficiente, o truncamento $f_n$ da função $f$ tende a se aproximar da própria função $f$.
-Desta forma, fixemos um $m \in \N$.
+Logo, se tomarmos $k$ grande o suficiente, o truncamento $f_k$ da função $f$ tende a se aproximar da própria função $f$.
+Desta forma, fixemos um $p_0 \in \N$.
 Assim, para $x \in X$
 $$
-\lim_{k \to +\infty} \left(f_k(x)g_m(x)\right) = f(x)g_m(x) 
+\lim_{k \to +\infty} \left(f_k(x)g_{p_0}(x)\right) = f(x)g_{p_0}(x) 
 $$
 Segue pelo \ref{cor:convergencia-de-uma-sequencia-mensuravel} que 
-$fg_m \in \menfus$. 
+$fg_{p_0} \in \menfus$. 
 Analogamente, para $x \in X$
 $$
-\lim_{m \to +\infty} \left(f(x)g_m(x)\right) 
+\lim_{p \to +\infty} \left(f(x)g_p(x)\right) 
+=
+f(x)\cdot\lim_{p \to +\infty} g_p(x) 
 = f(x)g(x) = (fg)(x)
 $$
 Concluímos, pelo mesmo corolário, que $fg \in \menfus$.
-Dito isso, encerraremos esta seção apresentando a definição generalizada de mensurabilidade de uma função.
+Com toda essa discussão, provamos as proposições:
+
+\begin{env}{Proposição}
+	\label{prop:convergencia do truncamento}
+	Seja $f \in \menfus$ e $f_n$ um truncamento de $f$ para cada $n \in \N$. 
+	Assim, para cada $x \in X, f_n(x)$ converge para $f(x)$ quando $n$ tende para $+\infty$.
+\end{env}
+\begin{env}{Proposição}
+	\label{prop:produto de funções reais mensuraveis estendidas}
+	Se $f$ e $g$ são duas funções mensuráveis de valores reais estendidos, então o produto $f \cdot g$ também é uma função mensurável de valor real estendido.
+\end{env}
+
+Dito isso, encerraremos esta subseção apresentando a definição generalizada de mensurabilidade de uma função.
 
 \begin{env}{Definição}
 	\label{def:mensurabilidade-geral}
-	Sejam $(X, \cc)$ e $(Y,\mathcal{F})$ dois espaços mensuráveis.
-	Dizemos que uma função $\phi:X \to Y$ é dita mensurável se o conjunto $f^{-1}(E) = \{x \in X; f(x)\in E\} \in \cc$ para todo conjunto $E \in \mathcal{F}$ \cite{bartle}. 
+	Sejam $(X, \cc)$ e $(Y,\mathcal{F})$ espaços mensuráveis.
+	Dizemos que uma função $\varphi:X \to Y$ é mensurável se o conjunto $f^{-1}(E) = \{x \in X; f(x)\in E\} \in \cc$ para todo conjunto $E \in \mathcal{F}$. 
 \end{env}
 Embora essa definição pareça ser totalmente distinta da \ref{def:mensurabilidade-funções-reais}, as duas são equivalentes no caso particular de $Y = \R$ e $\mathcal{F} = \borel$ conforme demonstrado a seguir.
 
@@ -557,13 +557,14 @@ Embora essa definição pareça ser totalmente distinta da \ref{def:mensurabilid
 %%%%%%%%%% Espaços de Medida
 
 \section{Espaços de Medida}
-Antes de definimos uma medida, lembraremos de alguns conceitos e resultados da teoria de conjuntos que nos serão úteis adiante.
+Antes de definir uma medida, lembraremos de alguns conceitos e resultados da teoria de conjuntos que nos serão úteis adiante.
 
 \begin{env}{Definição}
 \label{def:sequência-crescente-decrescente-de-conjuntos}
     Uma sequência de conjuntos $(A_n)$ é dita \textbf{não-decrescente} se $A_n \subseteq A_{n+1}$ para todo $n \in \N$.
-    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência  de conjuntos é \textbf{não-crescente}
-    \cite{bartle}.
+    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência de conjuntos é \textbf{não-crescente}.
+    \index{Sequência! de conjuntos não-decrescente}
+    \index{Sequência! de conjuntos não-crescente}
 \end{env}
 
 \begin{env}{Proposição}
@@ -574,7 +575,8 @@ Seja $(E_n)$ uma sequência não-decrescente de conjuntos. Se $(A_n)$ é tal que
         \footnote{
         	Lembre que uma sequência disjunta significa que $A_i \cap A_j = \varnothing$ para todo $i \neq j$};
     \item $E_n = \displaystyle \bigcup_{j = 1}^n A_j$;
-    \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$ \cite{bartle}.
+    \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$.
+    \index{Sequência! disjunta}
 \end{enumerate}
 \end{env}
 
@@ -594,10 +596,18 @@ Seja $(E_n)$ uma sequência não-decrescente de conjuntos. Se $(A_n)$ é tal que
     (E_m \cap E_n) \cap \left( E_{m -1}\cup E_{n -1}\right)^c
     =
     E_m \cap E_{n-1}^c
-    = \varnothing.
+    = \varnothing,
     $$
-	Pois se $E_{m} \subseteq E_{n-1}$, então $E_{n-1}^c \subseteq E_{m}^c$.
-	Disso, $E_{m} \subseteq E_{n-1}^c \subset E_{m} \subseteq E_{m}^c$.
+	ois se $E_{m} \subseteq E_{n-1}$, então $E_{n-1}^c \subseteq E_{m}^c$.
+	Disso, 
+	$
+	E_{m} \cap E_{n-1}^c 
+	\subset 
+	E_{m} 
+	\subseteq 
+	E_{m}^c
+	=\varnothing.
+	$
     
     Provaremos agora o item $(b)$.
  	Se $m = 2$, então não há o que fazer.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  14 DEC 2023 23:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  16 DEC 2023 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2078,7 +2078,7 @@ Overfull \hbox (4.80414pt too wide) in paragraph at lines 174--175
  []
 
 [3] (./elementos-pre-textuais/agradecimentos.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--7
+Underfull \hbox (badness 10000) in paragraph at lines 1--10
 
  []
 
@@ -2130,20 +2130,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ]
-Underfull \hbox (badness 1354) in paragraph at lines 66--79
+Underfull \hbox (badness 1354) in paragraph at lines 74--87
 []\T1/ptm/m/n/12 (+20) Seja $\OML/ztmcm/m/it/12 X$ \T1/ptm/m/n/12 (+20) con-for
 me o exem-plo an-te-rior. Con-si-dere, agora, o con-junto
  []
 
 [11] [12]
-Overfull \hbox (0.6585pt too wide) in paragraph at lines 171--178
+Overfull \hbox (0.6585pt too wide) in paragraph at lines 179--186
 []\T1/ptm/m/n/12 (-20) Considere a $\OML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20)
  -álgebraapresentada na [][]Pro-po-si-ção 1.1.7[][]. Qual-quer ou-tra $\OML/ztm
 cm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -álgebra$\OMS/ztmcm/m/n/12 F$
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
@@ -2157,7 +2157,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [21] [22]
 LaTeX Info: Symbol \textasciiacute not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 854.
+            Default family used instead on input line 858.
  (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -2170,22 +2170,14 @@ Missing character: There is no ] in font nullfont!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (9.78143pt too wide) in paragraph at lines 483--508
+Overfull \hbox (9.78143pt too wide) in paragraph at lines 472--502
 []$ \T1/ptm/m/n/12 (-20) e $[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--508
-
  []
 
 [29] [30]
@@ -2197,7 +2189,7 @@ mcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) um es-paço men-su-rá-vel e $\OML/ztmcm/m/it/
  []
 
 [31]
-Overfull \hbox (6.02373pt too wide) detected at line 642
+Overfull \hbox (6.02373pt too wide) detected at line 652
 []
  []
 
@@ -2223,13 +2215,13 @@ This document will not have a glossary.
 
 (./documento.aux) ) 
 Here is how much of TeX's memory you used:
- 58097 strings out of 478287
- 1243768 string characters out of 5849289
- 1905066 words of memory out of 5000000
- 74838 multiletter control sequences out of 15000+600000
- 551385 words of font info for 327 fonts, out of 8000000 for 9000
+ 58104 strings out of 478287
+ 1243914 string characters out of 5849289
+ 1903088 words of memory out of 5000000
+ 74840 multiletter control sequences out of 15000+600000
+ 550831 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,16n,120p,1231b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,14n,120p,1231b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
@@ -2244,10 +2236,10 @@ ve/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on documento.pdf (42 pages, 767244 bytes).
+Output written on documento.pdf (42 pages, 768656 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
- 620 compressed objects within 7 object streams
- 199 named destinations out of 1000 (max. 500000)
+ 700 PDF objects out of 1000 (max. 8388607)
+ 621 compressed objects within 7 object streams
+ 206 named destinations out of 1000 (max. 500000)
  78458 words of extra memory for PDF output out of 89155 (max. 10000000)
 

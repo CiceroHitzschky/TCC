@@ -20,9 +20,17 @@ Tal estrutura recebe o nome de $\sigma$-álgebra e é definida em \cite{bartle} 
         \item $\varnothing$ e $X$ são elementos de $\mathcal{C}$;     
         \item Se um elemento $A \in \mathcal{C}$, então $A^c \in \mathcal{C}$
         \footnote{Em todo o texto, $X^c$ significa o complementar do conjunto $X$.};
-        \item Se $(A_j)$ é uma sequência de elementos de $\mathcal{C}$, 
+        \item Se $(A_j)$ é uma sequência
+        \footnote{
+        	\enquote{%
+        	[...] uma sequência 
+        	$x = (x_n)_{n \in \N} = (x_1, x_2,..., x_n,...)$ de elementos de um conjunto
+        	$X$ é uma função $x: \N \to X$, onde o valor $x(n)$ é indicado pelo símbolo $x_n$ e chama-se o n-ésimo termo da sequência%
+        	} \cite[p.25]{elon}.
+    	} de elementos de $\mathcal{C}$, 
         então $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}$.
         \vspace{-0.2cm}
+        \index{Sequência}
     \end{enumerate}
 \end{env}
 
@@ -208,10 +216,9 @@ Trataremos, agora, de uma \sigal extremamente importante e específica para o co
 \label{def:algebra-borel}
     Seja $X = \R$. Definimos como a \sigal de Borel, e representaremos por $\borel$, a \sigal gerada por todos os intervalos abertos $(-\infty,x)$ com $ x  \in \R$. 
     \index{$\sigma$-álgebra! de Borel}
-    \vspace{-0.2cm}
 \end{env}
 
-Os elemez'ntos da \sigal de Borel recebem o nome de Borelianos.
+Os elementos da \sigal de Borel recebem o nome de Borelianos.
 Esta \sigal é extremamente relevante para os estudos de medida e integração e pode ser definida de várias formas diferentes, mas todas são equivalentes.
 Isso quer dizer que $(-\infty, x)$ não é a única forma dos elementos de $\borel$. 
 De fato, se  $(-\infty, x) \in \borel$, então $(-\infty, x)^c \in \borel$ só que $(-\infty, x)^c = [x, +\infty$).
@@ -313,17 +320,14 @@ A decomposição de intervalos reais pela união de outros é relevante para mos
 	\ref{prop:interseção-elementos-sigmas} que $(a,b) \in \borel$.
 	Com isso, $\borel$ pode ser gerada por intervalos do tipo $(a,b)$ com $a,b \in \R$.
    
-	Suponha, reciprocamente, que $\mathcal{C}$ é uma \sigal de $\R$.
-	Se $\cc$ é gerada por intervalos do tipo $(a,b)$ onde $a,b \in \R$, então
-	os conjuntos $A_n = (-n, b)$ são todos elementos de $\mathcal{C}$ para qualquer $n \in \N$.
+	Suponha, reciprocamente, que $\mathcal{C}$ é uma \sigal de $\R$ gerada por $(a,b)$ com $a,b \in \R$.
+	Como $(a, b) \in \cc$, então $(a,b)^c \in \cc$, por definição de $\sigma$-álgebra.
+	Logo, $(-\infty,a])\cup [b,+\infty) \in \cc$.
+	Além disso, os conjuntos $A_n = (-n, a)$ são todos elementos de $\mathcal{C}$ para qualquer $n \in \N$.
 	Segue, pela  \ref{def:sigma-algebra}, que 
-	$\displaystyle \bigcup_{n = 1}^\infty (-n,b) \in \mathcal{C}$.
-	Só que $\displaystyle \bigcup_{n = 1}^\infty (-n,b) = (-\infty, b)$.
-	Com isso, os elementos de $\mathcal{C}$ são do tipo $(-\infty, b)$, ou seja, $\mathcal{C} \supset \borel$.
-	Por outro lado, se $A \in \cc$ e $\cc$ é composto por subconjuntos de $\R$, então $A$ é gerado por intervalos.
-	Como todo intervalo é gerado por elementos do tipo 
-	$(-\infty, x),\ x \in \R$, segue que $\mathcal{C} \subset \borel$. 
-	Portanto, $\mathcal{C} = \borel$.
+	$\displaystyle \bigcup_{n = 1}^\infty (-n,a) \in \mathcal{C}$.
+	Só que $\displaystyle \bigcup_{n = 1}^\infty (-n,a) = (-\infty, a)$. 
+	Disso, $(-\infty, a)\cap \left\{(\infty,a])\cup [b,+\infty)\right\} \in \cc$. Portanto,  $(-\infty, a) \in \cc$ como queríamos.
 	%% FFALTA PROVAR AINDA DIREITINHO.
 \end{prova}
 
@@ -839,7 +843,7 @@ Isso demonstra o lema adiante:
     \vspace{-0.2cm}
 \end{env}
 \begin{env}{Teorema}
-    Uma função $f: X \to \R$ é $\cc$-mensurável se, e somente se, suas partes negativa e positiva são ambas $\cc$-mensuráveis \cite{bartle}. 
+    Uma função $f: X \to \R$ é $\cc$-mensurável se, e somente se, suas partes negativa e positiva são ambas $\cc$-mensuráveis. 
     \vspace{-0.2cm}
 \end{env}
     \begin{prova}
