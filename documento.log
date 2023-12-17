@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  16 DEC 2023 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  17 DEC 2023 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2199,11 +2199,89 @@ LaTeX Warning: Reference `chap:intro' on page 33 undefined on input line 736.
 
 LaTeX Warning: Citation `magalhares' on page 35 undefined on input line 808.
 
-[35] [36] [37] [38]) (./documento.bbl [39]
-bibitemlist
-) (./documento.ind [40
+[35] [36] [37] [38]) (./elementos-textuais/teoria-integracao.tex [39] [40
 
-] [41
+]
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 165--178
+\T1/ptm/m/n/12 (+20) en-tão a in-te-gral da fun-ção $\OML/ztmcm/m/it/12 '$ \T1/
+ptm/m/n/12 (+20) com res-peito à me-dida $\OML/ztmcm/m/it/12 ^^V$ \T1/ptm/m/n/1
+2 (+20) é o va-lor real es-ten-dido
+ []
+
+[41]
+
+LaTeX Warning: Reference `prop: igualdade da caracteristica como medida' on pag
+e 42 undefined on input line 428.
+
+[42]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 467.
+
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 475.
+
+[43] [44]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 717.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[45]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[46] [47]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[48] [49] [50] [51] [52] [53] [54] [55]
+LaTeX Info: Symbol \textasciidieresis not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 1573.
+
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+73.
+
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+73.
+
+Missing character: There is no ¨ in font zptmcm7t!
+LaTeX Info: Symbol \textasciidieresis not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 1573.
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+73.
+
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
+73.
+
+Missing character: There is no ¨ in font zptmcm7t!
+[56] [57]) (./documento.bbl [58] [59]
+bibitemlist
+) (./documento.ind [60
+
+] [61
 
 
 ])
@@ -2224,13 +2302,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58129 strings out of 478287
- 1244203 string characters out of 5849289
- 1903416 words of memory out of 5000000
- 74854 multiletter control sequences out of 15000+600000
- 551006 words of font info for 327 fonts, out of 8000000 for 9000
+ 58783 strings out of 478287
+ 1257028 string characters out of 5849289
+ 1906260 words of memory out of 5000000
+ 75381 multiletter control sequences out of 15000+600000
+ 574513 words of font info for 383 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,14n,120p,1231b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,14n,120p,1231b,894s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -2244,10 +2322,10 @@ e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (42 pages, 771592 bytes).
+Output written on documento.pdf (62 pages, 858347 bytes).
 PDF statistics:
- 717 PDF objects out of 1000 (max. 8388607)
- 638 compressed objects within 7 object streams
- 214 named destinations out of 1000 (max. 500000)
- 78458 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 982 PDF objects out of 1000 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 283 named destinations out of 1000 (max. 500000)
+ 97946 words of extra memory for PDF output out of 106986 (max. 10000000)
 

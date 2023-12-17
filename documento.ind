@@ -9,7 +9,7 @@
 
   \item Conjunto
     \subitem  aberto, \hyperpage{17}
-    \subitem  de medida nula., \hyperpage{38}
+    \subitem  de medida nula., \hyperpage{39}
   \item Cota superior, \hyperpage{24}
 
   \indexspace
@@ -29,6 +29,10 @@
 
   \indexspace
 
+  \item Intervalo degenerado, \hyperpage{38}
+
+  \indexspace
+
   \item Limite
     \subitem  inferior, \hyperpage{27}
     \subitem  superior, \hyperpage{27}
@@ -37,6 +41,7 @@
 
   \item Maior $\sigma$-álgebra de um conjunto, \hyperpage{11}
   \item Medida, \hyperpage{34}
+    \subitem  de Lebesgue, \hyperpage{38}
     \subitem  de probabilidades, \hyperpage{35}
     \subitem  finita, \hyperpage{34}
   \item Menor $\sigma$-álgebra de um conjunto, \hyperpage{11}
@@ -47,6 +52,10 @@
     \subitem  negativa, \hyperpage{21}
     \subitem  positiva, \hyperpage{21}
   \item Partição de um conjunto, \hyperpage{33}
+
+  \indexspace
+
+  \item Quase todo ponto, \hyperpage{39}
 
   \indexspace
 

@@ -965,7 +965,7 @@ Como desejávamos.
 \begin{env}{Proposição}
 \label{prop:limite-sequencia-crescente}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-Se $(E_n)$ é uma sequência não-decrescente de elementos de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$.
+Se $(E_n)$ é uma sequência não-decrescente de elementos de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to +\infty} \mu(E_n)$.
 \end{env} 
 
 \begin{prova}
@@ -1023,7 +1023,7 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
         \mu(B_1) - \lim_{n \to +\infty} \mu(B_n) = \mu(B_1) - \mu\left(\bigcap_{n \in \N} B_n\right)
     \end{align*}
     Como $\mu(B_1) < +\infty$, podemos subtrair $\mu(B_1)$ e multiplicar ambos os lados da igualdade por $(-1)$.
-    Portanto, $\displaystyle \lim_{n \to +\infty} \mu(B_n) = \mu\left(\bigcap_{n \in \N} B_n\right)$
+    Portanto, $\displaystyle \lim_{n \to +\infty} \mu(B_n) = \mu\left(\bigcap_{n \in \N} B_n\right)$.
 \end{prova}
 
 Vimos quando tratamos de \sigals a \sigal de Borel que é muito relevante para o estudo da reta real.
@@ -1032,21 +1032,80 @@ Essa, por sua vez, não será demonstrada a titulo de simplificação do trabalh
 \begin{env}{Teorema}
 	\label{teo: medida de lebesgue}
 	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos \cite[p.20, tradução nossa, adaptação nossa]{bartle}
-	\footnote{No original: If $X = \textbf{R}$ and $\textbf{X} = \textbf{B}$, the Borel algebra, then [...] there exists a unique measure $\lambda$ defined on $\textbf{B}$ which coincides with length on open intervals.}.
+	\footnote{Esta medida recebe o nome de Medida de Lebesgue.}.
+	\index{Medida! de Lebesgue} 
 \end{env}
 
-Em termos práticos, se $E$ é um intervalo real não vazio $(a,b)$, então $\lambda(E) = b - a$.
-Esta medida recebe o nome de Medida de Lebesgue. 
+Em termos práticos, se $E =  (a,b)$ é um intervalo real não vazio, então $\lambda(E) = b - a$
+\footnote{
+	Em todo o texto, quando não houver menção contrária, $\lambda$ representa a medida de Lebesgue.
+}.
+Com essa medida, é muito mais fácil exibir um conjunto que tenha medida igual a $+\infty$ justificando a necessidade da reta estendida na \ref{def:medida}.
+Por exemplo, o intervalo 
+$J = (0, +\infty)$ tem medida $+\infty$.
+Com efeito, 
+tome a sequência $(J_n)$ de intervalos de $\R$ definida por $J_n = (0, n)$  com $n \in \N$.
+Claramente, $(J_n)$ é uma sequência não-decrescente e vale
+$\displaystyle
+\bigcup_{n = 1}^\infty J_n
+=
+J
+$.
+Logo, pela \ref{prop:limite-sequencia-crescente}, vemos que
+$$
+\lambda(J)
+=
+\lambda\left(\bigcup_{n = 1}^\infty J_n\right)
+=
+\lim_{n \to +\infty}\lambda(J_n)
+=
+\lim_{n \to +\infty}(n - 0)
+=
++\infty.
+$$
+
+De maneira análoga, é possível mostrar que o intervalo $(-\infty, 0)$ tem medida igual à $+\infty$ com respeito à medida de Lebesgue.
+Perceba também que dado um $a \in \R$, temos que
+$\lambda(\{a\}) = a - a = 0$, onde $\{a\} = [a,a]$ é o intervalo degenerado.
+\index{Intervalo degenerado}
+\begin{env}{Exemplo}
+	\label{ex: a medida de R}
+	Seja $(\R, \borel, \lambda)$ um espaço de medida.
+	Então $\lambda(\R) = +\infty$.
+	De fato, pondo $A = (-\infty, 0)$ e $B = (0, +\infty)$, observamos que os conjuntos $A, \{0\}$ e $B$ formam uma partição de $\R$.
+	Logo, 
+	$
+	\lambda(\R)
+	=
+	\lambda(A \cup \{0\} \cup B)
+	= 
+	\lambda(A) + \lambda(\{0\}) + \lambda(B)
+	=
+	(+\infty) + 0 + (+ \infty) 
+	=
+	+\infty.
+	$
+\end{env}
+
 Embora tenha tido a necessidade de utilizar o sistema da reta estendida para definirmos uma medida, existem conjuntos tão pequenos que sua medida é desprezível.
 À esses damos o nome de conjunto de medida nula.
 \begin{env}{Definição}
 	\label{def:conjunto-medida-nula}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
-	Dizemos que um conjunto $E \in \cc$ tem medida nula em relação à medida $\mu$ se $\mu(E) = 0$.
+	Dizemos que um conjunto $E \in \cc$ tem medida nula, em relação à medida $\mu$, se $\mu(E) = 0$.
 	\index{Conjunto! de medida nula.}
 \end{env}
 
-Podemos usar o conceito de \enquote{quase todo ponto} ou \enquote{quase todo lugar} para qualquer proposição que queiramos desde que ela não seja válida apenas em um subconjunto de medida nula.
+Existem situações em que uma regra á válida em quase todo ponto de um conjunto, mas não se aplica em todo o conjunto.
+Com isso, a \ref{def:conjunto-medida-nula} nos permite utilizar o conceito de \enquote{quase todo ponto} ou \enquote{quase todo lugar} para qualquer proposição que queiramos desde que ela não seja válida apenas em um subconjunto de medida nula.
+
+\begin{env}{Definição}
+	\label{def:quase-todo-ponto}
+	Diremos que alguma propriedade ocorre em quase todo ponto de um conjunto $X$ com respeito à medida $\mu$, se ela não é valida somente em um subconjunto $E$ de $X$ que tem medida nula.
+	Denotaremos esse acontecimento por $\mu$-q.t.p.
+	\index{Quase todo ponto}
+\end{env}
+
 \begin{env}{Proposição}
 	\label{prop:medida-nula-subconjunto}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
@@ -1073,32 +1132,28 @@ Podemos usar o conceito de \enquote{quase todo ponto} ou \enquote{quase todo lug
 		}.
 \end{env}
 \begin{prova}
-	Analogamente à proposição anterior segue, imediatamente, que
-	$$
+	Imediatamente, temos
+	$\displaystyle
 	\mu(Y)
 	=
 	\mu\left(\bigcup_{n \in \N}E_n\right)
 	=
 	\sum_{n = 1}^\infty \mu(E_n)
 	= 0.
-	$$
+	$
 \end{prova}
 
 Como exemplo, temos por definição, que $\varnothing$ tem medida nula, pois para qualquer medida $\mu$, $\mu(\varnothing) = 0$.
-Mostraremos a seguir um exemplo menos trivial:
+Finalizaremos esta seção exibindo mais um exemplo de conjunto de medida nula.
 
 \begin{env}{Exemplo}
-	Se $X \subset \R$ é um conjunto discreto, então tem medida nula com respeito à medida $\lambda$ de Lebesgue.
-	De fato, se $X$ é discreto, então é formado por pontos isolados.
-	Assim, se $a \in X$, então pode ser representado degeneradamente, por 
-	$\{a\} = [a,a]$.
-	Logo, $\lambda(\{a\}) = a - a = 0$.
-	Assim, o conjunto $X$ é dado pela reunião enumerável de seus pontos e todos têm medida nula. 
-	Segue pela \ref{prop:medida-nula-união} que $X$ tem medida nula.
+	Seja $(\R, \borel, \lambda)$ um espaço mensurável.
+	Se $X \subset \R$ é um conjunto enumerável, então $\lambda(X) = 0$.
+	De fato, se $X$ é enumerável, então
+	$X = \{x_1,x_2, ..., x_n,...\}$.
+	Como vimos anteriormente, $\lambda(x_n) = 0$ para todo $n \in \N$.
+	Segue, pela \ref{prop:medida-nula-união}, que
+	$X$ tem medida nula.
+	Particularmente, 
+	$\lambda(\Q) = 0$.
 \end{env}
-
-
- 
-% Espaços de Medida
-
-%Uma vez que já foram bem explorados os espaços mensuráveis bem como os espaços de medida, nosso objetivo neste capítulo é medir 
