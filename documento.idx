@@ -1,8 +1,11 @@
 \indexentry{$\sigma$-álgebra|hyperpage}{10}
 \indexentry{Sequência|hyperpage}{10}
+\indexentry{Espaço! mensurável|hyperpage}{10}
+\indexentry{Menor $\sigma$-álgebra de um conjunto|hyperpage}{11}
+\indexentry{Maior $\sigma$-álgebra de um conjunto|hyperpage}{11}
 \indexentry{$\sigma$-álgebra! gerada|hyperpage}{13}
-\indexentry{$\sigma$-álgebra! de Borel|hyperpage}{13}
-\indexentry{Função! $\cc$-mensurável|hyperpage}{15}
+\indexentry{$\sigma$-álgebra! de Borel|hyperpage}{14}
+\indexentry{Função! $\cc$-mensurável|hyperpage}{16}
 \indexentry{Função! constante|hyperpage}{16}
 \indexentry{Função! característica|hyperpage}{16}
 \indexentry{Função! contínua|hyperpage}{17}
@@ -15,7 +18,7 @@
 \indexentry{$\sigma$-álgebra! de Borel estendida|hyperpage}{25}
 \indexentry{Limite! superior|hyperpage}{27}
 \indexentry{Limite! inferior|hyperpage}{27}
-\indexentry{truncamento de uma função|hyperpage}{28}
+\indexentry{Truncamento de uma função|hyperpage}{28}
 \indexentry{Sequência! de subconjuntos não-decrescente|hyperpage}{32}
 \indexentry{Sequência! de subconjuntos não-crescente|hyperpage}{32}
 \indexentry{Sequência! disjunta|hyperpage}{32}
@@ -23,3 +26,7 @@
 \indexentry{Medida|hyperpage}{34}
 \indexentry{Medida! finita|hyperpage}{34}
 \indexentry{Espaço! de medida|hyperpage}{34}
+\indexentry{Medida! de probabilidades|hyperpage}{35}
+\indexentry{Espaço! de probabilidades|hyperpage}{35}
+\indexentry{Variável aleatória|hyperpage}{35}
+\indexentry{Conjunto! de medida nula.|hyperpage}{38}

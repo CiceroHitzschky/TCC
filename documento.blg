@@ -13,6 +13,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: elementos-pos-textuais/referencias.bib
+Warning--I didn't find a database entry for "magalhares"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -22,44 +23,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 12 entries,
+You've used 8 entries,
             6714 wiz_defined-function locations,
-            1247 strings with 10275 characters,
-and the built_in function-call counts, 6854 in all, are:
-= -- 615
-> -- 133
-< -- 12
-+ -- 93
-- -- 43
-* -- 373
-:= -- 914
-add.period$ -- 32
-call.type$ -- 14
-change.case$ -- 69
-chr.to.int$ -- 44
-cite$ -- 7
-duplicate$ -- 321
-empty$ -- 692
-format.name$ -- 185
-if$ -- 1724
+            1225 strings with 9776 characters,
+and the built_in function-call counts, 4022 in all, are:
+= -- 396
+> -- 52
+< -- 8
++ -- 66
+- -- 18
+* -- 196
+:= -- 535
+add.period$ -- 15
+call.type$ -- 10
+change.case$ -- 36
+chr.to.int$ -- 28
+cite$ -- 3
+duplicate$ -- 151
+empty$ -- 438
+format.name$ -- 69
+if$ -- 1035
 int.to.chr$ -- 4
 int.to.str$ -- 3
-missing$ -- 195
-newline$ -- 37
-num.names$ -- 35
-pop$ -- 220
+missing$ -- 113
+newline$ -- 21
+num.names$ -- 15
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 24
 quote$ -- 0
-skip$ -- 556
+skip$ -- 405
 stack$ -- 1
-substring$ -- 199
-swap$ -- 133
+substring$ -- 125
+swap$ -- 61
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 44
+while$ -- 20
 width$ -- 0
-write$ -- 117
+write$ -- 56
+(There was 1 warning)

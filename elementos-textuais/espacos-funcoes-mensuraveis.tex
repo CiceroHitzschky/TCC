@@ -34,7 +34,8 @@ Tal estrutura recebe o nome de $\sigma$-álgebra e é definida em \cite{bartle} 
     \end{enumerate}
 \end{env}
 
-Com isso, um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma $\sigma$-álgebra sobre $X$ é chamado, pelo mesmo autor, de  \textbf{espaço mensurável}.
+Com isso, um par ordenado $(X, \mathcal{C})$  constituído de um conjunto $X$ e uma $\sigma$-álgebra sobre $X$ é chamado, pelo mesmo autor, de espaço mensurável.
+\index{Espaço! mensurável}
 Além disso, cada elemento deste espaço é chamado de conjunto $\mathcal{C}-$mensurável.
 Quando não houver confusão ou quando a \sigal estiver fixada, dizemos simplesmente que cada elemento é um conjunto mensurável. 
 Observe que a terceira condição da \ref{def:sigma-algebra} nos diz que a união enumerável
@@ -61,6 +62,7 @@ Logo, para um número finito $A_1, A_2, ..., A_n$ com $n \in \N$ de elementos $\
 	De fato, podemos observar que, nesse exemplo, todas as condições impostas na  \ref{def:sigma-algebra} são atendidas de maneira trivial, pois 
 	$\varnothing$ e $X$ são todos os elementos de $\mathcal{C}_1$. 
 	Assim,  $(X, \mathcal{C}_1)$ é um espaço mensurável.
+	\index{Menor $\sigma$-álgebra de um conjunto}
 \vspace{-0.2cm}
 \end{env}
 
@@ -84,6 +86,7 @@ Para evidenciar essa percepção, observe o exemplo a seguir:
 	Logo,  $\displaystyle \bigcup_{j = 1}^\infty A_j \in \mathcal{C}_2$.
 	Com isso, $\mathcal{C}_2$ também é uma \sigal de $X$ e o par $(X, \mathcal{C}_2)$ é um espaço mensurável que, por sua vez, é diferente do espaço $(X,\mathcal{C}_1)$.
 	\vspace{-0.2cm}
+	\index{Maior $\sigma$-álgebra de um conjunto}
 \end{env}
 
 Os exemplos apresentados acima são todos de conjuntos que são uma \sigal de um conjunto $X$ arbitrário.
@@ -107,7 +110,16 @@ Será que se construirmos $\cc_3$ um conjunto que contenha $\varnothing$ e $X$ e
     \vspace{-0.2cm}
 \end{env}
 
-A proposição adiante nos mostra como podemos induzir uma \sigal com um conjunto fixado,  não vazio, em um conjunto.
+Perceba que as $\sigma$-álgebras $\cc_1$ e $\cc_2$ apresentadas no \ref{ex:sigma-trivial} e \ref{ex:sigma-subconjuntos}, respectivamente, exibem a \enquote{menor} e a \enquote{maior}
+\footnote{
+	A noção de \enquote{menor} e \enquote{maior} é trazida por meio da ordem parcial gerada pela relação de inclusão entre conjuntos.
+	} 
+$\sigma$-álgebra de um conjunto.
+De fato, sendo $\mathcal{F}$ uma $\sigma$-álgebra do conjunto $X$, $\mathcal{F}$ é composta por subconjuntos de $X$.
+Assim, $\mathcal{F} \subset \cc_2$.
+Além disso, pela \ref{def:sigma-algebra}, $\varnothing, X \in \mathcal{F}$, ou seja $\cc_1 \subset \mathcal{F}$.
+Portanto, $\cc_1 \subset \mathcal{F} \subset \cc_2$ para toda $\sigma$-álgebra $\mathcal{F}$ de $X$.
+Com isso, a proposição adiante nos mostra como podemos exibir a menor $\sigma$-álgebra de um conjunto $X$ com um subconjunto não vazio fixado.
 \begin{env}{Proposição}
 \label{prop:sigma-complementar}
     Seja $X$ e $A$ dois conjuntos quaisquer com $A \neq \varnothing$.
@@ -173,7 +185,7 @@ Iniciaremos verificando o comportamento de interseção de elementos de uma \sig
 	\Sigma = \displaystyle \bigcap_{\mathcal{T} \in \cc } \cc
 	$
 	é a $\sigma$-álgebra gerada por $\mathcal{T}$
-	\footnote{Também pode ser definida como a \textit{menor} $\sigma$-álgebra de $\mathcal{T}$ sendo a noção de \enquote{menor} trazida por meio da ordem parcial gerada pela relação de inclusão entre conjuntos.}.
+	\footnote{Também pode ser referenciada como a menor $\sigma$-álgebra de $\mathcal{T}$.}.
 \end{env}
 
 Considere a \sigal apresentada na \ref{prop:sigma-complementar}. 
@@ -203,8 +215,8 @@ Responderemos à esta pergunta com a proposição adiante.
     $\displaystyle\bigcup_{j \in \N} E_j \in \cc_A \ \forall\ A \in \mathcal{F}$.
     Disso, $\displaystyle \bigcup_{j \in \N} E_j \in \cc$.
     Portanto, $\cc$ é uma $\sigma$-álgebra.
+    \vspace{-0.4cm}
 \end{prova}
-
 
 Note que há uma diferença gritante entre a \ref{prop:interseção-elementos-sigmas} e \ref{prop:interseção-sigmas-quaisquer}.
 A primeira trata de conjuntos mensuráveis de uma \sigal e a outra refere-se à \sigals de um conjunto $X$.

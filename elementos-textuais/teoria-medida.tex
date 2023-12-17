@@ -285,7 +285,7 @@ Para mostrar que o produto de duas funções mensuráveis em $\xreta$ é mensur�
 	\end{array}\right.
 	\vspace{-0.4cm}
 	$$
-	\index{truncamento de uma função}
+	\index{Truncamento de uma função}
 \end{env}
 \begin{env}{Proposição}
 	\label{prop:truncamento-mensurável}
@@ -742,7 +742,10 @@ Dito isso,
         \item $\mu(\varnothing) = 0$;
         \item $\mu(A) \geq 0, \ \forall \ A \in \mathcal{C}$;
         \item Se $(A_n)$ é uma sequência disjunta de elementos de  $\mathcal{C}$, então 
-        $\displaystyle\mu\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mu(A_n)$.
+        $\displaystyle\mu\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mu(A_n)$
+        \footnote{
+        	Uma função que satisfaz a propriedade (iii) é dita contavelmente aditiva.
+        	}.
         \index{Medida}
     \end{enumerate}
 \end{env}
@@ -756,9 +759,9 @@ Além disso, uma tripla ordenada $(X, \mathcal{C}, \mu)$ constituída por um con
 % Exemplos de medida
 
 \begin{env}{Exemplo}
-    Sejam $X$ um conjunto e $\mathcal{C}$ a \sigal formada por todos os subconjunto de $X$.    
+    Sejam $X$ um conjunto e $\mathcal{C}$ a \sigal formada por todos os subconjuntos de $X$.    
     Defina $\mu_1, \mu_2:\mathcal{C} \to \xreta$ pondo $\mu_1(A) = 0$ para qualquer  $A \in \mathcal{C}$ e 
-    $\mu_2$ é  pondo 
+    $\mu_2$  pondo 
 	$$\mu_2(A) = \left\{\begin{array}{cc}
 	0, & \textrm{\ se \ } A = \varnothing \\
 	+\infty,& \textrm{\ se \ } A \neq \varnothing
@@ -766,7 +769,7 @@ Além disso, uma tripla ordenada $(X, \mathcal{C}, \mu)$ constituída por um con
 	Sendo definidas dessa forma, as funções $\mu_1$ e $\mu_2$ são medidas.
 	\end{env}
 
-De fato, em ambas as condições \textit{(i)} e \textit{(ii)} são trivialmente satisfeitas.
+De fato, ambas as condições \textit{(i)} e \textit{(ii)} são trivialmente satisfeitas.
 Para a condição \textit{(iii)}, temos que qualquer sequência disjunta $(A_n)$ acarretará que
 
 $$\mu_1\left(\bigcup_{n = 1}^\infty A_n\right) = 0 = \sum_{n = 1}^\infty \mu_1(A_n) $$
@@ -783,47 +786,62 @@ Ademais, na soma $\displaystyle \sum_{n = 1}^\infty \mu_2(A_n)$ só teremos soma
 Desta forma, $\displaystyle \sum_{n = 1}^\infty \mu_2(A_n) = +\infty$.
 Portanto $\mu_1$ e $\mu_2$ são medidas.
 
+\begin{env}{Observação}
+	Note que se $\mu$ é uma medida, então vale $\mu_1\leq \mu \leq \mu_2$.
+\end{env}
+
 % Probabilidade
 \begin{env}{Exemplo}
 	Seja $(\Omega, \cc)$ um espaço mensurável.
-	A função $\mathcal{P}:\cc \to [0,1]$ é dita uma probabilidade se satisfaz as propriedades:
+	A função $\rho:\cc \to [0,1]$ é dita uma medida de probabilidades se satisfaz as propriedades:
 	\begin{enumerate}[label* =(\textit{K\arabic*})]
-		\item $\mathcal{P}(\Omega) = 1$;
-		\item $\mathcal{P}(A) \geq 0,\ \forall\  A \in \cc$;
+		\item $\rho(\Omega) = 1$;
+		\item $\rho(A) \geq 0,\ \forall\  A \in \cc$;
 		\item Se $(A_n)$ é uma sequência disjunta de elementos de  $\mathcal{C}$, então 
-		$\displaystyle\mathcal{P}\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mathcal{P}(A_n)$
-		\cite[p.11, adaptação nossa]{magalhaes}
-		\footnote{As propriedades \textit{K1, K2} e \textit{K3} são chamadas de \textit{Axiomas de Kolmogorov}}.
+		$\displaystyle
+		\rho\left(\bigcup_{n = 1}^\infty A_n\right) 
+		= 
+		\sum_{n = 1}^\infty\rho(A_n)
+		$
+		\footnote{
+			As propriedades \textit{K1, K2} e \textit{K3} são chamadas de \textit{Axiomas de Kolmogorov} \cite{magalhares}.
+		}.
+	\index{Medida! de probabilidades}
 	\end{enumerate}
 \end{env}
 
+Afirmamos que $\rho$ é uma medida.
 Observe que as condições da \textit{(ii)} e \textit{(iii)} da \ref{def:medida} são satisfeitas, por definição, na função de probabilidade.
-Resta provar que $\mathcal{P}(\varnothing) = 0$.
-Assim, com o auxilio das propriedades \textit{(K1)} e \textit{(K3)}, segue que 
+Vejamos que $\rho(\varnothing) = 0$.
+Com o auxilio das propriedades \textit{(K1)} e \textit{(K3)}, segue que 
 $$
-\pp(\Omega)
+\rho(\Omega)
 = 
-\pp(\Omega \cup \varnothing)
+\rho(\Omega \cup \varnothing)
 = 
-\pp(\Omega) + \pp(\varnothing)
+\rho(\Omega) + \rho(\varnothing)
 \Rightarrow
-\pp(\Omega)
+\rho(\Omega)
 = 
-\pp(\Omega) + \pp(\varnothing)
+\rho(\Omega) + \rho(\varnothing)
 \Rightarrow
-\pp(\varnothing) = 0.
+\rho(\varnothing) = 0.
 $$
+
 Portanto a função probabilidade é uma medida.
-Neste caso, o espaço de medida $(\Omega, \cc, \pp)$ é chamado de espaço de probabilidades.
+Neste caso, o espaço de medida $(\Omega, \cc,\rho)$ é chamado de espaço de probabilidades.
+\index{Espaço! de probabilidades}
 Além disso, uma função $\cc$-mensurável pela \ref{def:mensurabilidade-geral} em um espaço de probabilidades é chamada de variável aleatória.
+\index{Variável aleatória}
 
 % Unidade de Medida Concentrada em p
 \begin{env}{Exemplo}\textbf{(Unidade de Medida Concentrada em $p$)}
 \label{ex:medida-concentrada-em-p}
-    Seja $(X, \mathcal{C})$ um espaço mensurável onde $\cc = \mathcal{P}(X)$ e $p$ um elemento de $X$.
-    Defina $\mu: \mathcal{C} \to \xreta$  como sendo
+    Sejam $(X, \mathcal{C})$ um espaço mensurável e $p$ um elemento de $X$.
+    Defina $\mu: \mathcal{C} \to \xreta$ pondo
 
-$$\mu(A) = \left\{\begin{array}{cc}
+$$
+\mu(A) = \left\{\begin{array}{cc}
 0, & \textrm{\ se \ } p \notin A \\
 1, & \textrm{\ se \ } p \in A 
 \end{array}\right.$$
@@ -832,8 +850,37 @@ $$\mu(A) = \left\{\begin{array}{cc}
 Então $\mu$ é uma medida.
 Verdadeiramente, observe que $p \notin \varnothing$, ou seja, $\mu(\varnothing) = 0$.
 Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construção de $\mu$.
+Seja $(A_j)$ uma sequência disjunta de subconjuntos de $X$.
+Se 
+$
+p \in \displaystyle \bigcup_{j = 1}^\infty A_j
+$,
+então existe um $n_0$ tal que $p \in A_{n_0}$.
+Como $(A_j)$ é disjunta, $p \notin A_j, \ \forall j\neq n_0$.
+Assim, $\mu(A_{n_0}) = 1$ enquanto que $\mu(A_j) = 0\ \forall j \neq n_0$.
+Logo, 
+$$
+\mu\left( \bigcup_{j = 1}^\infty A_j\right)
+=
+1
+=
+\sum_{j=1}^{\infty} \mu(A_j)
+$$
+Caso
+$
+p \notin \displaystyle \bigcup_{j = 1}^\infty A_j
+$,
+então $p \notin A_j\ \forall j \in \N$.
+Disso, $\mu(A_j) = 0\ \forall j \in \N$ acarretando que
 
-
+$$
+\mu\left( \bigcup_{j = 1}^\infty A_j\right)
+=
+0
+=
+\sum_{j=1}^{\infty} \mu(A_j).
+$$
+Portanto, $\mu$ é uma medida.
 \end{env}
 \begin{comment}
 	
@@ -872,7 +919,7 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 
 \begin{env}{Proposição}
 	\label{prop: medida com partição}
-	Se $\displaystyle \bigcup_{j \in I_n} E_j$ e $\displaystyle\bigcup_{k \in I_m} F_k$ são duas partições de um conjunto $X$, então 
+	Se $\displaystyle \bigcup_{j \in I_n} E_j$ e $\displaystyle\bigcup_{k \in I_m} F_k$ são duas partições distintas de um conjunto $X$, então 
 	$\displaystyle \mu(E_j) 
 	= 
 	\sum_{k = 1}^{m} \mu(E_j\cap F_k)$.
@@ -892,68 +939,49 @@ Trivialmente, tem-se $\mu(A) \geq 0,\ \forall A \in \mathcal{C}$, pela construç
 	=
 	\sum_{k = 1}^{m}\mu(E_j\cap F_k)
 	$$
+	\vspace{-1cm}
 \end{prova}
-
-\begin{comment}
-	
-
-\begin{env}{Proposição}
-	\label{prop: igualdade da caracteristica como medida}
-	Se $\displaystyle \bigcup_{j \in I_n} E_j$ e $\displaystyle\bigcup_{k \in I_m} F_k$ são duas partições de um conjunto $X$, então 
-	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
-\end{env}
-
-\begin{prova}
-	Pela \ref{prop: igualdade da caracteristica como medida}, $\chi$ é uma medida. Segue pela \ref{prop: medida com partição} que
-	$\displaystyle \chi_{E_j} = \sum_{k = 1}^{m} \chi_{(E_j\cap F_k)}$.
-\end{prova}
-\end{comment}
-
 % Teorema
 \begin{env}{Teorema}
 \label{teo:medida-diferença}
 	Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
 	Se $A$ e $B$ são elementos de $\mathcal{C}$ e $A \subset B$, então $\mu(A) \leq \mu(B)$.
-	Se $\mu(A) < +\infty$, então $\mu(B-A) = \mu(B) - \mu(A)$ \cite{bartle}.
+	Se $\mu(A) < +\infty$, então $\mu(B-A) = \mu(B) - \mu(A)$.
 \end{env}
-
 \begin{prova}
-	Suponha que $A \subset B$, então $B = A \cup (B - A)$ e $A \cap (B - A) = \varnothing$. Segue pela propriedade $(ii)$ da \ref{def:medida} que 
+	Suponha que $A \subset B$, então $B = A \cup (B - A)$ e $A \cap (B - A) = \varnothing$. Segue pela propriedade $(iii)$ da \ref{def:medida} que 
 	$$\mu(B) = \mu(A) + \mu(B-A)$$
 	Lembre que $B-A = B\cap A^c$ e $A \in \mathcal{C} \Rightarrow A^c \in \mathcal{C}$.
 	Além disso, como $B \in \mathcal{C}$ temos que $ B\cap A^c = B - A \in \mathcal{C}$.
 	Com isso, $\mu(B-A) \geq 0$.
 	Segue que $\mu(B) \geq \mu(A)$.
-	Observe que se $\mu(A) < \infty$, temos que 
-
+	Observe que se $\mu(A) < +\infty$, temos que 
 	$$\mu(B) = \mu(A) + \mu(B-A) 
- \Leftrightarrow \mu(B) - \mu(A) =  \mu(B-A)
- $$
+	 \Leftrightarrow \mu(B) - \mu(A) =  \mu(B-A)
+ 	$$
 Como desejávamos.
 \end{prova}
 
 \begin{env}{Proposição}
 \label{prop:limite-sequencia-crescente}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-Se $(E_n)$ é uma sequência não-decrescente de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$
-\cite{bartle}.
+Se $(E_n)$ é uma sequência não-decrescente de elementos de $\mathcal{C}$, então $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$.
 \end{env} 
 
 \begin{prova}
     Ora, se $\mu(E_n) = +\infty$, para algum $n \in \N$, ambos os lados da equação acima são $+\infty$.
     Desta forma, vamos supor que $\mu(E_n) < +\infty$ para todo $n \in \N$.
     Com isso, vamos construir uma sequência $(A_n)$ pondo $A_1 = E_1$ e $A_n = E_n - E_{n-1}$ para qualquer $n>1$.
-    Então pela \ref{prop:sequencia-crescente-conjuntos-resultado-A_n}, $(A_n)$ é uma sequência disjunta, temos 
+    Então pela \ref{prop:sequencia-crescente-conjuntos-resultado-A_n}, $(A_n)$ é uma sequência disjunta, logo
     $\displaystyle E_n = \bigcup_{j = 1}^n A_j$ e 
     $\displaystyle\bigcup_{j = 1}^\infty E_j = \bigcup_{j = 1}^\infty A_j$.
-    Como $\mu$ contavelmente aditiva, 
+    Como $\mu$ é contavelmente aditiva, 
     $$\mu\left(\bigcup_{n = 1}^\infty E_n\right)
     =\mu\left(\bigcup_{n = 1}^\infty A_n\right)
     = \sum_{n = 1}^\infty \mu(A_n)
     = \lim_{m \to +\infty}\sum_{n = 1}^m \mu(A_n)$$
     Pelo  \ref{teo:medida-diferença} vemos que $\mu(A_n) = \mu(E_n) - \mu(E_{n - 1 })$, para $n > 1$.
     Assim, 
-    
     \begin{align*}
         \lim_{m \to +\infty}\sum_{n = 1}^m \mu(A_n)
         =&
@@ -968,30 +996,12 @@ Se $(E_n)$ é uma sequência não-decrescente de $\mathcal{C}$, então $\mu\left
         \lim_{m \to +\infty} \mu(E_m)
     \end{align*}
     Segue que $\mu\left(\displaystyle \bigcup_{n = 1}^\infty E_n\right) = \dlim_{n \to \infty} \mu(E_n)$.
-
-
-
-
-% Note que $H_2 = A_2 - A_1$ e $H_3 = A_3 - A_2$. Logo, $H_1 \cup H_2 \cup H_3$
-% Assim, 
-
-% % \begin{align*}
-%     \bigcup_{n = 1}^4 H_n =&
-%     \bigcup_{n = 1}^4 (A_n - A_{n-1})\\
-%     =&
-%     \bigcup_{n = 1}^4 \left(A_n \cap (A_{n-1})^c\right)\\
-%     =&
-%     \left(A_1 \cap (A_{1-1})^c\right)\\
-    
-% \end{align*}
-
-
 \end{prova}
 
 \begin{env}{Proposição}
 Seja $\mu$ uma medida definida sobre uma \sigal $\mathcal{C}$.
-Se $(B_n)$ é uma sequência não-crescente de $\mathcal{C}$ e $\mu(B_1) < +\infty$, então 
-$\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty} \mu(B_n)$ \cite{bartle}.
+Se $(B_n)$ é uma sequência não-crescente de elementos de $\mathcal{C}$ e $\mu(B_1) < +\infty$, então 
+$\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty} \mu(B_n)$.
 \end{env} 
 \begin{prova}
     Defina uma sequência $(T_n)$ de elementos de $\mathcal{C}$ pondo $T_n = B_1 - B_n$ para qualquer que seja $n \in \N$.
@@ -1004,7 +1014,7 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
     $$
     \lim_{n \to +\infty} \mu(T_n) = \lim_{n \to +\infty} [\mu(B_1) - \mu(B_n)] = \mu(B_1) - \lim_{n \to +\infty} \mu(B_n)
     $$
-    Segue pela \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n} que 
+    Segue pela \ref{prop:sequencia-decrescente-conjuntos-resultado-A_n} e pelo \ref{teo:medida-diferença} que 
     $$
     \lim_{n \to +\infty} \mu(T_n) = \mu(B_1) - \mu\left(\bigcap_{n \in \N} B_n\right)
     $$
@@ -1012,12 +1022,13 @@ $\mu\left(\displaystyle \bigcap_{n = 1}^\infty B_n\right) = \dlim_{n \to \infty}
     \begin{align*}
         \mu(B_1) - \lim_{n \to +\infty} \mu(B_n) = \mu(B_1) - \mu\left(\bigcap_{n \in \N} B_n\right)
     \end{align*}
+    Como $\mu(B_1) < +\infty$, podemos subtrair $\mu(B_1)$ e multiplicar ambos os lados da igualdade por $(-1)$.
     Portanto, $\displaystyle \lim_{n \to +\infty} \mu(B_n) = \mu\left(\bigcap_{n \in \N} B_n\right)$
 \end{prova}
 
 Vimos quando tratamos de \sigals a \sigal de Borel que é muito relevante para o estudo da reta real.
 Da mesma forma, existe uma medida que é indispensável para o mesmo contexto.
-Essa, por sua vez, não será demonstrada a titulo de simplificação do trabalho, mas será enunciada aditante pela importância. 
+Essa, por sua vez, não será demonstrada a titulo de simplificação do trabalho, mas será enunciada adiante pela importância. 
 \begin{env}{Teorema}
 	\label{teo: medida de lebesgue}
 	Sendo $(\R, \borel)$ um espaço mensurável, existe uma única medida $\lambda$ definida sobre $\borel$ que coincide com o comprimento dos intervalos abertos \cite[p.20, tradução nossa, adaptação nossa]{bartle}
@@ -1028,35 +1039,38 @@ Em termos práticos, se $E$ é um intervalo real não vazio $(a,b)$, então $\la
 Esta medida recebe o nome de Medida de Lebesgue. 
 Embora tenha tido a necessidade de utilizar o sistema da reta estendida para definirmos uma medida, existem conjuntos tão pequenos que sua medida é desprezível.
 À esses damos o nome de conjunto de medida nula.
-Formalmente,
-
 \begin{env}{Definição}
 	\label{def:conjunto-medida-nula}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
 	Dizemos que um conjunto $E \in \cc$ tem medida nula em relação à medida $\mu$ se $\mu(E) = 0$.
+	\index{Conjunto! de medida nula.}
 \end{env}
 
-Podemos usar este conceito de \enquote{quase todo ponto} ou \enquote{quase todo lugar} para qualquer proposição que queiramos desde que ela não seja válida apenas em um subconjunto de medida nula \cite{bartle}.
+Podemos usar o conceito de \enquote{quase todo ponto} ou \enquote{quase todo lugar} para qualquer proposição que queiramos desde que ela não seja válida apenas em um subconjunto de medida nula.
 \begin{env}{Proposição}
 	\label{prop:medida-nula-subconjunto}
 	Seja $(X, \cc, \mu)$ um espaço de medida.
-	Se $\mu(X) = 0$ e $Y \subset X$, então $\mu(Y) = 0$ \cite[p.343, adaptação nossa]{elon}.
+	Se $\mu(X) = 0$ e $Y \subset X$ é $\cc$-mensurável, então $\mu(Y) = 0$ \footnote{
+		Esta proposição é a generalização de um resultado que pode ser encontrado em \cite[p.343]{elon}.
+		}.
 \end{env}
 \begin{prova}
-	Note que $(Y \cap X) \subset X$, pois $ Y \cap X = Y$.
-	Assim, pelo \ref{teo:medida-diferença}, temos que
+	Como $Y$ é $\cc$-mensurável, $\mu(Y)\geq 0$.
+	Segue, pelo \ref{teo:medida-diferença} que
 	$
-	\mu(Y) = \mu(X \cap Y) \leq \mu(X) = 0
+	0 \leq \mu(Y) \leq \mu(X) = 0
 	$.
-	Logo, $\mu(Y) \leq 0$.
-	Segue que $\mu(Y) = 0$, pois a medida é uma função não negativa.
+	Portanto, $\mu(Y) \leq 0$.
 	\vspace{-0.4cm}
 \end{prova}
 
 \begin{env}{Proposição}
 	\label{prop:medida-nula-união}
 	Seja $(X, \cc, \mu)$ um espaço de medida e $\{E_n\}$ uma sequência disjunta de elementos de $\cc$.
-	Se $Y = \displaystyle\bigcup_{n \in \N}E_n$ e $\mu(E_n) = 0$ para todo $n \in \N$, então $\mu(Y) = 0$ \cite[p.343, adaptação nossa]{elon}.
+	Se $Y = \displaystyle\bigcup_{n \in \N}E_n$ e $\mu(E_n) = 0$ para todo $n \in \N$, então $\mu(Y) = 0$
+	\footnote{
+		Outro resultado generalizado de \cite[p.343]{elon}.
+		}.
 \end{env}
 \begin{prova}
 	Analogamente à proposição anterior segue, imediatamente, que
@@ -1068,8 +1082,6 @@ Podemos usar este conceito de \enquote{quase todo ponto} ou \enquote{quase todo 
 	\sum_{n = 1}^\infty \mu(E_n)
 	= 0.
 	$$
-	Assim,
-	$\mu(Y)\leq 0$. Portanto, $\mu(Y) = 0$.
 \end{prova}
 
 Como exemplo, temos por definição, que $\varnothing$ tem medida nula, pois para qualquer medida $\mu$, $\mu(\varnothing) = 0$.

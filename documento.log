@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  16 DEC 2023 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  16 DEC 2023 22:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2130,20 +2130,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ]
-Underfull \hbox (badness 1354) in paragraph at lines 74--87
+Underfull \hbox (badness 1354) in paragraph at lines 76--90
 []\T1/ptm/m/n/12 (+20) Seja $\OML/ztmcm/m/it/12 X$ \T1/ptm/m/n/12 (+20) con-for
 me o exem-plo an-te-rior. Con-si-dere, agora, o con-junto
  []
 
 [11] [12]
-Overfull \hbox (0.6585pt too wide) in paragraph at lines 179--186
+Overfull \hbox (0.6585pt too wide) in paragraph at lines 191--198
 []\T1/ptm/m/n/12 (-20) Considere a $\OML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20)
  -álgebraapresentada na [][]Pro-po-si-ção 1.1.7[][]. Qual-quer ou-tra $\OML/ztm
 cm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -álgebra$\OMS/ztmcm/m/n/12 F$
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
 
  []
 
@@ -2154,10 +2154,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [21] [22]
 LaTeX Info: Symbol \textasciiacute not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 858.
+            Default family used instead on input line 870.
  (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -2192,12 +2195,15 @@ mcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) um es-paço men-su-rá-vel e $\OML/ztmcm/m/it/
 
 LaTeX Warning: Reference `chap:intro' on page 33 undefined on input line 736.
 
-[33] [34] [35] [36] [37] [38]) (./documento.bbl [39]
+[33] [34]
+
+LaTeX Warning: Citation `magalhares' on page 35 undefined on input line 808.
+
+[35] [36] [37] [38]) (./documento.bbl [39]
 bibitemlist
 ) (./documento.ind [40
 
 ] [41
-
 
 
 ])
@@ -2218,11 +2224,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58123 strings out of 478287
- 1244112 string characters out of 5849289
- 1903412 words of memory out of 5000000
- 74852 multiletter control sequences out of 15000+600000
- 551119 words of font info for 328 fonts, out of 8000000 for 9000
+ 58129 strings out of 478287
+ 1244203 string characters out of 5849289
+ 1903416 words of memory out of 5000000
+ 74854 multiletter control sequences out of 15000+600000
+ 551006 words of font info for 327 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,14n,120p,1231b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
@@ -2238,10 +2244,10 @@ e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (42 pages, 770253 bytes).
+Output written on documento.pdf (42 pages, 771592 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 618 compressed objects within 7 object streams
- 209 named destinations out of 1000 (max. 500000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 638 compressed objects within 7 object streams
+ 214 named destinations out of 1000 (max. 500000)
  78458 words of extra memory for PDF output out of 89155 (max. 10000000)
 
