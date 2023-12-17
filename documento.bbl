@@ -10,6 +10,18 @@
 {BARTLE, R.~G. \textbf{The Elements of Integration and Lebesgue Measure}. 1.
   ed. New York: Wiley-Interscience, 1995.}
 
+\bibitem[Boyer 2012]{boy}
+\abntrefinfo{Boyer}{BOYER}{2012}
+{BOYER, C.~B. \textbf{\textbf{História da Matemática}}. 3. ed. São Paulo:
+  Blucher, 2012.}
+
+\bibitem[Gil 2002]{gil}
+\abntrefinfo{Gil}{GIL}{2002}
+{GIL, A.~C. \textbf{{Como elaborar projetos de pesquisa}}. 4. ed. São Paulo:
+  Atlas S. A, 2002. Disponível em:
+  \url{https://files.cercomp.ufg.br/weby/up/150/o/Anexo_C1_como_elaborar_projeto_de_pesquisa_-_antonio_carlos_gil.pdf}.
+  Acesso em: 30 de dez. 2021.}
+
 \bibitem[Lima 2019]{elon}
 \abntrefinfo{Lima}{LIMA}{2019}
 {LIMA, E.~L. \textbf{\textbf{Um Curso de Análise}}. 15. ed. Rio de Janeiro:
@@ -19,6 +31,11 @@
 \abntrefinfo{Magalhaes}{MAGALHAES}{2011}
 {MAGALHAES, M.~N. \textbf{Probabilidade e Variáveis Aleatórias}. 3. ed. São
   Paulo: EdUsp, 2011.}
+
+\bibitem[Prodanov e Freitas 2013]{profreitas}
+\abntrefinfo{Prodanov e Freitas}{PRODANOV; FREITAS}{2013}
+{PRODANOV, C.~C.; FREITAS, E.~C. de. \textbf{Como elaborar projetos de
+  pesquisa}. 2. ed. Rio Grande do Sul: Feevale, 2013.}
 
 \bibitem[Rudin 1976]{rudin}
 \abntrefinfo{Rudin}{RUDIN}{1976}

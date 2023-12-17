@@ -561,10 +561,10 @@ Antes de definir uma medida, lembraremos de alguns conceitos e resultados da teo
 
 \begin{env}{Definição}
 \label{def:sequência-crescente-decrescente-de-conjuntos}
-    Uma sequência de conjuntos $(A_n)$ é dita \textbf{não-decrescente} se $A_n \subseteq A_{n+1}$ para todo $n \in \N$.
-    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência de conjuntos é \textbf{não-crescente}.
-    \index{Sequência! de conjuntos não-decrescente}
-    \index{Sequência! de conjuntos não-crescente}
+    Uma sequência de subconjuntos $(A_n)$ de um conjunto $X$ é dita \textbf{não-decrescente} se $A_n \subseteq A_{n+1}$ para todo $n \in \N$.
+    Caso tenhamos $A_n \supseteq A_{n+1}$ para todo $n \in \N$, dizemos que a sequência de subconjuntos é \textbf{não-crescente}.
+    \index{Sequência! de subconjuntos não-decrescente}
+    \index{Sequência! de subconjuntos não-crescente}
 \end{env}
 
 \begin{env}{Proposição}
@@ -575,7 +575,7 @@ Seja $(E_n)$ uma sequência não-decrescente de conjuntos. Se $(A_n)$ é tal que
         \footnote{
         	Lembre que uma sequência disjunta significa que $A_i \cap A_j = \varnothing$ para todo $i \neq j$};
     \item $E_n = \displaystyle \bigcup_{j = 1}^n A_j$;
-    \item $\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle \bigcup_{j = 1}^\infty A_n$.
+    \item $\displaystyle \bigcup_{j = 1}^\infty E_j = \displaystyle \bigcup_{j = 1}^\infty A_j$.
     \index{Sequência! disjunta}
 \end{enumerate}
 \end{env}
@@ -598,7 +598,7 @@ Seja $(E_n)$ uma sequência não-decrescente de conjuntos. Se $(A_n)$ é tal que
     E_m \cap E_{n-1}^c
     = \varnothing,
     $$
-	ois se $E_{m} \subseteq E_{n-1}$, então $E_{n-1}^c \subseteq E_{m}^c$.
+	pois se $E_{m} \subseteq E_{n-1}$, então $E_{n-1}^c \subseteq E_{m}^c$.
 	Disso, 
 	$
 	E_{m} \cap E_{n-1}^c 
@@ -608,65 +608,76 @@ Seja $(E_n)$ uma sequência não-decrescente de conjuntos. Se $(A_n)$ é tal que
 	E_{m}^c
 	=\varnothing.
 	$
-    
-    Provaremos agora o item $(b)$.
- 	Se $m = 2$, então não há o que fazer.
- 	Suponha $m > 2$.
- 	Assim, 
- 	\begin{align*}
- 		\bigcup_{j = 1}^m A_j
- 		=&
- 		\bigcup_{j = 1}^m(E_j\cap E_{j-1}^c)\\
- 		=&
- 		E_1 \cup (E_2\cap E_{1}^c) \cup (E_3\cap E_{2}^c) \cup \cdots
- 		\cup (E_m\cap E_{m-1}^c)\\
- 		=&
- 		\left[(E_1 \cup E_2)\cap (E_1\cup E_{1}^c)\right]
- 		\cup
- 		\left[(E_2 \cup E_3)\cap (E_2\cup E_{2}^c)\right]
- 		\cup
- 		\cdots
- 		\cup 
- 		\left[(E_{m-1} \cup E_m)\cap (E_{m-1}\cup E_{m-1}^c)\right]\\
- 		=&
- 		\left[(E_1 \cup E_2)\cap X\right]
- 		\cup
- 		\left[(E_2 \cup E_3)\cap X\right]
- 		\cup
- 		\cdots
- 		\cup 
- 		\left[(E_{m-1} \cup E_m)\cap X\right]\\
- 		=&
- 		(E_1 \cup E_2)
- 		\cup
- 		(E_2 \cup E_3)
- 		\cup
- 		\cdots
- 		\cup 
- 		(E_{m-1} \cup E_m)\\
- 		=&
- 		E_1 \cup E_2 \cup E_3\cup 
- 		\cdots
- 		\cup E_{m-1} \cup E_m\\
- 		=& E_m.
- 	\end{align*}
-	A última igualdade ocorre pelo fato de $(E_n)$ ser não-decrescente.
-	Assim, $E_1 \subseteq E_2 \subseteq \cdots \subseteq E_m$.
 	
-    Por fim, $(c)$ é um resultado imediato, pois $ x \in \displaystyle \bigcup_{j = 1}^\infty E_j$ se, e somente se, 
-    existe um $n_0 \in \N$ tal que $x \in E_{n_0}$. 
-    Pelo item $(b)$, isso só ocorre se $x \in \displaystyle \bigcup_{j = 1}^{n_0}A_j$.
-    Mas isso é equivalente à dizer que existe um $k$ com $1\leq k\leq n_0$ tal que $x \in A_k$.
-    Como $k \in \N$ isso acontece se, e somente se, $x \in A_k$ para algum $k \in \N$.
-    Portanto $x \in \displaystyle \bigcup_{j = 1}^\infty A_j$.
+    Provaremos o item $(b)$ por indução sobre $n$, isto é,
+ 	mostraremos que o resultado vale para $n = 2$ (\textit{Base de indução}), depois que se o resultado vale para um $k \in \N$ (\textit{Hipótese de indução}), então também valerá para $k+1$.
+ 	Dito isso, tome $n = 2$. Logo, 
+ 	\begin{align*}
+ 		\displaystyle \bigcup_{j = 1}^2 A_j 
+ 		=
+ 		A_1 \cup A_2
+ 		=
+ 		E_1\cup (E_2 - E_1)
+ 		=
+ 		E_1\cup (E_2 \cap E_1^c)
+ 		=
+ 		(E_1\cup E_2) \cap (E_1 \cup E_1^c)
+ 	\end{align*}
+ 	Como $(E_n)$ é uma sequência de subconjuntos não-decrescente,  $E_1\cup E_2 = E_2$.
+ 	Além disso, $E_1 \cup E_1^c = X$.
+ 	Com isso, 
+ 	$
+ 	(E_1\cup E_2) \cap (E_1 \cup E_1^c)
+ 	=
+ 	E_2 \cap X
+ 	=
+ 	E_2.
+ 	$
+ 	Ou seja, 
+ 	$E_2 = \displaystyle \bigcup_{j = 1}^2 A_j$.
+ 	Supondo que 
+ 	$
+ 	\displaystyle
+ 	E_k = \bigcup_{j = 1}^k A_j
+ 	$ 
+ 	para algum $k \in \N$, mostraremos que
+ 	$
+ 	\displaystyle
+ 	E_{k+1} = \bigcup_{j = 1}^{k+1} A_j
+ 	$.
+ 	Com efeito, 
+ 	\begin{align*}
+ 		\bigcup_{j = 1}^{k+1} A_j 
+ 		=
+ 		\left(\bigcup_{j = 1}^{k} A_j\right) \cup A_{k+1}
+ 		\overset{*}{=}
+ 		E_{k} \cup A_{k+1}
+ 		=
+ 		E_{k} \cup (E_{k+1}-E_{k})
+ 		\overset{\#}{=}
+ 		E_{k+1}
+ 	\end{align*}
+ 	Onde em * foi usada a hipótese de indução e em \# a base.
+ 	Segue, pelo método da indução finita, que
+ 	$E_n = \displaystyle \bigcup_{j = 1}^n A_j,\ \forall\ n \in \N$.
+	
+    Por fim, $(c)$ é um resultado imediato, pois utilizando o item anterior, vemos que 
+    $$
+    \bigcup_{j = 1}^\infty A_j 
+    = 
+    \bigcup_{j=1}^\infty\left(
+    \bigcup_{k = 1}^j A_k\right)
+    = 
+    \bigcup_{j = 1}^\infty E_j .
+    $$
+
 \end{prova}
 
 \begin{env}{Proposição}
 \label{prop:sequencia-decrescente-conjuntos-resultado-A_n}
-Seja $(F_n)$ uma sequência não-crescente de conjuntos. 
+Seja $(F_n)$ uma sequência não-crescente de subconjuntos de $X$. 
 Se $(E_n)$ é tal que $E_n = F_1 - F_n$ para todo $n \in \N$, então $(E_n)$ é não-decrescente e 
-$\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcap_{j = 1}^\infty F_n$
-\cite{bartle}.
+$\displaystyle \bigcup_{j = 1}^\infty E_n = \displaystyle F_1 - \bigcap_{j = 1}^\infty F_n$.
 \end{env}
 
 \begin{prova}
@@ -690,46 +701,57 @@ $$
     	= 
     	F_1 \cap \left(\bigcap_{j = 1}^\infty F_n\right)^c\\
     	= 
-    	F_1 -\bigcup_{j = 1}^\infty F_n
+    	F_1 -\bigcap_{j = 1}^\infty F_n
 $$
+\vspace{-1cm}
 \end{prova}
+
+\begin{env}{Definição}
+	Sejam $X$ um conjunto e $I \subset \N$.
+	Uma partição do conjunto $X$ é uma sequência $(A_j)_{j \in I}$ disjunta de subconjuntos não vazios de $X$ tais que
+	$
+	\displaystyle\bigcup_{j \in I} A_j = X.
+	$
+	\index{Partição de um conjunto}
+\vspace{-0.4cm}
+\end{env}
 
 \begin{env}{Proposição}
 	\label{prop: duas partições}
 	Se $\displaystyle \bigcup_{j = 1}^n E_j$ e $\displaystyle \bigcup_{k = 1}^m F_k$ são duas partições distintas de um conjunto $X$, então
-	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^m (E_j \cap F_k)$
-	\cite{bartle}.
+	para cada $j \in I_n$ tem-se $E_j = \displaystyle \bigcup_{k = 1}^m (E_j \cap F_k)$.
 \end{env}
 \begin{prova}
-	Fixemos um $j_0 \in I_n$.
-	Assim, temos que $\displaystyle x \in \bigcup_{k = 1}^m (E_{j_0} \cap F_k)$ implica que existe um $k_0 \in I_m$ tal que  $x \in E_{j_0}\cap F_{k_0}$.
-	Logo, $x \in E_{j_0}$ e $x \in F_{k_0}$, isto é, $x \in E_{j_0}$.
-	Reciprocamente, se $y \in X$, então para algum $j_1 \in I_n$, $y \in E_{j_1}$, pois $\{E_j\}$ formam uma partição de $X$.
-	Como $\{F_k\}$ também é uma partição de $X$, deve existir um $k_1 \in I_m$ tal que $x \in F_{k_1}$.
-	Assim, $x \in E_{j_1} \cap F_{k_1}$. 
-	Desta forma, existe um $k_1 \in I_m$ tal que $x \in \displaystyle \bigcup_{k = 1}^m (E_{j_1} \cap F_{k})$ como queríamos.	 
+	Ora, para qualquer $j \in I_n$, tem-se 
+	$\displaystyle
+	E_j 
+	= E_j \cap X 
+	= E_j \cap \left(\bigcup_{k = 1}^m F_k\right)
+	=
+	\bigcup_{k = 1}^m \left(E_j \cap F_k\right).
+	$
 \end{prova}
 
+A seguir definiremos, finalmente, uma medida.
+Esta é a definição mais importante, pois por meio dela vamos construir uma teoria da integração distinta da integração de Riemann conforme discutido na seção \ref{chap:intro}.
+Dito isso, 
 \begin{env}{Definição}
 \label{def:medida}
-    Uma medida é uma função $\mu: (X, \mathcal{C}) \to \xreta$ tal que satisfaz as seguintes condições:
+    Uma medida é uma função $\mu: (X, \mathcal{C}) \to \xreta$ satisfazendo as seguintes condições:
     \begin{enumerate}[label* = (\roman*)]
         \item $\mu(\varnothing) = 0$;
         \item $\mu(A) \geq 0, \ \forall \ A \in \mathcal{C}$;
         \item Se $(A_n)$ é uma sequência disjunta de elementos de  $\mathcal{C}$, então 
-        $\displaystyle\mu\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mu(A_n)$ \cite[p.19, tradução nossa]{bartle}.
-        
+        $\displaystyle\mu\left(\bigcup_{n = 1}^\infty A_n\right) = \sum_{n = 1}^\infty\mu(A_n)$.
+        \index{Medida}
     \end{enumerate}
 \end{env}
 
-O valor de $\mu$ pode ser igual à $+\infty$ para algum conjunto $A \in \mathcal{C}$.
-Quando temos que $\mu(E) < +\infty$ para qualquer que seja o conjunto $E \in \mathcal{C}$, dizemos que temos uma medida finita.
-
-\begin{env}{Definição}
-	\label{def:espaço-de-medida}
-	Dizemos que uma tripla ordenada $(X, \mathcal{C}, \mu)$ constituída por um conjunto $X$, uma \sigal $\mathcal{C}$ desse conjunto e uma medida $\mu$ sobre o espaço mensurável $(X, \mathcal{C})$ é um espaço de medida \cite{bartle}.
-\end{env}
-
+Na definição acima, o valor de $\mu$ pode ser igual à $+\infty$ para algum conjunto $A \in \mathcal{C}$.
+Quando ocorrer $\mu(E) < +\infty$ para qualquer que seja o conjunto $E \in \mathcal{C}$, dizemos que $\mu$ é uma medida finita. 
+\index{Medida! finita}
+Além disso, uma tripla ordenada $(X, \mathcal{C}, \mu)$ constituída por um conjunto $X$, uma \sigal $\mathcal{C}$ desse conjunto e uma medida $\mu$ sobre o espaço mensurável $(X, \mathcal{C})$ é chamada de espaço de medida.
+\index{Espaço! de medida}
 
 % Exemplos de medida
 
