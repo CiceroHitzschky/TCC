@@ -790,6 +790,41 @@ Portanto $\mu_1$ e $\mu_2$ são medidas.
 	Note que se $\mu$ é uma medida, então vale $\mu_1\leq \mu \leq \mu_2$.
 \end{env}
 
+% Exemplos de Medidas
+Deixando os exemplos mais simples de lado, exibiremos exemplos de medidas mais usuais como, por exemplo, a área de um polígono convexo.
+Vamos lembrar de alguns conceitos da Geometria Euclidiana Plana.
+Uma \textit{região triangular}
+\index{Região! triangular} é um conjunto de pontos do plano formado por todos os segmentos cujas extremidades estão
+sobre os lados de um triângulo enquanto que uma \textit{região poligonal} 
+\index{Região! poligonal}
+é a união de um número finito de regiões triangulares que duas a duas que não possuem interseção.
+Com isso, a noção de área de regiões poligonais é introduzida na geometria euclidiana através dos seguintes axiomas:
+\begin{enumerate}[label*=(\textit{A\arabic*})]
+	\item A toda região poligonal corresponde um número
+	maior do que zero;
+	\item Se uma região poligonal é a união de duas ou mais
+	regiões poligonais que duas a duas não tenham pontos interiores em
+	comum, então sua área é a soma das áreas daquelas regiões;
+	\item Regiões triangulares limitadas por triângulos congruentes têm áreas iguais.
+\end{enumerate}
+% Área
+\begin{env}{Exemplo}
+	\label{ex:area-como-medida}
+	A área de polígonos convexos é uma medida.
+	Primeiramente, vamos exibir o espaço mensurável para que possamos construir uma medida.
+	Lembrando que todo polígono convexo pode ser decomposto em regiões triangulares, podemos escolher
+ 	a $\sigma$-álgebra $\cc$ como o conjunto das regiões triangulares que decompõem algum polígono convexo ao passo que o conjunto $X$ é o conjunto de todos os polígonos convexos. 
+	Com isso, se uma função $\mu: \cc \to \xreta$ tende as condições dos axiomas \textit{(A1), (A2)} e \textit{(A3)}, então
+	$\mu$ é uma medida.
+	Com efeito, basta observar que o axioma \textit{(A1)} atende a condição \textit{(ii)} e o axioma \textit{(A2)} a condição \textit{(iii)} da \ref{def:medida}
+	\footnote{
+		Esses conceitos e axiomas podem ser encontrados em \cite[p.176]{lucas}.
+		}.
+	\index{Área de regiões poligonais}
+\end{env}
+\begin{env}{Observação}
+	Os conceitos de comprimento e volume também são medidas.
+\end{env}
 % Probabilidade
 \begin{env}{Exemplo}
 	Seja $(\Omega, \cc)$ um espaço mensurável.
@@ -804,7 +839,7 @@ Portanto $\mu_1$ e $\mu_2$ são medidas.
 		\sum_{n = 1}^\infty\rho(A_n)
 		$
 		\footnote{
-			As propriedades \textit{K1, K2} e \textit{K3} são chamadas de \textit{Axiomas de Kolmogorov} \cite{magalhares}.
+			As propriedades \textit{K1, K2} e \textit{K3} são chamadas de \textit{Axiomas de Kolmogorov} \cite{magalhaes}.
 		}.
 	\index{Medida! de probabilidades}
 	\end{enumerate}

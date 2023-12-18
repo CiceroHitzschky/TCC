@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  17 DEC 2023 20:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  17 DEC 2023 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2097,147 +2097,56 @@ Overfull \hbox (4.80414pt too wide) in paragraph at lines 176--177
 ] (./documento.lof) [8
 
 ]
-(./documento.toc) [9] (./elementos-textuais/espacos-funcoes-mensuraveis.tex
+(./documento.toc) [9] (./elementos-textuais/teoria-integracao.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sigma' on input line 9.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 9.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 3.33234pt
-(hyperref)                removed on input line 9.
-
-[10
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
+ [10
 
 
 ]
-Underfull \hbox (badness 1354) in paragraph at lines 76--90
-[]\T1/ptm/m/n/12 (+20) Seja $\OML/ztmcm/m/it/12 X$ \T1/ptm/m/n/12 (+20) con-for
-me o exem-plo an-te-rior. Con-si-dere, agora, o con-junto
- []
-
-[11] [12]
-Overfull \hbox (0.6585pt too wide) in paragraph at lines 191--198
-[]\T1/ptm/m/n/12 (-20) Considere a $\OML/ztmcm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20)
- -·lgebraapresentada na [][]Pro-po-si-Á„o 1.1.7[][]. Qual-quer ou-tra $\OML/ztm
-cm/m/it/12 ^^[$\T1/ptm/m/n/12 (-20) -·lgebra$\OMS/ztmcm/m/n/12 F$
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
-
- []
-
-[14] [15] [16] [17] [18] [19] [20]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[21] [22]
-LaTeX Info: Symbol \textasciiacute not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 870.
- (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-))
-(./elementos-textuais/teoria-medida.tex [23] [24
-
-] [25] [26] [27] [28]
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (9.78143pt too wide) in paragraph at lines 472--502
-[]$ \T1/ptm/m/n/12 (-20) e $[]$ 
- []
-
-[29] [30]
-Overfull \hbox (0.43129pt too wide) in paragraph at lines 537--539
-[]\T1/ptm/m/n/12 (-20) Seja $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 X; []\OT1/zt
-mcm/m/n/12 )$ \T1/ptm/m/n/12 (-20) um es-paÁo men-su-r·-vel e $\OML/ztmcm/m/it/
-12 f$ \T1/ptm/m/n/12 (-20) uma fun-Á„o. En-t„o $\OML/ztmcm/m/it/12 f$ \T1/ptm/m
-/n/12 (-20) È $[]$-mensur·vel
- []
-
-[31] [32]
-
-LaTeX Warning: Reference `chap:intro' on page 33 undefined on input line 736.
-
-[33] [34]
-
-LaTeX Warning: Citation `magalhares' on page 35 undefined on input line 808.
-
-[35] [36] [37] [38]) (./elementos-textuais/teoria-integracao.tex [39] [40
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 103--106
 
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 165--178
-\T1/ptm/m/n/12 (+20) en-t„o a in-te-gral da fun-Á„o $\OML/ztmcm/m/it/12 '$ \T1/
-ptm/m/n/12 (+20) com res-peito ‡ me-dida $\OML/ztmcm/m/it/12 ^^V$ \T1/ptm/m/n/1
-2 (+20) È o va-lor real es-ten-dido
- []
+LaTeX Warning: Reference `ex:area-como-medida' on page 11 undefined on input li
+ne 161.
 
-[41]
+[11]
 
-LaTeX Warning: Reference `prop: igualdade da caracteristica como medida' on pag
-e 42 undefined on input line 428.
+LaTeX Warning: Reference `prop: duas parti√ß√µes' on page 12 undefined on input
+ line 207.
 
-[42]
+[12]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 467.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 250.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 250.
 
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 475.
+(amsmath)                 on input line 258.
 
-[43] [44]
+
+LaTeX Warning: Reference `prop: medida com parti√ß√£o' on page 13 undefined on 
+input line 280.
+
+
+LaTeX Warning: Reference `def:medida' on page 13 undefined on input line 306.
+
+[13]
+
+LaTeX Warning: Reference `def:medida' on page 14 undefined on input line 401.
+
+[14]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 717.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 500.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[45]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2247,41 +2156,73 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46] [47]
+[15] [16] [17]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[48] [49] [50] [51] [52] [53] [54] [55]
+[18] [19] [20]
+
+LaTeX Warning: Reference `cor:convergencia-de-uma-sequencia-mensuravel' on page
+ 21 undefined on input line 1037.
+
+[21]
+
+LaTeX Warning: Reference `prop:limite-sequencia-crescente' on page 22 undefined
+ on input line 1067.
+
+[22] [23]
+
+LaTeX Warning: Reference `prop:medida-nula-uni√£o' on page 24 undefined on inpu
+t line 1248.
+
+[24] [25]
+
+LaTeX Warning: Reference `def:parte-positiva e negativa' on page 26 undefined o
+n input line 1318.
+
+
+LaTeX Warning: Reference `lem:f = f^+ - f^-' on page 26 undefined on input line
+ 1320.
+
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 1573.
+            Default family used instead on input line 1356.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
+56.
 
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-73.
-
-
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-73.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
+56.
 
 Missing character: There is no ® in font zptmcm7t!
 LaTeX Info: Symbol \textasciidieresis not provided by
             font family ptm in TS1 encoding.
-            Default family used instead on input line 1573.
+            Default family used instead on input line 1356.
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-73.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
+56.
 
 
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 15
-73.
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 13
+56.
 
 Missing character: There is no ® in font zptmcm7t!
-[56] [57]) (./documento.bbl [58] [59]
+[26]
+
+LaTeX Warning: Reference `lem:f = f^+ - f^-' on page 27 undefined on input line
+ 1410.
+
+[27]) (./documento.bbl [28] [29]
 bibitemlist
-) (./documento.ind [60
+) (./documento.ind [30
 
-] [61
+] [31
+
 
 
 ])
@@ -2302,30 +2243,29 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58783 strings out of 478287
- 1257028 string characters out of 5849289
- 1906260 words of memory out of 5000000
- 75381 multiletter control sequences out of 15000+600000
- 574513 words of font info for 383 fonts, out of 8000000 for 9000
+ 55664 strings out of 478287
+ 1194383 string characters out of 5849289
+ 1872213 words of memory out of 5000000
+ 72547 multiletter control sequences out of 15000+600000
+ 562244 words of font info for 316 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,14n,120p,1231b,894s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (62 pages, 858347 bytes).
+ 96i,13n,120p,1231b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on documento.pdf (32 pages, 704306 bytes).
 PDF statistics:
- 982 PDF objects out of 1000 (max. 8388607)
- 881 compressed objects within 9 object streams
- 283 named destinations out of 1000 (max. 500000)
- 97946 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 412 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 89706 words of extra memory for PDF output out of 106986 (max. 10000000)
 

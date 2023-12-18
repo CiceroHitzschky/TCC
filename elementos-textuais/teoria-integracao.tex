@@ -1,16 +1,16 @@
 \chapter{Teoria da Integração}
 Uma vez que já foram bem explorados os espaços mensuráveis e os espaços de medida, vamos abordar, nesta seção, a teoria da integração de Lebesgue.
-Iniciaremos por funções não negativas e iremos estendendo os conceitos aos poucos.
+Iniciaremos por simples e iremos estendendo os conceitos aos poucos.
 Quando não houver menção contrária, $(X, \cc, \mu)$ será um espaço de medida.
 O conjunto de todas as funções $f:X \to \xreta$ mensuráveis será simplesmente denotado por $M = M(X, \cc)$ e o conjunto das funções não negativas, que também são $\cc$-mensuráveis será denotado por $M^+ = M^+(X, \cc)$. 
 
 \section{A Integral de Funções Simples}
 	Iniciaremos tratando de casos particulares de integral e depois vamos expandindo.
-	Com isso, iniciaremos entendo a integral para funções simples.
+	Com isso, iniciaremos entendendo a integral para funções simples.
 
 \begin{env}{Definição}
-    Uma função real é dita \textbf{simples} quando possui apenas uma quantidade finita de valores \cite[p.27, tradução nossa]{bartle}
-    \footnote{A real-valued function is \textbf{simple} if it has only a finite number of values.}.
+    Uma função real é dita \textbf{simples} quando possui apenas uma quantidade finita de valores.
+    \index{Função! simples}
 \end{env}
 
 Representaremos esse tipo de função de forma padronizada em todo o texto.
@@ -35,7 +35,7 @@ $\displaystyle \bigcup_{j = 1}^n E_j = X$, onde a sequência finita de conjuntos
          2, & \textrm{\ se } x \in [3,4]
     \end{array}\right.
     $$
-    Claramente, $g$ também é uma função simples.
+    Claramente, $g$ é uma função simples.
     Basta denotar 
     $E_1 = [0,1),\ 
      E_2 = [1,2),\   
@@ -52,7 +52,7 @@ $\displaystyle \bigcup_{j = 1}^n E_j = X$, onde a sequência finita de conjuntos
   
     \begin{figure}[h!]
 	\centering
-	\Caption{\label{fig:gráfico-função-simples-g-sobre-[0,4]} Gráfico da Função $g =\dsum_{j = 1}^4 a_j\chi_{E_j}$}	
+	\Caption{\label{fig:gráfico-função-simples-g-sobre-[0,4]} Gráfico da função $g =\dsum_{j = 1}^4 a_j\chi_{E_j}$}	
 	\UECEfig{}{
 	    \begin{tikzpicture}[scale=0.7]
 				
@@ -100,8 +100,9 @@ $\displaystyle \bigcup_{j = 1}^n E_j = X$, onde a sequência finita de conjuntos
 	    \Fonte{Elaborado pelo autor}
 	}	
     \end{figure} 
-Agora pensemos na ideia de integral apresentada na disciplina de Cálculo Diferencial e Integral.
-Se quiséssemos calcular a integral das funções acima somaríamos as áreas dos retângulos conforme ilustram as figuras a seguir.\\
+O gráfico da função $g$ é representado conforme a figura 
+\ref{fig:gráfico-função-simples-g-sobre-[0,4]}.
+Pensando na ideia de integral de Riemann apresentada em um primeiro curso de Cálculo Diferencial e Integral, podemos calcular a integral de $g$ somando as áreas dos retângulos conforme ilustra a figura \ref{fig:integral-função-simples-g-sobre-[0,4]}.\\
  
     %Gráfico da função g
     \begin{figure}[!h]
@@ -113,7 +114,13 @@ Se quiséssemos calcular a integral das funções acima somaríamos as áreas do
                 % Eixos
                 \draw[->] (-1,0) -- (5,0) node[right] {$x$};
                 \draw[->] (0,-1) -- (0, 5) node[left] {$y$};
-                                
+                
+                % Preenchimento
+                \filldraw [domain=0:1,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{1})--(1,0)--(0,0);
+		        \filldraw [domain=1:2.5,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{3})--(2.5,0)--(1,0);
+		        \filldraw [domain=2.5:3.25,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{4})--(3.25,0)--(2.5,0);
+		        \filldraw [domain=3.25:4,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{2})--(4,0)--(3.25,0);   
+                
                 % Plot do gráfico	
 				\draw[domain=0:1,very thick,variable=\x,blue] plot ({\x},{1});
 				\draw[domain=1:2.5,very thick,variable=\x,blue] plot ({\x},{3});
@@ -121,10 +128,7 @@ Se quiséssemos calcular a integral das funções acima somaríamos as áreas do
 				\draw[domain=3.25:4,very thick,variable=\x,blue] plot ({\x},{2});
 
 				
-				\filldraw [domain=0:1,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{1})--(1,0)--(0,0);
-	            \filldraw [domain=1:2.5,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{3})--(2.5,0)--(1,0);
-				\filldraw [domain=2.5:3.25,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{4})--(3.25,0)--(2.5,0);
-				\filldraw [domain=3.25:4,smooth,variable=\x, cyan, fill opacity=0.4]  plot ({\x},{2})--(4,0)--(3.25,0);
+			
                 
         		% Bolinhas dos Intervalos
 				\draw[fill=blue] (0,1) circle (0.08);
@@ -146,255 +150,30 @@ Se quiséssemos calcular a integral das funções acima somaríamos as áreas do
                 \foreach \i in {-1,1,2,3,4}{
                 \draw (2pt,\i)--(-2pt, \i) node[left]{{\footnotesize $\i$}};
                 }
-                
-                % Linhas trastejadas
-                % \foreach \i in {1,2,3,4}{
-                % \draw[dashed, help lines] (\i,0) -- (\i,\i);
-                % }
-                % \foreach \i in {1,2,3}{
-                % \draw[dashed, help lines] (\i,\i) -- (\i,\i+1);
-                % }  
             \end{tikzpicture}
 	}{
 	    \Fonte{Elaborado pelo autor}
 	}	
     \end{figure} 
-Note que em ambos os casos estamos, basicamente, aplicando o valor $a_j$ na medida do conjunto $E_j$ correspondente onde $j$ é o número de partições do domínio. Com isso, temos a definição a seguir:
+Num olhar de medida vemos, basicamente, que o cartesiano entre o intervalo (0, $a_j$) e o intervalo $E_j$ correspondente onde $j$ é o número de partições do domínio formam a área de retângulos
+\footnote{
+	Lembre que uma área é uma medida conforme o \ref{ex:area-como-medida}.
+	}. 
+A soma das áreas do retângulo, resultam na integral da função $g$.
+Com essa perspectiva intuitiva definimos a Integral de Lebesgue para funções simples:
 \begin{env}{Definição}
 \label{def:integral-função-naonegativa-simples}
     Se $\varphi$ é uma função simples de $M^+(X, \cc)$ com a representação 
-    $\displaystyle\varphi =  \sum_{j = 1}^n a_j\chi_{E_j},$ então a integral da função $\varphi$ com respeito à medida $\mu$ é o valor real estendido
+    $\displaystyle\varphi =  \sum_{j = 1}^n a_j\chi_{E_j},$ então a integral de Lebesgue da função $\varphi$ com respeito à medida $\mu$ é o valor real estendido
     \linebreak $
     \displaystyle\int\varphi d\mu = \sum_{j = 1}^n a_j\mu(E_j)
-    $
-    \cite[p.28, tradução nossa]{bartle}
-    \footnote{No original: 
-    	If $\phi$ is a simple function in $M^+(X, \textbf{X})$ [...], we define the integral of $\phi$ with respect to
-    	$\mu$ to be the extended real number  
-    	$
-    	\displaystyle\int\varphi d\mu = \sum_{j = 1}^n a_j\mu(E_j)
-    	$.
-    }.
+    $.
+    \index{Integral de Lebesgue! para funções simples}
 \end{env}
 
 Para a \ref{def:integral-função-naonegativa-simples} empregamos a convenção que $0 \cdot (+\infty) = 0$.
 Isso é feito para garantir que a função identicamente nula tenha integral nula independentemente da medida ser finita ou não.
 A seguir, veremos propriedades elementares sobre a integral de funções simples.
-
-\begin{comment}
-	
-
-Antes disso, considere um espaço de medida $(X, \cc, \mu)$.
-Seja  $\{E_n\}$ uma partição de $X$ com $n \in I_5$ conforme a representação a seguir.\pagebreak
-\begin{figure}[h]
-	\centering
-	\Caption{\label{fig:particao-E-de-X} Partição $\{E_n\}$ do conjunto $X$} 
-	\UECEfig{}{
-		% Partição de X por E_n
-		\begin{tikzpicture}
-			% Define coordenadas que serão utilizadas posteriormente
-			\path
-			coordinate (aux0) at (0,1.5)
-			coordinate (aux1) at (0,3.5)
-			coordinate (aux2) at (10,3.5)
-			coordinate (aux3) at (9,6)
-			coordinate (aux4) at (4,0)
-			coordinate (aux5) at (7,0)
-			coordinate (aux6) at (2,6)
-			coordinate (aux7) at (5,6)
-			coordinate (esp1) at (0.2,2.5)
-			coordinate (esp2) at (1.5,1.5)
-			coordinate (esp3) at (3,0.1)
-			coordinate (esp4) at (5.5,1.1)
-			coordinate (esp5) at (8,0.5)
-			coordinate (esp6) at (8.75,2)
-			coordinate (esp7) at (9.7,3)
-			coordinate (esp8) at (6.5,4.5)
-			coordinate (esp9) at (3.8,5.8)
-			coordinate (esp10) at (1.5,4)
-			coordinate (nome) at (0, 6)
-			;
-			% Desenha curvas com angulação de saida e entrada
-			\draw[line width=0.8pt]
-			(esp1) to[out=-90,in=170]
-			(esp2) to[out=-10,in=170]
-			(esp3) to[out=-10,in=180]
-			(esp4) to[out=0,in=180]
-			(esp5) to[out=10,in=-150]
-			(esp6) to[out=20,in=-90]
-			(esp7) to[out=90,in=-60]
-			(esp8) to[out=120,in=0]
-			(esp9) to[out=180,in=0]
-			(esp10) to[out=180,in=90]
-			cycle;    
-			% Limita a figura às coordenadas citadas
-			\clip
-			(esp1) to[out=-90,in=170]
-			(esp2) to[out=-10,in=170]
-			(esp3) to[out=-10,in=180]
-			(esp4) to[out=0,in=180]
-			(esp5) to[out=10,in=-150]
-			(esp6) to[out=20,in=-90]
-			(esp7) to[out=90,in=-60]
-			(esp8) to[out=120,in=0]
-			(esp9) to[out=180,in=0]
-			(esp10) to[out=180,in=90]
-			cycle;    
-			
-			\draw[fill=green!40]
-			(aux4) to[bend right=10]
-			(aux6) --
-			(aux7) to[bend left=10]
-			(aux5) -- cycle;
-			\draw[fill=green!40]
-			(aux5) to[bend right=10]
-			(aux7) --
-			(10,6) --
-			(10,0) -- cycle;
-			\draw[fill=green!40]
-			(aux0) -- 
-			(aux1) to[bend right=10]
-			(aux3) --
-			(10,6) -- 
-			(aux2) to[bend left=10] cycle;
-			\draw[fill=green!40]
-			(0,0) -- 
-			(aux4) to[bend right=10]
-			(aux6) --
-			(0,6) -- 
-			(0,0) -- cycle;
-			\draw[fill=green!40]
-			(0,6) -- 
-			(aux1) to[bend right=10]
-			(aux3) --
-			(0,6) -- cycle;
-			\node at (4,5) {$E_1$};  
-			\node at (2,2) {$E_2$};  
-			\node at (6,3.3) {$E_3$};  
-			\node at (4.4,1.3) {$E_4$};  
-			\node at (7.5,2) {$E_5$};
-			\node at (0.1,5.5) {$X$};  
-			
-		\end{tikzpicture}
-		
-	}{
-		\Fonte{Elaborado pelo autor}
-	}   
-\end{figure}
-
-\hspace{-2cm}Tome também uma outra partição $\{F_m\}$ onde $m \in I_6$.\\
-
-\begin{figure}[h!]
-	\centering
-	\Caption{\label{fig:particao-F-de-X} Partição $\{F_m\}$ do conjunto $X$} 
-	\UECEfig{}{
-		% Partição F_m
-		\begin{tikzpicture}
-			% Define coordenadas que serão utilizadas posteriormente
-			\path
-			coordinate (aux0) at (1.1,2)
-			coordinate (aux1) at (0,3.5)
-			coordinate (aux2) at (10,3.5)
-			coordinate (aux3) at (9,6)
-			coordinate (aux4) at (4,0)
-			coordinate (aux5) at (7,0)
-			coordinate (aux6) at (2,6)
-			coordinate (aux7) at (5,6)
-			coordinate (aux8) at (11,2)
-			coordinate (aux9) at (3,8.2)
-			coordinate (esp1) at (0.2,2.5)
-			coordinate (esp2) at (1.5,1.5)
-			coordinate (esp3) at (3,0.1)
-			coordinate (esp4) at (5.5,1.1)
-			coordinate (esp5) at (8,0.5)
-			coordinate (esp6) at (8.75,2)
-			coordinate (esp7) at (9.7,3)
-			coordinate (esp8) at (6.5,4.5)
-			coordinate (esp9) at (3.8,5.8)
-			coordinate (esp10) at (1.5,4)
-			coordinate (nome) at (0, 6)
-			;
-			% Desenha curvas com angulação de saida e entrada
-			\draw[line width=0.8pt]
-			(esp1) to[out=-90,in=170]
-			(esp2) to[out=-10,in=170]
-			(esp3) to[out=-10,in=180]
-			(esp4) to[out=0,in=180]
-			(esp5) to[out=10,in=-150]
-			(esp6) to[out=20,in=-90]
-			(esp7) to[out=90,in=-60]
-			(esp8) to[out=120,in=0]
-			(esp9) to[out=180,in=0]
-			(esp10) to[out=180,in=90]
-			cycle;    
-			% Limita a figura às coordenadas citadas
-			\clip
-			(esp1) to[out=-90,in=170]
-			(esp2) to[out=-10,in=170]
-			(esp3) to[out=-10,in=180]
-			(esp4) to[out=0,in=180]
-			(esp5) to[out=10,in=-150]
-			(esp6) to[out=20,in=-90]
-			(esp7) to[out=90,in=-60]
-			(esp8) to[out=120,in=0]
-			(esp9) to[out=180,in=0]
-			(esp10) to[out=180,in=90]
-			cycle;    
-			
-			\draw[fill=cyan!35] 
-			(0,0) rectangle (10,6);
-			\draw
-			(0,0) 
-			to[bend right = 20] 
-			(aux7)
-			to[bend right = 22] 
-			(aux1);
-			\draw
-			(0,3) 
-			to[bend left = 10] 
-			(10,2)
-			to[bend right = 10]
-			(5,-6);
-			\draw
-			(5,0) 
-			to[bend right = 20] 
-			(aux7)
-			to[bend right = 22] 
-			(aux1);
-			
-			
-			% Rótulos
-			\node at (4,5) {$F_1$};  
-			\node at (2,2) {$F_2$};  
-			\node at (6.5,3.3) {$F_3$};  
-			\node at (4.4,1.3) {$F_4$};  
-			\node at (7.5,2) {$F_5$};  
-			\node at (5,3.5) {$F_6$};
-		\end{tikzpicture}
-		
-	}{
-		\Fonte{Elaborado pelo autor}
-	}   
-\end{figure}
-Claramente, ao observar as figuras acima, podemos ver que $E_3$ possui interseção com $F_j$ para todo $j \in I_6$.
-Assim, $E_5 = \displaystyle \bigcup_{j = 1}^6 (F_j\cap E_5)$ com $(F_j\cap E_5) = \varnothing,\ \forall j \in I_6$. 
-Logo, 
-$$
-\mu(E_5) = \mu\left(\bigcup_{j = 1}^6 (F_j\cap E_5)\right)
-= 
-\sum_{j=1}^{6}\mu(F_j\cap E_5)
-$$
-A igualdade acima é valida mesmo se o conjunto em questão não tiver interseção com todos os outros da partição.
-Neste caso, a interseção com os demais será vazia e soma associada à eles é 0.
-Basta observar, por exemplo, o conjunto $E_1$ que tem interseção com $F_1, F_6$ e $F_3$, mas não se intersecta com $F_2, F_4$ e $F_5$.
-Deste modo,
-$$
-\sum_{j=1}^{6}\mu(F_j\cap E_3)
-= \mu(F_1\cap E_3) + \mu(F_6\cap E_3) + \mu(F_3\cap E_3)
-= \mu(E_3)
-$$
-Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
-\end{comment}
 
 \begin{env}{Teorema}
 	\label{teo:aritmetica-com-integrais-de-funções-simples}
@@ -405,7 +184,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 	e
     $
     \displaystyle \int (\varphi + \psi) d\mu = \int \varphi d\mu + \int \psi d\mu
-    $ \cite{bartle}.
+    $.
 \end{env}
 \begin{prova}
     Representaremos as funções simples não negativas por $\varphi = \dsum_{j = 1}^n a_j\chi_{E_j}$ e $\psi = \dsum_{k = 1}^m b_k\chi_{F_k}$.
@@ -425,8 +204,12 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     	+
     	\dsum_{k = 1}^m b_k\chi_{F_k}
     \end{equation}
-    Como $\{E_n\}$ e $\{F_k\}$ são ambas partições de $X$, pela \ref{prop: igualdade da caracteristica como medida} temos que
-    $\chi_{E_j} = \dsum_{k = 1}^m \chi_{(E_j \cap F_k)}$ e 
+    Como $\{E_n\}$ e $\{F_k\}$ são ambas partições de $X$, pela \ref{prop: duas partições}, temos que
+    $E_j = \displaystyle \bigcup_{k = 1}^m (E_j \cap F_k)$
+    e 
+    $F_k = \displaystyle \bigcup_{j = 1}^n (E_j \cap F_k)$
+    .
+    Logo, $\chi_{E_j} = \dsum_{k = 1}^m \chi_{(E_j \cap F_k)}$ e 
     $\chi_{F_k} = \dsum_{j = 1}^n \chi_{(E_j \cap F_k)}$.
     Substituindo na equação \ref{eq:somatorio funções simples}, obtemos    
     \begin{align*}
@@ -441,8 +224,8 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
     	\dsum_{j = 1}^n\dsum_{k = 1}^m a_j\chi_{(E_j \cap F_k)}
     	+
     	\dsum_{k = 1}^m \dsum_{j = 1}^n b_k\chi_{(E_j \cap F_k)}\\
-	\end{align*}
-	\begin{align*}
+%	\end{align*}
+%	\begin{align*}
 		= &
 		\dsum_{j = 1}^n\dsum_{k = 1}^m 
 		\left(a_j\chi_{(E_j \cap F_k)}
@@ -517,7 +300,7 @@ Pois, $\mu(F_2\cap E_3) = \mu(F_4\cap E_3) = \mu(F_5\cap E_3) = 0$.
 
 \begin{env}{Lema}
 	\label{lem:medida-da-intersecao-de-um-fixado}
-	Se $\mu$ é uma medida sobre $X$ e fixemos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall\  E \in \cc$ também é uma medida sobre $X$ \cite{bartle}.
+	Se $\mu$ é uma medida sobre $X$ e fixamos um elemento $A$ de $\cc$, então a função $\lambda$ definida por $\lambda(E) = \mu(A\cap E), \ \forall\  E \in \cc$ também é uma medida sobre $X$ \cite{bartle}.
 \end{env}
 \begin{prova}
 	Basta mostrar que $\lambda$ satisfaz as condições impostas na  \ref{def:medida}.

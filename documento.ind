@@ -1,77 +1,11 @@
 \begin{theindex}
 
-  \item $\sigma$-álgebra, \hyperpage{10}
-    \subitem  de Borel, \hyperpage{14}
-    \subitem  de Borel estendida, \hyperpage{25}
-    \subitem  gerada, \hyperpage{13}
-
-  \indexspace
-
-  \item Conjunto
-    \subitem  aberto, \hyperpage{17}
-    \subitem  de medida nula., \hyperpage{39}
-  \item Cota superior, \hyperpage{24}
-
-  \indexspace
-
-  \item Espaço
-    \subitem  de medida, \hyperpage{34}
-    \subitem  de probabilidades, \hyperpage{35}
-    \subitem  mensurável, \hyperpage{10}
-
-  \indexspace
-
   \item Função
-    \subitem  $\cc$-mensurável, \hyperpage{16}
-    \subitem  característica, \hyperpage{16}
-    \subitem  constante, \hyperpage{16}
-    \subitem  contínua, \hyperpage{17}
+    \subitem  simples, \hyperpage{10}
 
   \indexspace
 
-  \item Intervalo degenerado, \hyperpage{38}
-
-  \indexspace
-
-  \item Limite
-    \subitem  inferior, \hyperpage{27}
-    \subitem  superior, \hyperpage{27}
-
-  \indexspace
-
-  \item Maior $\sigma$-álgebra de um conjunto, \hyperpage{11}
-  \item Medida, \hyperpage{34}
-    \subitem  de Lebesgue, \hyperpage{38}
-    \subitem  de probabilidades, \hyperpage{35}
-    \subitem  finita, \hyperpage{34}
-  \item Menor $\sigma$-álgebra de um conjunto, \hyperpage{11}
-
-  \indexspace
-
-  \item Parte
-    \subitem  negativa, \hyperpage{21}
-    \subitem  positiva, \hyperpage{21}
-  \item Partição de um conjunto, \hyperpage{33}
-
-  \indexspace
-
-  \item Quase todo ponto, \hyperpage{39}
-
-  \indexspace
-
-  \item Sequência, \hyperpage{10}
-    \subitem  de subconjuntos não-crescente, \hyperpage{32}
-    \subitem  de subconjuntos não-decrescente, \hyperpage{32}
-    \subitem  disjunta, \hyperpage{32}
-  \item Sistema estendido de números reais, \hyperpage{24}
-  \item Supremo, \hyperpage{24}
-
-  \indexspace
-
-  \item Truncamento de uma função, \hyperpage{28}
-
-  \indexspace
-
-  \item Variável aleatória, \hyperpage{35}
+  \item Integral de Lebesgue
+    \subitem  para funções simples, \hyperpage{12}
 
 \end{theindex}
